@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package types;
+
+import "doc.proto";
+
+message TermQuery {
+    Keyword Keyword = 1;    
+    repeated TermQuery Must = 2;
+    repeated TermQuery Should = 3;
+}
+
+
+// protoc -I=/mnt/c/Users/1213/Desktop/MiniES/MiniES/types --gogofaster_out=./types --proto_path=./types term_query.proto
+// 在windows上-I需使用绝对路径
