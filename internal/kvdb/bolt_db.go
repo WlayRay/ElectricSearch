@@ -161,7 +161,7 @@ func (s *Bolt) IterDB(fn func(k, v []byte) error) int64 {
 	return atomic.LoadInt64(&total)
 }
 
-// 遍历所有key，返回数据的条数
+// 遍历数据库，返回key的条数
 func (s *Bolt) IterKey(fn func(k []byte) error) int64 {
 	var total int64
 	s.db.View(func(tx *bolt.Tx) error {

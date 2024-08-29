@@ -34,7 +34,7 @@ type SkipListValue struct {
 	BitsFeature uint64
 }
 
-func (idx SkipListReverseIndex) Add(doc *types.Document) {
+func (idx SkipListReverseIndex) Add(doc types.Document) {
 	for _, keyword := range doc.Keywords {
 		key := keyword.ToString()
 		lock := idx.getLock(key)
@@ -160,7 +160,7 @@ func (idx SkipListReverseIndex) FilterByBits(bits uint64, onFlag uint64, offFlag
 	return true
 }
 
-func (idx SkipListReverseIndex) search(tq *types.TermQuery, onFlag uint64, offFlag uint64, orFlags []uint64) *skiplist.SkipList {
+func (idx SkipListReverseIndex) search(tq *types.TermQuery, onFlag, offFlag uint64, orFlags []uint64) *skiplist.SkipList {
 	if tq.Keyword != nil {
 		keyword := tq.Keyword.ToString()
 		if value, exists := idx.table.Get(keyword); exists {
@@ -191,7 +191,7 @@ func (idx SkipListReverseIndex) search(tq *types.TermQuery, onFlag uint64, offFl
 	return nil
 }
 
-func (idx SkipListReverseIndex) Search(tq *types.TermQuery, onFlag uint64, offFlag uint64, orFlags []uint64) []string {
+func (idx SkipListReverseIndex) Search(tq *types.TermQuery, onFlag, offFlag uint64, orFlags []uint64) []string {
 	skp := idx.search(tq, onFlag, offFlag, orFlags)
 	if skp == nil {
 		return nil
