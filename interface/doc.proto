@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-package types;
+package raybox.data;
+
+option go_package = "types";
 
 message Keyword{
     string Field = 1;
@@ -15,4 +17,4 @@ message Document{
     bytes Bytes = 5;                // 业务上使用的文档内容（经序列化后）
 }
 
-// protoc --gogofaster_out=./types --proto_path=./types doc.proto
+// protoc --gogofaster_out=./types --proto_path=./interface doc.proto

@@ -34,8 +34,8 @@ func TestNewWorker(t *testing.T) {
 	}
 
 	var (
-		p = 180
-		k = 180
+		p = 360
+		k = 360
 	)
 	var wg sync.WaitGroup
 	result := make(chan uint64, p*k)

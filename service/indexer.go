@@ -63,7 +63,7 @@ func (indexer *Indexer) AddDoc(doc types.Document) (int, error) {
 	// TODO: 优化，使用雪花算法生成IntId
 	// doc.IntId = util.Snowflake.GetId()
 	doc.IntId = atomic.AddUint64(&indexer.maxIntId, 1)
-	// X写入正排索引
+	// 写入正排索引
 	var value bytes.Buffer
 	encoder := gob.NewEncoder(&value)
 	if err := encoder.Encode(doc); err == nil {
