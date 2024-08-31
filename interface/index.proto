@@ -1,4 +1,39 @@
 syntax = "proto3";
 
-package service;
+package raybox.service;
 
+import "doc.proto";
+import "term_query.proto";
+
+option go_package = "service";
+
+message DocId { string DocId = 1; }
+
+message AffectedCount { uint32 Count = 1; }
+
+message SearchRequest {
+  raybox.term_query.TermQuery Query = 1;
+  uint64 OnFlag = 2;
+  uint64 OffFlag = 3;
+  repeated uint64 OrFlags = 4;
+}
+
+message SearchResponse { repeated raybox.data.Document Documents = 1; }
+
+service SearchService {
+  rpc DelectDoc(DocId) returns (AffectedCount);
+  rpc AddDoc(raybox.data.Document) returns (AffectedCount);
+  rpc Search(SearchRequest) returns (SearchResponse);
+}
+
+/*
+protoc --gogofaster_opt=Mdoc.proto=MiniES/types
+--gogofaster_opt=Mterm_query.proto=MiniES/types
+--gogofaster_out=plugins=grpc:./service --proto_path=./interface index.proto
+*/
+
+/*
+--gogofaster_opt=M指示了.proto里的import转到.go里该怎么写，比如.proto里写import"doc.proto"，转到.go里就应该写
+import "MiniES/types"
+-I和--gogofaster_opt=M可以有多个
+*/

@@ -20,7 +20,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Keyword struct {
 	Field string `protobuf:"bytes,1,opt,name=Field,proto3" json:"Field,omitempty"`
@@ -41,7 +41,7 @@ func (m *Keyword) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 		return xxx_messageInfo_Keyword.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -96,7 +96,7 @@ func (m *Document) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 		return xxx_messageInfo_Document.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -179,7 +179,7 @@ var fileDescriptor_37cb16cf10c66117 = []byte{
 func (m *Keyword) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -187,29 +187,36 @@ func (m *Keyword) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Keyword) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Keyword) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Field) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintDoc(dAtA, i, uint64(len(m.Field)))
-		i += copy(dAtA[i:], m.Field)
-	}
 	if len(m.Word) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.Word)
+		copy(dAtA[i:], m.Word)
 		i = encodeVarintDoc(dAtA, i, uint64(len(m.Word)))
-		i += copy(dAtA[i:], m.Word)
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.Field) > 0 {
+		i -= len(m.Field)
+		copy(dAtA[i:], m.Field)
+		i = encodeVarintDoc(dAtA, i, uint64(len(m.Field)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *Document) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -217,55 +224,66 @@ func (m *Document) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Document) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Document) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Id) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintDoc(dAtA, i, uint64(len(m.Id)))
-		i += copy(dAtA[i:], m.Id)
-	}
-	if m.IntId != 0 {
-		dAtA[i] = 0x10
-		i++
-		i = encodeVarintDoc(dAtA, i, uint64(m.IntId))
-	}
-	if m.BitsFeature != 0 {
-		dAtA[i] = 0x18
-		i++
-		i = encodeVarintDoc(dAtA, i, uint64(m.BitsFeature))
+	if len(m.Bytes) > 0 {
+		i -= len(m.Bytes)
+		copy(dAtA[i:], m.Bytes)
+		i = encodeVarintDoc(dAtA, i, uint64(len(m.Bytes)))
+		i--
+		dAtA[i] = 0x2a
 	}
 	if len(m.Keywords) > 0 {
-		for _, msg := range m.Keywords {
-			dAtA[i] = 0x22
-			i++
-			i = encodeVarintDoc(dAtA, i, uint64(msg.Size()))
-			n, err := msg.MarshalTo(dAtA[i:])
-			if err != nil {
-				return 0, err
+		for iNdEx := len(m.Keywords) - 1; iNdEx >= 0; iNdEx-- {
+			{
+				size, err := m.Keywords[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				if err != nil {
+					return 0, err
+				}
+				i -= size
+				i = encodeVarintDoc(dAtA, i, uint64(size))
 			}
-			i += n
+			i--
+			dAtA[i] = 0x22
 		}
 	}
-	if len(m.Bytes) > 0 {
-		dAtA[i] = 0x2a
-		i++
-		i = encodeVarintDoc(dAtA, i, uint64(len(m.Bytes)))
-		i += copy(dAtA[i:], m.Bytes)
+	if m.BitsFeature != 0 {
+		i = encodeVarintDoc(dAtA, i, uint64(m.BitsFeature))
+		i--
+		dAtA[i] = 0x18
 	}
-	return i, nil
+	if m.IntId != 0 {
+		i = encodeVarintDoc(dAtA, i, uint64(m.IntId))
+		i--
+		dAtA[i] = 0x10
+	}
+	if len(m.Id) > 0 {
+		i -= len(m.Id)
+		copy(dAtA[i:], m.Id)
+		i = encodeVarintDoc(dAtA, i, uint64(len(m.Id)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func encodeVarintDoc(dAtA []byte, offset int, v uint64) int {
+	offset -= sovDoc(v)
+	base := offset
 	for v >= 1<<7 {
 		dAtA[offset] = uint8(v&0x7f | 0x80)
 		v >>= 7
 		offset++
 	}
 	dAtA[offset] = uint8(v)
-	return offset + 1
+	return base
 }
 func (m *Keyword) Size() (n int) {
 	if m == nil {
@@ -418,10 +436,7 @@ func (m *Keyword) Unmarshal(dAtA []byte) error {
 			if err != nil {
 				return err
 			}
-			if skippy < 0 {
-				return ErrInvalidLengthDoc
-			}
-			if (iNdEx + skippy) < 0 {
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
 				return ErrInvalidLengthDoc
 			}
 			if (iNdEx + skippy) > l {
@@ -609,10 +624,7 @@ func (m *Document) Unmarshal(dAtA []byte) error {
 			if err != nil {
 				return err
 			}
-			if skippy < 0 {
-				return ErrInvalidLengthDoc
-			}
-			if (iNdEx + skippy) < 0 {
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
 				return ErrInvalidLengthDoc
 			}
 			if (iNdEx + skippy) > l {
@@ -630,6 +642,7 @@ func (m *Document) Unmarshal(dAtA []byte) error {
 func skipDoc(dAtA []byte) (n int, err error) {
 	l := len(dAtA)
 	iNdEx := 0
+	depth := 0
 	for iNdEx < l {
 		var wire uint64
 		for shift := uint(0); ; shift += 7 {
@@ -661,10 +674,8 @@ func skipDoc(dAtA []byte) (n int, err error) {
 					break
 				}
 			}
-			return iNdEx, nil
 		case 1:
 			iNdEx += 8
-			return iNdEx, nil
 		case 2:
 			var length int
 			for shift := uint(0); ; shift += 7 {
@@ -685,55 +696,30 @@ func skipDoc(dAtA []byte) (n int, err error) {
 				return 0, ErrInvalidLengthDoc
 			}
 			iNdEx += length
-			if iNdEx < 0 {
-				return 0, ErrInvalidLengthDoc
-			}
-			return iNdEx, nil
 		case 3:
-			for {
-				var innerWire uint64
-				var start int = iNdEx
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return 0, ErrIntOverflowDoc
-					}
-					if iNdEx >= l {
-						return 0, io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					innerWire |= (uint64(b) & 0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				innerWireType := int(innerWire & 0x7)
-				if innerWireType == 4 {
-					break
-				}
-				next, err := skipDoc(dAtA[start:])
-				if err != nil {
-					return 0, err
-				}
-				iNdEx = start + next
-				if iNdEx < 0 {
-					return 0, ErrInvalidLengthDoc
-				}
-			}
-			return iNdEx, nil
+			depth++
 		case 4:
-			return iNdEx, nil
+			if depth == 0 {
+				return 0, ErrUnexpectedEndOfGroupDoc
+			}
+			depth--
 		case 5:
 			iNdEx += 4
-			return iNdEx, nil
 		default:
 			return 0, fmt.Errorf("proto: illegal wireType %d", wireType)
 		}
+		if iNdEx < 0 {
+			return 0, ErrInvalidLengthDoc
+		}
+		if depth == 0 {
+			return iNdEx, nil
+		}
 	}
-	panic("unreachable")
+	return 0, io.ErrUnexpectedEOF
 }
 
 var (
-	ErrInvalidLengthDoc = fmt.Errorf("proto: negative length found during unmarshaling")
-	ErrIntOverflowDoc   = fmt.Errorf("proto: integer overflow")
+	ErrInvalidLengthDoc        = fmt.Errorf("proto: negative length found during unmarshaling")
+	ErrIntOverflowDoc          = fmt.Errorf("proto: integer overflow")
+	ErrUnexpectedEndOfGroupDoc = fmt.Errorf("proto: unexpected end of group")
 )

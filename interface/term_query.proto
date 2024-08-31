@@ -7,11 +7,12 @@ import "doc.proto";
 option go_package = "types";
 
 message TermQuery {
-    raybox.data.Keyword Keyword = 1;    
-    repeated TermQuery Must = 2;
-    repeated TermQuery Should = 3;
+  raybox.data.Keyword Keyword = 1;
+  repeated TermQuery Must = 2;
+  repeated TermQuery Should = 3;
 }
 
-
-// protoc -I=/mnt/c/Users/1213/Desktop/MiniES/MiniES/interface --gogofaster_out=./types --proto_path=./interface term_query.proto
-// 在windows上-I需使用绝对路径
+/*
+protoc -I=/mnt/c/Users/1213/Desktop/MiniES/MiniES/interface --gogofaster_out=./types --proto_path=./interface term_query.proto
+在windows上-I需使用绝对路径
+*/

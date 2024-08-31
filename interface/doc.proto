@@ -4,17 +4,17 @@ package raybox.data;
 
 option go_package = "types";
 
-message Keyword{
-    string Field = 1;
-    string Word = 2;
+message Keyword {
+  string Field = 1;
+  string Word = 2;
 }
 
-message Document{
-    string Id = 1;                  // 业务上使用的唯一ID，不会重复
-    uint64 IntId = 2;               // 倒排索引使用的文档ID
-    uint64 BitsFeature = 3;         // 倒排索引使用的特征（其中每一位代表一个特征）
-    repeated Keyword Keywords = 4;  // 倒排索引的Key
-    bytes Bytes = 5;                // 业务上使用的文档内容（经序列化后）
+message Document {
+  string Id = 1;    // 业务上使用的唯一ID，不会重复
+  uint64 IntId = 2; // 倒排索引使用的文档ID
+  uint64 BitsFeature = 3; // 倒排索引使用的特征（其中每一位代表一个特征）
+  repeated Keyword Keywords = 4; // 倒排索引的Key
+  bytes Bytes = 5; // 业务上使用的文档内容（经序列化后）
 }
 
 // protoc --gogofaster_out=./types --proto_path=./interface doc.proto

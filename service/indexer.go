@@ -8,14 +8,15 @@ import (
 	"bytes"
 	"encoding/gob"
 	"strings"
-	"sync/atomic"
+
+	"github.com/dgryski/go-farm"
 )
 
 // 外观模式，把正排和倒排索引2个子系统封装在一起
 type Indexer struct {
 	fowrdIndex   kvdb.IKeyValueDB
 	reverseIndex reverseindex.IReverseIndex
-	maxIntId     uint64
+	worker       *util.Worker // 雪花算法
 }
 
 func (indexer *Indexer) Init(DocNumEstimate int, dbtype int, Data string) error {
@@ -25,6 +26,13 @@ func (indexer *Indexer) Init(DocNumEstimate int, dbtype int, Data string) error 
 	}
 	indexer.fowrdIndex = db
 	indexer.reverseIndex = reverseindex.NewSkipListReverseIndex(DocNumEstimate)
+
+	// 通过对本机IP哈希生成雪花算法的workerId，可保证workerId唯一
+	ip, _ := util.GetLocalIP()
+	workerId := uint64(farm.Hash64WithSeed([]byte(ip), 0)) % 1023
+	if indexer.worker, err = util.NewWorker(workerId); err != nil {
+		util.Log.Printf("failed to build snowflake algorithm: %v", err)
+	}
 	return nil
 }
 
@@ -56,13 +64,10 @@ func (indexer *Indexer) AddDoc(doc types.Document) (int, error) {
 	if len(docId) == 0 {
 		return 0, nil
 	}
+	indexer.DeleteDoc(docId) // 先从正排和倒排索引上删除文档
 
-	// 先从正排和倒排索引上删除文档
-	indexer.DeleteDoc(docId)
+	doc.IntId = indexer.worker.GetWorkerId() // 使用雪花算法生成唯一自增ID
 
-	// TODO: 优化，使用雪花算法生成IntId
-	// doc.IntId = util.Snowflake.GetId()
-	doc.IntId = atomic.AddUint64(&indexer.maxIntId, 1)
 	// 写入正排索引
 	var value bytes.Buffer
 	encoder := gob.NewEncoder(&value)
