@@ -1,8 +1,8 @@
 package reverseindex
 
 import (
-	"MiniES/types"
-	"MiniES/util"
+	"ElectricSearch/types"
+	"ElectricSearch/util"
 	"runtime"
 	"sync"
 
@@ -152,8 +152,9 @@ func (idx SkipListReverseIndex) FilterByBits(bits uint64, onFlag uint64, offFlag
 	if bits&offFlag != 0 {
 		return false
 	}
-	for _, orFlags := range orFlags {
-		if bits&orFlags != orFlags {
+	//多个orFlags必须全部命中
+	for _, orFlag := range orFlags {
+		if orFlag > 0 && bits&orFlag <= 0 { //单个orFlag只有一个bit命中即可
 			return false
 		}
 	}

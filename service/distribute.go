@@ -1,9 +1,12 @@
 package service
 
 import (
-	"MiniES/util"
+	"ElectricSearch/types"
+	"ElectricSearch/util"
 	"context"
+	"fmt"
 	"sync"
+	"sync/atomic"
 	"time"
 
 	grpc "google.golang.org/grpc"
@@ -27,15 +30,17 @@ func NewSentinel(etcdServers []string) *Sentinel {
 func (sentinal *Sentinel) GetGrpcConn(endpoint string) *grpc.ClientConn {
 	if v, exists := sentinal.connPool.Load(endpoint); exists {
 		conn := v.(*grpc.ClientConn)
-		if conn.GetState() == connectivity.TransientFailure || conn.GetState() == connectivity.Shutdown {
-			util.Log.Printf("sentinel %s is not serving, close it", endpoint)
+		// 检查连接状态是否为Ready
+		if conn.GetState() != connectivity.Ready {
+			util.Log.Printf("sentinel %s is not ready (state: %v), close it", endpoint, conn.GetState())
 			conn.Close()
 			sentinal.connPool.Delete(endpoint)
 		} else {
 			return conn
 		}
 	}
-	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 	conn, err := grpc.DialContext(
 		ctx,
@@ -47,7 +52,136 @@ func (sentinal *Sentinel) GetGrpcConn(endpoint string) *grpc.ClientConn {
 		util.Log.Printf("dial %s failed: %s", endpoint, err)
 		return nil
 	}
-	util.Log.Printf("connect to grpc server %s", endpoint)
+	util.Log.Printf("successfully connected to grpc server %s", endpoint)
 	sentinal.connPool.Store(endpoint, conn)
 	return conn
+}
+
+func (sentinel *Sentinel) AddDoc(doc types.Document) (int, error) {
+	endpoint := sentinel.hub.GetServiceEndpoint(INDEX_SERVICE)
+	if len(endpoint) == 0 {
+		return 0, fmt.Errorf("there is no alive index worker")
+	}
+	conn := sentinel.GetGrpcConn(endpoint)
+	if conn == nil {
+		return 0, fmt.Errorf("connection to worker %s failed", endpoint)
+	}
+	client := NewIndexServiceClient(conn)
+	affected, err := client.AddDoc(context.Background(), &doc)
+	if err != nil {
+		return 0, err
+	}
+	util.Log.Printf("add doc %s to worker %s, affected %d", doc.Id, endpoint, affected.Count)
+	return int(affected.Count), nil
+}
+func (sentinel *Sentinel) DeleteDoc(docId string) int {
+	endpoints := sentinel.hub.GetServiceEndpoints(INDEX_SERVICE)
+	if len(endpoints) == 0 {
+		return 0
+	}
+	var n uint32
+	wg := sync.WaitGroup{}
+	wg.Add(len(endpoints))
+	for _, endpoint := range endpoints {
+		go func(endpoint string) {
+			defer wg.Done()
+			conn := sentinel.GetGrpcConn(endpoint)
+			if conn != nil {
+				client := NewIndexServiceClient(conn)
+				affected, err := client.DeleteDoc(context.Background(), &DocId{docId})
+				if err != nil {
+					util.Log.Printf("delect doc %s from worker %s failed: %s", docId, endpoint, err)
+				} else if affected.Count > 0 {
+					atomic.AddUint32(&n, uint32(affected.Count))
+					util.Log.Printf("delect doc %s from worker %s, affected %d", docId, endpoint, affected.Count)
+				}
+			}
+		}(endpoint)
+	}
+	wg.Wait()
+	return int(n)
+}
+
+func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64, orFlags []uint64) []*types.Document {
+	endpoints := sentinel.hub.GetServiceEndpoints(INDEX_SERVICE)
+	if len(endpoints) == 0 {
+		return nil
+	}
+
+	docs := make([]*types.Document, 0, 1000)
+	resultCh := make(chan *types.Document, 1000)
+	wg := sync.WaitGroup{}
+	wg.Add(len(endpoints))
+	for _, endpoint := range endpoints {
+		go func(endpoint string) {
+			defer wg.Done()
+			conn := sentinel.GetGrpcConn(endpoint)
+			if conn != nil {
+				client := NewIndexServiceClient(conn)
+				result, err := client.Search(context.Background(), &SearchRequest{querys, onFlag, offFlag, orFlags})
+				if err != nil {
+					util.Log.Printf("search from worker %s failed: %s", endpoint, err)
+				} else if len(result.Documents) > 0 {
+					for _, doc := range result.Documents {
+						resultCh <- doc
+					}
+				}
+			}
+		}(endpoint)
+	}
+
+	received := make(chan struct{})
+	go func() {
+		for {
+			doc, ok := <-resultCh
+			if !ok {
+				received <- struct{}{}
+				break
+			}
+			docs = append(docs, doc)
+		}
+	}()
+	wg.Wait()
+	close(resultCh)
+	<-received
+	return docs
+}
+
+func (sentinel *Sentinel) Count() int {
+	var n uint32
+	endpoints := sentinel.hub.GetServiceEndpoints(INDEX_SERVICE)
+	if len(endpoints) == 0 {
+		return 0
+	}
+	wg := sync.WaitGroup{}
+	wg.Add(len(endpoints))
+	for _, endpoint := range endpoints {
+		go func(endpoint string) {
+			defer wg.Done()
+			conn := sentinel.GetGrpcConn(endpoint)
+			if conn != nil {
+				client := NewIndexServiceClient(conn)
+				result, err := client.Count(context.Background(), &CountRequest{})
+				if err != nil {
+					util.Log.Printf("count from worker %s failed: %s", endpoint, err)
+				} else if result.Count > 0 {
+					atomic.AddUint32(&n, uint32(result.Count))
+					util.Log.Printf("count from worker %s, count %d", endpoint, result.Count)
+				}
+			}
+		}(endpoint)
+	}
+	wg.Wait()
+	return int(n)
+}
+
+func (sentinel *Sentinel) Close() (err error) {
+	sentinel.connPool.Range(func(key, value interface{}) bool {
+		if conn, ok := value.(*grpc.ClientConn); ok {
+			err = conn.Close()
+		}
+		return true
+	})
+	sentinel.hub.Close()
+	return
 }

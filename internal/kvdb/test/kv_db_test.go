@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"MiniES/internal/kvdb"
+	"ElectricSearch/internal/kvdb"
 )
 
 var (

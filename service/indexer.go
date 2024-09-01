@@ -1,10 +1,10 @@
 package service
 
 import (
-	"MiniES/internal/kvdb"
-	"MiniES/internal/reverse_index"
-	"MiniES/types"
-	"MiniES/util"
+	"ElectricSearch/internal/kvdb"
+	reverseindex "ElectricSearch/internal/reverse_index"
+	"ElectricSearch/types"
+	"ElectricSearch/util"
 	"bytes"
 	"encoding/gob"
 	"strings"
@@ -14,7 +14,7 @@ import (
 
 // 外观模式，把正排和倒排索引2个子系统封装在一起
 type Indexer struct {
-	fowrdIndex   kvdb.IKeyValueDB
+	forwardIndex kvdb.IKeyValueDB
 	reverseIndex reverseindex.IReverseIndex
 	worker       *util.Worker // 雪花算法
 }
@@ -24,25 +24,27 @@ func (indexer *Indexer) Init(DocNumEstimate int, dbtype int, Data string) error 
 	if err != nil {
 		return err
 	}
-	indexer.fowrdIndex = db
+	indexer.forwardIndex = db
 	indexer.reverseIndex = reverseindex.NewSkipListReverseIndex(DocNumEstimate)
 
 	// 通过对本机IP哈希生成雪花算法的workerId，可保证workerId唯一
 	ip, _ := util.GetLocalIP()
 	workerId := uint64(farm.Hash64WithSeed([]byte(ip), 0)) % 1023
-	if indexer.worker, err = util.NewWorker(workerId); err != nil {
-		util.Log.Printf("failed to build snowflake algorithm: %v", err)
+	worker, err := util.NewWorker(workerId)
+	if err != nil {
+		panic(err)
 	}
+	indexer.worker = worker
 	return nil
 }
 
 func (indexer *Indexer) Close() error {
-	return indexer.fowrdIndex.Close()
+	return indexer.forwardIndex.Close()
 }
 
 // 倒排索引存储在内存中，系统重启时从正派索引里加载数据
 func (indexer *Indexer) LoadFromIndexFile() int {
-	n := indexer.fowrdIndex.IterDB(func(k, v []byte) error {
+	n := indexer.forwardIndex.IterDB(func(k, v []byte) error {
 		reader := bytes.NewReader(v)
 		decoder := gob.NewDecoder(reader)
 		var doc types.Document
@@ -54,7 +56,7 @@ func (indexer *Indexer) LoadFromIndexFile() int {
 		indexer.reverseIndex.Add(doc)
 		return err
 	})
-	util.Log.Printf("Load %d datas from forward index: %s", n, indexer.fowrdIndex.GetDbPath())
+	util.Log.Printf("Load %d datas from forward index: %s", n, indexer.forwardIndex.GetDbPath())
 	return int(n)
 }
 
@@ -66,13 +68,13 @@ func (indexer *Indexer) AddDoc(doc types.Document) (int, error) {
 	}
 	indexer.DeleteDoc(docId) // 先从正排和倒排索引上删除文档
 
-	doc.IntId = indexer.worker.GetWorkerId() // 使用雪花算法生成唯一自增ID
+	doc.IntId = indexer.worker.GetId() // 使用雪花算法生成唯一自增ID
 
 	// 写入正排索引
 	var value bytes.Buffer
 	encoder := gob.NewEncoder(&value)
 	if err := encoder.Encode(doc); err == nil {
-		indexer.fowrdIndex.Set([]byte(docId), value.Bytes())
+		indexer.forwardIndex.Set([]byte(docId), value.Bytes())
 	} else {
 		return 0, err
 	}
@@ -85,7 +87,7 @@ func (indexer *Indexer) AddDoc(doc types.Document) (int, error) {
 func (indexer *Indexer) DeleteDoc(docId string) int {
 	n := 0
 	forwardKey := []byte(docId)
-	docBytes, err := indexer.fowrdIndex.Get(forwardKey) //先读正排索引，得到IntId和Keywords
+	docBytes, err := indexer.forwardIndex.Get(forwardKey) //先读正排索引，得到IntId和Keywords
 	if err == nil {
 		if len(docBytes) > 0 {
 			n = 1
@@ -106,7 +108,7 @@ func (indexer *Indexer) DeleteDoc(docId string) int {
 		util.Log.Printf("DeleteDoc error: %v", err)
 	}
 	// 从正排索引上删除
-	indexer.fowrdIndex.Delete(forwardKey)
+	indexer.forwardIndex.Delete(forwardKey)
 	return n
 }
 
@@ -121,7 +123,7 @@ func (indexer *Indexer) Search(querys *types.TermQuery, onFlag, offFlag uint64, 
 	for _, docId := range docIds {
 		keys = append(keys, []byte(docId))
 	}
-	docs, err := indexer.fowrdIndex.BatchGet(keys)
+	docs, err := indexer.forwardIndex.BatchGet(keys)
 	if err != nil {
 		util.Log.Printf("Search from forward index error: %v", err)
 	}
@@ -147,7 +149,7 @@ func (indexer *Indexer) Search(querys *types.TermQuery, onFlag, offFlag uint64, 
 
 func (Indexer *Indexer) Count() int {
 	n := 0
-	Indexer.fowrdIndex.IterKey(func(k []byte) error {
+	Indexer.forwardIndex.IterKey(func(k []byte) error {
 		n++
 		return nil
 	})

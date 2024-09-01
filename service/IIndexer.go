@@ -1,7 +1,7 @@
 package service
 
 import (
-	"MiniES/types"
+	"ElectricSearch/types"
 )
 
 type IIndexer interface {

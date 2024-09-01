@@ -6,7 +6,8 @@ import (
 	"path"
 	"sync/atomic"
 
-	"MiniES/util"
+	"ElectricSearch/util"
+
 	"github.com/dgraph-io/badger/v4"
 )
 

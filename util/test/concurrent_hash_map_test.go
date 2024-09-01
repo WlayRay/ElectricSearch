@@ -1,7 +1,7 @@
 package utiltest
 
 import (
-	"MiniES/util"
+	"ElectricSearch/util"
 	"fmt"
 	"math/rand"
 	"strconv"

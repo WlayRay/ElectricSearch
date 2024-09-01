@@ -5,7 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"MiniES/internal/reverse_index"
+	reverseindex "ElectricSearch/internal/reverse_index"
+
 	"github.com/huandu/skiplist"
 )
 

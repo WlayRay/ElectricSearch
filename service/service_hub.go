@@ -1,7 +1,7 @@
 package service
 
 import (
-	"MiniES/util"
+	"ElectricSearch/util"
 	"context"
 	"strings"
 	"sync"
@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	SERVICE_ROOT_PATH = "/MiniES/index" // etcd key的前缀
+	SERVICE_ROOT_PATH = "/ElectricSearch/index" // etcd key的前缀
 )
 
 // 服务注册中心

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"MiniES/util"
+	"ElectricSearch/util"
 )
 
 // TestIntToBytes 测试 IntToBytes 函数

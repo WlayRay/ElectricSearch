@@ -3,8 +3,8 @@ package kvdbtest
 import (
 	"testing"
 
-	"MiniES/internal/kvdb"
-	"MiniES/util"
+	"ElectricSearch/internal/kvdb"
+	"ElectricSearch/util"
 )
 
 func TestBadger(t *testing.T) {
@@ -18,5 +18,3 @@ func TestBadger(t *testing.T) {
 
 	t.Run("badger_test", testPipeline)
 }
-
-

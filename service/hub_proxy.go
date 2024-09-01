@@ -1,7 +1,7 @@
 package service
 
 import (
-	"MiniES/util"
+	"ElectricSearch/util"
 	"context"
 	"strings"
 	"sync"
@@ -16,7 +16,7 @@ type IServiceHub interface {
 	UnRegist(service, endpoint string) error                                         // 注销服务
 	GetServiceEndpoints(service string) []string                                     // 服务发现
 	GetServiceEndpoint(service string) string                                        // 根据负载均衡获取一台服务的endpoint
-	Close()                                                                           // 关闭etcd连接
+	Close()                                                                          // 关闭etcd连接
 }
 
 // 代理模式，对ServiceHub做一层代理，提供缓存和限流保护
@@ -53,7 +53,7 @@ func (proxy *ServiceHubProxy) watchEndpointsOfService(service string) {
 	ctx := context.Background()
 	prefix := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/"
 	watchChan := proxy.client.Watch(ctx, prefix, etcdv3.WithPrefix())
-	util.Log.Printf("watch service %s", service)
+	util.Log.Printf("watch service: %s", service)
 	go func() {
 		for response := range watchChan {
 			for _, event := range response.Events {

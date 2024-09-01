@@ -1,7 +1,7 @@
 package reverseindex
 
 import (
-	"MiniES/types"
+	"ElectricSearch/types"
 )
 
 type IReverseIndex interface {

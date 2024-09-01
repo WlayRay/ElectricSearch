@@ -3,8 +3,8 @@ package kvdbtest
 import (
 	"testing"
 
-	"MiniES/internal/kvdb"
-	"MiniES/util"
+	"ElectricSearch/internal/kvdb"
+	"ElectricSearch/util"
 )
 
 func TestBolt(t *testing.T) {
@@ -18,4 +18,3 @@ func TestBolt(t *testing.T) {
 
 	t.Run("bolt_test", testPipeline)
 }
-

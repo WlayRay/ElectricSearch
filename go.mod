@@ -1,4 +1,4 @@
-module MiniES
+module ElectricSearch
 
 go 1.22.3
 

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"MiniES/types"
-	"MiniES/util"
+	"ElectricSearch/types"
+	"ElectricSearch/util"
 	"context"
 	"fmt"
 	"time"
@@ -31,6 +31,7 @@ func (service *IndexServiceWorker) Regist(etcdEndpoint []string, servicePort, he
 			return fmt.Errorf("invalid listen port %d, should more than 1024", servicePort)
 		}
 		selfLocalIp, err := util.GetLocalIP()
+		selfLocalIp = "127.0.0.1" // 仅在本机模拟分布式部署用
 		if err != nil {
 			panic(err)
 		}
@@ -58,8 +59,8 @@ func (service *IndexServiceWorker) AddDoc(ctx context.Context, doc *types.Docume
 }
 
 // 从索引上删除文档
-func (service *IndexServiceWorker) DeleteDoc(ctx context.Context, docId string) (*AffectedCount, error) {
-	n := service.Indexer.DeleteDoc(docId)
+func (service *IndexServiceWorker) DeleteDoc(ctx context.Context, docId *DocId) (*AffectedCount, error) {
+	n := service.Indexer.DeleteDoc(docId.DocId)
 	return &AffectedCount{uint32(n)}, nil
 }
 
@@ -69,7 +70,7 @@ func (service *IndexServiceWorker) Search(ctx context.Context, request *SearchRe
 	return &SearchResponse{Documents: documents}, nil
 }
 
-func (service *IndexServiceWorker) Count(ctx context.Context) (*AffectedCount, error) {
+func (service *IndexServiceWorker) Count(ctx context.Context, request *CountRequest) (*AffectedCount, error) {
 	n := service.Indexer.Count()
 	return &AffectedCount{Count: uint32(n)}, nil
 }

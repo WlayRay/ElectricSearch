@@ -1,7 +1,7 @@
 package termquerytest
 
 import (
-	"MiniES/types"
+	"ElectricSearch/types"
 	"fmt"
 	"testing"
 )

@@ -1,7 +1,7 @@
 package servicetest
 
 import (
-	"MiniES/service"
+	"ElectricSearch/service"
 	"fmt"
 	"time"
 
@@ -25,7 +25,7 @@ func TestGetServiceEndpointByProxy(t *testing.T) {
 		_ = proxy.GetServiceEndpoints(serviceName)
 	}
 
-	time.Sleep(1 * time.Second) 
+	time.Sleep(1 * time.Second)
 	for i := 0; i < qps+5; i++ { // 桶里只有10个令牌，后五次访问会失败
 		endpoints := proxy.GetServiceEndpoints(serviceName)
 		fmt.Printf("%d endpoints: %v\n", len(Endpoints), endpoints)
