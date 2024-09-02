@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"ElectricSearch/service"
-	"ElectricSearch/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/service"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
 
 	"google.golang.org/grpc"
 )

@@ -1,13 +1,14 @@
 package service
 
 import (
-	"ElectricSearch/internal/kvdb"
-	reverseindex "ElectricSearch/internal/reverse_index"
-	"ElectricSearch/types"
-	"ElectricSearch/util"
 	"bytes"
 	"encoding/gob"
 	"strings"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/internal/kvdb"
+	reverseindex "github.com/WlayRay/ElectricSearch/v1.0.0/internal/reverse_index"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 
 	"github.com/dgryski/go-farm"
 )

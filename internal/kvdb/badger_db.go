@@ -6,7 +6,7 @@ import (
 	"path"
 	"sync/atomic"
 
-	"ElectricSearch/util"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 
 	"github.com/dgraph-io/badger/v4"
 )

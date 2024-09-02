@@ -1,9 +1,10 @@
 package termquerytest
 
 import (
-	"ElectricSearch/types"
 	"fmt"
 	"testing"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
 )
 
 const FIELD = ""

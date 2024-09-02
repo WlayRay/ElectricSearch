@@ -1,10 +1,11 @@
 package reverseindex
 
 import (
-	"ElectricSearch/types"
-	"ElectricSearch/util"
 	"runtime"
 	"sync"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 
 	"github.com/dgryski/go-farm"
 	"github.com/huandu/skiplist"

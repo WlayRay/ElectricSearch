@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"ElectricSearch/service"
-	"ElectricSearch/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/service"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -28,8 +28,8 @@ func StartService() {
 
 	server := grpc.NewServer()
 	indexServiceWorker := new(service.IndexServiceWorker)
-	indexServiceWorker.Init() //不进行服务注册，client直连server
-	indexServiceWorker.Indexer.LoadFromIndexFile()                                         //从文件中加载索引数据
+	indexServiceWorker.Init()                      //不进行服务注册，client直连server
+	indexServiceWorker.Indexer.LoadFromIndexFile() //从文件中加载索引数据
 	// 注册服务的具体实现
 	service.RegisterIndexServiceServer(server, indexServiceWorker)
 	go func() {
@@ -127,4 +127,3 @@ func TestIndexService(t *testing.T) {
 		}
 	}
 }
-

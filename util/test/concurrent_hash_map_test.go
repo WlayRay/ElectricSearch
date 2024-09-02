@@ -1,12 +1,13 @@
 package utiltest
 
 import (
-	"ElectricSearch/util"
 	"fmt"
 	"math/rand"
 	"strconv"
 	"sync"
 	"testing"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 )
 
 var (

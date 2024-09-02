@@ -1,9 +1,10 @@
 package servicetest
 
 import (
-	"ElectricSearch/service"
 	"fmt"
 	"time"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/service"
 
 	// "fmt"
 	"testing"

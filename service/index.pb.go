@@ -4,7 +4,7 @@
 package service
 
 import (
-	types "ElectricSearch/types"
+	types "github.com/WlayRay/ElectricSearch/v1.0.0/types"
 	context "context"
 	fmt "fmt"
 	proto "github.com/gogo/protobuf/proto"

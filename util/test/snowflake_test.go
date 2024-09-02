@@ -1,10 +1,11 @@
 package utiltest
 
 import (
-	"ElectricSearch/util"
 	"fmt"
 	"sync"
 	"testing"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 
 	"github.com/dgryski/go-farm"
 )

@@ -1,13 +1,14 @@
 package service
 
 import (
-	"ElectricSearch/types"
-	"ElectricSearch/util"
 	"context"
 	"fmt"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 
 	grpc "google.golang.org/grpc"
 	"google.golang.org/grpc/connectivity"
@@ -39,7 +40,7 @@ func (sentinal *Sentinel) GetGrpcConn(endpoint string) *grpc.ClientConn {
 			return conn
 		}
 	}
-	
+
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 	conn, err := grpc.DialContext(
@@ -74,6 +75,7 @@ func (sentinel *Sentinel) AddDoc(doc types.Document) (int, error) {
 	util.Log.Printf("add doc %s to worker %s, affected %d", doc.Id, endpoint, affected.Count)
 	return int(affected.Count), nil
 }
+
 func (sentinel *Sentinel) DeleteDoc(docId string) int {
 	endpoints := sentinel.hub.GetServiceEndpoints(INDEX_SERVICE)
 	if len(endpoints) == 0 {

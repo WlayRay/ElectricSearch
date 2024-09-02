@@ -13,7 +13,7 @@ message TermQuery {
 }
 
 /*
-protoc -I=/mnt/c/Users/1213/Desktop/ElectricSearch/ElectricSearch/interface
+protoc -I=/mnt/c/Users/1213/Desktop/github.com/WlayRay/ElectricSearch/v1.0.0/github.com/WlayRay/ElectricSearch/v1.0.0/interface
 --gogofaster_out=./types --proto_path=./interface term_query.proto
 在windows上-I需使用绝对路径
 */

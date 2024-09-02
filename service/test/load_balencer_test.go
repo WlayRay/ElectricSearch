@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"ElectricSearch/service"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/service"
 )
 
 var (
@@ -16,7 +16,7 @@ var (
 )
 
 func testLB(balancer service.LoadBalancer) {
-	const P = 100 
+	const P = 100
 	const LOOP = 100
 	selected := make(chan string, P*LOOP)
 	wg := sync.WaitGroup{}

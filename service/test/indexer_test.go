@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"ElectricSearch/internal/kvdb"
-	"ElectricSearch/service"
-	"ElectricSearch/types"
-	"ElectricSearch/util"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/internal/kvdb"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/service"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 )
 
 type Book struct {

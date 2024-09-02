@@ -1,14 +1,15 @@
 package service
 
 import (
-	"ElectricSearch/internal/kvdb"
-	"ElectricSearch/types"
-	"ElectricSearch/util"
 	"context"
 	"fmt"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/internal/kvdb"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 )
 
 const (

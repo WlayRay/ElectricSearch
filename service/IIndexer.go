@@ -1,7 +1,7 @@
 package service
 
 import (
-	"ElectricSearch/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
 )
 
 type IIndexer interface {

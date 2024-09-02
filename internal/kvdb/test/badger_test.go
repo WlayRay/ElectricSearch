@@ -3,8 +3,8 @@ package kvdbtest
 import (
 	"testing"
 
-	"ElectricSearch/internal/kvdb"
-	"ElectricSearch/util"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/internal/kvdb"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 )
 
 func TestBadger(t *testing.T) {

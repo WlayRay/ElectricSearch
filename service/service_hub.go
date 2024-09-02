@@ -1,18 +1,19 @@
 package service
 
 import (
-	"ElectricSearch/util"
 	"context"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
 
 	"go.etcd.io/etcd/api/v3/v3rpc/rpctypes"
 	etcdv3 "go.etcd.io/etcd/client/v3"
 )
 
 const (
-	SERVICE_ROOT_PATH = "/ElectricSearch/index" // etcd key的前缀
+	SERVICE_ROOT_PATH = "/github.com/WlayRay/ElectricSearch/v1.0.0/index" // etcd key的前缀
 )
 
 // 服务注册中心

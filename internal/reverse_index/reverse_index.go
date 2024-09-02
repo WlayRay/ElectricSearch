@@ -1,7 +1,7 @@
 package reverseindex
 
 import (
-	"ElectricSearch/types"
+	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
 )
 
 type IReverseIndex interface {
