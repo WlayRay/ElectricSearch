@@ -7,10 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"ElectricSearch/internal/kvdb"
 	"ElectricSearch/service"
 	"ElectricSearch/types"
-	"ElectricSearch/util"
+
 	"google.golang.org/grpc"
 )
 
@@ -31,7 +30,7 @@ func StartWorkers() {
 
 		server := grpc.NewServer()
 		indexServiceWorker := new(service.IndexServiceWorker)
-		indexServiceWorker.Init(50000, kvdb.BADGER, util.RootPath+"data/local_db/book_badger_"+strconv.Itoa(i))
+		indexServiceWorker.Init(i)
 		indexServiceWorker.Indexer.LoadFromIndexFile() //从文件中加载索引数据
 		// 注册服务的具体实现
 		service.RegisterIndexServiceServer(server, indexServiceWorker)

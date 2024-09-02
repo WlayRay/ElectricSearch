@@ -1,10 +1,13 @@
 package service
 
 import (
+	"ElectricSearch/internal/kvdb"
 	"ElectricSearch/types"
 	"ElectricSearch/util"
 	"context"
 	"fmt"
+	"strconv"
+	"strings"
 	"time"
 )
 
@@ -19,9 +22,39 @@ type IndexServiceWorker struct {
 	selfAddr string
 }
 
-func (service *IndexServiceWorker) Init(DocNumEstimate int, dbtype int, Data string) error {
+func (service *IndexServiceWorker) Init(workerIndex ...int) error {
 	service.Indexer = new(Indexer)
-	return service.Indexer.Init(DocNumEstimate, dbtype, Data)
+
+	var docNumEstimate, dbType int
+	var dbPath string
+	if v, ok := util.Configurations["document-estimate-num"]; ok {
+		docNumEstimate, _ = strconv.Atoi(v)
+	} else {
+		docNumEstimate = 50000
+	}
+	if v, ok := util.Configurations["db-path"]; ok {
+		dbPath = util.RootPath + strings.Replace(v, "\"", "", -1)
+		if dbPath[len(dbPath)-1] != '/' {
+			dbPath += "/"
+		}
+		if v, ok := util.Configurations["db-type"]; ok {
+			switch v {
+			case "badger":
+				dbType = kvdb.BADGER
+				dbPath += "badger_db"
+			default:
+				dbType = kvdb.BOLT
+				dbPath += "bolt_db/bolt"
+			}
+		} else {
+			dbType = kvdb.BOLT
+		}
+		util.Log.Println("db path:", dbPath)
+		if workerIndex != nil {
+			dbPath += "_" + strconv.Itoa(workerIndex[0])
+		}
+	}
+	return service.Indexer.Init(docNumEstimate, dbType, dbPath)
 }
 
 func (service *IndexServiceWorker) Regist(etcdEndpoint []string, servicePort, heartRate int) error {

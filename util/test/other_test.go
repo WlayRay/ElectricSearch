@@ -93,3 +93,11 @@ func TestDisassembleUint64(t *testing.T) {
 func TestGetLocalIP(t *testing.T) {
 	fmt.Println(util.GetLocalIP())
 }
+
+func TestInit(t *testing.T) {
+	fmt.Printf("rootpath: %v\n", util.RootPath)
+	fmt.Printf("configurations:\n")
+	for k, v := range util.Configurations {
+		fmt.Printf(" %v: %v\n", k, v)
+	}
+}

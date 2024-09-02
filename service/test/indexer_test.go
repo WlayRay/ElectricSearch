@@ -51,7 +51,7 @@ var (
 	// dbType=kvdb.BOLT
 	// dbPath=util.RootPath+"data/local_db/book_bolt"
 	dbType = kvdb.BADGER
-	dbPath = util.RootPath + "data/local_db/book_badger"
+	dbPath = util.RootPath + "data/local_db/items_badger"
 )
 
 func TestSearch(t *testing.T) {
@@ -226,4 +226,3 @@ func TestLoadFromIndexFile(t *testing.T) {
 	}
 	fmt.Println(strings.Repeat("-", 50))
 }
-

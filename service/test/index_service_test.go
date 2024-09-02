@@ -8,10 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"ElectricSearch/internal/kvdb"
 	"ElectricSearch/service"
 	"ElectricSearch/types"
-	"ElectricSearch/util"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -30,7 +28,7 @@ func StartService() {
 
 	server := grpc.NewServer()
 	indexServiceWorker := new(service.IndexServiceWorker)
-	indexServiceWorker.Init(50000, kvdb.BADGER, util.RootPath+"data/local_db/book_badger") //不进行服务注册，client直连server
+	indexServiceWorker.Init() //不进行服务注册，client直连server
 	indexServiceWorker.Indexer.LoadFromIndexFile()                                         //从文件中加载索引数据
 	// 注册服务的具体实现
 	service.RegisterIndexServiceServer(server, indexServiceWorker)
