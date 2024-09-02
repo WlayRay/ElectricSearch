@@ -4,8 +4,8 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
-	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
+	"github.com/WlayRay/ElectricSearch/types"
+	"github.com/WlayRay/ElectricSearch/util"
 
 	"github.com/dgryski/go-farm"
 	"github.com/huandu/skiplist"

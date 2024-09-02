@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
+	"github.com/WlayRay/ElectricSearch/types"
 )
 
 const FIELD = ""

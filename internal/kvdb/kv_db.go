@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
+	"github.com/WlayRay/ElectricSearch/util"
 )
 
 const (
@@ -53,7 +53,7 @@ func GetKetValueDB(dbType int, path string) (IKeyValueDB, error) {
 	case BADGER:
 		db = new(Badger).WithDataPath(path)
 	default: //默认使用bolt
-		db = new(Bolt).WithDataPath(path).WithBucket("github.com/WlayRay/ElectricSearch/v1.0.0")
+		db = new(Bolt).WithDataPath(path).WithBucket("github.com/WlayRay/ElectricSearch")
 	}
 	err = db.Open()
 	return db, err

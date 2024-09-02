@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/service"
-	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
+	"github.com/WlayRay/ElectricSearch/service"
+	"github.com/WlayRay/ElectricSearch/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

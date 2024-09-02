@@ -5,4 +5,4 @@ import (
 	"os"
 )
 
-var Log = log.New(os.Stdout, "[github.com/WlayRay/ElectricSearch/v1.0.0]", log.Llongfile|log.Ldate|log.Ltime)
+var Log = log.New(os.Stdout, "[github.com/WlayRay/ElectricSearch]", log.Llongfile|log.Ldate|log.Ltime)

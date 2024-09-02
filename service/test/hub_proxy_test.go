@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/service"
+	"github.com/WlayRay/ElectricSearch/service"
 
 	// "fmt"
 	"testing"

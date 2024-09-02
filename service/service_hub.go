@@ -6,14 +6,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
+	"github.com/WlayRay/ElectricSearch/util"
 
 	"go.etcd.io/etcd/api/v3/v3rpc/rpctypes"
 	etcdv3 "go.etcd.io/etcd/client/v3"
 )
 
 const (
-	SERVICE_ROOT_PATH = "/github.com/WlayRay/ElectricSearch/v1.0.0/index" // etcd key的前缀
+	SERVICE_ROOT_PATH = "/github.com/WlayRay/ElectricSearch/index" // etcd key的前缀
 )
 
 // 服务注册中心

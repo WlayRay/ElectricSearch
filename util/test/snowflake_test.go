@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
+	"github.com/WlayRay/ElectricSearch/util"
 
 	"github.com/dgryski/go-farm"
 )

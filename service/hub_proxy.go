@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
+	"github.com/WlayRay/ElectricSearch/util"
 
 	etcdv3 "go.etcd.io/etcd/client/v3"
 	"golang.org/x/time/rate"

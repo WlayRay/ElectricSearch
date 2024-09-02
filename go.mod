@@ -1,4 +1,4 @@
-module github.com/WlayRay/ElectricSearch/v1.0.0
+module github.com/WlayRay/ElectricSearch
 
 go 1.22.3
 

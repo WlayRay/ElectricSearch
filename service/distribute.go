@@ -7,8 +7,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/types"
-	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
+	"github.com/WlayRay/ElectricSearch/types"
+	"github.com/WlayRay/ElectricSearch/util"
 
 	grpc "google.golang.org/grpc"
 	"google.golang.org/grpc/connectivity"

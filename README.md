@@ -1,4 +1,4 @@
-# github.com/WlayRay/ElectricSearch/v1.0.0索引框架
+# ElectricSearch索引框架
 
 纯go语言实现的搜索引擎索引框架，支持单机部署，分布式部署（分布式部署需要etcd作为服务注册中心）
 

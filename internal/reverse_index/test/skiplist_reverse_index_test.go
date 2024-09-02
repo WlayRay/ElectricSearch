@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	reverseindex "github.com/WlayRay/ElectricSearch/v1.0.0/internal/reverse_index"
+	reverseindex "github.com/WlayRay/ElectricSearch/internal/reverse_index"
 
 	"github.com/huandu/skiplist"
 )

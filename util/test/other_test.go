@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/WlayRay/ElectricSearch/v1.0.0/util"
+	"github.com/WlayRay/ElectricSearch/util"
 )
 
 // TestIntToBytes 测试 IntToBytes 函数
