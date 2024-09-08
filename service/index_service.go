@@ -28,16 +28,19 @@ func (service *IndexServiceWorker) Init(workerIndex ...int) error {
 
 	var docNumEstimate, dbType int
 	var dbPath string
+	// 初始化预估最大文档数量
 	if v, ok := util.Configurations["document-estimate-num"]; ok {
 		docNumEstimate, _ = strconv.Atoi(v)
 	} else {
 		docNumEstimate = 50000
 	}
+	// 初始化正排索引文件存储路径
 	if v, ok := util.Configurations["db-path"]; ok {
 		dbPath = util.RootPath + strings.Replace(v, "\"", "", -1)
 		if dbPath[len(dbPath)-1] != '/' {
 			dbPath += "/"
 		}
+		// 初始化正排索引使用的数据库类型
 		if v, ok := util.Configurations["db-type"]; ok {
 			switch v {
 			case "badger":
@@ -64,13 +67,20 @@ func (service *IndexServiceWorker) Regist(etcdEndpoint []string, servicePort, he
 		if servicePort < 1024 {
 			return fmt.Errorf("invalid listen port %d, should more than 1024", servicePort)
 		}
-		selfLocalIp, err := util.GetLocalIP()
-		selfLocalIp = "127.0.0.1" // 仅在本机模拟分布式部署用
+		/*selfLocalIp, err := util.GetLocalIP()
 		if err != nil {
 			panic(err)
-		}
+		}*/
+		selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
 		service.selfAddr = fmt.Sprintf("%s:%d", selfLocalIp, servicePort)
 		hub := GetServiceHub(etcdEndpoint, int64(heartRate))
+
+		// index_service, ok := util.Configurations["index-service"]
+		// if !ok {
+		// 	panic("index-service not found in configurations!")
+		// }
+		// index_service = strings.Replace(index_service, "\"", "", -1)
+
 		leaseId, err := hub.Regist(INDEX_SERVICE, service.selfAddr, 0)
 		if err != nil {
 			panic(err)

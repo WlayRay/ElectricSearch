@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package raybox.video;
+
+option go_package = "common";
+
+message BiliBiliVideo {
+  string Id = 1;
+  string Title = 2;
+  int64 PostTime = 3;
+  string Author = 4;
+  int32 ViewCount = 5;
+  int32 LikeCount = 6;
+  int32 CoinCount = 7;
+  int32 FavoriteCount = 8;
+  int32 shareCount = 9;
+  repeated string Keywords = 10;
+}
+
+// protoc --gogofaster_out=./ --proto_path=./ video.proto

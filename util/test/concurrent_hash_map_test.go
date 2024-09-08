@@ -122,7 +122,8 @@ func BenchmarkSynMap(b *testing.B) {
 	}
 }
 
-// go test -run=none -bench=Benchmark.*Map -benchmem -count=1 -benchtime=100x ./util/test/concurrent_hash_map_test.go
+// go test -benchmem -run=^$ -bench ^*Map$ github.com/WlayRay/ElectricSearch/util/test
+
 /*
 goos: linux
 goarch: amd64
@@ -134,6 +135,20 @@ ok      command-line-arguments  16.469s
 
 Author: WlayRay
 Date:	2024/08/06
+*/
+
+/*
+goos: windows
+goarch: amd64
+pkg: github.com/WlayRay/ElectricSearch/util/test
+cpu: AMD Ryzen 7 5800H with Radeon Graphics
+BenchmarkConMap-16           100          41972393 ns/op         4583327 B/op    1078889 allocs/op
+BenchmarkSynMap-16           100         156763248 ns/op        92008714 B/op    8437746 allocs/op
+PASS
+ok      github.com/WlayRay/ElectricSearch/util/test     20.894s
+
+Author: WlayRay
+Date:	2024/09/05
 */
 
 func TestConcurrentHashMapIterator(t *testing.T) {

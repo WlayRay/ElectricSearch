@@ -21,7 +21,7 @@ type Indexer struct {
 }
 
 func (indexer *Indexer) Init(DocNumEstimate int, dbtype int, Data string) error {
-	db, err := kvdb.GetKetValueDB(dbtype, Data)
+	db, err := kvdb.GetKeyValueDB(dbtype, Data)
 	if err != nil {
 		return err
 	}

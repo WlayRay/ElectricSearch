@@ -30,7 +30,7 @@ type IKeyValueDB interface {
 }
 
 // 工厂模式，可以根据传入的dbType构建不同的数据库产品，返回产品的接口
-func GetKetValueDB(dbType int, path string) (IKeyValueDB, error) {
+func GetKeyValueDB(dbType int, path string) (IKeyValueDB, error) {
 	paths := strings.Split(path, "/")
 	parentPath := strings.Join(paths[:len(paths)-1], "/") //获取父目录
 
