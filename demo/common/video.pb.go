@@ -6,6 +6,7 @@ package common
 import (
 	fmt "fmt"
 	proto "github.com/gogo/protobuf/proto"
+	"google.golang.org/protobuf/reflect/protoreflect"
 	io "io"
 	math "math"
 	math_bits "math/bits"
@@ -33,6 +34,11 @@ type BiliBiliVideo struct {
 	FavoriteCount int32    `protobuf:"varint,8,opt,name=FavoriteCount,proto3" json:"FavoriteCount,omitempty"`
 	ShareCount    int32    `protobuf:"varint,9,opt,name=shareCount,proto3" json:"shareCount,omitempty"`
 	Keywords      []string `protobuf:"bytes,10,rep,name=Keywords,proto3" json:"Keywords,omitempty"`
+}
+
+// ProtoReflect implements protoreflect.ProtoMessage.
+func (m *BiliBiliVideo) ProtoReflect() protoreflect.Message {
+	panic("unimplemented")
 }
 
 func (m *BiliBiliVideo) Reset()         { *m = BiliBiliVideo{} }

@@ -21,7 +21,6 @@ const (
 
 func GetCategoriesBits(keywords []string) uint64 {
 	var bits uint64
-
 	for _, keyword := range keywords {
 		switch strings.ToLower(keyword) {
 		case "鬼畜":

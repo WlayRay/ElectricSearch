@@ -1,17 +1,15 @@
 package handler
 
 import (
-	// "context"
+	"context"
 	"log"
 	"net/http"
 	"strings"
 
 	"github.com/WlayRay/ElectricSearch/demo/common"
+	"github.com/WlayRay/ElectricSearch/demo/internal"
 	"github.com/WlayRay/ElectricSearch/service"
-	"github.com/WlayRay/ElectricSearch/types"
-	"github.com/WlayRay/ElectricSearch/util"
 	"github.com/gin-gonic/gin"
-	"github.com/gogo/protobuf/proto"
 )
 
 var Indexer service.IIndexer
@@ -27,43 +25,7 @@ func getKeywords(words []string) []string {
 	return keywords
 }
 
-// 搜索接口
-func Search(ctx *gin.Context) {
-	var searchRequest common.SearchRequest
-	if err := ctx.ShouldBindBodyWithJSON(&searchRequest); err != nil {
-		log.Printf("search request bind error: %v", err)
-		ctx.JSON(400, gin.H{
-			"error": "invalid request json!",
-		})
-		return
-	}
-
-	keywords := getKeywords(searchRequest.Keywords)
-	if len(keywords) == 0 || len(searchRequest.Author) == 0 {
-		ctx.String(http.StatusBadRequest, "关键词和作者不能同时为空")
-		return
-	}
-
-	query := new(types.TermQuery)
-	for _, keyword := range keywords {
-		query = query.And(types.NewTermQuery("content", keyword))
-	}
-	query = query.And(types.NewTermQuery("author", searchRequest.Author))
-	orFlags := []uint64{common.GetCategoriesBits(searchRequest.Categories)}
-	docs := Indexer.Search(query, 0, 0, orFlags)
-	videos := make([]common.BiliBiliVideo, 0, len(docs))
-	for _, doc := range docs {
-		var video common.BiliBiliVideo
-		if err := proto.Unmarshal(doc.Bytes, &video); err == nil {
-			if video.ViewCount >= int32(searchRequest.MinViewCount) && video.ViewCount <= int32(searchRequest.MaxViewCount) {
-				videos = append(videos, video)
-			}
-		}
-	}
-	util.Log.Printf("return %d videos", len(videos))
-	ctx.JSON(http.StatusOK, videos)
-}
-
+// 全站搜索接口
 func SearchAll(ctx *gin.Context) {
 	var searchRequest common.SearchRequest
 	if err := ctx.ShouldBindJSON(&searchRequest); err != nil {
@@ -80,11 +42,49 @@ func SearchAll(ctx *gin.Context) {
 		return
 	}
 
-	// searchCtx := common.VideoSearchContext{
-	// 	Ctx:     context.Background(),
-	// 	Request: &searchRequest,
-	// 	Indexer: Indexer,
-	// }
+	searchCtx := &common.VideoSearchContext{
+		Ctx:     context.Background(),
+		Request: &searchRequest,
+		Indexer: Indexer,
+	}
 
+	searcher := internal.NewAllVideoSearcher()
+	videos := searcher.Search(searchCtx)
 
+	ctx.JSON(http.StatusOK, videos)
+}
+
+// UP搜索自己视频的接口
+func SearchByAuthor(ctx *gin.Context) {
+	var searchRequest common.SearchRequest
+	if err := ctx.ShouldBindJSON(&searchRequest); err != nil {
+		log.Printf("bind request parameter failed: %s", err)
+		ctx.JSON(400, gin.H{
+			"error": "invalid request json!",
+		})
+		return
+	}
+
+	searchRequest.Keywords = getKeywords(searchRequest.Keywords)
+	if len(searchRequest.Keywords) == 0 {
+		ctx.String(http.StatusBadRequest, "关键词不能为空")
+		return
+	}
+
+	userName, ok := ctx.Value("user_name").(string)
+	if !ok || len(userName) == 0 {
+		ctx.String(http.StatusBadRequest, "用户未登录")
+		return
+	}
+
+	searchCtx := &common.VideoSearchContext{
+		Ctx:     context.Background(),
+		Request: &searchRequest,
+		Indexer: Indexer,
+	}
+
+	searcher := internal.NewUpVideoSearcher()
+	videos := searcher.Search(searchCtx)
+
+	ctx.JSON(http.StatusOK, videos)
 }
