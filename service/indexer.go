@@ -20,8 +20,8 @@ type Indexer struct {
 	worker       *util.Worker // 雪花算法
 }
 
-func (indexer *Indexer) Init(DocNumEstimate int, dbtype int, Data string) error {
-	db, err := kvdb.GetKeyValueDB(dbtype, Data)
+func (indexer *Indexer) Init(DocNumEstimate int, dbtype int, DataDir string) error {
+	db, err := kvdb.GetKeyValueDB(dbtype, DataDir)
 	if err != nil {
 		return err
 	}

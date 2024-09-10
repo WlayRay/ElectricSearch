@@ -2,6 +2,7 @@ package common
 
 import (
 	"encoding/csv"
+	fmt "fmt"
 	"io"
 	"log"
 	"os"
@@ -54,7 +55,10 @@ func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorker
 		if len(record[2]) > 4 {
 			t, err := time.ParseInLocation("2006-01-02 15:04:05", record[2], loc)
 			if err != nil {
-				log.Printf("parse time %s failed, err: %v", record[2], err)
+				for _, v := range record {
+					fmt.Printf("%+v\n", v)
+				}
+				log.Printf("parse record \n%v\n failed record len: %d, in %d line, err: %v", record, len(record), progress+1, err)
 			} else {
 				video.PostTime = t.Unix()
 			}
@@ -94,6 +98,7 @@ func AddVideoToIndex(video *BiliBiliVideo, indexer service.IIndexer) {
 		log.Printf("serielize video %s failed, err: %v", video.Id, err)
 		return
 	}
+
 	keywords := make([]*types.Keyword, 0, len(video.Keywords))
 	for _, keyword := range video.Keywords {
 		keywords = append(keywords, &types.Keyword{Field: "content", Word: strings.ToLower(keyword)})
