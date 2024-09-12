@@ -25,6 +25,7 @@ func WebServerInit(mode int) {
 		handler.Indexer = standaloneIndexer
 	case 3:
 	default:
+		panic("Unsupported mode")
 	}
 }
 

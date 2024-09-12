@@ -23,6 +23,51 @@ var (
 	port                = flag.Int("port", 0, "server的工作端口")
 )
 
+func startGin() {
+	engine := gin.Default()
+	gin.SetMode(gin.ReleaseMode)
+
+	// engine.Static("js", "demo/frontend/js")
+	// engine.Static("css", "demo/frontend/css")
+	// engine.Static("img", "demo/frontend/img")
+	// engine.LoadHTMLFiles("demo/frontend/search.html")
+
+	engine.Use(handler.GetUserInfo)
+	// categoriesBits := [...]string{"鬼畜", "记录", "科技", "美食", "音乐", "影视", "娱乐", "游戏", "综艺", "知识", "资讯", "番剧", "舞蹈", "游记"}
+	// engine.GET("/", func(ctx *gin.Context) {
+	// 	ctx.HTML(http.StatusOK, "search.html", categoriesBits)
+	// })
+
+	engine.POST("/search", handler.SearchAll)
+	engine.POST("/up_search", handler.SearchByAuthor)
+	if err := engine.Run("127.0.0.1:" + strconv.Itoa(*port)); err != nil {
+		util.Log.Println("Server failed to start:", err)
+		return
+	}
+	util.Log.Println("Server started succeed at port:", *port)
+}
+
+func main() {
+	flag.Parse()
+
+	switch mode {
+	case 1, 3:
+		WebServerMain(mode)
+		startGin()
+	case 2:
+
+	}
+	// fmt.Println("mode:", mode)
+	// fmt.Println("documentEstimateNum:", documentEstimateNum)
+	// fmt.Println("dbType:", dbType)
+	// fmt.Println("dbPath:", dbPath)
+	// fmt.Println("rebuildIndex:", rebuildIndex)
+	// fmt.Println("csvFilePath:", csvFilePath)
+	// fmt.Println("port:", *port)
+}
+
+//go run ./demo/main -port=7887 
+
 func init() {
 	// 初始化部署模式
 	if v, ok := util.Configurations["mode"]; !ok {
@@ -51,7 +96,7 @@ func init() {
 	//分布式模式下的worker总数
 	if v, ok := util.Configurations["total-workers"]; !ok {
 		panic("totalWorkers not found in configurations!")
-	} else {
+	} else if mode == 2 {
 		totalWorkers, _ = strconv.Atoi(v)
 		if totalWorkers < 1 {
 			panic("totalWorkers invalid!")
@@ -61,7 +106,7 @@ func init() {
 	//当前worker标号（从0开始）
 	if v, ok := util.Configurations["worker-index"]; !ok {
 		panic("workerIndex not found in configurations!")
-	} else {
+	} else if mode == 2 {
 		workerIndex, _ = strconv.Atoi(v)
 		if workerIndex < 0 || workerIndex > totalWorkers {
 			panic("workerIndex invalid!")
@@ -69,10 +114,11 @@ func init() {
 	}
 
 	//初始化文档所用CSV文件的路径
-	if v, ok := util.Configurations["csv-file-path"]; !ok {
+	if v, ok := util.Configurations["csv-file"]; !ok {
 		panic("csvFilePath not found in configurations!")
 	} else {
 		csvFilePath = util.RootPath + strings.Replace(v, "\"", "", -1)
+		util.Log.Printf("csvFilePath: %s", csvFilePath)
 	}
 
 	//正排索引存储文件的保存路径
@@ -102,37 +148,3 @@ func init() {
 		documentEstimateNum, _ = strconv.Atoi(v)
 	}
 }
-
-func startGin() {
-	engine := gin.Default()
-	gin.SetMode(gin.ReleaseMode)
-
-	// engine.Static("js", "demo/frontend/js")
-	// engine.Static("css", "demo/frontend/css")
-	// engine.Static("img", "demo/frontend/img")
-	// engine.LoadHTMLFiles("demo/frontend/search.html")
-
-	engine.Use(handler.GetUserInfo)
-	// categoriesBits := [...]string{"鬼畜", "记录", "科技", "美食", "音乐", "影视", "娱乐", "游戏", "综艺", "知识", "资讯", "番剧", "舞蹈", "游记"}
-	// engine.GET("/", func(ctx *gin.Context) {
-	// 	ctx.HTML(http.StatusOK, "search.html", categoriesBits)
-	// })
-
-	engine.POST("/search", handler.SearchAll)
-	engine.POST("/up_search", handler.SearchByAuthor)
-	engine.Run("127.0.0.1" + strconv.Itoa(*port))
-}
-
-func main() {
-	flag.Parse()
-
-	switch mode {
-	case 1, 3:
-		WebServerMain(mode)
-		startGin()
-	case 2:
-
-	}
-}
-
-// go run ./demo/main -mode=1 -index=true -port=5678 -dbPath=data/local_db/video_bolt

@@ -1,6 +1,8 @@
 package filter
 
-import "github.com/WlayRay/ElectricSearch/demo/common"
+import (
+	"github.com/WlayRay/ElectricSearch/demo/common"
+)
 
 type ViewFilter struct{}
 

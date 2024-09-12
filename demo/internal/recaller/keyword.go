@@ -5,7 +5,7 @@ import (
 
 	"github.com/WlayRay/ElectricSearch/demo/common"
 	"github.com/WlayRay/ElectricSearch/types"
-	"google.golang.org/protobuf/proto"
+	"github.com/gogo/protobuf/proto"
 )
 
 type KeywordRecaller struct{}
@@ -21,11 +21,12 @@ func (KeywordRecaller) Recall(ctx *common.VideoSearchContext) []*common.BiliBili
 	if indexer == nil {
 		return nil
 	}
+
 	keywords := request.Keywords
 	query := new(types.TermQuery)
 	if len(keywords) > 0 {
 		for _, keyword := range keywords {
-			query.And(types.NewTermQuery("content", keyword))
+			query = query.And(types.NewTermQuery("content", keyword))
 		}
 	}
 	if len(request.Author) > 0 {
@@ -33,10 +34,11 @@ func (KeywordRecaller) Recall(ctx *common.VideoSearchContext) []*common.BiliBili
 	}
 	orFlags := []uint64{(common.GetCategoriesBits(request.Categories))}
 	docs := indexer.Search(query, 0, 0, orFlags)
+
 	videos := make([]*common.BiliBiliVideo, 0, len(docs))
 	for _, doc := range docs {
 		var video common.BiliBiliVideo
-		if err := proto.Unmarshal(doc.Bytes, &video); err != nil {
+		if err := proto.Unmarshal(doc.Bytes, &video); err == nil {
 			videos = append(videos, &video)
 		}
 	}

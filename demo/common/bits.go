@@ -3,7 +3,9 @@ package common
 import "strings"
 
 const (
-	GUI_CHU = 1 << iota
+	BIAN_CHENG = 1 << iota
+	CHENG_XU_YUAN
+	GUI_CHU
 	JI_LU
 	KE_JI
 	MEI_SHI
@@ -15,7 +17,6 @@ const (
 	ZHI_SHI
 	ZI_XUN
 	FAN_JU
-	WU_DAO
 	YOU_XI
 )
 
@@ -23,6 +24,8 @@ func GetCategoriesBits(keywords []string) uint64 {
 	var bits uint64
 	for _, keyword := range keywords {
 		switch strings.ToLower(keyword) {
+		case "编程":
+			bits |= BIAN_CHENG
 		case "鬼畜":
 			bits |= GUI_CHU
 		case "纪录":
@@ -45,12 +48,10 @@ func GetCategoriesBits(keywords []string) uint64 {
 			bits |= ZHI_SHI
 		case "资讯":
 			bits |= ZI_XUN
-		case "番剧":
-			bits |= FAN_JU
-		case "舞蹈":
-			bits |= WU_DAO
 		case "游记":
 			bits |= YOU_XI
+		case "程序员":
+			bits |= CHENG_XU_YUAN
 		default:
 			// 不匹配任何关键词，不做处理
 		}

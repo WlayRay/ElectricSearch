@@ -2,7 +2,6 @@ package common
 
 import (
 	"encoding/csv"
-	fmt "fmt"
 	"io"
 	"log"
 	"os"
@@ -14,7 +13,7 @@ import (
 	"github.com/WlayRay/ElectricSearch/types"
 	"github.com/WlayRay/ElectricSearch/util"
 	"github.com/dgryski/go-farm"
-	proto "github.com/gogo/protobuf/proto"
+	"github.com/gogo/protobuf/proto"
 )
 
 func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorkers, workerIndex int) {
@@ -27,6 +26,8 @@ func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorker
 
 	loc, _ := time.LoadLocation("Asia/Shanghai")
 	reader := csv.NewReader(file)
+	reader.Comma = '|'       // 设置分隔符为竖线
+	reader.LazyQuotes = true // 允许不匹配的引号
 	progress := 0
 	for {
 		record, err := reader.Read()
@@ -55,9 +56,6 @@ func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorker
 		if len(record[2]) > 4 {
 			t, err := time.ParseInLocation("2006-01-02 15:04:05", record[2], loc)
 			if err != nil {
-				for _, v := range record {
-					fmt.Printf("%+v\n", v)
-				}
 				log.Printf("parse record \n%v\n failed record len: %d, in %d line, err: %v", record, len(record), progress+1, err)
 			} else {
 				video.PostTime = t.Unix()
@@ -85,6 +83,7 @@ func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorker
 		}
 		AddVideoToIndex(video, indexer)
 		progress++
+		// util.Log.Printf("add %d documents to index currently", progress)
 	}
 	util.Log.Printf("add %d documents to index totally", progress)
 }
@@ -92,6 +91,7 @@ func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorker
 func AddVideoToIndex(video *BiliBiliVideo, indexer service.IIndexer) {
 	doc := types.Document{Id: video.Id}
 	bs, err := proto.Marshal(video)
+
 	if err == nil {
 		doc.Bytes = bs
 	} else {

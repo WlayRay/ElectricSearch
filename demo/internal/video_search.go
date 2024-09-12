@@ -110,8 +110,8 @@ type UpVideoSearcher struct {
 	VideoSearcher
 }
 
-func NewUpVideoSearcher() *AllVideoSearcher {
-	searcher := new(AllVideoSearcher)
+func NewUpVideoSearcher() *UpVideoSearcher {
+	searcher := new(UpVideoSearcher)
 	searcher.WithRecaller(recaller.KeywordAuthorRecaller{})
 	searcher.WithFilter(filter.ViewFilter{})
 	return searcher

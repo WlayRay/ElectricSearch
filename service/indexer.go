@@ -129,23 +129,24 @@ func (indexer *Indexer) Search(querys *types.TermQuery, onFlag, offFlag uint64, 
 		util.Log.Printf("Search from forward index error: %v", err)
 	}
 
-	result := make([]*types.Document, 0, len(docs))
-	reader := bytes.NewReader(nil)
-	var doc types.Document
+	results := make([]*types.Document, 0, len(docs))
+	reader := bytes.NewReader([]byte{})
+	// var doc types.Document //千万别把接收每个文档的变量定义放在循环外
 	for _, docBytes := range docs {
 		if len(docBytes) > 0 {
 			reader.Reset(docBytes)
 			decoder := gob.NewDecoder(reader)
+			var doc types.Document //一定要把接收每个文档的变量定义放在循环内
 			err := decoder.Decode(&doc)
 			if err != nil {
 				util.Log.Printf("Decode error: %v", err)
 				continue
 			} else {
-				result = append(result, &doc)
+				results = append(results, &doc)
 			}
 		}
 	}
-	return result
+	return results
 }
 
 func (Indexer *Indexer) Count() int {

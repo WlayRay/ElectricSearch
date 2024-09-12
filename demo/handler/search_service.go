@@ -16,10 +16,10 @@ var Indexer service.IIndexer
 
 func getKeywords(words []string) []string {
 	keywords := make([]string, 0, len(words))
-	for _, keyword := range keywords {
-		word := strings.TrimSpace(strings.ToLower(keyword))
+	for _, word := range words {
+		keyword := strings.TrimSpace(strings.ToLower(word))
 		if word != "" {
-			keywords = append(keywords, word)
+			keywords = append(keywords, keyword)
 		}
 	}
 	return keywords
@@ -35,8 +35,8 @@ func SearchAll(ctx *gin.Context) {
 		})
 		return
 	}
-
 	searchRequest.Keywords = getKeywords(searchRequest.Keywords)
+
 	if len(searchRequest.Keywords) == 0 && len(searchRequest.Author) == 0 {
 		ctx.String(http.StatusBadRequest, "关键词和作者不能同时为空")
 		return
@@ -50,7 +50,6 @@ func SearchAll(ctx *gin.Context) {
 
 	searcher := internal.NewAllVideoSearcher()
 	videos := searcher.Search(searchCtx)
-
 	ctx.JSON(http.StatusOK, videos)
 }
 
