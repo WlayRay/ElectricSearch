@@ -34,7 +34,7 @@ func GetServiceHub(etcdEndpoints []string, heartRate int64) *ServiceHub {
 	if serviceHub == nil {
 		hubOnce.Do(func() {
 			if client, err := etcdv3.New(etcdv3.Config{
-				Endpoints:   etcdEndpoints, // TODO 将etcd的endpoints配置放到配置文件中
+				Endpoints:   etcdEndpoints,
 				DialTimeout: 5 * time.Second,
 			}); err != nil {
 				util.Log.Fatalf("etcd client init failed: %v", err)

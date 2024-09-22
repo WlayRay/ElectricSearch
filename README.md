@@ -1,6 +1,6 @@
 # ElectricSearch索引框架
 
-纯go语言实现的搜索引擎索引框架，支持[单机](service/test/indexer_test.go)部署，[分布式](service/test/distribute_test.go)部署，分布式部署需要etcd作为服务注册中心，可用使用Docker部署etcd
+纯go语言实现的搜索引擎索引框架，支持[单机](service/test/indexer_test.go)部署和[分布式](service/test/distribute_test.go)部署，分布式部署需要etcd作为服务注册中心，可用使用Docker部署etcd
 
 ## 项目架构
 
@@ -29,86 +29,91 @@
 
 ## 示例教程
 
-在代码中import依赖包并执行go mod tidy
+可以参考项目中的[demo](demo)目录，该目录为此框架的示例demo，可搜索CSV文件中的BiliBili视频信息，并提供http接口查询。
+
+也可以查看[service/test/](service/test)这个目录下的测试函数来学习如何使用此框架。
+
+下面大致介绍demo中的代码流程：
+
+首先在代码中import依赖包并执行go mod tidy
 
 ``` go
 import (
     "github.com/WlayRay/ElectricSearch/service"
     "github.com/WlayRay/ElectricSearch/types"
+    //其他属于此项目的包
 )
 ```
 
-定义业务文档结构体，这里假设业务文档为Book
+定义业务文档结构体，这里用protobuf定义一个[BiliBili视频信息的结构体](demo/common/video.proto)
 
-```go
-type Book struct {
-    ISBN    string
-    Title   string
-    Author  string
-    Price   float64
-    Content string
-}
-
-// 业务侧自行实现doc的序列化和反序列化
-func (book *Book) Serialize() []byte {
-    // 可用pb、json、gob等方式将Book序列化成字节流
-}
-
-func DeserializeBook(v []byte) *Book {
-    // 反序列化
+```
+message BiliBiliVideo {
+  string Id = 1;
+  string Title = 2;
+  int64 PostTime = 3;
+  string Author = 4;
+  int32 ViewCount = 5;
+  int32 LikeCount = 6;
+  int32 CoinCount = 7;
+  int32 FavoriteCount = 8;
+  int32 shareCount = 9;
+  repeated string Keywords = 10;
 }
 ```
 
-初始化索引
+初始化索引服务，在[demo/main/web_server.go](demo/main/web_server.go)和[demo/main/index_worker.go](demo/main/index_worker.go)这两个文件中
 
 ``` go
-es := new(service.Indexer)
-// 指定预估的文档容量、正排索引使用的存储引擎，以及文档数据存储的位置
-if err := es.Init(100, 0, "./data/local_db/book_bolt"); err != nil { // 这里0指代使用boltdb
-    fmt.Println(err)
-    t.Fail()
-    return
+// 单机部署
+standaloneIndexer := new(service.Indexer)
+if err := standaloneIndexer.Init(documentEstimateNum, dbType, dbPath); err != nil {
+    panic(err)
 }
-defer es.Close()
+
+// 分布式部署
+indexService = new(service.IndexServiceWorker)
+indexService.Init(workerIndex)
 ```
 
-初始化文档
+分布式部署还要在[demo/main/web_server.go](demo/main/web_server.go)中创建代理
+
+``` go
+handler.Indexer = service.NewSentinel(etcdEndpoints)
+```
+
+从CSV文件中初始化文档，代码在[demo/common/build_index.go](demo/common/build_index.go)中
 
 ```go
-book1 := Book{
-    ISBN:    "315246546",
-    Title:   "计算机系列丛书",
-    Author:  "张三",
-    Price:   59.0,
-    Content: "冰雪奇缘2 中文版电影原声带 (Frozen 2 (Mandarin Original Motion Picture",
+if rebuildIndex {
+    common.BuildIndexFromCSVFile(csvFilePath, standaloneIndexer, 0, 0)
+} else {
+    standaloneIndexer.LoadFromIndexFile()
 }
+```
 
-doc1 := types.Document{
-        Id:          book1.ISBN,
-        BitsFeature: 0b10101, //二进制
-        Keywords:    []*types.Keyword{{Field: "content", Word: "机器学习"}, {Field: "content", Word: "神经网络"}, {Field: "title", Word: book1.Title}},
-        Bytes:       book1.Serialize(), //写入索引时需要自行序列化
+查询视频
+
+```go
+keywords := request.Keywords
+query := new(types.TermQuery)
+if len(keywords) > 0 {
+    for _, keyword := range keywords {
+    query = query.And(types.NewTermQuery("content", keyword))
     }
-```
+}
+if len(request.Author) > 0 {
+    query = query.And(types.NewTermQuery("author", strings.ToLower(request.Author)))
+}
+orFlags := []uint64{(common.GetCategoriesBits(request.Categories))}
+docs := indexer.Search(query, 0, 0, orFlags)
 
-```go
-// 添加删除文档
-es.AddDoc(doc1) 
-es.DeleteDoc(doc1.Id)
-
-// 构造搜索表达式搜索文档
-// 支持任意复杂的And和Or的组合。And要求同时命中，Or只要求命中一个
-q1 := types.NewTermQuery("title", "生命起源")
-q2 := types.NewTermQuery("content", "文物")
-q3 := types.NewTermQuery("title", "中国历史")
-q4 := types.NewTermQuery("content", "文物")
-q5 := types.NewTermQuery("content", "唐朝")
-q6 := q1.And(q2)
-q7 := q3.And(q4).And(q5)
-q8 := q6.Or(q7)
-
-var onFlag uint64 = 0b10000 //要求doc.BitsFeature的对应位必须都是1
-var offFlag uint64 = 0b01000 //要求doc.BitsFeature的对应位必须都是0
-orFlags := []uint64{uint64(0b00010), uint64(0b00101)} //要求doc.BitsFeature的对应位至少有一个是1
-docs := es.Search(q8, onFlag, offFlag, orFlags) //检索
+videos := make([]*common.BiliBiliVideo, 0, len(docs))
+for _, doc := range docs {
+    var video common.BiliBiliVideo
+    if err := proto.Unmarshal(doc.Bytes, &video); err == nil {
+        videos = append(videos, &video)
+    }
+}
+return videos
 ```

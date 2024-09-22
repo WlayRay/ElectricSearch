@@ -27,7 +27,7 @@ func TestSearch(t *testing.T) {
 	}
 
 	request := SearchRequest{
-		Keywords:     []string{"go", "项目"},
+		Keywords:     []string{"go"},
 		Categories:   []string{"编程"},
 		MinViewCount: 0,
 		MaxViewCount: 300000,
@@ -35,7 +35,7 @@ func TestSearch(t *testing.T) {
 
 	bs, _ := sonic.Marshal(request)
 
-	req, err := http.NewRequest("POST", "http://localhost:7887/search", bytes.NewReader(bs))
+	req, err := http.NewRequest("POST", "http://localhost:7889/search", bytes.NewReader(bs))
 	if err != nil {
 		t.Fatal(err)
 	}

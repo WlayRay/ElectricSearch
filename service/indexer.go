@@ -43,7 +43,7 @@ func (indexer *Indexer) Close() error {
 	return indexer.forwardIndex.Close()
 }
 
-// 倒排索引存储在内存中，系统重启时从正派索引里加载数据
+// 倒排索引存储在内存中，系统重启时从正排索引里加载数据
 func (indexer *Indexer) LoadFromIndexFile() int {
 	n := indexer.forwardIndex.IterDB(func(k, v []byte) error {
 		reader := bytes.NewReader(v)
@@ -61,7 +61,7 @@ func (indexer *Indexer) LoadFromIndexFile() int {
 	return int(n)
 }
 
-// 向索引中添加文档，如果文档已存在则会覆盖
+// 向索引中添加文档，如果文档已存在则先删除
 func (indexer *Indexer) AddDoc(doc types.Document) (int, error) {
 	docId := strings.TrimSpace(doc.Id)
 	if len(docId) == 0 {
@@ -80,7 +80,7 @@ func (indexer *Indexer) AddDoc(doc types.Document) (int, error) {
 		return 0, err
 	}
 
-	// 写入倒排序索引
+	// 写入倒排索引
 	indexer.reverseIndex.Add(doc)
 	return 1, nil
 }

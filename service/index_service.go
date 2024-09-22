@@ -23,7 +23,7 @@ type IndexServiceWorker struct {
 	selfAddr string
 }
 
-func (service *IndexServiceWorker) Init(workerIndex ...int) error {
+func (service *IndexServiceWorker) Init(workerIndex int) error {
 	service.Indexer = new(Indexer)
 
 	var docNumEstimate, dbType int
@@ -54,9 +54,7 @@ func (service *IndexServiceWorker) Init(workerIndex ...int) error {
 			dbType = kvdb.BOLT
 		}
 		util.Log.Println("db path:", dbPath)
-		if workerIndex != nil {
-			dbPath += "_" + strconv.Itoa(workerIndex[0])
-		}
+		dbPath += "_" + strconv.Itoa(workerIndex)
 	}
 	return service.Indexer.Init(docNumEstimate, dbType, dbPath)
 }
@@ -74,13 +72,6 @@ func (service *IndexServiceWorker) Regist(etcdEndpoint []string, servicePort, he
 		selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
 		service.selfAddr = fmt.Sprintf("%s:%d", selfLocalIp, servicePort)
 		hub := GetServiceHub(etcdEndpoint, int64(heartRate))
-
-		// index_service, ok := util.Configurations["index-service"]
-		// if !ok {
-		// 	panic("index-service not found in configurations!")
-		// }
-		// index_service = strings.Replace(index_service, "\"", "", -1)
-
 		leaseId, err := hub.Regist(INDEX_SERVICE, service.selfAddr, 0)
 		if err != nil {
 			panic(err)
@@ -119,8 +110,10 @@ func (service *IndexServiceWorker) Count(ctx context.Context, request *CountRequ
 	return &AffectedCount{Count: uint32(n)}, nil
 }
 
-func (service *IndexServiceWorker) Close() {
+func (service *IndexServiceWorker) Close() error {
 	if service.hub != nil {
+		service.hub.UnRegist(INDEX_SERVICE, service.selfAddr)
 		service.hub.Close()
 	}
+	return service.Indexer.Close()
 }

@@ -24,6 +24,7 @@ func WebServerInit(mode int) {
 		}
 		handler.Indexer = standaloneIndexer
 	case 3:
+		handler.Indexer = service.NewSentinel(etcdEndpoints)
 	default:
 		panic("Unsupported mode")
 	}

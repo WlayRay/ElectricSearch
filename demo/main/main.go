@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"strconv"
 	"strings"
 
@@ -20,7 +19,9 @@ var (
 	totalWorkers        int
 	workerIndex         int
 	csvFilePath         string
-	port                = flag.Int("port", 0, "server的工作端口")
+	port                int
+	etcdEndpoints       []string
+	hearRate            int
 )
 
 func startGin() {
@@ -40,33 +41,27 @@ func startGin() {
 
 	engine.POST("/search", handler.SearchAll)
 	engine.POST("/up_search", handler.SearchByAuthor)
-	if err := engine.Run("127.0.0.1:" + strconv.Itoa(*port)); err != nil {
+	if err := engine.Run("127.0.0.1:" + strconv.Itoa(port)); err != nil {
 		util.Log.Println("Server failed to start:", err)
 		return
 	}
-	util.Log.Println("Server started succeed at port:", *port)
+	util.Log.Println("Server started succeed at port:", port)
 }
 
 func main() {
-	flag.Parse()
-
 	switch mode {
 	case 1, 3:
 		WebServerMain(mode)
 		startGin()
 	case 2:
-
+		GrpcIndexerMain()
 	}
-	// fmt.Println("mode:", mode)
-	// fmt.Println("documentEstimateNum:", documentEstimateNum)
-	// fmt.Println("dbType:", dbType)
-	// fmt.Println("dbPath:", dbPath)
-	// fmt.Println("rebuildIndex:", rebuildIndex)
-	// fmt.Println("csvFilePath:", csvFilePath)
-	// fmt.Println("port:", *port)
+	// 模式1为单机部署，模式2为启动分布式部署下的每个索引服务节点，相当于一个grpc server
+	// 模式3为启动分布式部署下的etcd代理（Sentinel），后续的添加、搜索、删除文档等都通过代理操作
+	// 在分布式部署时，需要先通过模式2启动多个索引服务节点，然后再通过模式3启动etcd代理和web server
 }
 
-//go run ./demo/main -port=7887 
+//go run ./demo/main
 
 func init() {
 	// 初始化部署模式
@@ -77,6 +72,12 @@ func init() {
 		if mode < 1 || mode > 3 {
 			panic("mode invalid!")
 		}
+	}
+
+	if v, ok := util.Configurations["port"]; !ok {
+		panic("port not found in configurations!")
+	} else {
+		port, _ = strconv.Atoi(v)
 	}
 
 	//是否重建索引
@@ -146,5 +147,22 @@ func init() {
 		panic("documentEstimateNum not found in configurations!")
 	} else {
 		documentEstimateNum, _ = strconv.Atoi(v)
+	}
+
+	//etcd集群endpoints
+	if v, ok := util.Configurations["etcd-servers"]; ok {
+		addrs := strings.Trim(v, "[]")
+		endpoints := strings.Split(addrs, ",")
+		for _, endpoint := range endpoints {
+			endpoint = strings.TrimSpace(endpoint)
+			endpoint = strings.Replace(endpoint, "\"", "", -1)
+			etcdEndpoints = append(etcdEndpoints, endpoint)
+		}
+		util.Log.Printf("etcdEndpoints: %v", etcdEndpoints)
+	}
+
+	//分布式部署下，每个服务的心跳周期
+	if v, ok := util.Configurations["heart-rate"]; ok {
+		hearRate, _ = strconv.Atoi(v)
 	}
 }
