@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"context"
 	"log"
 	"net/http"
 	"strings"
@@ -43,7 +42,7 @@ func SearchAll(ctx *gin.Context) {
 	}
 
 	searchCtx := &common.VideoSearchContext{
-		Ctx:     context.Background(),
+		Ctx:     ctx,
 		Request: &searchRequest,
 		Indexer: Indexer,
 	}
@@ -77,7 +76,7 @@ func SearchByAuthor(ctx *gin.Context) {
 	}
 
 	searchCtx := &common.VideoSearchContext{
-		Ctx:     context.Background(),
+		Ctx:     ctx,
 		Request: &searchRequest,
 		Indexer: Indexer,
 	}

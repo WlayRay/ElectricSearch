@@ -19,5 +19,3 @@ type VideoSearchContext struct {
 	Request *SearchRequest
 	Videos  []*BiliBiliVideo
 }
-
-type UN string

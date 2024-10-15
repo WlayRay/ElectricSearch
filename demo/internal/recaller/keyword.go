@@ -1,6 +1,7 @@
 package recaller
 
 import (
+	"github.com/WlayRay/ElectricSearch/util"
 	"strings"
 
 	"github.com/WlayRay/ElectricSearch/demo/common"
@@ -61,7 +62,7 @@ func (KeywordAuthorRecaller) Recall(ctx *common.VideoSearchContext) []*common.Bi
 			query.And(types.NewTermQuery("content", keyword))
 		}
 	}
-	v := ctx.Ctx.Value(common.UN("user_name"))
+	v := ctx.Ctx.Value("user_name")
 	if v != nil {
 		if author, ok := v.(string); ok {
 			if len(author) > 0 {
@@ -75,8 +76,10 @@ func (KeywordAuthorRecaller) Recall(ctx *common.VideoSearchContext) []*common.Bi
 	videos := make([]*common.BiliBiliVideo, 0, len(docs))
 	for _, doc := range docs {
 		var video common.BiliBiliVideo
-		if err := proto.Unmarshal(doc.Bytes, &video); err != nil {
+		if err := proto.Unmarshal(doc.Bytes, &video); err == nil {
 			videos = append(videos, &video)
+		} else {
+			util.Log.Printf("unmarshal failed: %v", err)
 		}
 	}
 	return videos
