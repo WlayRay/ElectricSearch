@@ -29,16 +29,8 @@ func startGin() {
 	engine := gin.Default()
 	gin.SetMode(gin.ReleaseMode)
 
-	// engine.Static("js", "demo/frontend/js")
-	// engine.Static("css", "demo/frontend/css")
-	// engine.Static("img", "demo/frontend/img")
-	// engine.LoadHTMLFiles("demo/frontend/search.html")
-
 	engine.Use(handler.GetUserInfo)
 	// categoriesBits := [...]string{"鬼畜", "记录", "科技", "美食", "音乐", "影视", "娱乐", "游戏", "综艺", "知识", "资讯", "番剧", "舞蹈", "游记"}
-	// engine.GET("/", func(ctx *gin.Context) {
-	// 	ctx.HTML(http.StatusOK, "search.html", categoriesBits)
-	// })
 
 	engine.POST("/search", handler.SearchAll)
 	engine.POST("/up_search", handler.SearchByAuthor)

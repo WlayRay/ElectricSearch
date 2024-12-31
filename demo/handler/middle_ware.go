@@ -7,7 +7,7 @@ import (
 )
 
 func GetUserInfo(ctx *gin.Context) {
-	userName, err := url.QueryUnescape(ctx.Request.Header.Get("UserName"))
+	userName, err := url.QueryUnescape(ctx.Request.Header.Get("X-UserName"))
 	if err == nil {
 		ctx.Set("user_name", userName)
 	}

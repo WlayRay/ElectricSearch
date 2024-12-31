@@ -81,7 +81,7 @@ func TestSearchByAuthor(t *testing.T) {
 	}
 	req.Header.Set("Content-Type", "application/sonic")
 	req.Header.Set("Cache-Control", "no-cache")
-	req.Header.Set("UserName", "七牛云")
+	req.Header.Set("X-UserName", "七牛云")
 
 	resp, err := client.Do(req)
 	if err != nil {
