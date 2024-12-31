@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/WlayRay/ElectricSearch/demo/common"
+	infrastructure "github.com/WlayRay/ElectricSearch/demo/infrastructure"
 	"github.com/bytedance/sonic"
 )
 
@@ -50,7 +50,7 @@ func TestSearch(t *testing.T) {
 	defer resp.Body.Close()
 	content, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode == 200 {
-		var datas []common.BiliBiliVideo
+		var datas []infrastructure.BiliBiliVideo
 		sonic.Unmarshal(content, &datas)
 		for _, data := range datas {
 			fmt.Printf("%s %d %s %s\n", data.Id, data.ViewCount, data.Title, strings.Join(data.Keywords, "|"))
@@ -91,7 +91,7 @@ func TestSearchByAuthor(t *testing.T) {
 	defer resp.Body.Close()
 	content, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode == 200 {
-		var datas []common.BiliBiliVideo
+		var datas []infrastructure.BiliBiliVideo
 		sonic.Unmarshal(content, &datas)
 		for _, data := range datas {
 			fmt.Printf("%s %d %s %s\n", data.Id, data.ViewCount, data.Title, strings.Join(data.Keywords, "|"))

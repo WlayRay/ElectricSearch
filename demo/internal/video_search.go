@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/WlayRay/ElectricSearch/demo/common"
+	infrastructure "github.com/WlayRay/ElectricSearch/demo/infrastructure"
 	"github.com/WlayRay/ElectricSearch/demo/internal/filter"
 	"github.com/WlayRay/ElectricSearch/demo/internal/recaller"
 	"github.com/WlayRay/ElectricSearch/util"
@@ -13,11 +13,11 @@ import (
 )
 
 type Recaller interface {
-	Recall(ctx *common.VideoSearchContext) []*common.BiliBiliVideo
+	Recall(ctx *infrastructure.VideoSearchContext) []*infrastructure.BiliBiliVideo
 }
 
 type Filter interface {
-	Apply(ctx *common.VideoSearchContext)
+	Apply(ctx *infrastructure.VideoSearchContext)
 }
 
 // 模版方法模式，超类
@@ -34,12 +34,12 @@ func (search *VideoSearcher) WithFilter(filters ...Filter) {
 	search.Filters = append(search.Filters, filters...)
 }
 
-func (search *VideoSearcher) Recall(searchCtx *common.VideoSearchContext) {
+func (search *VideoSearcher) Recall(searchCtx *infrastructure.VideoSearchContext) {
 	if len(search.Recallers) == 0 {
 		return
 	}
 	// 并行执行多路召回
-	colletion := make(chan *common.BiliBiliVideo, 1000)
+	colletion := make(chan *infrastructure.BiliBiliVideo, 1000)
 	wg := sync.WaitGroup{}
 	wg.Add(len(search.Recallers))
 
@@ -55,7 +55,7 @@ func (search *VideoSearcher) Recall(searchCtx *common.VideoSearchContext) {
 		}(recaller)
 	}
 
-	videoMap := make(map[string]*common.BiliBiliVideo, 1000)
+	videoMap := make(map[string]*infrastructure.BiliBiliVideo, 1000)
 	receiveDone := make(chan struct{})
 	go func() {
 		for {
@@ -73,7 +73,7 @@ func (search *VideoSearcher) Recall(searchCtx *common.VideoSearchContext) {
 	searchCtx.Videos = maps.Values(videoMap)
 }
 
-func (search *VideoSearcher) Filter(searchCtx *common.VideoSearchContext) {
+func (search *VideoSearcher) Filter(searchCtx *infrastructure.VideoSearchContext) {
 	if len(search.Filters) == 0 {
 		return
 	}
@@ -82,7 +82,7 @@ func (search *VideoSearcher) Filter(searchCtx *common.VideoSearchContext) {
 	}
 }
 
-func (search *VideoSearcher) Search(searchCtx *common.VideoSearchContext) []*common.BiliBiliVideo {
+func (search *VideoSearcher) Search(searchCtx *infrastructure.VideoSearchContext) []*infrastructure.BiliBiliVideo {
 	t1 := time.Now()
 	search.Recall(searchCtx)
 	t2 := time.Now()

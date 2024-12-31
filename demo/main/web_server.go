@@ -5,8 +5,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/WlayRay/ElectricSearch/demo/common"
 	"github.com/WlayRay/ElectricSearch/demo/handler"
+	"github.com/WlayRay/ElectricSearch/demo/infrastructure"
 	"github.com/WlayRay/ElectricSearch/service"
 )
 
@@ -18,7 +18,7 @@ func WebServerInit(mode int) {
 			panic(err)
 		}
 		if rebuildIndex {
-			common.BuildIndexFromCSVFile(csvFilePath, standaloneIndexer, 0, 0)
+			infrastructure.BuildIndexFromCSVFile(csvFilePath, standaloneIndexer, 0, 0)
 		} else {
 			standaloneIndexer.LoadFromIndexFile()
 		}

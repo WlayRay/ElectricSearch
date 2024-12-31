@@ -1,7 +1,8 @@
-package common
+package infrastructure
 
 import (
 	"context"
+
 	"github.com/WlayRay/ElectricSearch/service"
 )
 

@@ -29,19 +29,19 @@ func (service *IndexServiceWorker) Init(workerIndex int) error {
 	var docNumEstimate, dbType int
 	var dbPath string
 	// 初始化预估最大文档数量
-	if v, ok := util.Configurations["document-estimate-num"]; ok {
-		docNumEstimate, _ = strconv.Atoi(v)
+	if v, ok := util.ConfigMap["document-estimate-num"]; ok {
+		docNumEstimate, _ = strconv.Atoi(v.(string))
 	} else {
 		docNumEstimate = 50000
 	}
 	// 初始化正排索引文件存储路径
-	if v, ok := util.Configurations["db-path"]; ok {
-		dbPath = util.RootPath + strings.Replace(v, "\"", "", -1)
+	if v, ok := util.ConfigMap["db-path"]; ok {
+		dbPath = util.RootPath + strings.Replace(v.(string), "\"", "", -1)
 		if dbPath[len(dbPath)-1] != '/' {
 			dbPath += "/"
 		}
 		// 初始化正排索引使用的数据库类型
-		if v, ok := util.Configurations["db-type"]; ok {
+		if v, ok := util.ConfigMap["db-type"]; ok {
 			switch v {
 			case "badger":
 				dbType = kvdb.BADGER

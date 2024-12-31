@@ -45,7 +45,7 @@ import (
 )
 ```
 
-定义业务文档结构体，这里用protobuf定义一个[BiliBili视频信息的结构体](demo/common/video.proto)
+定义业务文档结构体，这里用protobuf定义一个[BiliBili视频信息的结构体](demo/infrastructure/video.proto)
 
 ```
 message BiliBiliVideo {
@@ -82,11 +82,11 @@ indexService.Init(workerIndex)
 handler.Indexer = service.NewSentinel(etcdEndpoints)
 ```
 
-从CSV文件中初始化文档，代码在[demo/common/build_index.go](demo/common/build_index.go)中
+从CSV文件中初始化文档，代码在[demo/infrastructure/build_index.go](demo/infrastructure/build_index.go)中
 
 ```go
 if rebuildIndex {
-    common.BuildIndexFromCSVFile(csvFilePath, standaloneIndexer, 0, 0)
+    infrastructure.BuildIndexFromCSVFile(csvFilePath, standaloneIndexer, 0, 0)
 } else {
     standaloneIndexer.LoadFromIndexFile()
 }
@@ -105,12 +105,12 @@ if len(keywords) > 0 {
 if len(request.Author) > 0 {
     query = query.And(types.NewTermQuery("author", strings.ToLower(request.Author)))
 }
-orFlags := []uint64{(common.GetCategoriesBits(request.Categories))}
+orFlags := []uint64{(infrastructure.GetCategoriesBits(request.Categories))}
 docs := indexer.Search(query, 0, 0, orFlags)
 
-videos := make([]*common.BiliBiliVideo, 0, len(docs))
+videos := make([]*infrastructure.BiliBiliVideo, 0, len(docs))
 for _, doc := range docs {
-    var video common.BiliBiliVideo
+    var video infrastructure.BiliBiliVideo
     if err := proto.Unmarshal(doc.Bytes, &video); err == nil {
         videos = append(videos, &video)
     }

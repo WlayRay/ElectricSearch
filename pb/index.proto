@@ -29,11 +29,9 @@ service IndexService {
   rpc Count(CountRequest) returns (AffectedCount);
 }
 
-/*
-protoc --gogofaster_opt=Mdoc.proto=github.com/WlayRay/ElectricSearch/types
---gogofaster_opt=Mterm_query.proto=github.com/WlayRay/ElectricSearch/types
---gogofaster_out=plugins=grpc:./service --proto_path=./interface index.proto
-*/
+
+// protoc --gogofaster_opt=Mdoc.proto=github.com/WlayRay/ElectricSearch/types --gogofaster_opt=Mterm_query.proto=github.com/WlayRay/ElectricSearch/types --gogofaster_out=plugins=grpc:./service --proto_path=./pb pb/index.proto
+
 
 /*
 --gogofaster_opt=M指示了.proto里的import转到.go里该怎么写，比如.proto里写import"doc.proto"，转到.go里就应该写

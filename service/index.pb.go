@@ -4,9 +4,9 @@
 package service
 
 import (
-	types "github.com/WlayRay/ElectricSearch/types"
 	context "context"
 	fmt "fmt"
+	types "github.com/WlayRay/ElectricSearch/types"
 	proto "github.com/gogo/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"

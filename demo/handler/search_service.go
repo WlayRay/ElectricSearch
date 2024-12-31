@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/WlayRay/ElectricSearch/demo/common"
+	infrastructure "github.com/WlayRay/ElectricSearch/demo/infrastructure"
 	"github.com/WlayRay/ElectricSearch/demo/internal"
 	"github.com/WlayRay/ElectricSearch/service"
 	"github.com/gin-gonic/gin"
@@ -26,7 +26,7 @@ func getKeywords(words []string) []string {
 
 // 全站搜索接口
 func SearchAll(ctx *gin.Context) {
-	var searchRequest common.SearchRequest
+	var searchRequest infrastructure.SearchRequest
 	if err := ctx.ShouldBindJSON(&searchRequest); err != nil {
 		log.Printf("bind request parameter failed: %s", err)
 		ctx.JSON(400, gin.H{
@@ -41,7 +41,7 @@ func SearchAll(ctx *gin.Context) {
 		return
 	}
 
-	searchCtx := &common.VideoSearchContext{
+	searchCtx := &infrastructure.VideoSearchContext{
 		Ctx:     ctx,
 		Request: &searchRequest,
 		Indexer: Indexer,
@@ -54,7 +54,7 @@ func SearchAll(ctx *gin.Context) {
 
 // UP搜索自己视频的接口
 func SearchByAuthor(ctx *gin.Context) {
-	var searchRequest common.SearchRequest
+	var searchRequest infrastructure.SearchRequest
 	if err := ctx.ShouldBindJSON(&searchRequest); err != nil {
 		log.Printf("bind request parameter failed: %s", err)
 		ctx.JSON(400, gin.H{
@@ -75,7 +75,7 @@ func SearchByAuthor(ctx *gin.Context) {
 		return
 	}
 
-	searchCtx := &common.VideoSearchContext{
+	searchCtx := &infrastructure.VideoSearchContext{
 		Ctx:     ctx,
 		Request: &searchRequest,
 		Indexer: Indexer,

@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/WlayRay/ElectricSearch/demo/common"
+	infrastructure "github.com/WlayRay/ElectricSearch/demo/infrastructure"
 	"github.com/WlayRay/ElectricSearch/internal/kvdb"
 	"github.com/WlayRay/ElectricSearch/service"
 	"github.com/WlayRay/ElectricSearch/util"
@@ -28,5 +28,5 @@ func TestBuildIndex(t *testing.T) {
 	Init()
 	defer indexer.Close()
 	csvFile := util.RootPath + "data/bilibili_video.csv"
-	common.BuildIndexFromCSVFile(csvFile, indexer, 0, 0)
+	infrastructure.BuildIndexFromCSVFile(csvFile, indexer, 0, 0)
 }

@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/WlayRay/ElectricSearch/demo/common"
-	"github.com/WlayRay/ElectricSearch/service"
-	"github.com/WlayRay/ElectricSearch/util"
-	"google.golang.org/grpc"
 	"net"
 	"os"
 	"os/signal"
 	"strconv"
 	"syscall"
+
+	"github.com/WlayRay/ElectricSearch/demo/infrastructure"
+	"github.com/WlayRay/ElectricSearch/service"
+	"github.com/WlayRay/ElectricSearch/util"
+	"google.golang.org/grpc"
 )
 
 var indexService *service.IndexServiceWorker
@@ -27,14 +28,14 @@ func GrpcIndexerInit() {
 	indexService.Init(workerIndex)
 	if rebuildIndex {
 		util.Log.Printf("totalworkers = %d, workerindex = %d", totalWorkers, workerIndex)
-		common.BuildIndexFromCSVFile(csvFilePath, indexService.Indexer, totalWorkers, workerIndex)
+		infrastructure.BuildIndexFromCSVFile(csvFilePath, indexService.Indexer, totalWorkers, workerIndex)
 	} else {
 		indexService.Indexer.LoadFromIndexFile() //直接从正排索引中加载
 	}
 
 	service.RegisterIndexServiceServer(server, indexService)
 	fmt.Printf("Start gprc server on port: %d\n", port)
-	indexService.Regist(etcdEndpoints, port, hearRate)
+	indexService.Regist(etcdEndpoints, port, heartRate)
 
 	err = server.Serve(lis)
 	if err != nil {

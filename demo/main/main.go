@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 
@@ -21,7 +22,7 @@ var (
 	csvFilePath         string
 	port                int
 	etcdEndpoints       []string
-	hearRate            int
+	heartRate           int
 )
 
 func startGin() {
@@ -65,75 +66,93 @@ func main() {
 
 func init() {
 	// 初始化部署模式
-	if v, ok := util.Configurations["mode"]; !ok {
-		panic("mode not found in configurations!")
+	if v, ok := util.ConfigMap["mode"]; !ok {
+		panic("mode not found in ConfigMap!")
 	} else {
-		mode, _ = strconv.Atoi(v)
+		mode, _ = strconv.Atoi(fmt.Sprintf("%v", v))
 		if mode < 1 || mode > 3 {
 			panic("mode invalid!")
 		}
 	}
 
-	if v, ok := util.Configurations["port"]; !ok {
-		panic("port not found in configurations!")
-	} else {
-		port, _ = strconv.Atoi(v)
+	// 读取 server 配置
+	serverConfig, ok := util.ConfigMap["server"].(map[string]any)
+	if !ok {
+		panic("server configuration not found!")
 	}
 
-	//是否重建索引
-	if v, ok := util.Configurations["rebuild-index"]; !ok {
-		panic("rebuildIndex not found in configurations!")
+	if v, ok := serverConfig["port"]; !ok {
+		panic("port not found in ConfigMap!")
 	} else {
-		switch v {
-		case "true":
-			rebuildIndex = true
-		case "false":
-			rebuildIndex = false
+		port, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+	}
+
+	if v, ok := serverConfig["rebuild_index"]; !ok {
+		panic("rebuildIndex not found in ConfigMap!")
+	} else {
+		switch v.(type) {
+		case bool:
+			rebuildIndex = v.(bool)
+		case string:
+			rebuildIndex = v.(string) == "true"
 		default:
 			panic("rebuildIndex invalid!")
 		}
 	}
 
-	//分布式模式下的worker总数
-	if v, ok := util.Configurations["total-workers"]; !ok {
-		panic("totalWorkers not found in configurations!")
-	} else if mode == 2 {
-		totalWorkers, _ = strconv.Atoi(v)
-		if totalWorkers < 1 {
-			panic("totalWorkers invalid!")
+	// 读取 distributed 配置
+	distributedConfig, ok := util.ConfigMap["distributed"].(map[string]any)
+	if mode == 2 && !ok {
+		panic("distributed configuration not found!")
+	}
+
+	if mode == 2 {
+		if v, ok := distributedConfig["total_workers"]; !ok {
+			panic("totalWorkers not found in ConfigMap!")
+		} else {
+			totalWorkers, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+			if totalWorkers < 1 {
+				panic("totalWorkers invalid!")
+			}
+		}
+
+		if v, ok := distributedConfig["worker_index"]; !ok {
+			panic("workerIndex not found in ConfigMap!")
+		} else {
+			workerIndex, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+			if workerIndex < 0 || workerIndex >= totalWorkers {
+				panic("workerIndex invalid!")
+			}
+		}
+
+		if v, ok := distributedConfig["heart_rate"]; ok {
+			heartRate, _ = strconv.Atoi(fmt.Sprintf("%v", v))
 		}
 	}
 
-	//当前worker标号（从0开始）
-	if v, ok := util.Configurations["worker-index"]; !ok {
-		panic("workerIndex not found in configurations!")
-	} else if mode == 2 {
-		workerIndex, _ = strconv.Atoi(v)
-		if workerIndex < 0 || workerIndex > totalWorkers {
-			panic("workerIndex invalid!")
-		}
+	// 读取 index 配置
+	indexConfig, ok := util.ConfigMap["index"].(map[string]any)
+	if !ok {
+		panic("index configuration not found!")
 	}
 
-	//初始化文档所用CSV文件的路径
-	if v, ok := util.Configurations["csv-file"]; !ok {
-		panic("csvFilePath not found in configurations!")
+	if v, ok := indexConfig["csv_file"]; !ok {
+		panic("csvFilePath not found in ConfigMap!")
 	} else {
-		csvFilePath = util.RootPath + strings.Replace(v, "\"", "", -1)
+		csvFilePath = util.RootPath + strings.Replace(fmt.Sprintf("%v", v), "\"", "", -1)
 		util.Log.Printf("csvFilePath: %s", csvFilePath)
 	}
 
-	//正排索引存储文件的保存路径
-	if v, ok := util.Configurations["db-path"]; !ok {
-		panic("dbPath not found in configurations!")
+	if v, ok := indexConfig["db_path"]; !ok {
+		panic("dbPath not found in ConfigMap!")
 	} else {
-		dbPath = util.RootPath + strings.Replace(v, "\"", "", -1)
+		dbPath = util.RootPath + strings.Replace(fmt.Sprintf("%v", v), "\"", "", -1)
 	}
 
-	//正排索引使用哪种引擎
-	if v, ok := util.Configurations["db-type"]; !ok {
-		panic("dpType not found int configurations!")
+	if v, ok := indexConfig["db_type"]; !ok {
+		panic("dbType not found in ConfigMap!")
 	} else {
-		switch v {
+		switch fmt.Sprintf("%v", v) {
 		case "badger":
 			dbType = kvdb.BADGER
 			dbPath += "badger_db"
@@ -143,26 +162,28 @@ func init() {
 		}
 	}
 
-	if v, ok := util.Configurations["document-estimate-num"]; !ok {
-		panic("documentEstimateNum not found in configurations!")
+	if v, ok := indexConfig["document_estimate_num"]; !ok {
+		panic("documentEstimateNum not found in ConfigMap!")
 	} else {
-		documentEstimateNum, _ = strconv.Atoi(v)
+		documentEstimateNum, _ = strconv.Atoi(fmt.Sprintf("%v", v))
 	}
 
-	//etcd集群endpoints
-	if v, ok := util.Configurations["etcd-servers"]; ok {
-		addrs := strings.Trim(v, "[]")
-		endpoints := strings.Split(addrs, ",")
-		for _, endpoint := range endpoints {
-			endpoint = strings.TrimSpace(endpoint)
+	// 读取 etcd 配置
+	etcdConfig, ok := util.ConfigMap["etcd"].(map[string]any)
+	if !ok {
+		panic("etcd configuration not found!")
+	}
+
+	if v, ok := etcdConfig["servers"]; ok {
+		servers, ok := v.([]any)
+		if !ok {
+			panic("etcd servers configuration invalid!")
+		}
+		for _, server := range servers {
+			endpoint := strings.TrimSpace(fmt.Sprintf("%v", server))
 			endpoint = strings.Replace(endpoint, "\"", "", -1)
 			etcdEndpoints = append(etcdEndpoints, endpoint)
 		}
 		util.Log.Printf("etcdEndpoints: %v", etcdEndpoints)
-	}
-
-	//分布式部署下，每个服务的心跳周期
-	if v, ok := util.Configurations["heart-rate"]; ok {
-		hearRate, _ = strconv.Atoi(v)
 	}
 }

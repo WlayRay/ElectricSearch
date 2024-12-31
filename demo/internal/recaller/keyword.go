@@ -1,10 +1,11 @@
 package recaller
 
 import (
-	"github.com/WlayRay/ElectricSearch/util"
 	"strings"
 
-	"github.com/WlayRay/ElectricSearch/demo/common"
+	"github.com/WlayRay/ElectricSearch/util"
+
+	infrastructure "github.com/WlayRay/ElectricSearch/demo/infrastructure"
 	"github.com/WlayRay/ElectricSearch/types"
 	"github.com/gogo/protobuf/proto"
 )
@@ -13,7 +14,7 @@ type KeywordRecaller struct{}
 
 type KeywordAuthorRecaller struct{}
 
-func (KeywordRecaller) Recall(ctx *common.VideoSearchContext) []*common.BiliBiliVideo {
+func (KeywordRecaller) Recall(ctx *infrastructure.VideoSearchContext) []*infrastructure.BiliBiliVideo {
 	request := ctx.Request
 	if request == nil {
 		return nil
@@ -33,12 +34,12 @@ func (KeywordRecaller) Recall(ctx *common.VideoSearchContext) []*common.BiliBili
 	if len(request.Author) > 0 {
 		query = query.And(types.NewTermQuery("author", strings.ToLower(request.Author)))
 	}
-	orFlags := []uint64{(common.GetCategoriesBits(request.Categories))}
+	orFlags := []uint64{(infrastructure.GetCategoriesBits(request.Categories))}
 	docs := indexer.Search(query, 0, 0, orFlags)
 
-	videos := make([]*common.BiliBiliVideo, 0, len(docs))
+	videos := make([]*infrastructure.BiliBiliVideo, 0, len(docs))
 	for _, doc := range docs {
-		var video common.BiliBiliVideo
+		var video infrastructure.BiliBiliVideo
 		if err := proto.Unmarshal(doc.Bytes, &video); err == nil {
 			videos = append(videos, &video)
 		}
@@ -46,7 +47,7 @@ func (KeywordRecaller) Recall(ctx *common.VideoSearchContext) []*common.BiliBili
 	return videos
 }
 
-func (KeywordAuthorRecaller) Recall(ctx *common.VideoSearchContext) []*common.BiliBiliVideo {
+func (KeywordAuthorRecaller) Recall(ctx *infrastructure.VideoSearchContext) []*infrastructure.BiliBiliVideo {
 	request := ctx.Request
 	if request == nil {
 		return nil
@@ -71,11 +72,11 @@ func (KeywordAuthorRecaller) Recall(ctx *common.VideoSearchContext) []*common.Bi
 		}
 	}
 
-	orFlags := []uint64{(common.GetCategoriesBits(request.Categories))}
+	orFlags := []uint64{(infrastructure.GetCategoriesBits(request.Categories))}
 	docs := indexer.Search(query, 0, 0, orFlags)
-	videos := make([]*common.BiliBiliVideo, 0, len(docs))
+	videos := make([]*infrastructure.BiliBiliVideo, 0, len(docs))
 	for _, doc := range docs {
-		var video common.BiliBiliVideo
+		var video infrastructure.BiliBiliVideo
 		if err := proto.Unmarshal(doc.Bytes, &video); err == nil {
 			videos = append(videos, &video)
 		} else {

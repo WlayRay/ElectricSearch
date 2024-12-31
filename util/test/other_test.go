@@ -96,8 +96,8 @@ func TestGetLocalIP(t *testing.T) {
 
 func TestInit(t *testing.T) {
 	fmt.Printf("rootpath: %v\n", util.RootPath)
-	fmt.Printf("configurations:\n")
-	for k, v := range util.Configurations {
+	fmt.Printf("ConfigMap:\n")
+	for k, v := range util.ConfigMap {
 		fmt.Printf(" %v: %v\n", k, v)
 	}
 }
