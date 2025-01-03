@@ -34,6 +34,7 @@ func startGin() {
 
 	engine.POST("/search", handler.SearchAll)
 	engine.POST("/up_search", handler.SearchByAuthor)
+	
 	if err := engine.Run("127.0.0.1:" + strconv.Itoa(port)); err != nil {
 		util.Log.Println("Server failed to start:", err)
 		return
@@ -57,6 +58,7 @@ func main() {
 //go run ./demo/main
 
 func init() {
+	// 配置文件校验
 	// 初始化部署模式
 	if v, ok := util.ConfigMap["mode"]; !ok {
 		panic("mode not found in ConfigMap!")
@@ -82,11 +84,11 @@ func init() {
 	if v, ok := serverConfig["rebuild_index"]; !ok {
 		panic("rebuildIndex not found in ConfigMap!")
 	} else {
-		switch v.(type) {
+		switch v := v.(type) {
 		case bool:
-			rebuildIndex = v.(bool)
+			rebuildIndex = v
 		case string:
-			rebuildIndex = v.(string) == "true"
+			rebuildIndex = v == "true"
 		default:
 			panic("rebuildIndex invalid!")
 		}

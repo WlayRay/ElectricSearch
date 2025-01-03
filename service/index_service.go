@@ -43,12 +43,12 @@ func (service *IndexServiceWorker) Init(workerIndex int) error {
 		// 初始化正排索引使用的数据库类型
 		if v, ok := util.ConfigMap["db-type"]; ok {
 			switch v {
-			case "badger":
-				dbType = kvdb.BADGER
-				dbPath += "badger_db"
-			default:
+			case "bolt":
 				dbType = kvdb.BOLT
 				dbPath += "bolt_db/bolt"
+			default:
+				dbType = kvdb.BADGER
+				dbPath += "badger_db"
 			}
 		} else {
 			dbType = kvdb.BOLT
