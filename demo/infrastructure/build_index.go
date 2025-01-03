@@ -95,7 +95,7 @@ func AddVideoToIndex(video *BiliBiliVideo, indexer service.IIndexer) {
 	if err == nil {
 		doc.Bytes = bs
 	} else {
-		log.Printf("serielize video %s failed, err: %v", video.Id, err)
+		log.Printf("serialize video %s failed, err: %v", video.Id, err)
 		return
 	}
 

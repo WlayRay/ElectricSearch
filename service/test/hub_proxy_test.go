@@ -21,8 +21,8 @@ func TestGetServiceEndpointByProxy(t *testing.T) {
 	proxy := service.GetServiceHubProxy(etcdServers, 10, qps)
 
 	for i := 0; i < 3; i++ {
-		proxy.Regist(serviceName, Endpoints[i], 0)
-		defer proxy.UnRegist(serviceName, Endpoints[i])
+		proxy.Register(serviceName, Endpoints[i], 0)
+		defer proxy.UnRegister(serviceName, Endpoints[i])
 		_ = proxy.GetServiceEndpoints(serviceName)
 	}
 

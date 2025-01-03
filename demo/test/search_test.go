@@ -50,10 +50,10 @@ func TestSearch(t *testing.T) {
 	defer resp.Body.Close()
 	content, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode == 200 {
-		var datas []infrastructure.BiliBiliVideo
-		sonic.Unmarshal(content, &datas)
-		for _, data := range datas {
-			fmt.Printf("%s %d %s %s\n", data.Id, data.ViewCount, data.Title, strings.Join(data.Keywords, "|"))
+		var videos []infrastructure.BiliBiliVideo
+		sonic.Unmarshal(content, &videos)
+		for _, video := range videos {
+			fmt.Printf("%s %d %s %s\n", video.Id, video.ViewCount, video.Title, strings.Join(video.Keywords, "|"))
 		}
 	} else {
 		fmt.Println(resp.Status)
@@ -91,10 +91,10 @@ func TestSearchByAuthor(t *testing.T) {
 	defer resp.Body.Close()
 	content, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode == 200 {
-		var datas []infrastructure.BiliBiliVideo
-		sonic.Unmarshal(content, &datas)
-		for _, data := range datas {
-			fmt.Printf("%s %d %s %s\n", data.Id, data.ViewCount, data.Title, strings.Join(data.Keywords, "|"))
+		var videos []infrastructure.BiliBiliVideo
+		sonic.Unmarshal(content, &videos)
+		for _, video := range videos {
+			fmt.Printf("%s %d %s %s\n", video.Id, video.ViewCount, video.Title, strings.Join(video.Keywords, "|"))
 		}
 	} else {
 		fmt.Println(resp.Status)

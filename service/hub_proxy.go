@@ -13,11 +13,11 @@ import (
 )
 
 type IServiceHub interface {
-	Regist(service, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) // 注册服务
-	UnRegist(service, endpoint string) error                                         // 注销服务
-	GetServiceEndpoints(service string) []string                                     // 服务发现
-	GetServiceEndpoint(service string) string                                        // 根据负载均衡获取一台服务的endpoint
-	Close()                                                                          // 关闭etcd连接
+	Register(service, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) // 注册服务
+	UnRegister(service, endpoint string) error                                         // 注销服务
+	GetServiceEndpoints(service string) []string                                       // 服务发现
+	GetServiceEndpoint(service string) string                                          // 根据负载均衡获取一台服务的endpoint
+	Close()                                                                            // 关闭etcd连接
 }
 
 // 代理模式，对ServiceHub做一层代理，提供缓存和限流保护

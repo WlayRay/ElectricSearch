@@ -27,7 +27,7 @@ func GrpcIndexerInit() {
 	// 初始化索引
 	indexService.Init(workerIndex)
 	if rebuildIndex {
-		util.Log.Printf("totalworkers = %d, workerindex = %d", totalWorkers, workerIndex)
+		util.Log.Printf("total workers = %d, worker index = %d", totalWorkers, workerIndex)
 		infrastructure.BuildIndexFromCSVFile(csvFilePath, indexService.Indexer, totalWorkers, workerIndex)
 	} else {
 		indexService.Indexer.LoadFromIndexFile() //直接从正排索引中加载
@@ -35,7 +35,7 @@ func GrpcIndexerInit() {
 
 	service.RegisterIndexServiceServer(server, indexService)
 	fmt.Printf("Start gprc server on port: %d\n", port)
-	indexService.Regist(etcdEndpoints, port, heartRate)
+	indexService.Register(etcdEndpoints, port, heartRate)
 
 	err = server.Serve(lis)
 	if err != nil {

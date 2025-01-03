@@ -50,10 +50,10 @@ func GetKeyValueDB(dbType int, path string) (IKeyValueDB, error) {
 	var db IKeyValueDB
 
 	switch dbType {
-	case BADGER:
-		db = new(Badger).WithDataPath(path)
-	default: //默认使用bolt
+	case BOLT:
 		db = new(Bolt).WithDataPath(path).WithBucket("github.com/WlayRay/ElectricSearch")
+	default: //默认使用badger
+		db = new(Badger).WithDataPath(path)
 	}
 	err = db.Open()
 	return db, err

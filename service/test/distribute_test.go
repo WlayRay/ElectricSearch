@@ -34,7 +34,7 @@ func StartWorkers() {
 		indexServiceWorker.Indexer.LoadFromIndexFile() //从文件中加载索引数据
 		// 注册服务的具体实现
 		service.RegisterIndexServiceServer(server, indexServiceWorker)
-		indexServiceWorker.Regist(etcdServers, port, 20)
+		indexServiceWorker.Register(etcdServers, port, 20)
 		go func(port int) {
 			// 启动服务
 			fmt.Printf("start grpc server on port %d\n", port)

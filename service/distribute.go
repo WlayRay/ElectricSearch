@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"sync"
 	"sync/atomic"
-	"time"
 
 	"github.com/WlayRay/ElectricSearch/types"
 	"github.com/WlayRay/ElectricSearch/util"
@@ -28,33 +27,29 @@ func NewSentinel(etcdServers []string) *Sentinel {
 	}
 }
 
-func (sentinal *Sentinel) GetGrpcConn(endpoint string) *grpc.ClientConn {
-	if v, exists := sentinal.connPool.Load(endpoint); exists {
+func (sentinel *Sentinel) GetGrpcConn(endpoint string) *grpc.ClientConn {
+	if v, exists := sentinel.connPool.Load(endpoint); exists {
 		conn := v.(*grpc.ClientConn)
 		// 检查连接状态是否为Ready
 		if conn.GetState() != connectivity.Ready {
 			util.Log.Printf("sentinel %s is not ready (state: %v), close it", endpoint, conn.GetState())
 			conn.Close()
-			sentinal.connPool.Delete(endpoint)
+			sentinel.connPool.Delete(endpoint)
 		} else {
 			return conn
 		}
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-	conn, err := grpc.DialContext(
-		ctx,
+	conn, err := grpc.NewClient(
 		endpoint,
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
-		grpc.WithBlock(),
 	)
 	if err != nil {
 		util.Log.Printf("dial %s failed: %s", endpoint, err)
 		return nil
 	}
 	util.Log.Printf("successfully connected to grpc server %s", endpoint)
-	sentinal.connPool.Store(endpoint, conn)
+	sentinel.connPool.Store(endpoint, conn)
 	return conn
 }
 
@@ -92,10 +87,10 @@ func (sentinel *Sentinel) DeleteDoc(docId string) int {
 				client := NewIndexServiceClient(conn)
 				affected, err := client.DeleteDoc(context.Background(), &DocId{docId})
 				if err != nil {
-					util.Log.Printf("delect doc %s from worker %s failed: %s", docId, endpoint, err)
+					util.Log.Printf("delete doc %s from worker %s failed: %s", docId, endpoint, err)
 				} else if affected.Count > 0 {
 					atomic.AddUint32(&n, uint32(affected.Count))
-					util.Log.Printf("delect doc %s from worker %s, affected %d", docId, endpoint, affected.Count)
+					util.Log.Printf("delete doc %s from worker %s, affected %d", docId, endpoint, affected.Count)
 				}
 			}
 		}(endpoint)

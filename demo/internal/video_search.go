@@ -39,7 +39,7 @@ func (search *VideoSearcher) Recall(searchCtx *infrastructure.VideoSearchContext
 		return
 	}
 	// 并行执行多路召回
-	colletion := make(chan *infrastructure.BiliBiliVideo, 1000)
+	collection := make(chan *infrastructure.BiliBiliVideo, 1000)
 	wg := sync.WaitGroup{}
 	wg.Add(len(search.Recallers))
 
@@ -50,7 +50,7 @@ func (search *VideoSearcher) Recall(searchCtx *infrastructure.VideoSearchContext
 			result := recaller.Recall(searchCtx)
 			util.Log.Printf("recall %d docs by %s", len(result), rule)
 			for _, video := range result {
-				colletion <- video
+				collection <- video
 			}
 		}(recaller)
 	}
@@ -59,7 +59,7 @@ func (search *VideoSearcher) Recall(searchCtx *infrastructure.VideoSearchContext
 	receiveDone := make(chan struct{})
 	go func() {
 		for {
-			video, ok := <-colletion
+			video, ok := <-collection
 			if !ok {
 				break
 			}
@@ -68,7 +68,7 @@ func (search *VideoSearcher) Recall(searchCtx *infrastructure.VideoSearchContext
 		receiveDone <- struct{}{}
 	}()
 	wg.Wait()
-	close(colletion)
+	close(collection)
 	<-receiveDone
 	searchCtx.Videos = maps.Values(videoMap)
 }

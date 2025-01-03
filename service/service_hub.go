@@ -50,7 +50,7 @@ func GetServiceHub(etcdEndpoints []string, heartRate int64) *ServiceHub {
 	return serviceHub
 }
 
-func (hub *ServiceHub) Regist(service, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) {
+func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) {
 	ctx := context.Background()
 	if leaseID <= 0 {
 		// 创建一个有效期为heartRate的租约（单位：秒）
@@ -61,7 +61,7 @@ func (hub *ServiceHub) Regist(service, endpoint string, leaseID etcdv3.LeaseID) 
 			keys := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/" + endpoint
 			// 服务注册
 			if _, err := hub.client.Put(ctx, keys, "", etcdv3.WithLease(lease.ID)); err != nil {
-				util.Log.Printf("regist service %s endpoint %s failed: %v", service, endpoint, err)
+				util.Log.Printf("register service %s endpoint %s failed: %v", service, endpoint, err)
 				return leaseID, err
 			} else {
 				return leaseID, nil
@@ -70,7 +70,7 @@ func (hub *ServiceHub) Regist(service, endpoint string, leaseID etcdv3.LeaseID) 
 	} else {
 		// 续租
 		if _, err := hub.client.KeepAliveOnce(ctx, leaseID); err != rpctypes.ErrLeaseNotFound {
-			return hub.Regist(service, endpoint, leaseID)
+			return hub.Register(service, endpoint, leaseID)
 		} else if err != nil {
 			util.Log.Printf("keep lease %d failed: %v", leaseID, err)
 			return 0, err
@@ -81,7 +81,7 @@ func (hub *ServiceHub) Regist(service, endpoint string, leaseID etcdv3.LeaseID) 
 }
 
 // 注销服务
-func (hub *ServiceHub) UnRegist(service, endpoint string) error {
+func (hub *ServiceHub) UnRegister(service, endpoint string) error {
 	ctx := context.Background()
 	key := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/" + endpoint
 	if _, err := hub.client.Delete(ctx, key); err != nil {
