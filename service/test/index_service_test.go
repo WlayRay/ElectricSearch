@@ -47,10 +47,10 @@ func TestIndexService(t *testing.T) {
 	time.Sleep(1 * time.Second) //等server启动完毕
 
 	//连接到服务端
-	conn, err := grpc.DialContext(
-		context.Background(),
+	// 连接到服务端
+	conn, err := grpc.NewClient(
 		"127.0.0.1:"+strconv.Itoa(servicePort),
-		grpc.WithTransportCredentials(insecure.NewCredentials()), //Credential即使为空，也必须设置
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
 	)
 	if err != nil {
 		fmt.Printf("dial failed: %s", err)

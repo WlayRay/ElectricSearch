@@ -34,8 +34,8 @@ func startGin() {
 
 	engine.POST("/search", handler.SearchAll)
 	engine.POST("/up_search", handler.SearchByAuthor)
-	
-	if err := engine.Run("127.0.0.1:" + strconv.Itoa(port)); err != nil {
+
+	if err := engine.Run("0.0.0.0:" + strconv.Itoa(port)); err != nil {
 		util.Log.Println("Server failed to start:", err)
 		return
 	}

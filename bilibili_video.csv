@@ -1,0 +1,945 @@
+https://www.bilibili.com/video/BV1dy4y1u7Sq|后端开发大师课程 [golang + postgres +docker] (中文字幕)|2021-06-19 03:13:20|FlameMida|40000|813|414|3716|165|知识,野生技能协会,视频教程,课程,计算机,开发,编程,sql,后端,docker,go,golang|
+https://www.bilibili.com/video/BV19a4y1G7HM|【golang教程】全部100集，字节跳动终于整理出了go语言的完整教程！持续更新中~|2023-05-06 23:10:55|AIT_快知名UP煮|12000|142|107|634|27|知识,野生技能协会,程序员,c++,计算机,it,编程,go语言教程,计算机技术,python,java,golang|
+https://www.bilibili.com/video/BV1DN411U7Mi|【2023版】字节跳动89小时内部培训的go语言（golang）教程，java程序员转行go开发工程师必看，全套600集，就怕你不学！|2023-07-04 01:45:23|程序员知识库|77000|1482|1597|3835|172|知识,野生技能协会,知识分享官,计算机,程序员,编程,golang开发,golang项目,go语言,go教程,go教程,go开发工程师|
+https://www.bilibili.com/video/BV1Mj411s7Kj|go语言gui桌面程序解决方案wails(webview)教程【1】|2023-12-10 05:28:25|墨明棋妙的豆子|14000|145|56|282|20|科技2023年终总结,科技,计算机技术,it,教程,编程,经验分享,gui,go,go语言,golang,2023热门年度盘点|
+https://www.bilibili.com/video/BV1Sp4y1R7Zq|wails - 轻量级的 electron 替代品，使用 go 封装前端页面|2024-01-04 20:30:00|GitHub精选|2063|8|0|17|3|你也喜欢学习吗？,科技,软件应用,github精选,跨端应用,前端,go,前端开发,github,electron,web,web开发|
+https://www.bilibili.com/video/BV1Gr421p7ZR|无需依赖 docker，简单且快速的 go 应用容器镜像构建工具|2024-03-08 22:55:03|GitHub精选|1149|15|2|29|4|知识分享家,科技,软件应用,工程效率,效能提升,镜像构建,github精选,容器,ci,docker,go,github|
+https://www.bilibili.com/video/BV1dC41187ju|专为 go 语言设计的函数式编程库|2024-03-10 18:37:53|GitHub精选|1477|21|2|30|6|工作提效指南,科技,软件应用,今天也要好好工作,程序员,编程,github精选,分布式,函数式编程,go,github,高并发|
+https://www.bilibili.com/video/BV1Qp4y197L2|一个简洁且多彩的 go 语言日志库|2023-12-30 19:48:23|GitHub精选|1825|22|4|49|3|打卡2023最后一周,科技,软件应用,程序员,编程,github精选,哔哩哔哩跨年季,日志,log,go,github,go语言,基础库|
+https://www.bilibili.com/video/BV1xfpgeXEta|go语言rbac接口鉴权快速上手|2024-09-05 18:01:11|Golang在发光|1149|19|8|112|4|科技,计算机技术,it,程序员,编程,区块链,接口,go语言|
+https://www.bilibili.com/video/BV1WbHQehEFW|go语言微服务开发之grpc|2024-09-06 18:18:51|Golang在发光|497|4|2|24|0|科技,计算机技术,编程语言,it,程序员,编程,分布式,区块链,接口,微服务,java,go语言|
+https://www.bilibili.com/video/BV1FbHfeyE3q|go 语言微服务开发之服务发现|2024-09-07 11:33:49|Golang在发光|267|3|0|10|0|科技,计算机技术,it,编程语言,程序员,编程,分布式,区块链,接口,微服务,go语言|
+https://www.bilibili.com/video/BV1b3411T73k|golang在发光：go语言开发ci/cd流水线平台|2022-04-19 16:23:50|Golang在发光|4775|52|15|224|7|知识,野生技能协会,go语言教程,ci/cd流水线平台,golang教程,马哥教育,go语言|
+https://www.bilibili.com/video/BV1zU4y1P732|golang在发光：go语言开发企业级devops平台|2021-09-08 17:24:03|Golang在发光|5977|38|6|141|4|知识,野生技能协会,go,go语言,golang,devops|
+https://www.bilibili.com/video/BV1EY4y1P7Y3|golang实战项目：2小时带你吃透kubernetes operator 二次开发|2022-07-30 14:34:49|Golang在发光|9257|57|15|296|21|知识,野生技能协会,k8s教程,go二次开发,kubernetesoperator,kubernetes二次开发,golang,go语言,kubernetes,云原生|
+https://www.bilibili.com/video/BV14M4y1R7Qr|go实战项目：kubernetes二次开发实战【高薪必备】|2023-03-02 19:43:10|马哥教育实战|26000|697|177|989|707|科技,计算机技术,k8s二次开发,go实战项目,go语言,kubernetes,二次开发,云原生|
+https://www.bilibili.com/video/BV1JV4y1E7uL|golang实战项目：2小时带你吃透prometheus exporter 二次开发|2022-07-28 17:06:29|Golang在发光|7310|61|14|349|21|知识,野生技能协会,开发,视频教程,prometheus二次开发,go二次开发,prometheus教程,golang,go语言,prometheus,kubernetes,云原生|
+https://www.bilibili.com/video/BV1kcHxeRECz|golang入门到实战教程丨一套精通go语言|2024-09-03 16:40:44|老男孩IT教育|1197|8|0|39|1|知识,野生技能协会,it,程序员,编程,实战,搭建,go语言,golang,那些年那些事|
+https://www.bilibili.com/video/BV1yCWhe7EkR|golang入门到实战教程丨一套精通go语言|2024-08-21 16:09:22|老男孩IT|629|6|1|25|2|知识,野生技能协会,程序员,语言,it,编程,实战,数据库,go语言,实战教程,golang,黑神话悟空真好玩|
+https://www.bilibili.com/video/BV13E421A7WM|【b站最全】golang入门到实战教程丨一套精通go语言|2024-07-18 17:49:53|老男孩IT|1256|9|6|57|1|知识,野生技能协会,入门,程序员,语言,教程,脚本,实战,go语言,实战教程,golang,一起涨知识|
+https://www.bilibili.com/video/BV1STpyexEfG|golang入门到实战教程，零基础必备，一套轻松精通go语言|2024-08-19 10:07:17|Python-武沛齐|972|11|4|46|2|知识,校园学习,环境,程序员,开发,入门,技术,编程,基础,实战,实战教程|
+https://www.bilibili.com/video/BV1JJsTe6Ebs|golang入门到实战教程丨一套精通go语言|2024-08-28 17:21:47|老男孩IT教育|880|8|2|17|0|知识,野生技能协会,程序员,it,语言,编程,go语言,实战教程,golang,捕捉秋日碎片|
+https://www.bilibili.com/video/BV1sMpSecECd|[一(01-07)]udemy - working with design patterns in go (golang) 2024-6|2024-08-20 07:09:56|空白得很|461|9|4|15|0|科技,计算机技术,trevorsawler,go,golang,udemy,designpatterns|
+https://www.bilibili.com/video/BV13LeueWEG1|二(09-12完)udemy - working with microservices in go (golang) 2024-6|2024-08-17 07:30:58|空白得很|423|11|5|20|0|科技,计算机技术,微服务,go,golang,udemy,microservices|
+https://www.bilibili.com/video/BV116eKezEbz|一(01-08)udemy - working with microservices in go (golang) 2024-6|2024-08-16 10:54:53|空白得很|576|20|5|45|0|科技,计算机技术,微服务,go,golang,udemy,microservices|
+https://www.bilibili.com/video/BV1RU4y1Q7oR|udemy评分4.7课程 - working with microservices in go (golang) 2022-4（01-04）|2022-06-29 11:41:06|空白得很|2260|26|13|124|3|科技,计算机技术,go,it,编程,教程,golang,go语言,微服务,编程开发,microservices|
+https://www.bilibili.com/video/BV1TT411L7mt|udemy_working_with_concurrency_in_go_golang_2022-5（01-05）|2022-08-05 11:39:41|空白得很|938|13|6|63|1|科技,计算机技术,go,教学视频,视频教程,编程,golang,go语言,编程开发,concurrency,udemy|
+https://www.bilibili.com/video/BV15spmerE4n|2024最新golang从入门到实战教程（完整版）|2024-08-19 19:28:24|Linux-技术大师|16000|264|232|1411|31|知识,野生技能协会,程序员,计算机,编程,golang开发,golang入门,golang项目实战,golang,golang教程,go语言,golang基础|
+https://www.bilibili.com/video/BV17hHseLEiU|2024最新golang云原生全套教程，从go语言基础到企业实战项目，学完即可就业！！！|2024-09-05 15:30:38|CPP开发|1480|17|9|150|4|知识,野生技能协会,分布式,微服务,golang,docker,kubernetes,go语言,protobuf,云原生,grpc,etcd|
+https://www.bilibili.com/video/BV15sHreWEDt|2024硬核golang云原生教程（完整版），学完既可直击高薪岗位！|2024-09-02 15:06:36|简说Linux内核|2167|46|32|273|7|科技,计算机技术,grpc框架,k8s二开,prometheus云监控,分布式,数据库,docker,devops,go语言,项目实战,云原生|
+https://www.bilibili.com/video/BV1oJHEetEvx|双非本科all in go后端|2024-09-04 06:00:00|张朝阳讲go语言|1329|12|1|4|1|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1Tr421M7Zu|tiobe 8月编程语言排名：没啥好说的，只能拿python搪塞一个月|2024-08-11 00:05:05|张朝阳讲go语言|5917|29|1|1|2|科技,计算机技术,编程语言,java,go语言|
+https://www.bilibili.com/video/BV1rz421i77H|rust 起飞，go 进入了前 十名  七月编程语言排名速览|2024-07-21 19:24:25|独立开发Luke|16000|85|2|18|14|知识,野生技能协会,编程语言,go,最好的编程语言,排名,rust,必剪创作|
+https://www.bilibili.com/video/BV1Ww41147Uy|2024年，go和rust之间，我们要怎么选|2023-12-21 19:00:00|程序猿DD|34000|167|15|180|22|新年自律打卡,科技,计算机技术,学习,编程语言,哔哩哔哩跨年季,go,rust,语言选择,必剪创作|
+https://www.bilibili.com/video/BV1Pr4y177oh|go vs rust，我到底该学习哪一个？|2022-07-17 15:50:52|波波微课|37000|374|71|158|28|知识,野生技能协会,go,rust,golang,go编程,rust编程|
+https://www.bilibili.com/video/BV13A4m1G7ok|想学go语言的小白直接放弃吧！|2024-02-24 17:00:00|路飞-金角大王Alex|14000|64|4|23|6|科技,计算机技术,小白,it,程序员,编程,就业,职业规划,python,alex,java,go语言|
+https://www.bilibili.com/video/BV1XN41167PH|抛弃java拥抱go，聊聊我的转go心得吧！|2023-06-17 20:59:44|我是健健哥|17000|104|25|60|9|itbook多得,知识,职业职场,程序员,编程,java,golang,必剪创作|
+https://www.bilibili.com/video/BV1h94y1W7Uv|golang找不到工作？通过岗位对比和现状进行分析|2023-09-14 19:07:32|码神之路|11000|91|13|92|8|科技,计算机技术,it,编程语言,程序员,编程,工作,现状,岗位,大厂,golang,找不到工作|
+https://www.bilibili.com/video/BV1Du4y1F7xR|fiber框架让go语言飞起来！|2023-11-29 00:05:00|真的不想修改昵称呀|3300|12|0|31|1|科技,计算机技术,it,编程,框架,go,fiber|
+https://www.bilibili.com/video/BV1aj411L763|go语言gin框架 对比 fiber框架|2023-11-28 00:01:00|真的不想修改昵称呀|1765|9|2|12|1|科技,计算机技术,编程,go,mysql,gin,fiber|
+https://www.bilibili.com/video/BV1eQ4y1b7ew|go语言gin框架 对比 php webman框架|2023-11-18 01:01:00|真的不想修改昵称呀|1645|8|1|11|0|生活,日常,计算机,对比,程序员,编程,webman,性能,go,php,gin|
+https://www.bilibili.com/video/BV1jv411F7Ni|第二次对比 go语言gin原生sql 对比 webman pdo原生sql|2023-11-23 15:38:23|真的不想修改昵称呀|1754|11|0|8|0|科技,计算机技术,计算机,编程,webman,压力测试,go,php,gin|
+https://www.bilibili.com/video/BV14H4y117KU|go语言 gin框架 gorm 增删改查|2023-12-01 00:05:41|真的不想修改昵称呀|755|9|0|21|0|知识,职业职场,编程,gin,go,gorm,curd|
+https://www.bilibili.com/video/BV1be411Q7st|go语言 gorm增删改查体验|2023-11-16 15:45:18|真的不想修改昵称呀|313|3|0|2|0|科技,计算机技术,it,计算机,编程,go,增删改查,go语言,gorm,goland|
+https://www.bilibili.com/video/BV1Qv411F78m|学一下go语言 感觉很轻便|2023-11-15 15:43:41|真的不想修改昵称呀|330|3|0|4|0|知识,职业职场,创业,互联网,后端,web,go语言,goland|
+https://www.bilibili.com/video/BV1jjHjeXEpf|上线一个json和sql转go语言结构体工具|2024-08-30 17:43:49|真的不想修改昵称呀|193|4|2|1|0|科技,计算机技术,it,程序员,编程,go语言|
+https://www.bilibili.com/video/BV1ZVsWeUEpu|使用 goframe 和 uniapp+vue3 构建「验房管家」微信小程序|2024-08-27 15:02:20|真的不想修改昵称呀|292|3|0|7|0|科技,计算机技术,goframe,微信小程序,vue,go语言|
+https://www.bilibili.com/video/BV1AC4y1F7ic|go语言fiber框架实现api限速|2023-12-07 11:20:55|真的不想修改昵称呀|320|2|0|8|0|科技,计算机技术,限速,api,go,go语言,fiber|
+https://www.bilibili.com/video/BV1xyWYexERn|组合优于继承（go&rust都是这种设计）|2024-08-21 19:57:09|架构师-刘志勇|1727|17|6|37|0|科技,计算机技术,编程,java,go,rust,编程开发,架构师|
+https://www.bilibili.com/video/BV1vqHmezEgs|python、go、rust都已不再oop。时代早就变了。|2024-09-06 11:56:24|架构师-刘志勇|20000|126|35|136|17|科技,计算机技术,系统,编程语言,编程,互联网,python,java,go,rust,架构|
+https://www.bilibili.com/video/BV1X8HnebE9f|内部课实录-java设计缺陷与go python的设计原理|2024-09-03 11:14:51|架构师-刘志勇|37|7|2|12|0|科技,计算机技术,计算机,原理,编程语言,编程,实录,设计模式,java,go,java,架构师|
+https://www.bilibili.com/video/BV1QK4y1672D|字节大量使用新语言，包括go，rust等，为什么阿里一直都抱着java不松手？|2024-01-06 17:19:00|程序员_小王|80000|373|12|153|33|科技,计算机技术,程序员,计算机,编程语言,it,互联网,阿里,java,rust,go语言,字节跳动|
+https://www.bilibili.com/video/BV1yt4y1o7Nt|go 开发 web 并不爽为什么这么多人推 go 呢 ？|2024-01-03 19:21:00|程序员_小王|25000|81|4|75|9|科技,计算机技术,程序员,it,计算机,go,编程,互联网,web,go语言|
+https://www.bilibili.com/video/BV1444y1P7pB|go 和 python 哪个更有前景？|2022-04-01 17:00:00|极客时间App|13000|158|0|48|12|知识,职业职场,go,程序员,编程,大厂,代码,python|
+https://www.bilibili.com/video/BV1sz421U7f3|当python遇到go，谁更胜一筹？|2024-05-07 10:38:56|老男孩讲程序|816|5|0|4|0|聊聊科技那些事,科技,计算机技术,科技,go,计算机,编程,互联网,经验分享,计算机技术,python,it行业|
+https://www.bilibili.com/video/BV1uw4m1R7Lx|2024为什么我选择使用go语言，而不是rust，强烈建议观看，听听国外大佬的思维方式|2024-03-19 19:17:12|码神之路|31000|207|25|259|40|科技,计算机技术,编程入门,程序员,编程,思维方式,思维,rust,软件开发,go语言,编程思维|
+https://www.bilibili.com/video/BV1P44y1i7pp|[rust vs go] grpc性能对比第一轮，伤心了，意想不到的结果|2021-10-24 14:59:33|万能的胖子|31000|152|26|145|21|知识,野生技能协会,rust语言,性能对比,go语言,grpc,打卡挑战|
+https://www.bilibili.com/video/BV1xM411i7XC|go (golang) vs rust性能基准测试|2023-02-03 02:03:28|精选海外教程postcode|13000|122|5|88|14|科技,计算机技术,编程语言,编程,性能,rust,性能测试|
+https://www.bilibili.com/video/BV19x4y187Pe|jdk17，rust，go 开发http api 性能比对|2024-04-17 00:06:40|码学|6375|35|2|50|3|科技,计算机技术,编程语言,开发,go,性能比对,语言优劣,性能,rust,java,高并发,语言选择|
+https://www.bilibili.com/video/BV1xg4y1m7xZ|【巅峰对决】不吹不黑，直接看看go对比c#的web性能如何|2024-01-15 21:47:44|哈萨给23|16000|94|15|43|13|科技,计算机技术,服务器,编程语言,性能测试,go,c#,.net,golang,高并发,dotnet,csharp|
+https://www.bilibili.com/video/BV1DH4y127Va|哪个是最佳的go框架？关于golang 后端框架的真相|2023-11-23 10:58:16|沃趣Squids数据库平台|9257|70|3|103|4|科技,计算机技术,编程语言,程序员,编程,框架,后端,gin,go,echo,golang,标准库|
+https://www.bilibili.com/video/BV15L411P7cM|聊聊 golang 的 web 框架|2022-03-11 15:06:59|极客时间App|7483|97|33|219|16|知识,职业职场,程序员,编程,go语言|
+https://www.bilibili.com/video/BV15W4y1k7bB|程序员干货｜如何快速提高go语言编码能力？|2022-06-13 17:28:48|极客时间App|1989|40|15|94|3|学编程的正确姿势,科技,计算机技术,it,学习,程序员,计算机,编程,go语言,golang,互联网,编程开发|
+https://www.bilibili.com/video/BV1P34y1m718|go语言前景及编程简介|2021-10-19 10:54:14|极客时间App|1508|40|6|41|1|知识,职业职场,入门,教育,it,零基础,编程,职业,应届生,go语言|
+https://www.bilibili.com/video/BV1C341187YP|8 小时入门 go 语言|2021-11-12 19:23:43|极客时间App|11000|196|111|653|31|知识,职业职场,go,程序员,编程,面试,golang,求职,go语言,应届生,编程开发|
+https://www.bilibili.com/video/BV1Gq4y1e7eA|如何从小白进阶成go语言专家？|2022-04-01 16:59:30|极客时间App|2963|72|21|149|13|知识,职业职场,职场,学习,编程,面试,求职,代码,极客时间|
+https://www.bilibili.com/video/BV1Cr4y1y7cK|go语言基础语法介绍|2021-10-18 16:57:56|极客时间App|969|26|3|31|0|知识,职业职场,计算机,零基础,入门,编程,求职,golang,go语言|
+https://www.bilibili.com/video/BV1ru411d7nX|go语言基础语法实战|2021-10-18 17:15:58|极客时间App|783|30|5|28|0|知识,职业职场,零基础,it,程序员,入门,计算机,编程,求职,职业,go语言|
+https://www.bilibili.com/video/BV1xre7eBEPf|06 go语言中多路复用器的基本用法|2024-08-14 10:02:58|Python私教|412|6|0|8|1|有趣软件分享,科技,计算机技术,go语言,开启暑假的100种方式|
+https://www.bilibili.com/video/BV1dL411J7wg|python需要用28个字节来表示一个整数，而go语言只需要1个字节|2021-07-28 22:16:31|Python私教|108|0|0|0|0|知识分享官,知识,科学科普|
+https://www.bilibili.com/video/BV1Eg411M7VH|go语言零基础入门教程007 字符串的定义|2021-07-23 07:57:15|Python私教|24|2|0|0|0|知识分享官,知识,科学科普,教程,编程,go|
+https://www.bilibili.com/video/BV1CX4y1p7Au|超级牛，我用go开发了一套框架，写权限系统只要是十来行代码|2023-06-29 08:26:37|Python私教|95|1|0|0|0|科技,计算机技术,go,编程,框架|
+https://www.bilibili.com/video/BV1Ym4y1X71B|zdpgo_docker框架使用教程001，使用golang在远程服务器上自动安装docker|2021-12-19 18:05:28|Python私教|55|1|0|0|0|创作加成计划,知识,科学科普|
+https://www.bilibili.com/video/BV1kL4y1H74v|使用golang操作mysql数据库001，开源框架zdpgo_mysql的基本使用|2021-12-13 07:56:55|Python私教|112|2|1|3|1|创作加成计划,知识,科学科普|
+https://www.bilibili.com/video/BV1fF411e7tb|golang操作kafka入门教程001，实现发送短信的功能|2022-01-03 17:23:24|Python私教|564|2|2|3|0|知识分享官,知识,科学科普,学习,知识分享官·新年特别篇|
+https://www.bilibili.com/video/BV1s44y1E7mZ|golang中的channel讲解，如何使用channel实现两个协程之间的通信|2021-12-11 18:02:10|Python私教|506|3|0|3|0|创作加成计划,知识,科学科普|
+https://www.bilibili.com/video/BV1Za411r7sq|golang并发实战案例，使用两个goroutine求1到100万之间所有数的和|2021-12-11 18:59:45|Python私教|455|2|0|4|0|创作加成计划,知识,科学科普|
+https://www.bilibili.com/video/BV1sg411w7tT|使用golang写爬虫001，爬取豆瓣电影top250|2021-12-12 10:42:06|Python私教|226|1|0|1|0|创作加成计划,知识,科学科普|
+https://www.bilibili.com/video/BV1wb4y1q7Gc|golang当中利用channel阻塞的特性实现两个协程之间的同步|2021-12-11 18:22:24|Python私教|140|2|0|0|0|创作加成计划,知识,科学科普|
+https://www.bilibili.com/video/BV1Mx4y1s74w|go语言中的闭包函数|2024-07-27 08:05:02|Python私教|33|1|0|0|0|有趣软件分享,科技,计算机技术,开启暑假的100种方式|
+https://www.bilibili.com/video/BV1Ci4y117xW|go语言大佬鸟窝现场代码演示！如何用go语言解决经典并发问题|2022-02-14 18:04:48|极客时间App|6057|119|57|392|18|知识分享官,知识,职业职场,微博,代码演示,哲学家分餐,编程学习,鸟窝,go语言,并发编程|
+https://www.bilibili.com/video/BV1ggpcevEJf|加州大学尔湾分校《go语言编程programming with google go》中英字幕|2024-09-09 19:00:00|GPT中英字幕课程资源|1410|30|8|76|1|知识,职业职场,计算机,编程,并发,coursera,golang,go语言,加州大学尔湾分校|
+https://www.bilibili.com/video/BV1ZC4y1V7Yc|一次性理解：java、go、rust都是如何应对并发挑战的？|2023-10-13 08:00:00|极客时间App|7646|146|49|337|18|程序员研究所,科技,计算机技术,it,编程,java|
+https://www.bilibili.com/video/BV11CeMeLEmo|golang入门到实战教程丨一套精通go语言|2024-08-16 14:17:28|爱学运维的木木|398|6|2|33|1|知识,野生技能协会,it,语言,程序员,编程,生活是个动词,实战,go语言,实操,golang|
+https://www.bilibili.com/video/BV12vsWeeEXC|最新goweb实战开发教程，一小时上手gin框架/基于go语言实现im功能,通过gin+websocket实现qq项目/goliang并发编程！|2024-08-27 14:24:04|路飞学城Alex小助理|1408|18|6|87|2|科技,计算机技术,程序员,it,科技,编程,goweb实战,开发教程,互联网,计算机技术,golang|
+https://www.bilibili.com/video/BV1RVWferExe|[中文字幕]在 go 中使用并发|2024-08-31 20:30:00|王教员|1129|26|2|78|3|科技,计算机技术,程序员,编程,程序开发,并发,go,golang,编程开发|
+https://www.bilibili.com/video/BV18qnZexEYy|golang踩坑日记|2024-09-05 06:10:00|张朝阳讲go语言|4192|78|31|251|5|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1xz421S7ev|golang架构师必学必会的九大开源框架（rpc、gin、jwt、cobra、otel、go-kit、gorm、logrus、validator）|2024-04-25 14:20:52|Qt_Operator|8702|107|61|885|34|知识,野生技能协会,程序员,计算机,编程,golang云原生,golangweb框架,golang微服务框架,golang开源框架,微服务,golang,go语言|
+https://www.bilibili.com/video/BV1ox4y1d7uZ|【2023开源框架教程】golang绕不开的几个开源框架（gin、grpc、cobra、gorm、logrus、jwt、go-kit...）存下吧！有这还啃书？|2023-07-10 18:03:43|Linux-后端攻城狮|12000|122|83|957|40|知识,野生技能协会,go-kit,validator,logrus,golangweb框架,golang微服务框架,golang,gin,go语言,grpc,gorm|
+https://www.bilibili.com/video/BV1NP4y1772a|golang  mysql + gin + gorm + jwt|2022-01-13 15:02:52|井九太懒了|7650|33|7|247|5|知识,野生技能协会,jwt,gin,mysql,golang,gorm|
+https://www.bilibili.com/video/BV1Fa411B7za|golang gorilla/mux gorm图书管理系统demo|2022-01-16 10:28:03|井九太懒了|946|10|4|35|1|知识,野生技能协会,gin,mysql,golang|
+https://www.bilibili.com/video/BV1Dm4y1U7eZ|jwt authentication in golang with gin  jwt auth golang|2022-01-16 10:15:14|井九太懒了|549|2|1|20|0|知识,野生技能协会,jwt,gin,golang|
+https://www.bilibili.com/video/BV11dWNeVEPB|udemy - working with websockets in go (golang) 2024-6|2024-08-19 07:14:26|空白得很|445|11|3|25|0|科技,计算机技术,trevorsawler,go,golang,udemy,websockets|
+https://www.bilibili.com/video/BV1itpSe7Egb|[二(08-11)完]udemy - working with design patterns in go (golang) 2024-6|2024-08-21 07:10:56|空白得很|247|8|1|15|0|科技,计算机技术,it,trevorsawler,go,golang,udemy,designpatterns|
+https://www.bilibili.com/video/BV1PN4y1C7e2|【七(24+bonus)完结?】 usegolang - web development with go 2023-9|2023-10-19 00:22:04|空白得很|747|16|3|35|0|科技,计算机技术,usegolang,go,golang|
+https://www.bilibili.com/video/BV17v4y1z7Lb|【三】15-16 usegolang - web development with go|2022-12-23 13:37:11|空白得很|742|11|2|45|0|科技,计算机技术,usegolang,go,golang,web|
+https://www.bilibili.com/video/BV1x14y1K7Wc|【一】01-06 usegolang - web development with go|2022-12-05 19:42:07|空白得很|1694|29|15|90|3|科技,计算机技术,编程语言,编程,usegolang,go,web,web前端|
+https://www.bilibili.com/video/BV1Mu4y1F7Zf|【四】17-19 usegolang - web development with go 2023-2|2023-02-20 22:39:12|空白得很|707|12|4|43|2|科技,计算机技术,编程,usegolang,go,web,golang,web前端|
+https://www.bilibili.com/video/BV1Ve411K7a1|【二】07-14 usegolang - web development with go|2022-12-06 20:47:36|空白得很|1543|18|9|68|0|科技,计算机技术,编程语言,编程,usegolang,前端,go,golang,web,web前端|
+https://www.bilibili.com/video/BV1J14y1u74c|udemy - building modern web applications with go (golang) 2022-7（01-05）|2023-01-11 19:00:28|空白得很|1826|27|8|84|6|科技,计算机技术,编程语言,编程,go,golang,前端开发,udemy|
+https://www.bilibili.com/video/BV1yG4y1k7vQ|udemy - building modern web applications with go (golang) 2022-7（06-10）|2023-01-12 19:00:05|空白得很|1250|14|6|62|2|科技,计算机技术,编程,前端,web,golang,前端开发,udemy|
+https://www.bilibili.com/video/BV1qv4y1u7hm|working with microservices in go (golang) 2022-4（05-08）|2022-06-30 11:53:27|空白得很|895|12|5|68|0|科技,计算机技术,go,学习,it,教程,编程,golang,go语言,微服务,编程开发,microservices|
+https://www.bilibili.com/video/BV1bM4y1J7DF|[一(01-08)]udemy - introduction to testing in go (golang) 2022-9|2023-06-24 13:06:11|空白得很|705|12|4|34|0|科技,计算机技术,go,golang,udemy,testing|
+https://www.bilibili.com/video/BV1ok4y1K72H|[二(09-13完结)]udemy - introduction to testing in go (golang) 2022-9|2023-06-25 08:00:52|空白得很|491|10|5|23|1|科技,计算机技术,go,golang,udemy,testing|
+https://www.bilibili.com/video/BV1dG4y1A71p|udemy - building modern web applications with go (golang) 2022-7（11-15）|2023-01-13 19:00:04|空白得很|1234|16|8|71|2|科技,计算机技术,编程语言,go,golang,前端开发,udemy|
+https://www.bilibili.com/video/BV13R4y117f1|udemy - go the complete developer's guide (golang) 2022-10|2022-12-02 08:20:17|空白得很|1351|21|4|95|6|科技,计算机技术,编程,developer,go,golang,udemy|
+https://www.bilibili.com/video/BV1Sj411p7UN|[二(06-12)完结]udemy - go - the complete guide 2023-12|2023-12-19 08:00:13|空白得很|781|13|3|28|2|科技,计算机技术,go,udemy|
+https://www.bilibili.com/video/BV1Xj411p7E7|【一(01-05)】udemy - go - the complete guide 2023-12|2023-12-18 08:00:13|空白得很|1183|27|8|70|6|科技,计算机技术,go,udemy|
+https://www.bilibili.com/video/BV18u4y1e7qr|【六】23 usegolang - web development with go 2023-8|2023-08-27 18:25:42|空白得很|694|12|4|26|0|科技,计算机技术,usegolang,go,golang|
+https://www.bilibili.com/video/BV1tj411d7fM|full time go dev 2023-6|2023-07-21 08:00:07|空白得很|5600|83|30|298|11|科技,计算机技术,go,golang|
+https://www.bilibili.com/video/BV1me411r7UH|udemy - master go programming 2023-9|2023-12-26 08:00:02|空白得很|1106|29|3|90|1|科技,计算机技术,go,golang,udemy|
+https://www.bilibili.com/video/BV11W4y1u7oF|coursera –programming with google go specialization-2/3-functionsinterfaces|2022-12-04 14:06:25|空白得很|153|2|1|14|0|科技,计算机技术,编程,google,go,coursera,golang|
+https://www.bilibili.com/video/BV1Ee411N79b|coursera –programming with google go specialization-3/3-concurrency in go|2022-12-04 14:18:47|空白得很|259|8|1|29|0|科技,计算机技术,编程,google,go,coursera,golang|
+https://www.bilibili.com/video/BV1PU4y1Q77a|udemy_learn_how_to_code_googles_go_golang_programming_language_2022-4(24-30)|2022-06-27 11:41:55|空白得很|115|2|1|12|0|科技,计算机技术,it,视频教程,go,编程,教程,go语言,golang,编程开发|
+https://www.bilibili.com/video/BV1sS4y1H7kA|udemy_learn_how_to_code_googles_go_golang_programming_language_2022-4（05-09）|2022-06-23 12:14:21|空白得很|156|2|1|12|0|科技,计算机技术,视频教程,学习,go,it,编程,教程,go语言,golang,编程开发|
+https://www.bilibili.com/video/BV1g34y1p79o|udemy - working with microservices in go (golang) 2022-4（09-10）完结|2022-07-01 12:42:35|空白得很|837|8|5|58|0|科技,计算机技术,it,go,教程,编程,golang,go语言,微服务,编程开发,microservices|
+https://www.bilibili.com/video/BV1VG4y1R7t3|coursera –programming with google go specialization-1/3-getting started with go|2022-12-03 10:05:53|空白得很|494|7|2|35|0|科技,计算机技术,编程,go,coursera,golang|
+https://www.bilibili.com/video/BV1784y1L7Fb|ardanlabs - ultimate go advanced engineering|2023-02-01 08:00:05|空白得很|1939|24|7|126|9|科技,计算机技术,ardanlabs,go,golang|
+https://www.bilibili.com/video/BV1xT41137dq|硬核-from ardanlabs - ultimate go advanced concepts (bill kennedy)-（01-02）|2022-07-02 11:30:27|空白得很|1330|16|9|85|1|科技,计算机技术,go,编程,advancedconcept,billkennedy,ardanlabs,golang,go语言,advanced,编程开发|
+https://www.bilibili.com/video/BV1wZ4y1Y74S|ardanlabs - refactoring with bill（ultimate go最终篇）|2022-07-08 11:18:17|空白得很|681|9|1|45|2|科技,计算机技术,go,编程,ardanlabs,advancedconcept,billkennedy,golang,go语言,advanced|
+https://www.bilibili.com/video/BV1m1421y7Ff|ardan labs - ultimate go software design with kubernetes 2024-1|2024-05-31 15:03:48|空白得很|753|25|5|72|2|科技,计算机技术,billkennedy,ardanlabs,ultimatego,go,kubernetes|
+https://www.bilibili.com/video/BV1nx4y137iR|ardanlabs - ultimate go debugging|2023-01-21 08:00:44|空白得很|748|15|6|54|2|科技,计算机技术,ardanlabs,golang,debugging|
+https://www.bilibili.com/video/BV1RT4y1W7FZ|ardanlabs - ultimate go web services with kubernetes 4.1 2023-10|2024-01-03 01:01:37|空白得很|1349|35|6|78|1|科技,计算机技术,ardanlabs,ultimatego,go,kubernetes,webservices|
+https://www.bilibili.com/video/BV1UJWFeYEWQ|udemy - working with concurrency in go (golang) 2024-6|2024-08-18 07:30:47|空白得很|870|14|3|52|0|科技,计算机技术,并发,go,golang,udemy,concurrency|
+https://www.bilibili.com/video/BV1HBe3ejE6p|golang这100个场景的语法使用，覆盖95%的面试题｜40-47|2024-08-17 00:04:55|白泽talk|2188|65|28|167|8|知识,校园学习,程序员,计算机,语法,编程,开源,场景,面试题,秋招,golang,面经|
+https://www.bilibili.com/video/BV17S421R7rp|go最热门的依赖注入库wire，12.5k你值得拥有！|2024-07-04 00:00:54|白泽talk|4313|86|39|185|10|golang,知识,校园学习,程序员,学习,计算机,go,编程,开源,后端,依赖注入|
+https://www.bilibili.com/video/BV1sJ4m1L7RN|go项目结构最佳实践，你觉得怎么样？|2024-03-30 12:44:21|白泽talk|9327|182|89|510|19|知识,校园学习,结构,程序员,go,编程,实习,项目,开源,实践,golang,新学期多点新知识|
+https://www.bilibili.com/video/BV17K41167aa|go语言实战项目《百万级并发im即时消息系统》，程序员转行golang开发必看，手把手教你从零入门go语言开发|2022-12-09 18:55:27|云原生架构师|73000|1880|2630|4437|241|科技,计算机技术,计算机,it,程序员,go,编程,golang项目实战,python,java,golang,go语言教程|
+https://www.bilibili.com/video/BV1BP4y1H7gV|【go语言实战】gin+websocket构建im即时聊天demo|2021-12-22 10:03:00|小生凡一|54000|930|366|2284|394|科技猎手,科技,计算机技术,golang,后端,编程开发|
+https://www.bilibili.com/video/BV18G411P7Cw|2023年必备【go语言教程】gin+websocket项目实战im通信系统|2022-12-18 19:02:41|弯弯的美食|3748|43|49|155|5|科技,计算机技术,程序员,计算机,编程,go语言,i.m,docker,项目实战,k8s,野生技能协会,dockerfile,科技猎手计划·2022第五期|
+https://www.bilibili.com/video/BV1gW4y1p7yi|推荐【第三弹（第二章）】go项目实战-三小时教你仿百度网盘（企业级项目）（云储存、mysql、redis、阿里云oss、k8s+docker）|2022-11-30 16:38:10|弯弯的美食|1997|23|10|128|5|科技,计算机技术,程序员,计算机,编程,百度网盘,golang,go语言,项目实战,野生技能协会|
+https://www.bilibili.com/video/BV1V14y1L7aY|【golang全套教程】零基础、小白学编程语言，大佬教你学go怎么长肌肉 go语言 项目实战  函数  运算符  面向对象|2022-10-30 18:30:46|弯弯的美食|745|8|5|29|1|科技,计算机技术,计算机,视频教程,编程,码农,go语言,golang,互联网,编程开发,高并发,野生技能协会|
+https://www.bilibili.com/video/BV1v14y1j7nT|【golang教程132集】2022最新最全、最详细包含（golang web、golang项目实战、golang win），非常适合新手跟小白学习|2022-10-21 18:00:00|弯弯的美食|2356|24|12|113|8|科技,计算机技术,视频教程,it,计算机,野生技术协会,编程,go语言,golang,编程开发|
+https://www.bilibili.com/video/BV1nPWLefEAn|golang最简单的gorm教程|2024-08-22 17:39:13|写代码的程序猿儿|837|9|6|54|0|科技,计算机技术,科技,go,计算机,程序员,it,编程,教程,gorm教程,互联网,golang,go教程|
+https://www.bilibili.com/video/BV1xaewebEnu|go语言类型推导为什么会失败？|2024-08-12 18:02:05|自觉放齐|4474|85|15|50|11|golang,科技,计算机技术,程序员,计算机,it,编程|
+https://www.bilibili.com/video/BV11K411X7hz|golang 踩坑之：坑爹的 var|2022-12-04 18:52:52|自觉放齐|2193|39|12|20|5|科技猎手,科技,计算机技术,坑爹,程序员,学习,编程语言,教程,编程,码农,golang,科技猎手计划·2022第五期|
+https://www.bilibili.com/video/BV1ZR4y1k76u|golang 踩坑之：切片之痛2|2022-12-05 20:52:00|自觉放齐|936|22|8|14|1|科技猎手,科技,计算机技术,学习,程序员,编程语言,编程,教程,码农,golang,科技猎手计划·2022第五期|
+https://www.bilibili.com/video/BV1Qg411H7wW|golang 踩坑之：切片之痛【openai 版】|2022-12-06 11:30:01|自觉放齐|1129|17|6|9|4|科技,计算机技术,编程语言,学习,程序员,人工智能,编程,chatgpt,码农,切片,openai,golang|
+https://www.bilibili.com/video/BV1Je4y1375D|golang 踩坑之：切片之痛|2022-12-02 15:01:12|自觉放齐|2237|51|10|53|3|科技猎手,科技,计算机技术,编程语言,教程,编程,码农,切片,golang,科技猎手计划·2022第五期|
+https://www.bilibili.com/video/BV1hb421Y782|【go基础】5：不简单的 for，与时俱进版|2024-04-27 16:44:16|自觉放齐|3708|64|17|39|6|科技,计算机技术,编程语言,编程,教程,基础,for,golang|
+https://www.bilibili.com/video/BV1Si421d79J|【go基础】1：并发编程就是不断创建 goroutine？|2024-03-11 02:15:37|自觉放齐|5241|77|27|92|6|我是程序员,科技,计算机技术,学习,编程,goroutine,golang,并发编程|
+https://www.bilibili.com/video/BV1Um411k7ZB|【go基础】3：使用 context，既管生又管养|2024-03-31 16:07:10|自觉放齐|5698|117|42|204|10|golang,科技,计算机技术,程序员,编程,context,goroutine,基础,并发编程|
+https://www.bilibili.com/video/BV1iw4m1y7QE|【go基础】4：context & net， 一鱼三吃|2024-04-22 15:50:43|自觉放齐|2926|69|29|108|6|golang,科技,计算机技术,程序员,context,并发|
+https://www.bilibili.com/video/BV1H44y1U7uV|golang 踩坑之：不简单的 for|2022-12-11 14:12:03|自觉放齐|3370|99|34|95|9|科技猎手,科技,计算机技术,学习,循环,编程,码农,代码,并发,golang,科技猎手计划·2022第五期|
+https://www.bilibili.com/video/BV1Xr421J7H9|【go基础】2：如何取消一个 goroutine|2024-03-11 21:03:19|自觉放齐|4988|96|15|130|5|科技,计算机技术,goroutine,基础,取消,golang,并发编程|
+https://www.bilibili.com/video/BV1CH4y177rd|【go指针】2：golang函数参数到底要不要使用指针？|2024-02-29 00:14:44|自觉放齐|5603|117|20|123|10|新学期一起学习,科技,计算机技术,程序员,函数,代码,码农,参数,指针,性能,golang,哔哩哔哩开学季|
+https://www.bilibili.com/video/BV1ys4y187Pc|指针*和取址& 傻傻分不清楚？|2023-02-18 17:31:00|新生代农民工啊|2878|52|6|35|3|chatgpt来啦,科技,计算机技术,编程,go语言,golang,必剪创作,万物研究所·第八期|
+https://www.bilibili.com/video/BV1id4y1d7Xe|go：struct 中有个奇怪的东西|2022-08-28 10:00:00|新生代农民工啊|3787|90|17|46|1|技术宅的夏天,科技,计算机技术,编程入门,编程,go语言,golang,必剪创作,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV1o24y167ac|go struct 该用值定义方法还是用指针？|2023-01-20 22:02:00|新生代农民工啊|6281|109|44|144|14|用知识过好新的一年,科技,计算机技术,编程,golang,后端开发,互联网技术,必剪创作,我在b站跨年|
+https://www.bilibili.com/video/BV1Y7sgeBE7Q|程序员入门时如何学会写golang泛型struct|2024-08-29 08:15:00|程序员在囧途|819|9|2|26|1|知识,野生技能协会,程序员,运维,运维开发,go语言,golang,泛型|
+https://www.bilibili.com/video/BV1umsFeMExA|0.运维涅槃重生之路|2024-08-24 22:13:06|博哥爱运维|1000|47|24|43|1|科技,计算机技术,go开发,sre,运维开发|
+https://www.bilibili.com/video/BV11FpwecEXA|14.运维go开发--切片（slice）|2024-09-04 21:35:49|博哥爱运维|209|4|3|3|1|科技,计算机技术,学习,go,编程语言,go语言开发教程,sre,运维开发|
+https://www.bilibili.com/video/BV1n4pge1EAJ|15.运维go开发--map字典|2024-09-05 20:59:53|博哥爱运维|158|5|3|0|1|科技,计算机技术,编程语言,学习,go,go语言开发教程,sre,运维开发|
+https://www.bilibili.com/video/BV1tm4YePEvt|18.运维go开发--闭包函数|2024-09-10 21:28:02|博哥爱运维|124|7|5|2|0|科技,计算机技术,学习,go,编程语言,编程,运维,go语言开发教程,sre,运维开发|
+https://www.bilibili.com/video/BV1m2pbeCEMh|16.运维go开发--range遍历|2024-09-07 21:51:12|博哥爱运维|217|5|5|1|1|科技,计算机技术,go,编程语言,学习,编程,go语言开发教程,sre,运维开发|
+https://www.bilibili.com/video/BV16XpieXEYU|17.运维go开发--函数编写|2024-09-08 22:43:17|博哥爱运维|220|8|3|0|1|科技,计算机技术,学习,编程语言,go,编程,运维,go语言开发教程,sre,运维开发|
+https://www.bilibili.com/video/BV1MVWreUEZf|6.值的初识|2024-08-25 22:19:16|博哥爱运维|297|6|3|0|1|科技,计算机技术,go开发,sre,运维开发|
+https://www.bilibili.com/video/BV1PYsJeJECP|7.变量定义|2024-08-26 21:56:53|博哥爱运维|203|4|1|0|1|科技,计算机技术,编程语言,学习,编程,教程,go开发,sre,运维开发|
+https://www.bilibili.com/video/BV1e9sMeKECw|9.for循环|2024-08-28 21:41:47|博哥爱运维|211|6|3|1|1|科技,计算机技术,编程语言,学习,教程,go开发,sre,运维开发,编程开发|
+https://www.bilibili.com/video/BV1arsFeGE9g|5.编译go程序|2024-08-24 22:34:30|博哥爱运维|355|8|3|7|1|科技,计算机技术,go开发,sre,运维开发|
+https://www.bilibili.com/video/BV1BKHveGEQF|12.switch 分支结构2|2024-09-01 21:23:48|博哥爱运维|145|6|5|0|1|科技,计算机技术,go开发,运维开发新手教程,sre|
+https://www.bilibili.com/video/BV1UAHFe4EHK|11.switch 分支结构1|2024-08-31 21:47:24|博哥爱运维|163|7|1|0|2|科技,计算机技术,运维新手开发教程,sre,运维开发,go语言开发|
+https://www.bilibili.com/video/BV11Pste3EZL|8.常量定义|2024-08-27 21:37:49|博哥爱运维|193|5|3|1|1|科技,计算机技术,学习,编程语言,编程,教程,go开发,sre,运维开发|
+https://www.bilibili.com/video/BV1VBsFe5E9Q|2.go版本安装|2024-08-24 22:20:55|博哥爱运维|185|7|3|1|0|科技,计算机技术,编程语言,编程,教程,go开发,运维开发|
+https://www.bilibili.com/video/BV1wuHTeqEUE|10.条件判断|2024-08-29 21:16:13|博哥爱运维|182|3|3|2|1|科技,计算机技术,go开发,编程学习,sre,运维开发|
+https://www.bilibili.com/video/BV1eisFe1Ei4|4.vscode使用技巧|2024-08-24 22:28:08|博哥爱运维|215|6|1|0|0|科技,计算机技术,go开发,sre,运维开发|
+https://www.bilibili.com/video/BV1LisFe1EFx|3.vscode编码工具安装|2024-08-24 22:24:52|博哥爱运维|226|9|7|2|0|科技,计算机技术,go开发,sre,运维开发|
+https://www.bilibili.com/video/BV1iyHkebEqn|13.数组定义|2024-09-02 21:38:25|博哥爱运维|172|5|5|0|2|科技,计算机技术,学习,go语言开发教程,sre,运维开发|
+https://www.bilibili.com/video/BV1NP4y1k7Mv|吞刀片版公开课：golang到底适合什么领域的开发|2023-01-12 07:15:00|程序员在囧途|877|13|9|1|2|知识,野生技能协会,开发,程序员,编程,公开课,运维,刀片,微服务,golang,运维开发,go语言|
+https://www.bilibili.com/video/BV12A4m1V7oR|golang1.22下for循环遍历的变量副本"修复"|2024-02-09 08:00:00|程序员在囧途|1408|25|4|14|4|知识,野生技能协会,程序员,运维,微服务,运维开发,go语言,golang,k8s|
+https://www.bilibili.com/video/BV1aR4y1C7Sz|关于学golang时要多练代码：到底要怎么练?|2022-12-08 12:45:52|程序员在囧途|1602|30|11|41|3|知识,野生技能协会,程序员,运维,运维开发,golang,k8s,kubernetes,云原生|
+https://www.bilibili.com/video/BV1zm411R77b|[1brc]golang妙级读取和处理上亿文本的几种方法|2024-03-14 12:20:41|程序员在囧途|2438|40|10|127|3|知识,野生技能协会,编程,运维,实战,运维开发,golang,云原生|
+https://www.bilibili.com/video/BV1uv4y1j7Zi|go结合chatgpt开发智能运维终端、prompt工程师岗位来了？|2023-03-22 07:30:00|程序员在囧途|1951|16|2|35|11|科技,计算机技术,go,人工智能,运维,chatgpt,运维开发,kubernetes,golang|
+https://www.bilibili.com/video/BV1qk4y1Y7A3|prompt工程师养成记(golang):开张课、快速创建代码骨架|2023-04-11 07:25:00|程序员在囧途|481|9|2|7|1|科技,计算机技术,ai,运维,chatgpt,golang,运维开发,k8s,gpt,prompt|
+https://www.bilibili.com/video/BV1NM4y1D7Jf|chatgpt和k8s运维开发探索性实战入门(golang)|2023-02-15 07:15:00|程序员在囧途|873|12|4|16|1|知识,野生技能协会,开发,ai,人工智能,运维,chatgpt,实战,golang,运维开发,kubernetes,k8s|
+https://www.bilibili.com/video/BV1Zj411M7nk|golang结合chatgpt开发k8s运维客户端工具(探索)|2023-03-06 07:15:00|程序员在囧途|1441|19|4|40|1|知识,野生技能协会,人工智能,运维,chatgpt,golang,ai,运维开发,kubernetes,k8s|
+https://www.bilibili.com/video/BV1Ew41167mr|golang实战开发k8s pod可视化管理系统(1):开张课|2023-10-19 07:15:00|程序员在囧途|782|8|0|17|0|知识,野生技能协会,运维,程序员在囧途,运维开发,k8s,kubernetes,云原生|
+https://www.bilibili.com/video/BV1tj421Z7bc|go+k8s多集群可视化管理系统实战开发(1):开张课|2024-03-12 07:25:00|程序员在囧途|500|7|0|9|0|知识,野生技能协会,运维,多集群,karmada,实战,go,运维开发,k8s,云原生|
+https://www.bilibili.com/video/BV1gb4y1r7Q2|go实战开发k8s可视化平台:健康检查可视化和实例|2021-07-27 07:15:06|程序员在囧途|521|6|2|8|0|知识,野生技能协会,运维,运维级开发,golang,k8s,架构师|
+https://www.bilibili.com/video/BV13L4y1z7qT|golang开发k8s多集群管理系统:集群列表和状态检查展现|2021-10-30 07:15:08|程序员在囧途|909|4|0|12|0|知识,野生技能协会,运维,运维级开发,集群联邦,golang,k8s|
+https://www.bilibili.com/video/BV1Cr4y1M77W|go+k8s开发低代码通用operator(开张课)|2022-07-01 07:15:01|程序员在囧途|733|11|2|15|2|知识,野生技能协会,运维,运维级开发,golang,operator,k8s|
+https://www.bilibili.com/video/BV1X94y1D7WZ|golang实战开发可配置的运维级命令行工具|2022-07-28 07:15:00|程序员在囧途|1101|11|0|29|1|知识,野生技能协会,运维,运维级开发,go,golang,开发工具,k8s,kubernetes|
+https://www.bilibili.com/video/BV1a94y12784|运维级开发训练课：golang手写可配置的orm|2022-06-15 07:15:00|程序员在囧途|621|12|2|6|0|知识,野生技能协会,运维,运维级开发,cuelang,golang,k8s,kubernetes|
+https://www.bilibili.com/video/BV1Yv411J7RW|go实战开发k8s可视化平台:快捷创建deployment|2021-07-12 07:05:19|程序员在囧途|1945|6|0|15|1|知识,野生技能协会,运维,运维级开发,golang,gin,k8s,kubernetes|
+https://www.bilibili.com/video/BV1cX4y1P7Eo|go实战开发nginx-ingress可视化系统(6):限流可视化开发|2021-06-23 07:15:14|程序员在囧途|712|6|2|16|1|知识,野生技能协会,运维,运维级开发,golang,gin,k8s,kubernetes|
+https://www.bilibili.com/video/BV12v411H7y2|go手撸nginx-ingress可视化平台:金丝雀发布可视化开发|2021-06-30 07:15:18|程序员在囧途|3874|18|13|93|6|知识,野生技能协会,go,运维,运维级开发,golang,gin,k8s|
+https://www.bilibili.com/video/BV1f64y1z7xy|go实战开发nginx-ingress可视化系统(16):自动创建自签证书|2021-07-19 07:15:12|程序员在囧途|1244|13|0|22|1|知识,野生技能协会,运维,运维级开发,golang,nginx,k8s,kubernetes|
+https://www.bilibili.com/video/BV1S3411t7kE|k8s客户端编程(7):代码调用kustomize创建deployment|2021-11-18 07:15:07|程序员在囧途|787|7|0|6|0|知识,野生技能协会,运维,kustomize,运维级开发,client-go,golang,k8s,kubernetes|
+https://www.bilibili.com/video/BV17B4y1Q7fZ|go+k8s运维级开发:工作流模式批量新增或删除k8s资源|2022-06-09 07:15:00|程序员在囧途|914|11|4|23|0|知识,野生技能协会,运维,运维级开发,cuelang,golang,工作流,k8s,kubernetes|
+https://www.bilibili.com/video/BV1DY4y1c7ph|go+cue开发运维级工具框架:配一配即可显示k8s pods 列表|2022-08-16 07:15:00|程序员在囧途|941|7|0|15|1|知识,野生技能协会,运维,运维级开发,cuelang,框架,自研,golang,k8s,kubernetes|
+https://www.bilibili.com/video/BV18Y4y157mw|go+k8s运维级开发个人博客系统(1)关于个人博客的观点、项目架构|2022-05-21 07:14:59|程序员在囧途|706|6|0|15|0|知识,野生技能协会,嘴炮,运维,运维级开发,博客,golang,项目架构,k8s,kubernetes|
+https://www.bilibili.com/video/BV1Lv4y1P7Y6|k8s运维级开发个人博客(4):模仿client-go编写博客客户端|2022-05-26 07:15:00|程序员在囧途|425|7|0|3|0|知识,野生技能协会,运维,运维级开发,博客,golang,k8s,kubernetes|
+https://www.bilibili.com/video/BV1Cx4y187XJ|k8s主题课: client-go开发实战训练|2024-04-19 08:54:00|程序员在囧途|377|6|1|7|1|知识,野生技能协会,开发,运维,go程序员,实战,实战训练,运维开发,kubernetes,k8s|
+https://www.bilibili.com/video/BV1MJ4m1p7dB|golang主题课:cgo快速入门和实践|2024-04-13 08:15:00|程序员在囧途|1140|15|2|33|3|知识,野生技能协会,go,运维,go程序员,运维开发,cgo,云原生|
+https://www.bilibili.com/video/BV1XX4y1Y7dm|【公开课】轻谈golang程序员怎么写出不那么屎的简历|2023-07-04 07:15:00|程序员在囧途|2118|32|7|75|4|知识,野生技能协会,程序员,公开课,运维,简历,面试,golang,运维开发,k8s,kubernetes,云原生|
+https://www.bilibili.com/video/BV158411H7E1|运维开发技巧: golang和bash混合编程的套路|2022-12-23 07:15:00|程序员在囧途|1288|28|7|75|7|知识,野生技能协会,开发,技巧,程序员,编程,运维,bash,运维开发,golang|
+https://www.bilibili.com/video/BV1sk4y1h7qy|【运维开发】k8s pod原地升级原理和golang代码玩法|2023-03-11 07:15:00|程序员在囧途|752|7|0|14|1|知识,野生技能协会,运维,代码,linux,golang,运维开发,kubernetes,k8s|
+https://www.bilibili.com/video/BV11Z421m72J|golang易写错的n个案例:"诡异的"观测变量就消失的现象|2024-02-23 15:58:43|程序员在囧途|608|5|2|10|0|知识,野生技能协会,程序员,运维,观测,运维开发,go语言,golang,k8s|
+https://www.bilibili.com/video/BV1gdHJeXEng|[golang学员定制]什么是分布式系统、一致性哈希是什么|2024-09-03 07:20:00|程序员在囧途|184|3|0|2|0|知识,野生技能协会,运维,分布式,运维开发,go语言,golang,分布式系统|
+https://www.bilibili.com/video/BV1KupMeJEid|golang程序员课程定制,你敢说我就敢做|2024-09-05 16:53:07|程序员在囧途|127|3|2|0|0|知识,野生技能协会,程序员,课程,编程,运维,运维开发,go语言,golang|
+https://www.bilibili.com/video/BV1Zz42117tc|java程序员转型golang需要注意点什么|2024-05-18 01:40:36|程序员在囧途|488|3|1|5|1|知识,野生技能协会,语言,程序员,编程,转型,java,golang|
+https://www.bilibili.com/video/BV1xM4m1r7ne|go程序员简历编写实战(1)怎么写工作经历|2024-05-29 02:00:05|程序员在囧途|512|9|2|12|0|知识,野生技能协会,程序员,面试,实战,转型,简历|
+https://www.bilibili.com/video/BV1Q8ndepE5N|kubernetes中的web性能基准rust (actix) vs. go (golang)|2024-08-31 12:07:55|第二杯半价a|1137|14|2|14|2|科技,计算机技术,web,rust,golang|
+https://www.bilibili.com/video/BV12opYepEvK|rust (axum) vs. go (标准库): kubernetes 性能对比基准测试|2024-09-08 18:46:00|干饭猛人猛干饭|1976|21|1|32|2|科技,计算机技术,性能基准测试,aws,go,rust,kubernetes|
+https://www.bilibili.com/video/BV1BN4y1e7Zf|golang开发ebpf基础:解析redis报文和观测执行命令|2023-12-07 07:15:00|程序员在囧途|2437|44|6|100|7|知识,野生技能协会,开发,运维,ebpf,容器,观测,运维开发,golang,redis|
+https://www.bilibili.com/video/BV1au4y1K75C|再谈微服务、2024年golang云原生微服务课程规划|2023-12-21 07:15:00|程序员在囧途|503|6|0|6|1|知识,野生技能协会,程序员,运维,容器,微服务,运维开发,golang,2024年|
+https://www.bilibili.com/video/BV1PB4y147kG|go开发k8s运维工具：二开proxy以支持多集群功能|2022-08-26 07:15:00|程序员在囧途|497|8|0|14|1|知识,野生技能协会,go,linux,运维,go语言,golang,k8s,kubernetes|
+https://www.bilibili.com/video/BV1JP411z7QJ|k8s运维开发:client-go调用k8s时打印请求地址的代码写法|2023-06-16 07:15:00|程序员在囧途|452|5|2|2|1|科技,计算机技术,开发,运维,go,linux,运维开发,k8s,kubernetes,云原生|
+https://www.bilibili.com/video/BV1fP411E7VF|rust wasm+go混编开发k8s可视化系统:前端架构和阶段性成果展示|2022-10-02 07:20:00|程序员在囧途|669|17|0|15|1|知识,野生技能协会,go,运维,rust,运维开发,k8s,kubernetes,webassembly,wasm|
+https://www.bilibili.com/video/BV1kU4y1z7Zy|rust wasm+go混编开发k8s可视化管理系统:开张课|2022-09-06 07:15:00|程序员在囧途|587|13|0|23|2|知识,野生技能协会,go,运维,运维级开发,rust,golang,k8s,kubernetes,wasm|
+https://www.bilibili.com/video/BV1Zb4y167m3|go实战开发istio可视化系统(19):虚拟服务支持超时熔断|2021-07-21 07:15:04|程序员在囧途|521|3|0|6|0|知识,野生技能协会,运维,servicemesh,运维级开发,golang,k8s,kubernetes,istio|
+https://www.bilibili.com/video/BV12M4y1N7A2|go实战开发istio可视化系统:灰度发布可视化|2021-08-04 07:15:12|程序员在囧途|671|5|0|10|0|知识,野生技能协会,servicemesh,golang,微服务,高并发,k8s,istio|
+https://www.bilibili.com/video/BV1Eq4y1x7xs|go实战开发istio可视化系统(16):负载均衡可视化和基本测试|2021-07-07 07:15:18|程序员在囧途|302|4|2|4|0|知识,野生技能协会,运维,servicemesh,运维级开发,golang,gin,k8s,istio|
+https://www.bilibili.com/video/BV1Y64y1h748|go+k8s微服务实战:基于istio的代码架构进阶设计和效果展示|2021-09-10 12:33:25|程序员在囧途|805|5|1|9|0|知识,野生技能协会,运维级开发,微服务,golang,k8s,kubernetes,istio|
+https://www.bilibili.com/video/BV1XU4y1c7aD|go+k8s微服务实战:本地服务访问远程k8s内部服务的方法(http简易版本)|2021-10-02 07:15:08|程序员在囧途|486|5|0|6|1|知识,野生技能协会,运维,运维级开发,微服务,golang,k8s,kubernetes|
+https://www.bilibili.com/video/BV14y4y1T7n6|go+k8s微服务实战(18):基于grpc设计通用数据库服务|2021-07-15 07:15:03|程序员在囧途|619|4|0|12|1|知识,野生技能协会,运维,运维级开发,golang,gin,k8s,kubernetes,istio|
+https://www.bilibili.com/video/BV1MU4y177yL|golang手撸http ingress网关:快速开发请求头过滤器|2021-08-30 07:15:08|程序员在囧途|590|2|0|14|0|知识,野生技能协会,运维,运维级开发,golang,微服务,operator,k8s|
+https://www.bilibili.com/video/BV18Y411M7Mb|golang实战wasm开发:获取js对象、设置innerhtml|2022-06-07 07:15:00|程序员在囧途|1138|10|2|20|2|知识,野生技能协会,golang,vue,k8s,kubernetes,webassembly,wasm|
+https://www.bilibili.com/video/BV1pV411s7cb|go手撸k8s可视化系统(73):自动签发用户、代码生成kubectl配置文件|2021-06-21 07:15:10|程序员在囧途|2083|10|4|52|1|知识,野生技能协会,运维,运维级开发,golang,微服务,golang,k8s,kubernetes,rbac|
+https://www.bilibili.com/video/BV16h411q7vQ|go实战开发k8s可视化系统:pod就绪检查可视化开发|2021-08-08 07:15:09|程序员在囧途|550|4|0|10|1|知识,野生技能协会,go,运维,运维级开发,k8s,kubernetes,云原生|
+https://www.bilibili.com/video/BV1DT421678K|http vs grpc，既生瑜，何生亮|2024-08-19 06:00:00|张朝阳讲go语言|16000|176|21|247|11|科技,计算机技术,go,http,go语言,grpc|
+https://www.bilibili.com/video/BV1fx4y1W7SP|buffer writer一定要flush|2024-08-09 05:56:00|张朝阳讲go语言|2429|35|6|47|2|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV13V4y1y7jE|interface{}将成为历史|2023-06-22 17:45:39|张朝阳讲go语言|35000|250|40|179|15|科技,计算机技术,接口,go,go语言,interface,空接口|
+https://www.bilibili.com/video/BV1Fw4m1R78T|彻底理解go interface类型|2024-03-19 09:12:11|转弯遇见MK|773|9|0|19|2|科技,计算机技术,go,编程,理解,类型,接口,go语言,编程开发,interface|
+https://www.bilibili.com/video/BV19u4m1M7Nm|go标准包context的理解与使用|2024-03-15 11:55:46|转弯遇见MK|607|11|3|18|3|科技,计算机技术,go,编程,理解,go语言,编程开发|
+https://www.bilibili.com/video/BV1nx421U78f|go 1.22带来了什么新的功能|2024-04-01 21:30:22|转弯遇见MK|1259|6|0|5|2|科技,计算机技术,学习,go,编程,经验分享,功能,编程开发|
+https://www.bilibili.com/video/BV1iF4m1A7An|如何构建一个完整的go rest api项目( docker, jwt, mysql) 附github，在简介|2024-04-19 14:30:39|转弯遇见MK|772|15|2|56|0|科技,计算机技术,完整,go,编程,教程,项目,后端,api,编程开发,rest,1.21|
+https://www.bilibili.com/video/BV1Hm411U7R4|go 1.22完整的后端rest api服务，附github地址|2024-04-20 17:01:54|转弯遇见MK|432|6|2|28|0|科技,计算机技术,学习,编程,完整案列,源代码,后端,api,web,go,rest,必剪创作|
+https://www.bilibili.com/video/BV1xm42177rd|使用go 1.22构建api服务器|2024-04-09 23:51:45|转弯遇见MK|2369|35|4|63|8|科技,计算机技术,服务器,go,go1.22,api,构建,http|
+https://www.bilibili.com/video/BV1iM4m1X7ST|为什么golang 1.22 http路由器不是很好|2024-04-01 21:37:36|转弯遇见MK|1313|6|0|8|0|科技,计算机技术,编程语言,go,编程,go1.22,经验分享,编程开发,router,http|
+https://www.bilibili.com/video/BV1ox4y1S7Hi|golang 的错误处理比你想像中更好|2024-03-15 11:50:07|转弯遇见MK|2325|14|5|39|7|科技,计算机技术,程序员,编程,处理,更好,错误,go语言,golang|
+https://www.bilibili.com/video/BV1cE421u7iY|如何有效地处理golang api中的错误|2024-04-11 15:00:44|转弯遇见MK|576|8|1|25|0|科技,计算机技术,it,go,编程,错误,处理,api,构建|
+https://www.bilibili.com/video/BV1wM4m1X7Ef|美女姐姐教你学习go 指针，如果你不没有学会的话|2024-04-15 17:03:00|转弯遇见MK|211|1|0|4|0|科技,计算机技术,入门,go,学习,it,程序员,编程,教程,指针,编程开发|
+https://www.bilibili.com/video/BV1mH4y1n7Jk|数据结构：美女姐姐教你学习go 的栈和队列|2024-03-29 11:49:31|转弯遇见MK|70|1|0|2|0|科技,计算机技术,开发,go,美女,算法,教程,编程,数据结构,队列,编程开发,栈|
+https://www.bilibili.com/video/BV1df421d7hf|数据结构：美女姐姐教你学习go 的链表 1|2024-03-26 14:48:34|转弯遇见MK|74|2|0|2|0|科技,计算机技术,开发,算法,美女,go,编程,教程,数据结构,简单,链表,编程开发|
+https://www.bilibili.com/video/BV1Vm411r7uy|数据结构：美女姐姐教你学习go 的链表 2|2024-03-27 13:46:32|转弯遇见MK|75|1|0|1|0|科技,计算机技术,开发,美女,go,算法,学习,编程,教程,数据结构,链表,编程开发|
+https://www.bilibili.com/video/BV1MC411j7aV|数据结构：美女姐姐教你学习go 的 图结构 2|2024-04-01 14:40:35|转弯遇见MK|75|2|0|2|0|科技,计算机技术,计算机,学习,算法,go,教程,编程,经验分享,数据结构,图,编程开发|
+https://www.bilibili.com/video/BV1TJ4m1j7cz|数据结构：美女姐姐教你学习go 的 图结构 1|2024-03-31 10:32:18|转弯遇见MK|76|1|1|1|0|科技,计算机技术,算法,计算机,go,美女,学习,编程,教程,图,数据结构,编程开发|
+https://www.bilibili.com/video/BV1Cx421k7KK|美女姐姐 教你学习 go指针，简单好理解|2024-03-25 11:12:28|转弯遇见MK|187|7|1|9|2|科技,计算机技术,go,美女,开发,学习,编程,教程,理解,简单,指针,编程开发|
+https://www.bilibili.com/video/BV1dK421x7VQ|go web 文件上传|2024-03-16 21:57:50|转弯遇见MK|261|5|0|11|0|科技,计算机技术,go,编程,网站,文件,web,文件上传,go语言|
+https://www.bilibili.com/video/BV16i421h7J7|go1.23跟普通人相关的新特性|2024-08-15 06:00:00|张朝阳讲go语言|5900|85|19|67|9|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1K2421F71o|go1.22新特性|2024-02-16 10:24:00|张朝阳讲go语言|14000|212|57|195|24|知识,职业职场,go,go语言,golang|
+https://www.bilibili.com/video/BV11D421T7oe|go语言1.23新特性之unique包|2024-05-02 20:00:14|秋来冬风|1857|7|1|8|0|科技,计算机技术,程序员,语言,it,编程,特性,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Hb421p76s|【go语言】go 1.23编译器变化（视频版）|2024-06-23 15:24:07|秋来冬风|344|2|0|1|0|科技,计算机技术,it,go,程序员,编程,go语言,分享视频,编译器,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Ym41167mq|go1.23前瞻timer和ticker的重大改进|2024-04-08 20:00:16|秋来冬风|1433|9|0|6|0|科技,计算机技术,go,前瞻,分享,总结,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1HE421T7oZ|go1.23前瞻os.copyfs函数（视频版）|2024-04-13 18:41:33|秋来冬风|416|3|0|0|0|科技,计算机技术,知识,软件,分享,互联网,计算机技术,go语言,go1.23|
+https://www.bilibili.com/video/BV12M4m1R7ZG|go1.23前瞻reflect.sliceat函数（视频版）|2024-04-05 21:14:44|秋来冬风|211|2|0|0|0|科技,计算机技术,编程,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1mH4y1p7tL|go1.23前瞻slices.repeat函数（视频版）|2024-03-25 21:43:06|秋来冬风|231|2|0|1|0|科技,计算机技术,编程,go语言,go语言,go1.23|
+https://www.bilibili.com/video/BV1DF4m1P7tj|go语言新功能debug.setcrashoutput函数：让崩溃变得更加可控ai介绍|2024-04-18 21:41:20|秋来冬风|341|3|0|4|0|科技,计算机技术,it,人工智能,编程,崩溃,新功能,介绍,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV18D421L7Yg|go1.23前瞻sync.map.clear方法（视频版）|2024-03-25 19:49:33|秋来冬风|462|4|0|1|0|科技,计算机技术,编程,go语言,go语言,go1.23|
+https://www.bilibili.com/video/BV1DA4m1P7dh|go1.23前瞻tar.fileinfonames接口（视频版）|2024-03-24 16:27:22|秋来冬风|530|2|0|0|0|科技,软件应用,知识,软件,编程,go语言,go语言,go1.23|
+https://www.bilibili.com/video/BV1Dn4y1Q7pr|go语言2024年6月11日12日提交总结分享（视频版）|2024-06-15 15:42:00|秋来冬风|52|1|0|0|0|科技,计算机技术,go,it,学习,语言,编程,go语言,分享,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1qxHFerE7X|go语言2024年8月16日到8月29日提交总结分享（视频版）|2024-08-31 20:43:42|秋来冬风|73|0|0|1|0|科技,计算机技术,学习,计算机,it,编程,go1.24,go语言,分享视频,必剪创作|
+https://www.bilibili.com/video/BV1ep421D734|go语言2024年4月16日提交总结分享（视频版）|2024-04-17 21:58:53|秋来冬风|86|2|0|1|0|科技,计算机技术,it,编程,总结,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1XQeueZEMs|go语言2024年8月3日到8月15日提交总结分享（视频版）|2024-08-16 19:58:34|秋来冬风|47|0|0|0|0|科技,计算机技术,计算机,it,编程,go1.24,go语言,分享视频,必剪创作|
+https://www.bilibili.com/video/BV1TAegeHEfr|go1.24前瞻bytes包和strings包迭代器（视频版）|2024-08-16 19:41:15|秋来冬风|75|1|0|1|0|科技,计算机技术,计算机,it,编程,go1.24,go语言,前瞻,分享视频,必剪创作|
+https://www.bilibili.com/video/BV1Vm421j7ud|go语言2024年4月15日提交总结分享（视频版）|2024-04-16 21:20:06|秋来冬风|103|1|0|0|0|科技,计算机技术,it,编程,总结,分享,分享视频,go语言,go1.23|
+https://www.bilibili.com/video/BV1u1421S7x2|go语言2024-3-31和4-1提交总结分享(视频版)|2024-04-02 21:41:23|秋来冬风|102|1|0|0|0|科技,计算机技术,程序员,it,编程,分享,总结,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV19u4m1T7NS|go语言2024年3月25日提交总结分享（视频版）|2024-03-26 22:23:10|秋来冬风|132|1|0|0|0|科技,计算机技术,编程,go语言,go语言,go1.23|
+https://www.bilibili.com/video/BV1P1421q7HK|go语言2024年5月19日20日提交总结分享（视频版）|2024-05-21 19:36:24|秋来冬风|86|2|0|1|0|科技,计算机技术,语言,it,go,学习,编程,分享,总结,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Dx421U7kf|go语言2024年4月6日提交总结分享（视频版）|2024-04-07 20:46:15|秋来冬风|112|1|0|1|0|科技,计算机技术,go,编程,分享,总结,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Vt421n7Vj|go语言2024年4月2日提交总结分享（视频版）|2024-04-03 22:10:40|秋来冬风|88|1|0|1|0|科技,计算机技术,学习,编程,分享,总结,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Yx4y1B79c|go语言2024年4月28到29日提交总结分享（视频版）|2024-04-30 21:34:53|秋来冬风|122|1|0|0|0|科技,计算机技术,it,语言,go,编程,总结,分享,分享视频,必剪创作|
+https://www.bilibili.com/video/BV1Sw4m1D77q|go语言2024年5月23日提交总结分享（视频版）|2024-05-24 17:46:58|秋来冬风|134|1|0|0|0|科技,计算机技术,it,语言,go,学习,编程,总结,分享,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1dJ4m1M7DG|go语言2024年6月6日7日提交总结分享（视频版）|2024-06-08 19:55:25|秋来冬风|166|1|0|0|0|科技,计算机技术,学习,go,it,语言,编程,分享,go语言,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV14n4y1d7G1|go语言2024年6月3日到5日提交总结分享（视频版）|2024-06-06 21:14:28|秋来冬风|126|1|0|0|0|科技,计算机技术,go,语言,it,学习,编程,分享,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1XD42137je|go语言2024年5月25日提交总结分享（视频版）|2024-05-27 22:42:49|秋来冬风|201|1|0|0|0|科技,计算机技术,学习,go,语言,it,编程,分享,总结,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Yt421P7jr|go语言2024年4月17日提交总结分享（视频版）|2024-04-18 20:35:20|秋来冬风|89|1|0|0|0|科技,计算机技术,it,编程,分享,总结,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1kH4y1g75E|go语言2024年5月7日提交总结分享（视频版）|2024-05-08 22:13:52|秋来冬风|104|2|0|0|0|科技,计算机技术,语言,学习,it,go,编程,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV13D42177Zd|go语言2024年3月24日提交总结分享(视频版)|2024-03-24 14:45:58|秋来冬风|113|3|0|0|0|科技,软件应用,学习,分享,go语言,go语言,免费白嫖|
+https://www.bilibili.com/video/BV1ym41167xp|go语言2024年3月28日提交总结分享（视频版）|2024-03-29 21:03:01|秋来冬风|99|1|0|0|0|科技,计算机技术,编程,分享,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1FE42137h9|go语言2024年4月10日提交总结分享（视频版）|2024-04-11 21:03:16|秋来冬风|102|2|0|0|0|科技,计算机技术,学习,语言,it,编程,总结,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV12x4y1a7DV|go语言2024年4月12日提交总结分享（视频版）|2024-04-13 18:35:11|秋来冬风|97|1|0|0|0|科技,计算机技术,程序员,it,学习,编程,总结,go语言,go1.23|
+https://www.bilibili.com/video/BV1cT421y7wi|go语言2024年5月1日提交总结分享（视频版）|2024-05-01 15:29:05|秋来冬风|100|2|0|1|0|科技,计算机技术,语言,it,go,编程,总结,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV11n4y1o7JH|go语言2024年5月24日提交总结分享（视频版）|2024-05-26 21:25:00|秋来冬风|147|1|0|0|0|科技,计算机技术,学习,go,语言,it,编程,分享,总结,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1mT421v7aN|go语言2024年5月31日6月1日提交总结分享（视频版）|2024-06-03 21:27:05|秋来冬风|161|2|0|0|0|科技,计算机技术,语言,学习,go,it,编程,分享,总结,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Qy411h7eC|go语言2024年5月17日提交总结分享（视频版）|2024-05-18 19:41:01|秋来冬风|108|1|0|0|0|科技,计算机技术,语言,学习,go,it,编程,总结,分享,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV16w4m1k7M7|go语言2024年7月23日到27日提交总结分享（视频版）|2024-07-29 19:42:24|秋来冬风|38|1|0|0|0|科技,计算机技术,it,计算机,编程,go1.24,go语言,总结,分享视频,必剪创作|
+https://www.bilibili.com/video/BV1Mb421z7k5|go语言2024年5月22日提交总结分享（视频版）|2024-05-23 21:16:18|秋来冬风|154|1|0|0|0|科技,计算机技术,学习,语言,it,go,编程,总结,分享,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1bU411f7F8|go语言2024年5月14日提交总结分享（视频版）|2024-05-15 20:06:52|秋来冬风|96|1|0|0|0|科技,计算机技术,go,语言,学习,it,编程,分享,总结,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Ey411q7qE|go语言2024年6月17日到21日提交总结分享（视频版）|2024-06-23 13:11:29|秋来冬风|36|1|0|0|0|科技,计算机技术,it,学习,go,语言,编程,分享,go语言,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Pq421F7iW|go语言2024年4月13日提交总结分享（视频版）|2024-04-14 18:31:19|秋来冬风|99|3|0|0|0|科技,计算机技术,程序员,it,学习,编程,分享,go语言,go1.23|
+https://www.bilibili.com/video/BV18M4m1z7Hv|go语言2024年5月29日30日提交总结分享（视频版）|2024-05-31 22:38:07|秋来冬风|164|2|0|0|0|科技,计算机技术,go,it,学习,语言,编程,分享,总结,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1JS411P7VP|go语言2024年6月8日10日提交总结分享（视频版）|2024-06-11 21:27:46|秋来冬风|35|3|1|0|0|科技,计算机技术,it,go,语言,学习,编程,go语言,分享,分享视频,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1BC411H7wL|go语言2024年4月23日提交总结分享（视频版）|2024-04-24 21:27:25|秋来冬风|86|1|0|0|0|科技,计算机技术,it,语言,学习,编程,总结,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Xyi7epErs|go语言2024年7月29日到8月2日提交总结分享（视频版）|2024-08-03 13:47:43|秋来冬风|49|1|0|0|0|科技,计算机技术,计算机,it,编程,go1.24,go语言,总结,分享视频,必剪创作|
+https://www.bilibili.com/video/BV1qx4y1h76t|go语言2024年4月20日提交总结分享（视频版）|2024-04-21 21:00:09|秋来冬风|92|2|0|0|0|科技,计算机技术,学习,语言,it,编程,总结,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV17r42177hp|go语言2024年5月11日提交总结分享（视频版）|2024-05-12 11:43:48|秋来冬风|83|1|0|0|0|科技,计算机技术,语言,it,go,学习,编程,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV11m421L7vg|go语言2024年4月11日提交总结分享（视频版）|2024-04-12 21:53:41|秋来冬风|96|1|0|0|0|科技,计算机技术,go,it,学习,编程,总结,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1m142167HB|go语言2024年5月6日提交总结分享（视频版）|2024-05-07 20:39:29|秋来冬风|92|1|0|0|0|科技,计算机技术,学习,语言,it,go,编程,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1sF4m1w71X|go语言2024年4月25日提交总结分享（视频版）|2024-04-26 21:11:02|秋来冬风|89|1|0|0|0|科技,计算机技术,it,go,语言,总结,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1FH4y1K7cR|go语言2024年4月22日提交总结分享（视频版）|2024-04-23 20:02:09|秋来冬风|82|2|0|0|0|科技,计算机技术,学习,语言,it,编程,分享,总结,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1DF4m1w7CY|go语言2024年4月24日提交总结分享（视频版）|2024-04-25 21:52:53|秋来冬风|90|2|0|0|0|科技,计算机技术,学习,it,语言,编程,分享,总结,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1SZ421i7HV|go语言2024年4月7日-8日提交总结分享|2024-04-09 21:50:13|秋来冬风|107|3|0|0|0|科技,计算机技术,程序员,语言,it,go,编程,总结,分享,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1gm42147iF|go语言2024年4月19日提交总结分享（视频版）|2024-04-20 16:52:50|秋来冬风|87|1|0|0|0|科技,计算机技术,学习,it,语言,编程,分享,总结,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1si421k7GU|go语言2024年5月5日提交总结分享（视频版）|2024-05-06 20:27:32|秋来冬风|99|1|0|0|0|科技,计算机技术,go,学习,语言,it,编程,分享,分享视频,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Sj42197u3|go语言2024年3月29日提交总结分享（视频版）|2024-03-30 21:35:19|秋来冬风|102|0|0|0|0|科技,计算机技术,编程,分享,go语言,必剪创作,go1.23|
+https://www.bilibili.com/video/BV1Vbpse6EFw|go语言开发cicd流水线平台|2024-09-10 15:23:49|Golang在发光|341|7|0|29|0|科技,计算机技术,计算机,it,程序员,编程语言,编程,流水线,平台,自动化,区块链,go语言|
+https://www.bilibili.com/video/BV1CN4y1R71b|一小时带你精通go语言链路追踪最佳实践|2023-09-01 17:08:56|Golang在发光|3232|47|9|203|6|知识,野生技能协会,go语言,go语言实战,go语言学习|
+https://www.bilibili.com/video/BV1Z34y1L7j5|golang在发光：go高频面试之并发|2022-06-07 17:30:20|Golang在发光|1577|27|3|83|3|知识,野生技能协会,go面试,go并发,go高频面试题,go语言,go教程|
+https://www.bilibili.com/video/BV1iL411A7Kf|golang在发光：高频面试之channel|2022-03-28 16:31:30|Golang在发光|1570|23|5|58|3|知识,野生技能协会,go语言教程,go,go语言,golang,channel,go语言面试题|
+https://www.bilibili.com/video/BV12K4y137sL|golang开发运维架构项目实战 socker beego websocker 运维 监控|2021-06-11 16:43:57|Golang在发光|5529|31|8|166|1|知识,野生技能协会,编程语言,go,go语言,golang,websocket,beego|
+https://www.bilibili.com/video/BV1D34qe5E3X|golang实战项目：k8s api gateway实践与二次开发|2024-09-11 14:35:18|Golang在发光|76|1|0|3|1|科技,计算机技术,计算机,it,程序员,编程,k8sapi,实战,架构,go语言,k8s,实战项目|
+https://www.bilibili.com/video/BV1mi4y1d7SL|golang在发光：go语言如何使用grpc构建微服务/rpc/protobuf/grpc|2021-12-20 16:27:21|Golang在发光|12000|98|40|504|16|知识,野生技能协会,go,go语言,golang,微服务|
+https://www.bilibili.com/video/BV1ZY41137jx|golang在发光：go语言微服务/从入门到实战/grpc stream/protobuf/|2022-02-25 17:14:26|Golang在发光|3958|28|7|132|1|知识,野生技能协会,教学视频,go,go语言,golang,微服务,go微服务|
+https://www.bilibili.com/video/BV1ea411i7Qh|golang在发光：华科大大佬手把手golang教学，32小时入门全套视频！|2022-04-07 17:56:21|Golang在发光|4445|55|20|251|1|知识,野生技能协会,视频教程,go,教程,go语言教学视频,golang,go语言|
+https://www.bilibili.com/video/BV11a411W7D6|golang在发光：2022版redis零基础快速入门教程|2022-06-30 16:24:53|Golang在发光|1910|25|7|82|5|知识,野生技能协会,视频教程,redis入门教程,redis零基础教程,go语言,redis|
+https://www.bilibili.com/video/BV1QF41147eG|golang在发光：go高频面试之算法|2022-03-10 17:19:45|Golang在发光|3863|53|14|205|5|知识,野生技能协会,golang算法,go算法,golang高频面试题,go高频面试题,go面试题|
+https://www.bilibili.com/video/BV11r4y1H72R|golang在发光：全方位拆解go运维&开发工程师前景|2022-04-20 16:38:53|Golang在发光|1709|17|1|32|1|知识,野生技能协会,go语言教程,go语言学习路线,go语言发展前景,go语言行业分析,go语言|
+https://www.bilibili.com/video/BV15g411R7Yt|golang在发光：go语言之slice避坑指南|2022-05-27 18:20:00|Golang在发光|909|26|5|46|3|知识,野生技能协会,go语言教程,goslice,slice避坑指南,go语言,slice|
+https://www.bilibili.com/video/BV1YP4y1t71E|golang在发光：两天带你了解go语言核心概念和关键应用|2021-10-14 18:31:26|Golang在发光|2163|31|6|136|4|知识,野生技能协会,go,编程语言,面向编程,并发接口,go语言,golang,cicd|
+https://www.bilibili.com/video/BV1qP4y1b7g9|golang在发光：探索骄傲的go语言/go并发/mpg并发/channel|2021-10-28 14:05:10|Golang在发光|3145|26|6|122|4|知识,野生技能协会,go,go并发,mpg并发,常见并发模式,go语言,golang,channel|
+https://www.bilibili.com/video/BV1WLp7eKEPe|go 语言微服务开发之链路追踪|2024-09-09 15:04:28|Golang在发光|270|3|0|14|1|科技,计算机技术,编程语言,it,程序员,编程,分布式,区块链,接口,微服务,go语言,高并发|
+https://www.bilibili.com/video/BV1qDWfejEgo|[go语言版]leetcode热题100-7-接雨水|2024-08-24 15:52:02|三叶あめな|2841|32|0|16|2|科技,计算机技术,算法,程序员,计算机,编程语言,编程,互联网,校招,leetcode,go语言,社招|
+https://www.bilibili.com/video/BV1xzWQerEsD|[go语言版]leetcode热题100-6-三数之和|2024-08-23 22:01:53|三叶あめな|1523|3|1|6|0|科技,计算机技术,编程语言,计算机,程序员,算法,互联网,数据结构,校招,leetcode,go语言,社招|
+https://www.bilibili.com/video/BV1eQY5egE8Q|[go语言版]leetcode热题100-1-两数之和|2024-08-10 11:16:36|三叶あめな|2070|15|2|4|0|科技,计算机技术,程序员,算法,校园,编程,数据结构,互联网,校招,java,leetcode,go语言|
+https://www.bilibili.com/video/BV15QsMeqEDc|[go语言版]leetcode热题100-8-无重复字符的最长子串|2024-08-28 22:11:38|三叶あめな|88|0|0|0|0|科技,计算机技术,计算机,校园,程序员,算法,编程,互联网,校招,leetcode,go语言,社招|
+https://www.bilibili.com/video/BV1Q5Y5evEDd|[go语言版]leetcode热题100-2-字母异位词数组|2024-08-10 11:55:40|三叶あめな|103|2|0|2|0|科技,计算机技术,程序员,校园,算法,编程,互联网,数据结构,校招,java,leetcode,go语言|
+https://www.bilibili.com/video/BV1P9YLeZEP1|[go语言版]leetcode热题100-5-盛最多水的容器|2024-08-10 16:27:12|三叶あめな|436|1|0|1|0|科技,计算机技术,校园,程序员,算法,编程,数据结构,互联网,校招,leetcode,go语言,社招|
+https://www.bilibili.com/video/BV1AiYjeFEHm|[go语言版]leetcode热题100-3-最长连续序列|2024-08-10 14:34:17|三叶あめな|221|0|0|0|0|科技,计算机技术,算法,程序员,校园,编程,数据结构,互联网,校招,leetcode,go语言,社招|
+https://www.bilibili.com/video/BV1fgn9etEe4|go语言并发编程-sync.waitgroup用法和原理分析|2024-08-31 09:26:59|小蚂蚁老go|910|35|10|54|5|科技,计算机技术,golang语言,sync.waitgroup,go,sync,go语言,并发编程,原理分析|
+https://www.bilibili.com/video/BV1zPWieJEM8|go语言并发编程-errgroup用法和原理分析|2024-08-25 00:29:12|小蚂蚁老go|1658|51|25|78|5|科技,计算机技术,errgroup,golang语言,setlimit,errgroup.group,go语言,go,go语言,原理分析|
+https://www.bilibili.com/video/BV1fUWSedE8z|莫名奇妙的golang|2024-08-23 19:05:39|拉姑吧|897|13|4|1|2|有趣软件分享,科技,软件应用,日常,学习,程序员,it,编程,bug,go,go语言,开启暑假的100种方式|
+https://www.bilibili.com/video/BV1WYpteeE3T|《golang通天》适宜和不适宜人群|2024-09-11 05:57:00|张朝阳讲go语言|551|3|1|1|1|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1urWWeiEJa|跳出程序员角色看go的优势|2024-08-21 06:33:00|张朝阳讲go语言|8134|83|4|25|3|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1jW421d7Q7|我为什么抛弃python和java|2024-07-06 06:05:00|张朝阳讲go语言|22000|117|8|63|6|科技,计算机技术,java,python,go,go语言|
+https://www.bilibili.com/video/BV12T421X7AF|java 22真的太秀了，拜托官方下次别更新了。没必要学python、go他们。做java8挺好的 🐶  最新版idea上手体验|2024-05-06 11:29:41|御风大世界|75000|841|42|365|70|我是程序员,科技,计算机技术,编程语言,java22,jdk22,新版idea,上手体验,新特性,互联网,高级开发,软件升级|
+https://www.bilibili.com/video/BV1LH4y1w7Mj|《go语言从入门到通天》|2024-07-07 06:41:00|张朝阳讲go语言|883|6|2|3|1|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1UZ421T7BL|初识go语言|2024-08-02 05:47:00|张朝阳讲go语言|593|4|4|3|1|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1dj411B7yE|go语言里为什么这么多error|2023-08-19 06:45:41|张朝阳讲go语言|7743|80|20|42|4|科技,计算机技术,go,error,go语言|
+https://www.bilibili.com/video/BV1vw41137NU|go语言为什么没有异常处理机制|2024-01-05 07:13:25|张朝阳讲go语言|8899|49|10|41|7|科技,计算机技术,异常,go,error,go语言|
+https://www.bilibili.com/video/BV11c411C7gF|2023年go语言在国内快凉了吗？|2023-12-27 18:35:44|疯狂的IT人|36000|121|8|49|14|一月创作计划,科技,计算机技术,go,c语言,it,程序员,计算机,国内,互联网,后端,go语言|
+https://www.bilibili.com/video/BV1aa4y1g784|「 解析go语言的未来：前景如何？ 」|2023-05-10 17:42:08|金角大王Alex教你学PY|3504|26|2|4|4|今天也要好好工作,知识,职业职场,职场,程序员,解析,编程,互联网,前景,go语言,专科生|
+https://www.bilibili.com/video/BV1EEWYeVEhR|go性能瓶颈排查--pprof 火焰图|2024-08-23 06:02:00|张朝阳讲go语言|1203|23|7|32|7|科技,计算机技术,pprof,go,go语言|
+https://www.bilibili.com/video/BV1Tv411F7nh|定义结构体方法时要不要传结构体的指针|2023-11-25 07:13:06|张朝阳讲go语言|5633|119|53|133|9|知识,校园学习,指针,接口,结构体,go,go语言|
+https://www.bilibili.com/video/BV1N84y1D72Y|从100g文件中寻找topk，并行遍历超大文件的正确姿势|2023-09-22 12:16:45|张朝阳讲go语言|8986|176|38|412|35|科技,计算机技术,topk,并行,大文件,go,分治,go语言|
+https://www.bilibili.com/video/BV1cj411h7mq|100g文件寻找topk，mapreduce的单机版本|2023-09-25 06:48:24|张朝阳讲go语言|2315|39|10|51|9|科技,计算机技术,topk,大文件,并行,go,go语言,mapreduce|
+https://www.bilibili.com/video/BV1Ne411Y7zw|map的value为结构体时该如何修改|2024-01-21 08:32:00|张朝阳讲go语言|2315|37|9|36|3|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1UN411x7Tw|go1.21.3新功能，越来越像python了|2023-10-30 05:55:00|张朝阳讲go语言|43000|350|54|285|41|科技,计算机技术,python,go,go语言|
+https://www.bilibili.com/video/BV18h411G7L3|go语言最新版1.20新特性|2023-03-25 14:04:17|清华学神尹成|1319|10|2|6|1|科技,计算机技术,it,程序员,编程,go语言|
+https://www.bilibili.com/video/BV1Pf4y1h797|前谷歌算法工程师带你实战golang2022-go语言最新go1.19最有深度最详细-没有之一\更有备战web3.0区块链技术|2021-06-17 22:45:21|清华学神尹成|260000|2520|1010|6039|635|科技,计算机技术,视频教程,学习,it,计算机,加油！开学季,go语言,go,golang,后端开发,web3.0|
+https://www.bilibili.com/video/BV1RH4y1c7QP|golang入门到实战教程丨一套精通go语言|2024-08-16 16:40:27|老男孩IT教育|1135|13|6|65|0|知识,野生技能协会,语言,go,程序员,it,编程,go语言,实战教程,golang,快乐暑假拍拍拍！|
+https://www.bilibili.com/video/BV1FwWmeHEbb|golang(go语言)高频问题汇总，golang(go语言)有多态这个语法特性吗？如何描述？|2024-08-26 09:25:00|郭宏志-老郭|829|7|1|23|1|知识,职业职场,golang,go语言|
+https://www.bilibili.com/video/BV1zD421A72P|什么是golang(go语言)类型断言？|2024-05-18 08:52:58|郭宏志-老郭|563|4|2|0|0|知识,职业职场,go语言,golang|
+https://www.bilibili.com/video/BV1jn4y1R72p|golang(go语言) orm框架如何选择(gorm xorm xsql)？|2024-05-26 09:42:09|郭宏志-老郭|1275|9|4|16|2|知识,职业职场,go语言,golang,给毕业生的珍珠offer|
+https://www.bilibili.com/video/BV19L4y1g7kY|xorm简单而强大的golang数据库框架|2022-03-04 08:50:15|郭宏志-老郭|6159|51|38|239|13|知识,职业职场,go,xorm,go语言,golang,gorm|
+https://www.bilibili.com/video/BV1cj411z72d|hertz客户端，字节golang微服务框架hertz，golang项目开发必备技能|2023-08-20 10:47:24|郭宏志-老郭|1220|8|2|9|0|知识,职业职场,微服务,golang,go语言,字节,hertz|
+https://www.bilibili.com/video/BV1eu4y1Q7cX|字节微服务框架hertz简介，golang项目开发必备技能|2023-08-18 11:44:01|郭宏志-老郭|2360|20|10|49|4|知识,职业职场,golang微服务,golang,golang教程,go语言,字节,hertz,go教程|
+https://www.bilibili.com/video/BV12k4y1L7U6|golang专题-字节微服务框架kitex|2023-05-19 15:13:31|郭宏志-老郭|2764|30|20|68|1|知识,职业职场,golang微服务,kitex,golang,golang教程,go语言,go教程,go微服务|
+https://www.bilibili.com/video/BV1Hh411c74p|golang微服务框架go-kit，go-kit基本概念|2023-05-25 12:44:57|郭宏志-老郭|525|6|0|2|1|知识,职业职场,go-kit,golang微服务,gokit,golang,go语言,go教程,go微服务|
+https://www.bilibili.com/video/BV1d24y1N7Bc|golang微服务框架go-kit，go-kit简介|2023-05-25 10:33:13|郭宏志-老郭|615|8|4|6|0|知识,职业职场,golang微服务,golang,go语言,go教程,go微服务|
+https://www.bilibili.com/video/BV16M4y1v71s|golang微服务框架go-kit，第一个go-kit应用|2023-05-25 12:32:52|郭宏志-老郭|706|13|1|12|0|知识,职业职场,go-kit,golang微服务,gokit,golang,go语言,go教程,go微服务|
+https://www.bilibili.com/video/BV1KP4y1F7dn|golang微服务框架go-kit，只需关注自己的业务逻辑|2022-05-18 09:36:05|郭宏志-老郭|4707|29|10|92|3|知识,校园学习,go,教程,go-kit,golang微服务,gokit,golang微服务框架,go语言,golang,go微服务,我在b站做up主|
+https://www.bilibili.com/video/BV1kS4y1B7Kx|golang web框架fiber，最快的go语言web框架|2022-05-17 11:58:15|郭宏志-老郭|7261|50|21|109|7|知识,职业职场,go,golangfiber,gofiber,golang,go语言,fiber,公开课创作激励x新星计划|
+https://www.bilibili.com/video/BV1fM4m1d764|golang(go语言）如何动态解析一个json？|2024-05-12 10:26:00|郭宏志-老郭|1894|22|9|46|0|知识,校园学习,golang,json,go语言|
+https://www.bilibili.com/video/BV15J4m1W7Ne|golang项目开发高频问题汇总，结构体转换为json返回空|2024-04-22 11:21:24|郭宏志-老郭|872|7|0|5|0|知识,职业职场,go项目开发,golang,golang教程,go语言,go视频|
+https://www.bilibili.com/video/BV1tw4m1y7UB|golang项目开发高频问题汇总，给我一份需求如何从头设计并是实现一个系统|2024-04-24 11:16:44|郭宏志-老郭|674|7|0|15|0|知识,职业职场,go项目开发,golang,golang教程,go语言,go视频|
+https://www.bilibili.com/video/BV1TT421y7ze|golang项目开发高频问题汇总，golang结构体tag是如何使用的？|2024-05-03 11:38:40|郭宏志-老郭|875|8|1|25|1|知识,职业职场,golang项目,结构体,golang,go语言|
+https://www.bilibili.com/video/BV1Cx4y1B7uo|golang项目开发高频问题汇总，golang在参数和返回值中使用指针和值有什么区别|2024-05-03 10:20:55|郭宏志-老郭|952|10|5|15|0|知识,职业职场,golang项目,指针,golang,go语言|
+https://www.bilibili.com/video/BV1uC411n789|golang项目开发高频问题汇总，golang如何处理多个返回值？|2024-05-06 16:21:15|郭宏志-老郭|530|4|0|1|0|知识,职业职场,项目开发,go语言,golang|
+https://www.bilibili.com/video/BV1Bm411C7Sv|golang项目开发高频问题汇总，golang协程goroutine没有输出？|2024-05-06 10:19:39|郭宏志-老郭|616|6|0|13|1|知识,职业职场,golang,go语言|
+https://www.bilibili.com/video/BV1VT421X77L|golang怎样的项目设计才能轻松拿捏老板？|2024-05-08 09:59:20|郭宏志-老郭|480|5|2|8|1|知识,职业职场,go语言,golang|
+https://www.bilibili.com/video/BV1px4y1L7SL|再议golang接口|2023-02-10 09:52:11|郭宏志-老郭|1583|29|8|20|2|知识,校园学习,接口,golang,go语言|
+https://www.bilibili.com/video/BV1AU4y1U7aA|prometheus监控系统，基于golang的高性能监控系统|2022-05-18 16:23:54|郭宏志-老郭|2653|22|12|55|3|原神up主激励计划,知识,校园学习,go,prometheus监控系统,golang,go语言,prometheus|
+https://www.bilibili.com/video/BV1BG4y197FU|goframe框架，使用goframe实现一个完整的用户案例|2022-12-01 11:31:35|郭宏志-老郭|6694|54|27|69|9|知识,校园学习,go框架,goframe,go,golang,go语言|
+https://www.bilibili.com/video/BV1ee4y1g7pS|goframe框架，第一个goframe应用|2022-11-30 09:49:46|郭宏志-老郭|4564|59|30|75|7|知识,职业职场,go框架,golang框架,goframe,go应用,golang|
+https://www.bilibili.com/video/BV1Xw411y7nv|goalng项目开发必备技能，gin websocket应用|2023-10-12 13:18:08|郭宏志-老郭|1432|15|3|38|2|知识,职业职场,golang,gin,go语言,websocket|
+https://www.bilibili.com/video/BV1dQ4y1W7sF|goalng项目开发必备技能，golang项目部署集成了redis grpc和etcd docker k8s|2023-10-15 11:30:05|郭宏志-老郭|490|5|0|4|0|知识,职业职场,golang,docker,gin,go语言,redis,k8s,grpc,etcd|
+https://www.bilibili.com/video/BV1jB4y1f7MW|goalng项目开发必备技能，golang项目部署集成了redis grpc和etcd|2023-10-14 17:20:31|郭宏志-老郭|562|4|0|5|1|知识,职业职场,golang,gin,go语言,redis,grpc,etcd|
+https://www.bilibili.com/video/BV11841167XY|goalng项目开发必备技能，golang项目部署集成了redis grpc和etcd|2023-10-14 17:05:45|郭宏志-老郭|306|5|0|5|1|知识,职业职场,golang,go语言,redis,grpc,etcd|
+https://www.bilibili.com/video/BV1Mp4y1u7Z6|goalng项目开发必备技能，golang项目部署集成了redis grpc和etcd|2023-10-13 11:39:43|郭宏志-老郭|521|6|2|9|0|知识,职业职场,grcp,golang,docker,go语言,redis,k8s,etcd|
+https://www.bilibili.com/video/BV1444y1F71E|hertz 路由，字节golang微服务框架hertz，golang项目开发必备技能|2023-08-19 19:06:52|郭宏志-老郭|1062|9|4|8|3|知识,校园学习,golang,golang教程,go语言,字节,k8s,hertz,go微服务|
+https://www.bilibili.com/video/BV1mu411w7Vy|hertz服务注册与发现etcd，字节golang微服务框架hertz，golang项目开发必备技能|2023-09-11 10:25:40|郭宏志-老郭|515|7|4|2|0|知识,职业职场,微服务,golang,go语言,hertz|
+https://www.bilibili.com/video/BV1Lz4y1T7kv|hertz服务注册与发现consul，字节golang微服务框架hertz，golang项目开发必备技能|2023-09-06 08:12:42|郭宏志-老郭|654|8|2|7|1|知识,职业职场,golang微服务,字节微服务,golang,go语言,hertz,go微服务|
+https://www.bilibili.com/video/BV1cN41167uq|hertz网络库，字节golang微服务框架hertz，golang项目开发必备技能|2023-08-20 10:47:01|郭宏志-老郭|879|6|0|17|0|知识,职业职场,微服务,golang,go语言,hertz|
+https://www.bilibili.com/video/BV1au4y1i7Nr|hertz中间件recovery，字节golang微服务框架hertz，golang项目开发必备技能|2023-08-22 13:15:49|郭宏志-老郭|718|7|5|2|4|知识,职业职场,golang,go语言,字节,中间件,hertz|
+https://www.bilibili.com/video/BV1Gu411774c|代码自动生成工具hz|2023-08-18 12:09:41|郭宏志-老郭|1432|15|11|18|2|知识,职业职场,微服务,golang,go语言,字节,hertz|
+https://www.bilibili.com/video/BV1bSspeNEcB|golang（go语言）高频问题汇总，golang（go语言）如何自定义错误处理？|2024-08-27 07:00:13|郭宏志-老郭|692|7|3|19|3|知识,职业职场,错误,golang,go语言|
+https://www.bilibili.com/video/BV1zR4y1t7Wj|golang入门到项目实战 [2022最新go语言教程，没有废话，纯干货！]|2021-11-17 20:38:11|郭宏志-老郭|603000|5801|5465|21000|1729|科技,计算机技术,视频教程,it,go语言,golang|
+https://www.bilibili.com/video/BV1e14y1m7ar|耗时数月整理的golang就业教程，完整版200集，全程干货无废话，学完立即上岗《零基础入门学习go》！15天让你编程水平有着质的飞跃~|2023-06-16 17:25:06|零声教育_雨眠老师|6309|57|28|454|20|科技,计算机技术,编程语言,golang开发,golang入门,golang项目实战,golangweb,golang并发编程,go语言,golang,golang教程,云原生|
+https://www.bilibili.com/video/BV1k24y1E7a7|【2023最新版】golang零基础入门自学教程，现在分享给大家，入门到精通，学完即可就业！ 涉及（go语言/分布式/微服务/devops）等知识点讲解|2023-03-21 16:31:50|零声教育_雨眠老师|40000|345|252|2150|127|科技,计算机技术,编程语言,golang框架,golang开发,golang入门,golang特性,入门到精通,golang,gin,go语言,并发编程|
+https://www.bilibili.com/video/BV15L41187LY|2023年初版！golang项目实战教程，少走弯路，避免盲目自学。本教程包含（go语言/微服务/分布式/k8s/docker/云原生项目实战）|2023-05-06 16:03:14|零声教育_小旷吖|6040|93|65|564|20|科技,计算机技术,程序员,golang框架,golang开发,golang项目实战,chatgpt,go语言,微服务,golang,golang教程,grpc|
+https://www.bilibili.com/video/BV1ZM411w7Ft|【2023版】golang语言教程（附源码），从基础入门到项目实战（docker/k8s/持续集成/工程组件/分布式中间件/云原生/项目实战）一百多集学完即就业|2023-02-17 23:44:53|B站_C学院|10000|144|74|960|23|知识,职业职场,科技,go实战项目,go学习路线,计算机技术,go,go,golang,devops,go语言,云原生|
+https://www.bilibili.com/video/BV1PF411R7FK|【go企业级实战项目合集】17款golang开发项目案例！深入底层原理，手把手教你用代码实现，带你彻底掌握go语言，持续更新中~|2023-07-03 21:24:10|Qt_Operator|6118|75|53|369|14|科技,计算机技术,golang项目,golangweb框架,分布式,微服务,golang,devops,golang教程,go语言,grpc,golang实战|
+https://www.bilibili.com/video/BV1sw411m7YN|【2023最全实战项目】17个golang练手项目合集（含源码），学习golang必备，十天练完就业无忧练项目经验|2023-09-27 10:55:50|Linux-后端攻城狮|19000|294|208|1884|51|科技,计算机技术,编程语言,golang微服务,golang项目实战,golang云原生,golangweb框架,golang,golang教程,go语言,golang实战,golang后端开发|
+https://www.bilibili.com/video/BV1ch411M7h5|如何逼自己7天练完14个golang云原生项目实战/golang教程  提供源码和学习视频|2023-06-16 15:44:13|零声教育_知识库|4878|71|49|474|22|知识,野生技能协会,程序员,golang框架,golang开发,golang项目,计算机技术,golang,golang教程,go语言,etcd,golang实战|
+https://www.bilibili.com/video/BV1XX4y1q7JN|【golang项目】23个golang实战项目，练完即可就业，从入门到进阶，基础到框架，你想要的全都有，建议码住！_golang_golang实例|2023-04-20 16:33:32|零声教育_知识库|8018|125|82|786|30|知识,野生技能协会,编程语言,计算机,golang框架,golang项目,go语言,golang,devops,golang教程,c++程序员|
+https://www.bilibili.com/video/BV1rK4y1w7JB|2023最新go语言实战项目《百万级并发im即时消息系统》，程序员转行golang开发必看（golang开发/golang实战/golang项目）|2023-09-20 13:56:59|云原生技术架构|16000|273|291|1104|47|知识,野生技能协会,程序员,计算机,编程,golang开发,golang项目,golang,golang教程,go语言,golang实战,知识大师集结令|
+https://www.bilibili.com/video/BV1Qj411D7A6|字节大佬耗时一周整理完的golang项目实战教程，完整版200集，练完即可成神，年薪24w不在话下，大厂offer拿到手软！让你编程水平有着质的飞跃~|2023-06-17 17:47:55|Linux-技术大师|3207|32|17|260|19|知识,野生技能协会,gin框架,golang框架,golang开发,golang项目实战,golang,docker,web框架,go语言,k8s,grpc|
+https://www.bilibili.com/video/BV1rw4m1a7Jz|2024最新版golang云原生公开课教程（完整版）|2024-07-18 15:04:39|Linux-技术大师|3264|44|30|354|10|知识,野生技能协会,程序员,计算机,编程,golang项目实战,golang云原生,golang开源框架,golang,docker,go语言,k8s|
+https://www.bilibili.com/video/BV174421S7ta|golang 2024 实战教程 - 开发命令行小工具|2024-07-19 21:23:35|大庆哥开荒记|2667|70|30|177|2|科技,计算机技术,程序员,编程,go,实战教程,golang|
+https://www.bilibili.com/video/BV14XYMeLEvY|golang 2024 实战教程 - 基于 gin 和 gorm 开发 api|2024-08-09 23:16:08|大庆哥开荒记|3167|60|36|159|3|科技,计算机技术,编程,教程,教不会来骂我,入门教程,gin,go,实战教程,golang,gorm|
+https://www.bilibili.com/video/BV1i7sxe9ESY|2024最新goweb】实战开发教程，一小时上手gin框架/基于go语言实现im功能,通过gin+websocket实现qq项目/goliang并发编程！|2024-08-27 18:45:21|写代码的程序猿儿|1223|11|5|92|0|科技,计算机技术,it,程序员,科技,编程,gin框架,gin框架实战,golang开发,互联网,计算机技术,golang|
+https://www.bilibili.com/video/BV1Vz421B7bD|2024最新版go框架教程，大厂工程师带你学gin框架，一套课程带你入门到精通！|2024-07-08 11:22:17|写代码的程序猿儿|422|4|0|13|3|科技,计算机技术,程序员,人工智能,it,编程语言,编程,机器学习,python,python爬虫,python基础,python教程|
+https://www.bilibili.com/video/BV1Pu4y1j7TA|开源 go 框架：airway - 我设计和开发的开源 web 框架（golang）|2023-11-20 23:59:44|大庆哥开荒记|2282|19|2|43|4|科技,计算机技术,go,编程,full-stack,golang,开源框架|
+https://www.bilibili.com/video/BV13z421B7z7|【go语言项目】快速开发 api 后端接口的利器 - 基于低代码 + airway 框架的代码自动生成思路分享|2024-07-17 10:31:39|大庆哥开荒记|314|3|0|4|0|科技,计算机技术,框架,接口,后端,golang,编程开发,web前端,代码生成器|
+https://www.bilibili.com/video/BV1KaYzecEGz|第二节 开发一个tcp端口扫描器 go语言开发 黑客 网安工具 开发|2024-08-13 09:42:11|AAOTS|2917|96|31|234|5|科技,计算机技术,go,计算机,黑客,教程,编程,极客,网络安全,信息安全,golang|
+https://www.bilibili.com/video/BV1xfYkeuENm|第三节 开发一个协程版端口扫描器 go语言开发 黑客 网安工具 开发|2024-08-13 17:28:29|AAOTS|964|19|12|40|0|科技,计算机技术,黑客,计算机,go,极客,教程,编程,网络安全,信息安全,golang|
+https://www.bilibili.com/video/BV1CZeAe8EXs|第四节 开发一个简洁的netcat！tcp正向代理 go语言开发 黑客 网安工具 开发|2024-08-15 22:57:29|AAOTS|2296|69|30|160|7|科技,计算机技术,计算机,go,黑客,极客,教程,编程,网络安全,信息安全,golang|
+https://www.bilibili.com/video/BV18MHPe6EcD|使用golang的协程竟然变慢了｜协程运行性能与创建开销分析|2024-09-01 13:41:50|白泽talk|1175|31|9|48|1|知识,校园学习,语言,性能,开源,后端,golang,协程|
+https://www.bilibili.com/video/BV1qz421y7pV|最棒的go书籍｜go语言的100个错误(1-10)|2024-04-07 21:46:15|白泽talk|3893|110|76|227|10|知识,校园学习,学习,go,程序员,编程,经验分享,笔记,阅读,开源,golang,新学期多点新知识|
+https://www.bilibili.com/video/BV1Gy411z7tx|go最热门的i18n库，真的好用吗？|2024-06-08 09:45:25|白泽talk|2897|47|20|118|2|知识,校园学习,程序员,go,编程,教程,本地化,开源,后端,golang,i18n|
+https://www.bilibili.com/video/BV1fHaXenEeV|go微服务中使用context传递事务真的这么优雅？|2024-08-07 23:21:06|白泽talk|2832|49|26|153|6|知识,校园学习,程序员,编程,整洁架构,开源,微服务,kratos,架构,golang|
+https://www.bilibili.com/video/BV1ib421J7bN|go高性能websocket库gws，高负载也有高性能！(一)|2024-07-24 09:16:46|白泽talk|2596|56|18|174|11|知识,校园学习,go,程序员,编程,开源,高性能,架构,golang,websocket|
+https://www.bilibili.com/video/BV1Ms42137ep|只用go语言，也能写出有趣的游戏！|2024-05-31 23:33:49|白泽talk|1803|42|19|55|3|知识,校园学习,游戏开发,程序员,编程,教程,ebiten,go语言,开源,后端,golang|
+https://www.bilibili.com/video/BV1c6421M7TM|1000行go代码写了一个游戏，可带劲了！|2024-02-13 10:43:18|白泽talk|3012|51|28|48|4|我在寒假搞学习,知识,校园学习,冒险,go,程序员,游戏,模拟人生,编程,开源,大厂,经验分享,哔哩哔哩新春季|
+https://www.bilibili.com/video/BV1FE421M7RD|最棒的go书籍｜go语言的100个错误(11-20)|2024-04-13 12:28:41|白泽talk|2027|25|16|35|1|知识,校园学习,程序员,学习,编程,笔记,开源,书籍,经验分享,阅读,go语言,golang|
+https://www.bilibili.com/video/BV1u2421c73m|怎么他们都有开源项目经历｜手把手教你参与开源|2024-02-07 10:37:10|白泽talk|28000|1069|452|3002|100|每天学点新知识,知识,校园学习,开发,计算机,程序员,开源,面试,大厂,经验分享,秋招,go语言|
+https://www.bilibili.com/video/BV1qC411h7P8|开源一个很适合写入简历的go项目｜http框架讲解篇|2024-03-16 10:53:45|白泽talk|6684|114|41|340|6|新学期多点新知识,知识,校园学习,程序员,go,教程,实习,求职,开源,招聘,框架,字节,新学期，多点新知识！|
+https://www.bilibili.com/video/BV1Yu4m1N7xF|【干货】golang 自学看这个视频就够了，我甚至帮你搜集了所有该学的资料。|2024-02-10 11:48:34|白泽talk|9407|199|96|489|23|我在寒假搞学习,知识,校园学习,自学,程序员,编程,干货,面试,大厂,经验分享,秋招,golang,哔哩哔哩新春季|
+https://www.bilibili.com/video/BV1CV4y1D7A4|【2023最新】28个golang实战项目，练完即可就业，从入门到进阶，基础到框架，你想要的全都有，建议码住|2023-03-28 13:00:08|零声教育_雨眠老师|12000|176|112|1264|33|知识,野生技能协会,程序员,计算机,编程,golang教程,golang项目,golang基础,go语言,计算机技术,golang,实战项目|
+https://www.bilibili.com/video/BV1ei421e7Kr|【2024最新go语言项目合集】超全golang实战项目（附源码课件）详细视频教程-适用于 go毕设 go课设 go练手项目-带你轻松学习golang~|2024-06-19 16:10:26|Linux-技术大师|4636|57|55|359|14|科技,计算机技术,计算机,程序员,编程,golang开发,golang云原生,golang项目,golang,golang教程,go语言,golang实战|
+https://www.bilibili.com/video/BV1cz42117s7|黑马go语言微服务项目全套视频（上）|2024-04-06 23:09:18|因人成事-莫|7566|82|23|563|30|科技,计算机技术,程序员,视频,教程,编程,全套,黑马,项目,分布式,微服务,go|
+https://www.bilibili.com/video/BV1sA4m1F7zg|黑马go语言微服务项目全套视频（中）|2024-04-06 23:24:28|因人成事-莫|3862|47|13|347|6|科技,计算机技术,程序员,视频,教程,编程,黑马,分布式,全套,项目,微服务,go|
+https://www.bilibili.com/video/BV1Ax421S7KD|黑马go语言微服务项目全套视频（下）|2024-04-06 23:26:54|因人成事-莫|1753|23|5|192|5|科技,计算机技术,程序员,视频,编程,教程,全套,黑马,项目,分布式,微服务,go|
+https://www.bilibili.com/video/BV1kM411X7Cp|go-zero零基础入门教程go微服务开发必学教程|2023-10-28 14:30:39|枫枫知道|27000|315|254|1105|67|科技,计算机技术,零基础,程序员,go-zero,互联网,微服务,后端,go|
+https://www.bilibili.com/video/BV1Fg4y1W7Na|【码神之路】go-zero框架教程，十年大厂程序员讲解，通俗易懂|2023-02-22 20:21:29|码神之路|44000|441|324|1959|91|golang,科技,计算机技术,程序员,it,编程,大厂程序员,go-zero,干货,框架,go,gopher|
+https://www.bilibili.com/video/BV1Fr4y177Jf|1. 安装|2022-07-17 17:33:11|KesonAn|4388|30|17|66|8|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1CG411p7w9|2. 功能概览|2022-07-17 17:27:54|KesonAn|1651|6|2|17|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1SS4y177Ma|5. 自动补全|2022-07-17 17:39:25|KesonAn|1092|1|0|3|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1vT41177VH|3. quickstart|2022-07-17 17:38:50|KesonAn|1528|6|4|4|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1we4y197g2|4. upgrade|2022-07-17 17:32:32|KesonAn|1201|6|2|2|0|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1r94y1Q77Y|26. goctl-swagger|2022-07-17 18:29:56|KesonAn|1243|2|2|6|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1oN4y1T73u|36. mongo 代码生成|2022-07-17 18:30:52|KesonAn|1380|1|0|7|2|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1ud4y1Q7Ph|40. dockerfile 生成|2022-07-17 18:32:32|KesonAn|803|2|2|4|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1fr4y1j7wD|12. dart & ts 生成|2022-07-17 17:53:14|KesonAn|689|2|0|0|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1kB4y1Y7Ht|13. 快速创建  go rest 服务|2022-07-17 17:51:58|KesonAn|902|1|0|5|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1ba411M7dU|31. 快捷创建 proto 文件|2022-07-17 18:18:53|KesonAn|962|2|0|3|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1dW4y1m7uY|14. 模板功能介绍|2022-07-17 17:52:58|KesonAn|722|2|0|2|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV12S4y177ue|15. 模板持久化|2022-07-17 17:51:10|KesonAn|654|1|2|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1gF411K7B9|17. 模板 revert|2022-07-17 17:59:51|KesonAn|409|0|0|0|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1pS4y17782|19. 模板自定义(1)|2022-07-17 18:13:27|KesonAn|733|0|0|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV11B4y1a7RX|20. 模板自定义（2）|2022-07-17 17:57:19|KesonAn|514|1|0|1|2|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1EU4y1i76H|18. 模板 update|2022-07-17 17:57:56|KesonAn|389|0|0|0|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Ke4y197mJ|35. rpc 分组|2022-07-17 18:35:24|KesonAn|717|2|0|3|2|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1CS4y1772V|34. rpc 目录结构|2022-07-17 18:35:57|KesonAn|536|0|0|0|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Lr4y177Y3|32. 快速生成 rpc 服务|2022-07-17 18:17:14|KesonAn|622|2|1|0|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV13B4y1Y7fH|33. rpc 服务生成|2022-07-17 18:22:23|KesonAn|554|1|0|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1TV4y1J7su|29. goctl env (2)|2022-07-17 18:08:55|KesonAn|282|0|0|0|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1JV4y1J7JH|28. goctl env（1）|2022-07-17 18:10:56|KesonAn|399|0|0|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV15U4y1i7ME|42. 结语|2022-07-17 18:29:07|KesonAn|303|4|0|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1oa411S7b6|27. goctl 快速上报 issue|2022-07-17 18:01:45|KesonAn|309|1|0|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1xG411n7nR|30. goctl 迁移指令 migrate|2022-07-17 18:16:26|KesonAn|440|2|0|1|0|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1tB4y1Y7kB|10. api 文件格式化|2022-07-17 17:52:39|KesonAn|812|2|0|2|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Wt4y1t7rf|9. api 文件校验 validate|2022-07-17 17:47:26|KesonAn|1302|4|2|2|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Ng411Z71k|23. api 路由前缀和分组|2022-07-17 18:14:20|KesonAn|838|2|2|1|2|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV14V4y1J7vc|24. api tag|2022-07-17 18:17:09|KesonAn|660|2|0|3|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1RW4y1m7Un|7. api 语法|2022-07-17 17:59:21|KesonAn|1634|5|4|6|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Ta411D7jh|6. api 文件|2022-07-17 17:39:35|KesonAn|1424|3|2|6|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1BU4y1B7SH|21. api go 代码生成|2022-07-17 18:19:17|KesonAn|965|6|6|4|2|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Rr4y1j7y7|11. api doc 生成|2022-07-17 17:51:58|KesonAn|976|2|2|2|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1wW4y1U7GY|39. postgresql 代码生成|2022-07-17 18:23:30|KesonAn|640|0|0|2|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1694y1Q7w5|37. 从数据库生成 mysql 代码|2022-07-17 18:37:47|KesonAn|1027|2|0|7|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1dS4y177kQ|38. 通过 sql 文件生成 mysql 代码|2022-07-17 18:32:54|KesonAn|593|0|0|0|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Et4y1t7Pu|41. k8s 描述文件生成|2022-07-17 18:25:50|KesonAn|570|1|0|0|2|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV17r4y177MB|25. java & kotlin 生成|2022-07-17 18:03:37|KesonAn|405|3|0|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1c34y1n7KE|22. 文件格式化 --style|2022-07-17 18:14:57|KesonAn|514|0|0|1|1|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1qW4y117k2|16. 模板清理|2022-07-17 17:57:40|KesonAn|463|0|1|0|0|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1Tg411Z74J|8. 编辑器插件|2022-07-17 18:01:21|KesonAn|700|4|2|2|2|科技,软件应用,视频教程,go-zero,goctl|
+https://www.bilibili.com/video/BV1xT41157U1|【从零实现go微服务框架】msgo 一个完整的go web框架，微服务框架，从零实现，深入学习go，突破思维困局，十年大厂程序员讲解，通俗易懂|2022-06-12 13:04:32|码神之路|8786|73|38|267|16|知识,野生技能协会,程序员,编程,go项目实战,从零实现web框架,go微服务实战,微服务,go,golang,web框架,微服务框架|
+https://www.bilibili.com/video/BV1Eg4y1E7Ki|【码神之路】go-zero微服务项目实战，数字资产交易平台，十年大厂程序员讲解，通俗易懂|2023-03-03 21:38:37|码神之路|15000|127|59|642|29|golang,科技,计算机技术,it,编程,教程,微服务实战,大厂程序员,go-zero,微服务,go语言,gopher|
+https://www.bilibili.com/video/BV1yM411g7ZZ|【go-zero实战】项目介绍|2023-05-05 23:47:51|GOLANG-ROADMAP|4215|34|10|140|4|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1Lh4y1d7gG|【go-zero实战】24-构建market处理器接收mq数据|2023-06-08 21:00:00|GOLANG-ROADMAP|907|7|2|10|1|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1V8411f7tC|【go-zero实战】02-搭建用户rpc服务|2023-06-02 22:00:00|GOLANG-ROADMAP|1157|5|6|15|3|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1KP411X7m7|【go-zero实战】11-注册|2023-06-06 22:00:00|GOLANG-ROADMAP|364|2|0|2|0|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV11h4y1R7qC|【go-zero实战】06-发送验证码|2023-06-04 22:00:00|GOLANG-ROADMAP|473|5|0|2|0|知识,职业职场,it,编程,go-zero,dovker,微服务,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1Rc411g77n|【go-zero实战】12-登录实现|2023-06-07 21:00:00|GOLANG-ROADMAP|457|4|2|8|0|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1mP411Q7Jx|【go-zero实战】07-人机校验服务器验证|2023-06-05 21:00:00|GOLANG-ROADMAP|275|0|0|0|1|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1qX4y1h7rt|【go-zero实战】10-检查手机号是否注册|2023-06-06 21:00:00|GOLANG-ROADMAP|269|1|0|1|0|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1hL411q77g|【go-zero实战】04-搭建用户api服务|2023-06-03 22:00:00|GOLANG-ROADMAP|711|3|2|8|2|知识,职业职场,it,编程,go-zero,微服务,docker,go语言,实战项目,go实战,必剪创作,go学到什么程度可以找工作|
+https://www.bilibili.com/video/BV1Vk4y1x7TL|2023最新gin+grpc实战:项目管理/协同系统 02-优雅启停|2023-05-28 22:00:00|GOLANG-ROADMAP|1064|8|4|19|0|golang,知识,职业职场,2023最新,go,gin,go语言,实战项目,gopher,grpc,go学习,必剪创作|
+https://www.bilibili.com/video/BV1bu411s7VC|2023最新gin+grpc实战:项目管理/协同系统11-etcd-服务发现|2023-06-02 21:00:00|GOLANG-ROADMAP|652|7|2|11|1|golang,知识,职业职场,2023最新,go,gin,go语言,实战项目,gopher,grpc,go学习,必剪创作|
+https://www.bilibili.com/video/BV1S24y1K7UN|go实战【码神三国】04.websocket服务搭建-1|2023-05-15 23:19:44|GOLANG-ROADMAP|1111|8|6|16|0|golang,知识,职业职场,程序员,go,实战,实战项目,go学习,必剪创作|
+https://www.bilibili.com/video/BV1oz4y1t7cB|go实战【码神三国】05-websocket服务搭建-2|2023-05-16 21:19:11|GOLANG-ROADMAP|554|6|2|3|1|golang,知识,职业职场,go,程序员,游戏,编程,项目实战,go学习,必剪创作|
+https://www.bilibili.com/video/BV1sS4y1U7mj|【go项目实战】码神三国，带你体验完整工程实践|2022-03-21 23:09:12|GOLANG-ROADMAP|4757|14|5|19|4|虚拟up主召集令,知识,职业职场,游戏开发,go,编程,go语言,编程学习,golang,项目实战,打卡挑战,必剪创作|
+https://www.bilibili.com/video/BV1MX4y117mS|go游戏开发实战项目:码神三国项目演示及代码介绍|2023-05-12 22:58:20|GOLANG-ROADMAP|3904|14|6|70|5|golang,知识,职业职场,开发,程序员,游戏,go,编程,go项目实战,golang|
+https://www.bilibili.com/video/BV1Wa411b7x3|【go面试】go map的底层实现原理？|2022-03-11 12:45:52|GOLANG-ROADMAP|7219|39|17|65|13|知识分享官,知识,职业职场,it,go,编程,求职,golang,go语言,面试,面试技巧,必剪创作|
+https://www.bilibili.com/video/BV1aL4y157zr|【go面试】go goroutine的底层实现原理？|2022-04-08 19:14:34|GOLANG-ROADMAP|4848|38|24|107|5|计算机编程趣味知识点,知识,职业职场,学习,go,it,编程,面试,面试技巧,求职,go语言,互联网|
+https://www.bilibili.com/video/BV1BT4y1e7W7|【go面试】go 互斥锁的实现原理？|2022-03-29 13:04:03|GOLANG-ROADMAP|5662|49|26|108|8|虚拟up主召集令,知识,职业职场,go,it,编程,求职,go语言,面试技巧,面试,golang,必剪创作|
+https://www.bilibili.com/video/BV19Y411J7tB|【go面试】go可重入锁如何实现？|2022-04-02 16:24:58|GOLANG-ROADMAP|2341|10|4|18|3|虚拟up主召集令,知识,职业职场,it,go,编程,go语言,面试技巧,求职,面试,golang,必剪创作|
+https://www.bilibili.com/video/BV1hS4y1D7Zs|【go面试】go map如何扩容？|2022-03-18 12:17:54|GOLANG-ROADMAP|3279|26|7|17|4|虚拟up主召集令,知识,职业职场,it,go,编程,求职,面试技巧,面试,golang,打卡挑战,必剪创作|
+https://www.bilibili.com/video/BV1Xr4y1B7Pu|【go面试】go map如何查找？|2022-03-15 21:38:58|GOLANG-ROADMAP|3065|16|9|8|5|虚拟up主召集令,知识,职业职场,打卡挑战,必剪创作|
+https://www.bilibili.com/video/BV1YS4y1D7pM|【go面试】go map冲突的解决方式？|2022-03-16 12:56:54|GOLANG-ROADMAP|2773|9|2|8|3|虚拟up主召集令,知识,职业职场,go,it,编程,面试,互联网,面试技巧,求职,打卡挑战,必剪创作|
+https://www.bilibili.com/video/BV1uP4y1u7cS|【go面试】go map的负载因子为什么是6.5？|2022-03-17 13:24:18|GOLANG-ROADMAP|2723|14|6|12|2|虚拟up主召集令,知识,职业职场,打卡挑战,必剪创作|
+https://www.bilibili.com/video/BV1gu411B73Y|【go面试】go channel如何控制goroutine并发执行顺序|2022-03-25 12:18:56|GOLANG-ROADMAP|3314|12|6|14|5|虚拟up主召集令,知识,职业职场,打卡挑战,必剪创作|
+https://www.bilibili.com/video/BV1z54y1o7kf|【go面试】go 常用的并发模型？|2022-05-30 22:31:03|GOLANG-ROADMAP|3014|20|8|48|4|知识,职业职场,学习,视频教程,it,go,编程,go语言,golang,面试,高并发,必剪创作|
+https://www.bilibili.com/video/BV1qg411R7ix|【go面试】go 有哪些并发同步原语？|2022-06-01 15:54:51|GOLANG-ROADMAP|2210|17|8|29|2|知识,校园学习,go,学习,视频教程,编程,golang,经验分享,面试,go语言,高并发,必剪创作|
+https://www.bilibili.com/video/BV1Xi4y127Cx|【go面试】go gmp和gm模型？|2022-04-24 17:46:49|GOLANG-ROADMAP|7351|60|26|128|6|知识,校园学习,go,it,学习,视频教程,编程,面试,经验分享,go语言,golang,必剪创作|
+https://www.bilibili.com/video/BV1LA4y1D7yo|【go面试】go 调度原理？|2022-04-25 20:58:36|GOLANG-ROADMAP|3601|33|22|53|3|知识,校园学习,it,课程,学习,go,教程,编程,golang,面试,go语言,必剪创作|
+https://www.bilibili.com/video/BV1XF411T7bK|【go面试】go 内存分配机制？|2022-05-07 21:26:02|GOLANG-ROADMAP|4139|26|14|54|4|是什么原因让程序员可以拿到高薪,知识,校园学习,程序员,编程,go面试题,面试,go,面试题,go语言,golang,必剪创作|
+https://www.bilibili.com/video/BV1N44y1N7Cs|【go面试】go channel的底层实现原理？|2022-03-20 13:36:30|GOLANG-ROADMAP|13000|117|72|354|29|知识,职业职场,it,go,编程,golang,面试,go语言,面试技巧,golang,面试宝典,必剪创作|
+https://www.bilibili.com/video/BV1aG4y1d7DC|golang 后端工作4.5年 第一面|2022-11-24 10:39:53|硬核课堂|15000|145|55|429|50|科技,计算机技术,课程,程序员,服务器,编程,面试,golang,工作,后端,编程开发,系统设计|
+https://www.bilibili.com/video/BV1Yv4y1B7Vz|go面试题汇总 进大厂必看|2023-01-01 15:26:02|王中阳Go|2357|34|13|84|1|科技,计算机技术,go,go基础,大厂面试题详解,go找工作,go前景,面试题,golang教程,go入门,go面试题,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1qv4y1Q7V5|go基础面试题汇总29题|2022-12-20 11:04:03|王中阳Go|3950|32|19|94|7|科技猎手,科技,计算机技术,编程,go面试题,java转go,go入门实战,go求职,go招聘,面试,面试题,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1JD4y1h74p|相见恨晚的go面试题大全day1|2022-12-19 18:49:28|王中阳Go|3285|57|47|203|14|科技猎手,科技,计算机技术,go,编程,go面试题,java转go,go入门实战,go求职,go招聘,面试题,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1KM411m7j1|【go面试题大全】并发编程|2022-12-20 22:30:45|王中阳Go|1925|25|12|112|5|科技猎手,科技,计算机技术,程序员,go,go面试题,go招聘,面试,面试题,编程开发,并发编程,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1oK411z7yx|go微服务详解&面试题汇总|2022-12-22 22:19:25|王中阳Go|1264|15|8|30|2|科技猎手,科技,计算机技术,go语言入门,go入门教程,go微服务,go实战教程,微服务,面试题,编程开发,go语言学习,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1484y1s7y2|【go电商实战16】用户角色权限管理&方案思路&表结构设计&添加角色|2022-12-21 11:19:05|王中阳Go|2235|17|4|32|4|科技猎手,科技,计算机技术,go,go语言入门,goframe,go入门教程,go微服务,go实战教程,权限管理,go语言学习,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1xY4y1f7SU|「真tm优雅」go实现文件上云&自定义文件域名|2023-01-13 15:07:59|王中阳Go|1468|34|7|77|8|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1V8411A78M|「go开源电商24」半小时搞定商品分类管理|2023-01-13 21:40:18|王中阳Go|1231|21|6|29|1|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1c84y1Y74L|go开源电商系统：订单&支付状态管理|2023-01-09 21:20:11|王中阳Go|3175|41|8|138|2|用知识过好新的一年,科技,计算机技术,订单管理,go入门教程,go实战教程,go语言入门,goframe,支付状态管理,go,go语言,开源系统,我在b站跨年|
+https://www.bilibili.com/video/BV1LK411B72u|【go电商实战17】用户角色权限管理&角色的crud&添加唯一索引&物理删除|2022-12-24 12:30:59|王中阳Go|1414|23|13|33|0|科技猎手,科技,计算机技术,go,编程,go入门教程,go面试题,go微服务,go实战教程,权限管理,go语言学习,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1TV4y1c7X6|【go电商实战15-2】订单查询&不要重复造轮子&解决时区问题|2022-12-19 16:13:19|王中阳Go|1128|21|6|19|6|科技猎手,科技,计算机技术,go,编程语言,编程,java转go,php转go,go入门实战,入门教程,实战项目,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1Jv4y1Q7tf|【go电商实战15】查询今日订单总数&如何避免自己重复造轮子|2022-12-19 13:59:56|王中阳Go|862|14|2|12|0|科技猎手,科技,计算机技术,程序员,go,编程,java转go,php转go,比特币,电商,区块链,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1vv4y1S7Cd|【go电商实战05】中间件的使用-路由绑定-自定义返回json|2022-11-13 10:13:02|王中阳Go|1753|25|10|30|5|科技猎手,科技,计算机技术,编程入门,编程,电商实战,go,golang,编程开发,go实战,中间件,go入门,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1vd4y1r7FL|【电商实战04】orm链式操作之字段过滤&粉丝有问必答|2022-11-10 18:59:11|王中阳Go|1705|36|20|19|5|科技猎手,科技,计算机技术,编程入门,程序员,编程,电商实战,go,golang,go实战,go入门,科技猎手计划·2022第四期,万圣节惊奇派对|
+https://www.bilibili.com/video/BV1Z24y1f75u|电商实战_链式操作_软删除_优雅的时间管理_删除轮播图|2022-11-09 14:24:14|王中阳Go|1998|38|18|33|2|科技猎手,科技,计算机技术,编程入门,编程,教程,电商实战,go,golang,go实战,go入门,科技猎手计划·2022第四期,万圣节惊奇派对|
+https://www.bilibili.com/video/BV1Q24y1v7tY|【go电商实战20】优雅的debug&事务的使用&结构体的抽取|2023-01-02 15:19:42|王中阳Go|1114|24|10|46|2|今日份学习打卡,科技,计算机技术,年终校园大赏,编程入门,go,go基础,go入门教程,go事务处理,golang教程,debug,go电商实战,存档2022，开拍2023|
+https://www.bilibili.com/video/BV148411A7Z1|「go实战项目」cms是啥？半小时搞定cms？|2023-01-17 12:03:56|王中阳Go|2544|21|5|28|0|用知识过好新的一年,科技,计算机技术,go,实习项目,go入门教程,春招项目,goframe教程,go电商教程,春招准备,cms,实战项目,我在b站跨年|
+https://www.bilibili.com/video/BV1eG4y1X75M|gtoken用户登录及鉴权「go开源电商实战项目32」|2023-01-18 10:09:51|王中阳Go|1113|21|10|38|2|用知识过好新的一年,科技,计算机技术,go,编程入门,实习项目,go入门教程,goframe教程,go电商教程,电商,golang,实战项目,我在b站跨年|
+https://www.bilibili.com/video/BV1884y187bq|orm不用hasmany，还能这么做模型关联？「收藏列表详解」|2023-01-18 17:21:57|王中阳Go|470|11|5|14|0|用知识过好新的一年,科技,计算机技术,编程入门,go,实习项目,go入门教程,goframe教程,go电商教程,orm,golang,实战项目,我在b站跨年|
+https://www.bilibili.com/video/BV1uK411k7Bw|服了！收藏系统还能这么设计？「go开源电商实战」|2023-01-18 16:12:48|王中阳Go|696|16|5|27|3|用知识过好新的一年,科技,计算机技术,go,编程入门,编程,实习项目,go入门教程,goframe教程,go电商教程,golang,实战项目,我在b站跨年|
+https://www.bilibili.com/video/BV1344y1X7HP|【go电商实战08】开源到github啦_管理后台admin的增删改查_加密盐_公共类库从v1升级到v2_串讲知识点|2022-11-21 06:00:00|王中阳Go|2879|52|19|52|15|up主起航计划,科技,计算机技术,go,编程入门,编程,go实战项目,电商,开源,实战,golang,go语言学习|
+https://www.bilibili.com/video/BV1v841157Bh|【学go必看】goframe集成gtoken视频详解，包括v2版本和v1版本。|2022-12-05 17:19:21|王中阳Go|4114|41|21|63|6|科技猎手,科技,计算机技术,编程,goframe,go实战项目,go电商实战,区块链,go,jwt,go视频教程,科技猎手计划·2022第五期,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1Z24y1Y7JK|golang上传文件详解|2023-01-05 19:20:00|王中阳Go|1922|35|8|50|5|用知识过好新的一年,科技,计算机技术,编程入门,编程,golang入门,golang实战项目,golang电商,golang,golang教程,golang基础,我在b站跨年,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1g3411m7pG|用2个小时解决前端反馈的问题|2023-01-08 17:33:54|王中阳Go|979|13|5|19|2|用知识过好新的一年,科技,计算机技术,编程,golang入门,golang实战项目,golang电商,开源,golang,golang教程,golang基础,我在b站跨年,存档2022，开拍2023|
+https://www.bilibili.com/video/BV1AP4y1k7cg|golang模型关联取值-静态关联取值的技巧和优化方案|2023-01-12 16:19:07|王中阳Go|166|7|2|6|0|用知识过好新的一年,科技,计算机技术,编程,goframe,golang教程,go语言,go入门,我在b站跨年|
+https://www.bilibili.com/video/BV1Md4y1L7yW|「提效利器」快速导出接口文档&路由组的优化|2023-01-13 17:49:37|王中阳Go|489|15|6|12|0|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1u84y1h7wf|go注册路由抽取代码、优化路由组、抽取常量|2023-01-13 16:12:53|王中阳Go|437|8|1|10|0|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1kY411y79N|「学go必看」点赞和收藏如何设计？需要注意哪些问题？|2023-01-13 07:23:29|王中阳Go|557|13|2|20|2|用知识过好新的一年,科技,计算机技术,go,go语言入门,go语言项目,go开源项目,学go,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1zP4y1k7qR|go语言妙用「类型转换」和「数据校验」实现商品管理的敏捷开发|2023-01-16 17:58:04|王中阳Go|852|15|6|33|3|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1AW4y137Wb|「啥是敏捷开发？」带你优化go代码，快速解决todolist|2023-01-13 15:39:21|王中阳Go|355|8|2|9|1|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1aY411y7Mq|「学go必看」点赞列表如何设计？静态关联with和withall的使用？如何复用其他包的结构体？|2023-01-13 07:34:01|王中阳Go|318|10|2|8|1|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1fd4y157Ke|「go敏捷开发」电商项目の商品中心 从0到1详解|2023-01-13 18:46:25|王中阳Go|707|17|9|16|2|用知识过好新的一年,科技,计算机技术,go,go语言入门,goframe,go语言项目,go开源项目,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1dd4y157zD|「学go必看」商品详情接口如何设计和优化？是否收藏该商品不需要单独写接口|2023-01-13 07:27:47|王中阳Go|348|6|0|9|2|用知识过好新的一年,科技,计算机技术,go,go语言入门,go语言项目,go开源项目,学go,王中阳go,golang,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1CK411r7q1|冬训肯吃苦，春招猛如虎！go春招电商实战教程|2023-01-16 20:08:17|王中阳Go|534|17|4|10|0|用知识过好新的一年,科技,计算机技术,go语言入门,goframe,go语言项目,go开源项目,春招教程,golang,春招,go语言教程,go教程,我在b站跨年|
+https://www.bilibili.com/video/BV1bR4y1y7pp|【go电商实战11】工程目录设计详解&如何做到高内聚低耦合？|2022-11-29 18:16:10|王中阳Go|1387|20|7|35|7|科技猎手,科技,计算机技术,go,php,编程,goframe,区块链,微服务,java,golang,gin,科技猎手计划·2022第五期|
+https://www.bilibili.com/video/BV1bt4y1K7Lj|【初学go必看】用敏捷开发和“抄作业”的思想，教你快速上手go电商实战项目|2022-11-04 17:41:40|王中阳Go|7468|134|85|291|16|科技猎手,科技,计算机技术,视频教程,go,课程,教程,go语言,实战,golang,go,编程开发,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1Ng41167fW|go实战项目教程_电商实战1：课程大纲+开源地址|2022-10-29 14:28:12|王中阳Go|9647|164|127|423|69|科技猎手,科技,计算机技术,视频教程,go,golang,互联网,go语言,实战,编程开发,项目实战,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1yG411c7Xk|【准备工作】用“抄作业”的思路带你快速上手电商实战项目|2022-11-06 12:44:21|王中阳Go|2170|18|6|26|4|bilibili实用up主扶持计划,科技,计算机技术,视频教程,golang,经验分享,实战,go语言,go,学习心得,编程开发,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1kG4y1Z78g|【电商实战】如何通过编写logic生成service？新手容易犯的错误有哪些？|2022-11-06 12:57:30|王中阳Go|1940|22|12|17|5|bilibili实用up主扶持计划,科技,计算机技术,视频教程,编程,经验分享,实战,golang,go语言,go,编程开发,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1Ue4y1s7TE|【电商实战】gf工具怎么用？api层和model层怎么编写？|2022-11-06 12:52:54|王中阳Go|2656|23|17|51|6|bilibili实用up主扶持计划,科技,计算机技术,视频教程,经验分享,golang,电商,实战,go语言,go,编程开发,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1npH1e3ENe|【gin-vue-admin】2.7.3正式版，自动化支持配置导入导出，插件可自动生成菜单和api，角色支持严格角色模式，更多细节体验优化【翻转极光出品）|2024-09-02 22:07:37|go圈里最会写js的奇淼|976|16|8|5|3|知识,野生技能协会,go,课程,科技,编程,经验分享,go语言,golang,github,gin,vue|
+https://www.bilibili.com/video/BV1Wq4y1H7Fe|【golang教学】第十五章：文件操作的基础使用和代码示例（1010工作室出品）|2021-08-14 16:28:20|go圈里最会写js的奇淼|5644|58|45|45|4|知识,野生技能协会,科技,课程,go,编程,golang,go语言,经验分享,github,gin,vue|
+https://www.bilibili.com/video/BV1Rg411u7xH|【gin-vue-admin】手把手教你使用gin-vue-admin(分p合集)|2021-07-10 17:18:50|go圈里最会写js的奇淼|95000|619|548|1496|137|知识,野生技能协会,课程,go,科技,编程,go语言,经验分享,golang,github,gin,vue|
+https://www.bilibili.com/video/BV1pN4y157wp|【go-admin-pro】如何优雅添加api（&适用于go-admin）|2022-08-09 22:17:54|wenjianzhang|4622|21|8|45|25|知识,校园学习,go,权限管理系统,go-admin,golang,go语言,经验分享,gin,vue,antd,antdesign|
+https://www.bilibili.com/video/BV1NV4y177HJ|【go-admin-pro】订阅版antd菜单和路由|2022-08-07 13:30:58|wenjianzhang|881|11|4|9|8|知识,校园学习,学习,课程,go,视频教程,权限管理系统,go-admin,golang,学习心得,antd,antdesign|
+https://www.bilibili.com/video/BV1xM4y1f7nf|【go-admin-pro】在线代码生成工具-agent的使用#内测版|2023-02-18 20:00:22|wenjianzhang|2065|14|2|33|7|知识,校园学习,学习,go-admin,go,代码生成,antd|
+https://www.bilibili.com/video/BV1QG411b7Sd|【go-admin-pro】订阅版代码工具参数说明|2022-08-06 11:32:34|wenjianzhang|668|8|6|10|0|知识,校园学习,go,教程,go-admin,经验分享,golang,antd|
+https://www.bilibili.com/video/BV1Wa411o7Zr|【go-admin-pro】订阅版app指令（&适用于go-admin）|2022-08-08 22:10:52|wenjianzhang|1339|15|7|5|25|知识,校园学习,学习,go,教学视频,教程,权限管理系统,go-admin,gin,vue,antd,antdesign|
+https://www.bilibili.com/video/BV1YB4y1z7vM|【go-admin-pro】订阅版antd pro select组件使用介绍|2022-08-23 09:19:08|wenjianzhang|825|7|3|4|3|学习帮帮团,知识,校园学习,go,公开课,权限管理系统,go-admin,golang,gin,vue,antd,antdesign,学习帮帮团2022第二季|
+https://www.bilibili.com/video/BV1qh411c7Nb|go-admin-pro 开箱教程 - 菜单管理功能介绍|2023-05-13 15:50:31|wenjianzhang|1162|13|0|6|5|1分钟学个知识点,知识,校园学习,视频教程,教程,go-admin,功能介绍,经验分享,管理系统,gin,golang,gorm,是老师，也是up主！|
+https://www.bilibili.com/video/BV1rs4y1Q7qA|go-admin-pro 开箱教程 - 角色管理功能介绍|2023-05-13 12:07:29|wenjianzhang|761|10|7|7|3|1分钟学个知识点,知识,校园学习,开箱,编程,go-admin,经验分享,功能介绍,管理系统,gin,golang,gorm,是老师，也是up主！|
+https://www.bilibili.com/video/BV1Qh41157zq|go-admin-pro 开箱教程 - 接口管理功能介绍|2023-05-13 01:04:13|wenjianzhang|848|5|2|10|1|知识,校园学习,编程,go-admin,功能介绍,经验分享,管理系统,gin,golang,gorm|
+https://www.bilibili.com/video/BV1TV4y1d7AS|go-admin-pro 开箱教程-wagger文档生成|2023-04-28 19:08:07|wenjianzhang|1824|5|2|15|3|知识,校园学习,视频教程,教程,编程,go-admin,经验分享,管理系统,go,gin,生成,gorm|
+https://www.bilibili.com/video/BV16z4y1Y7cb|go-admin-pro开箱教程-部门管理功能介绍|2023-04-29 18:07:54|wenjianzhang|1260|10|3|10|1|知识,校园学习,开箱,视频教程,教程,go-admin,功能介绍,经验分享,管理系统,gin,golang,gorm|
+https://www.bilibili.com/video/BV1rs4y1Q7Us|go-admin-pro 开箱教程 - 数据字典功能介绍|2023-05-13 00:12:06|wenjianzhang|817|5|2|5|2|知识,校园学习,视频教程,go-admin,经验分享,功能介绍,管理系统,gin,golang,gorm|
+https://www.bilibili.com/video/BV1DM4y187kb|go-admin-pro 开箱教程-从代码下载、安装、配置、数据迁移、前后端启动|2023-04-28 01:19:57|wenjianzhang|6268|38|13|112|37|1分钟学个知识点,知识,校园学习,学习,教程,编程,go-admin,管理系统,go,gin,gorm,是老师，也是up主！|
+https://www.bilibili.com/video/BV13Y4y1A7n2|【go-admin-pro】如何优雅的数据迁移？migrate指令（&适用于go-admin）|2022-08-10 22:43:46|wenjianzhang|1068|8|8|5|24|知识,校园学习,视频教程,go,学习,编程,权限管理系统,go-admin,golang,gin,antd,antdesign|
+https://www.bilibili.com/video/BV1wS4y1x7g2|【go-admin-pro】数据迁移migrate指令常见的问题说明（&适用于go-admin）|2022-08-11 18:46:03|wenjianzhang|789|8|7|5|12|知识,校园学习,视频教程,学习,编程,权限管理系统,go-admin,golang,gin,vue,antd,antdesign|
+https://www.bilibili.com/video/BV1Zk4y157HH|go-admin-pro 开箱教程 - 用户管理功能介绍|2023-05-13 15:05:48|wenjianzhang|624|4|2|5|1|1分钟学个知识点,知识,校园学习,视频教程,go-admin,功能介绍,经验分享,管理系统,gin,golang,gorm,是老师，也是up主！|
+https://www.bilibili.com/video/BV1zR4y1f7LN|go-admin中如何生成接口文档|2022-11-21 18:37:53|wenjianzhang|966|9|4|11|4|校园分享官,知识,校园学习,go-admin,api,go,gin,vue,权限管理,swagger,gorm,antd|
+https://www.bilibili.com/video/BV1kg411v7ix|go-admin文档更新啦|2022-11-19 16:27:13|wenjianzhang|539|10|2|4|2|校园分享官,知识,校园学习,go-admin,gin,vue,权限管理,gorm,antd,校园分享官第6期|
+https://www.bilibili.com/video/BV1s24y1k7pv|【golang-web开发】gin框架手把手教学|2022-12-07 10:11:08|枫枫知道|85000|857|856|2853|191|科技,计算机技术,程序员,it,零基础,零基础教程,gin,golang,web开发,go|
+https://www.bilibili.com/video/BV1dz421D7EC|2024最新版go框架教程，大厂工程师带你学gin框架，一套课程带你入门到精通！|2024-03-05 18:30:59|金角大王Alex|795|3|0|21|0|科技,计算机技术,程序员,科技,go,计算机,it,编程,框架,计算机技术,gin,编程开发|
+https://www.bilibili.com/video/BV1Jx421y7tL|2024最新版go语言教程，大佬从0开始带你学习微服务架构，小白必备！|2024-03-04 20:30:45|金角大王Alex|438|6|5|13|0|科技,计算机技术,科技,go,计算机,课程,编程语言,程序员,it,编程,互联网,计算机技术|
+https://www.bilibili.com/video/BV1wG4y1Z7Wo|【码神之路】go语言web框架-gin框架教程，十年大厂程序员讲解，通俗易懂|2022-11-19 22:30:29|码神之路|19000|202|146|754|45|知识,野生技能协会,go,it,程序员,编程,gin框架,大厂程序员,gin,高薪,web,golang|
+https://www.bilibili.com/video/BV1Rd4y1K75i|2022最新go标准库教程，全面精讲，十年大厂程序员讲解，通俗易懂|2022-07-29 11:23:19|码神之路|21000|319|264|1607|56|知识,野生技能协会,程序员,课程,编程入门,it,go,教程,go标准库,golang,go语言,标准库|
+https://www.bilibili.com/video/BV1gx4y1r7xb|【2024新版】go入门教程，十年大厂程序员讲解，通俗易懂|2024-02-27 22:37:47|码神之路|16000|241|185|900|55|golang,科技,计算机技术,go,it,编程入门,程序员,编程,大厂,互联网,入门教程|
+https://www.bilibili.com/video/BV1tP4y1v7kW|马士兵教育-2023版go语言（golang）就业班全套视频讲解——三连收藏再看！|2022-12-30 12:03:21|马士兵教育|209000|4467|2095|16000|3390|科技,计算机技术,程序员,it,计算机,技术宅,编程,野生技术协会,gin框架,go语言,golang,编程开发|
+https://www.bilibili.com/video/BV1hS411K7nu|马士兵-2024版go语言全新教程（golang零基础入门→实战→精通）！|2024-06-04 16:36:17|马士兵IT课堂|31000|848|401|3153|520|科技,计算机技术,技术宅,知识,计算机,程序员,编程,golang开发,深度学习,go,go语言,编程开发|
+https://www.bilibili.com/video/BV1BE421P7Vz|2024最新最详细的kubernetes入门教程，让你自学k8s少走99%的弯路！（k8s基础、k8s集群、k8s部署、k8s二开、k8s命令...）|2024-06-10 11:20:36|Linux-技术大师|7402|102|44|727|26|科技,计算机技术,计算机,程序员,编程,k8s教程,k8s基础,golang,devops,go语言,k8s,kubernetes|
+https://www.bilibili.com/video/BV1Rm421N7Jy|【2024年新版】go语言教程_golang入门实战全套视频教程|2024-06-05 11:44:15|IT营大地|23000|207|126|1005|47|知识,校园学习,go语言教程,go语言视频,golang教程,新版go,golang视频,go语言,go,golang|
+https://www.bilibili.com/video/BV1XY4y1t76G|go语言-golang gin go gorm go-micro微服务k8s教程 2024年5月更新|2022-05-07 14:24:13|筱筱知晓|235000|1691|1407|7863|619|知识,野生技能协会,go,go-micro,k8s教程,golang教程,go微服务,gin教程,go语言,gin,golang,go教程|
+https://www.bilibili.com/video/BV1CR4y1g7wB|【go语言实战】go/golang 并发爬虫|2022-01-13 13:36:37|小生凡一|28000|378|225|766|80|科技猎手,科技,计算机技术,视频教程,并发,网络爬虫,golang,编程开发|
+https://www.bilibili.com/video/BV1h44y1L7LN|【go语言微服务】go-micro+rabbitmq 构建简单备忘录|2022-01-23 08:00:57|小生凡一|34000|841|402|1446|254|科技猎手,科技,计算机技术,go,学习,编程,微服务,golang,编程开发|
+https://www.bilibili.com/video/BV1GT4y1R7tX|【go语言web开发】gin+gorm实现简单备忘录|2021-11-13 21:44:28|小生凡一|46000|920|358|1780|393|科技,计算机技术,开发,学习,编程,教程,golang,编程开发|
+https://www.bilibili.com/video/BV1894y1e71J|【go微服务开发】2. 配置文件|2023-08-01 22:43:14|小生凡一|1687|38|13|48|1|科技,计算机技术,go,开发,编程,微服务|
+https://www.bilibili.com/video/BV1fu4y117eq|【go-micro微服务开发】4. 生成proto文件|2023-08-10 12:00:00|小生凡一|1086|9|10|17|0|分享我的专业知识,科技,计算机技术,开发,go,微服务,万物研究所·奖学金计划|
+https://www.bilibili.com/video/BV1A14y1B7iY|【go微服务开发】6. 网关调用user模块|2023-08-14 08:20:00|小生凡一|1225|21|14|24|3|分享我的专业知识,科技,计算机技术,开发,go,服务,微服务,网关,万物研究所·奖学金计划|
+https://www.bilibili.com/video/BV1N44y1A7wh|【go微服务开发】3. mysql数据库连接|2023-08-08 09:32:56|小生凡一|1079|20|13|31|0|分享我的专业知识,科技,计算机技术,开发,go,编程,微服务,mysql,编程开发,万物研究所·奖学金计划|
+https://www.bilibili.com/video/BV1hp4y1g7Mn|【go微服务开发】5. 用户子模块|2023-08-12 08:00:00|小生凡一|854|14|6|10|0|分享我的专业知识,科技,计算机技术,开发,程序员,go,编程,模块,微服务,万物研究所·奖学金计划|
+https://www.bilibili.com/video/BV1Km4y1H7yp|【go微服务开发】10.网关调用task子模块|2023-08-19 22:55:13|小生凡一|681|12|2|11|0|科技,计算机技术,go,开发,编程,微服务,网关|
+https://www.bilibili.com/video/BV1cj411z7FB|【go微服务开发】9.task(2)模块|2023-08-19 22:49:04|小生凡一|538|10|4|4|0|科技,计算机技术,go,开发,编程,服务,微服务|
+https://www.bilibili.com/video/BV1Yu4y1q7vt|【go微服务开发】8.rabbitmq 监听消费|2023-08-17 08:50:12|小生凡一|1223|26|12|26|3|科技,计算机技术,go,编程,微服务,编程开发,消息队列|
+https://www.bilibili.com/video/BV1wz4y147EC|【go微服务开发】1. gin+micro v4+rabbitmq+etcd 项目简介|2023-07-29 13:19:51|小生凡一|15000|275|144|640|81|科技,计算机技术,go,开发,程序员,微服务,编程开发|
+https://www.bilibili.com/video/BV1CH4y1Q7PM|基于go-zero的go实战干货二 微服务拆分&&项目结构 && 服务初始化 &&调用流程 && jwt验证 && 验证码注册 && 缓存 && 服务注册与发现|2023-09-02 20:07:11|只喝冰美式的程序员|9235|215|220|254|14|科技,计算机技术,结构,干货,实战,微服务,go语言,架构设计|
+https://www.bilibili.com/video/BV1op4y177iS|基于go-zero的go微服务实战干货教程，第一课 项目介绍和核心技术介绍|2023-08-26 15:55:28|只喝冰美式的程序员|10000|420|293|589|35|科技,计算机技术,go-zero,实战,微服务,go语言,架构设计|
+https://www.bilibili.com/video/BV1hw4m1a7G2|基于go-zero的im系统实战（核心代码实现）|2024-07-14 15:36:59|只喝冰美式的程序员|1861|54|45|68|5|科技,计算机技术,it,程序员,go-zero,go-zero实战,代码,聊天室,实战,im,微服务,go实战|
+https://www.bilibili.com/video/BV17i421e7wE|基于go-zero的im系统实战（架构&etcd使用）|2024-06-23 15:02:41|只喝冰美式的程序员|2016|59|38|78|5|科技,计算机技术,it,程序员,编程,im实战,实战,架构,go实战|
+https://www.bilibili.com/video/BV1RT421Y7sp|基于go-zero的im系统实战（架构设计）|2024-06-10 00:24:43|只喝冰美式的程序员|2129|70|54|67|2|科技,计算机技术,计算机,程序员,学习,编程,im系统,实战,架构,go语言,架构设计,go实战|
+https://www.bilibili.com/video/BV1eT421e7vS|基于go-zero的im系统实战（开篇）|2024-06-09 18:00:34|只喝冰美式的程序员|2782|83|55|167|7|科技,计算机技术,程序员,计算机,教程,im系统,go语言,go实战|
+https://www.bilibili.com/video/BV1jb421H772|基于go-zero的im系统实战（项目初始化）|2024-06-10 17:27:20|只喝冰美式的程序员|1507|49|38|46|0|科技,计算机技术,程序员,编程,im系统,微服务,go语言,实战项目,架构设计,go实战|
+https://www.bilibili.com/video/BV1QD421u7dr|基于go-zero的go实战-canal重复消息问题排查|2024-06-01 12:38:19|只喝冰美式的程序员|1356|34|14|27|1|科技,计算机技术,编程,go,go语言,go实战|
+https://www.bilibili.com/video/BV1oB4y1f7Tr|基于go-zero的go实战干货第九期-缓存一致性保证 & 缓存击穿 & 缓存穿透 & 缓存雪崩|2023-10-05 19:43:27|只喝冰美式的程序员|3075|94|105|132|7|科技,计算机技术,程序员,go,go-zero,go-zero实战,redis,go实战|
+https://www.bilibili.com/video/BV1sz4y1G73u|基于go-zero的go实战干货第七期-canal安装配置 & mysql配置 & canal解析binlog投递到kafka & kafka消费mysql数据|2023-10-02 17:11:31|只喝冰美式的程序员|2274|53|46|30|5|科技,计算机技术,程序员,go-zero,canal,go-zero实战,go实战|
+https://www.bilibili.com/video/BV1F84y1S74g|基于go-zero的go实战干货第六期-docker安装kafka & 在go-zero中使用kafka进行数据生产和消费 & grpcurl工具使用|2023-09-29 19:28:09|只喝冰美式的程序员|2834|99|109|50|7|科技,计算机技术,程序员,计算机,go-zero,go-zero实战,go,docker,kafka,go实战|
+https://www.bilibili.com/video/BV1Y8411q7uW|基于go-zero的go实战干货第四期 文章模块架构设计|2023-09-17 16:07:16|只喝冰美式的程序员|2615|99|103|44|8|科技,计算机技术,go-zero,go-zero实战,实战,微服务,go,架构,架构设计,go实战|
+https://www.bilibili.com/video/BV1k8411y7W5|基于go-zero的go实战干货第五期-项目结构说明 && 文件上传 && 对接阿里oss && 文章发布 && 多服务联动测试|2023-09-23 20:32:57|只喝冰美式的程序员|4018|138|112|51|2|程序员研究所,科技,计算机技术,go-zero,go-zero实战,实战,微服务,go,go实战|
+https://www.bilibili.com/video/BV1S8411C7CY|基于go-zero的go实战干货第八期-文章列表缓存 && 缓存代码 & 性能提升工具mapreduce|2023-10-05 00:12:27|只喝冰美式的程序员|2063|61|62|27|1|程序员研究所,科技,计算机技术,程序员,go-zero,go-zero实战,干货,缓存,go实战|
+https://www.bilibili.com/video/BV19u411w7WS|基于go-zero的go实战干货第三期 自定义业务错误码 && 自定义错误处理函数 && grpc服务错误处理 && api服务错误处理|2023-09-09 19:34:59|只喝冰美式的程序员|4110|106|118|81|6|科技,计算机技术,go-zero,go-zero实战,干货,go,错误处理,go实战,grpc|
+https://www.bilibili.com/video/BV1je411R7iy|基于go-zero的go实战干货第十期-集成gorm&基于gorm实现关注服务&gorm集成指标监控和链路追踪&服务对接prometheus&jaeger|2023-10-22 16:33:17|只喝冰美式的程序员|2932|90|90|81|4|1024程序员节来了,科技,计算机技术,go-zero,go-zero实战,go,go实战,prometheus,jaeger,1024·2023活动征稿|
+https://www.bilibili.com/video/BV1u64y177rL|go实战干货十二-服务可视化（基于prometheus & grafana的服务监控）|2023-11-26 02:48:32|只喝冰美式的程序员|4426|110|86|203|12|科技,计算机技术,go-zero,grafana,go实战,prometheus|
+https://www.bilibili.com/video/BV11u4y1Y7GC|第十一期-在go-zero中集成elasticsearch & elasticsearch同步数据 && 实现文章搜索功能|2023-10-29 19:13:28|只喝冰美式的程序员|2606|83|83|67|5|科技,计算机技术,go-zer,kafka,go实战,kibana,elasticsearch|
+https://www.bilibili.com/video/BV1z4421X7ur|【项目面试】不给30k我不接这offer（上）|2024-06-01 17:07:27|只喝冰美式的程序员|2141|57|41|69|7|ultra一下，逢考必过,科技,计算机技术,程序员,编程,项目,面试,go语言,go实战|
+https://www.bilibili.com/video/BV1S4421S7be|基于go-zero的im系统实战（tcp server）|2024-06-15 23:58:08|只喝冰美式的程序员|1708|48|42|35|4|科技,计算机技术,程序员,计算机,im系统,实战,微服务,go语言,编程开发,实战项目,架构设计,go实战|
+https://www.bilibili.com/video/BV15x421X7UA|【逼上梁山系列】06-《go语言从入门到实战》哇！！！项目跑起来了（http server）|2024-03-31 09:00:00|只喝冰美式的程序员|1684|56|64|19|0|科技,计算机技术,学习,程序员,go,教程,go基础,实战,go实战,go开发工程师|
+https://www.bilibili.com/video/BV1Ax4y1B71T|【逼上梁山系列】09-《go语言从入门到实战》map使用与踩坑|2024-05-04 10:43:54|只喝冰美式的程序员|944|37|30|7|2|科技,计算机技术,go,学习,教程,编程,程序员做up主,go从入门到实战,map,go实战,go开发工程师|
+https://www.bilibili.com/video/BV1yH4y1P7ur|【逼上梁山系列】08-《go语言从入门到实战》项目讲解 http server|2024-04-20 13:15:55|只喝冰美式的程序员|996|45|52|13|2|科技,计算机技术,go,程序员,教程,编程,项目讲解,程序员做up主,go从入门到实战,实战,go实战,go开发工程师|
+https://www.bilibili.com/video/BV1bm421j7Md|【逼上梁山系列】07-《go语言从入门到实战》操作mysql & slice讲解 & 项目分层 &|2024-04-14 00:04:21|只喝冰美式的程序员|1163|44|31|15|1|科技,计算机技术,程序员,go,教程,程序员做up主,go从入门到实战,实战,项目,go实战,go开发工程师|
+https://www.bilibili.com/video/BV1bH4y1C7Uj|go实战干货十三-k8s（环境搭建 、集群安装、基础讲解）|2023-12-03 20:38:24|只喝冰美式的程序员|2438|74|72|82|1|科技,计算机技术,go-zero,k8s部署,k8s,kubernetes,go实战,kubeadm|
+https://www.bilibili.com/video/BV1qK411b7cS|go实战干货十四-k8s（服务部署、基于k8s服务发现、deployment、service、pod）|2023-12-17 15:23:35|只喝冰美式的程序员|2404|70|57|75|5|科技,计算机技术,go-zero,k8s,kubernetes,go实战|
+https://www.bilibili.com/video/BV1Uf421f7A2|【逼上梁山系列】02-《go语言从入门到实战》- 环境搭建&开发工具|2024-03-17 10:00:00|只喝冰美式的程序员|1987|86|86|36|3|b站我的学习宝地,科技,计算机技术,学习,go基础,go配置,ide,go语言,go实战,jetbrains,哔哩哔哩开学季,go安装,go开发工程师|
+https://www.bilibili.com/video/BV1hx421C7iW|【逼上梁山系列】01-go语言从入门到实战概述|2024-03-15 23:25:39|只喝冰美式的程序员|4402|233|199|347|18|科技,计算机技术,go语言,入门到实战|
+https://www.bilibili.com/video/BV1TJ4m1779o|【逼上梁山系列】04-《go语言从入门到实战》- go module构建模式|2024-03-23 16:35:18|只喝冰美式的程序员|2012|122|90|50|6|科技,计算机技术,入门,go,学习,程序员,教程,编程,go基础,go语言,go实战,go开发工程师|
+https://www.bilibili.com/video/BV1ox4y1J7qu|【逼上梁山系列】10-《go语言从入门到实战》context上下文|2024-05-25 16:18:00|只喝冰美式的程序员|1133|53|38|23|2|科技,计算机技术,编程,教程,context,后端实战,go项目实战,实战,go,go语言,go实战|
+https://www.bilibili.com/video/BV1Fx4y1U7dL|【逼上梁山系列】03-《go语言从入门到实战》- 编写第一个go程序|2024-03-19 10:00:00|只喝冰美式的程序员|1942|87|89|39|1|科技,计算机技术,程序员,学习,go,编程,go基础,go语言,go实战,go开发工程师|
+https://www.bilibili.com/video/BV1JJ4m1L7We|【逼上梁山系列】05-《go语言从入门到实战》手把手带你开始做项目（项目布局）|2024-03-30 11:21:53|只喝冰美式的程序员|2249|98|79|68|3|科技,计算机技术,go,入门,编程,go基础,项目,实战,go实战,go开发工程师|
+https://www.bilibili.com/video/BV1WW421c7wX|基于opentelemetry的go工程可观测性|2024-03-10 12:07:30|只喝冰美式的程序员|2033|72|45|103|8|科技,计算机技术,可观测性,opentelemetry,go工程,go|
+https://www.bilibili.com/video/BV12FpmeZE8r|调试go应用程序|2024-08-19 20:53:08|渣理大大|413|8|4|33|1|科技猎手,科技,计算机技术,go,可观测性,调试,科技猎手2024第2季|
+https://www.bilibili.com/video/BV1sAHEegEDg|使用 fyne 构建图形 go 应用程序|2024-08-30 23:10:07|渣理大大|184|1|0|9|0|科技,计算机技术,编程,fyne,图形,go|
+https://www.bilibili.com/video/BV1Y4ndesEnb|用 go 构建生成式人工智能应用程序 part 1|2024-08-31 14:10:06|渣理大大|124|2|0|9|0|科技,计算机技术,ai,人工智能,编程,go,编程开发|
+https://www.bilibili.com/video/BV1Yg411w7wh|使用go和sqlite构建生产应用程序 - ben johnson - gophercon 2021|2021-12-11 11:49:53|渣理大大|473|5|1|15|0|知识,野生技能协会,编程,go,golang,gophercon|
+https://www.bilibili.com/video/BV1fL4y1n7QN|zillow是如何使用go语言的 - arish labroo - gophercon 2021|2021-12-10 16:50:51|渣理大大|458|4|0|13|0|知识,野生技能协会,编程,go,golang,gophercon|
+https://www.bilibili.com/video/BV1nQ4y1e7o2|为什么在go中使用webassembly以及如何使用wasm - gophercon 2021|2021-12-10 15:44:31|渣理大大|779|8|3|15|1|知识,野生技能协会,编程,go,golang,webassembly,gophercon,wasm|
+https://www.bilibili.com/video/BV1f34y1X7pp|使用无冲突复制数据类型crdts在go中建立一个最终一致性的高可用分布式服务 - arash bina - gophercon 2021|2021-12-11 11:24:11|渣理大大|186|2|2|9|0|知识,野生技能协会,编程,crdts,go,golang,gophercon|
+https://www.bilibili.com/video/BV1cZ4y197ns|队列、公平和go调度器 - madhav jivrajani - gophercon 2021|2021-12-10 16:24:37|渣理大大|227|5|0|8|1|知识,野生技能协会,编程,go,golang,gophercon|
+https://www.bilibili.com/video/BV1Cb4y1i7JE|go 调试寻宝 - suzy mueller - gophercon 2021|2021-12-10 16:43:34|渣理大大|119|1|0|12|0|知识,野生技能协会,编程,go,golang,gophercon|
+https://www.bilibili.com/video/BV1634y1X7TD|go程序可靠性涅槃 - daniel selans - gophercon 2021|2021-12-10 16:06:01|渣理大大|235|5|2|10|0|知识,野生技能协会,编程,go,golang,gophercon|
+https://www.bilibili.com/video/BV1qq4y1z7E5|为go代码编写静态分析器 - akhil indurti - gophercon 2021|2021-12-10 16:19:13|渣理大大|540|12|5|25|0|知识,野生技能协会,编程,go,golang,gophercon|
+https://www.bilibili.com/video/BV1x44y1a7hn|从零开始go程序性能剖析和可观测性 - felix geisendörfer - gophercon 2021|2021-12-10 15:26:28|渣理大大|196|3|4|16|1|知识,野生技能协会,演讲,编程,go,golang|
+https://www.bilibili.com/video/BV1De4y1S7pU|gophercon europe 2022 - yarden laifenfeld - from oop to go|2022-10-16 22:24:13|渣理大大|65|0|0|0|3|知识,野生技能协会,编程,golang|
+https://www.bilibili.com/video/BV1Pd4y127Aa|gophercon europe 2022 - kemal akkoyun - building a go profiler using go|2022-10-16 22:35:32|渣理大大|52|0|0|0|0|知识,野生技能协会,学习,编程,golang|
+https://www.bilibili.com/video/BV1Fm4y1w7YJ|gophercon europe 2022 - anna-katharina wickert - go flow safe|2022-10-16 22:39:03|渣理大大|60|0|0|0|0|知识,野生技能协会,学习,编程,golang|
+https://www.bilibili.com/video/BV1tG4y1n79Z|gophercon europe 2022 - gilad weiss - package management in go： under the hood|2022-10-16 22:32:34|渣理大大|64|1|0|2|1|知识,野生技能协会,学习,编程,golang|
+https://www.bilibili.com/video/BV1NG4y1H7Vv|gophercon europe 2022 - cameron balahan - how go became its best self|2022-10-16 22:36:49|渣理大大|54|1|0|1|0|知识,野生技能协会,学习,编程,golang|
+https://www.bilibili.com/video/BV1zN4y1w7bM|gophercon europe 2022：  michael knyszek - respecting memory limits in go|2022-10-16 22:27:55|渣理大大|47|1|0|0|0|知识,野生技能协会,学习,编程,golang|
+https://www.bilibili.com/video/BV1Qe4y1S7af|gophercon europe 2022 - marian montagnino - reinventing the cli with go|2022-10-16 22:32:05|渣理大大|46|1|0|0|0|知识,野生技能协会,学习,编程,经验分享,golang|
+https://www.bilibili.com/video/BV1m14y1L78o|gophercon europe 2022 - robert burke - stream processing end to end with go|2022-10-16 22:29:34|渣理大大|57|1|0|0|0|知识,野生技能协会,编程,golang|
+https://www.bilibili.com/video/BV1FZ4y1R7SQ|可汗学院从大python单体应用到go服务的旅程 - kevin dangoor - gophercon 2021|2021-12-11 11:27:06|渣理大大|155|2|0|5|0|知识,野生技能协会,编程,go,golang,gophercon|
+https://www.bilibili.com/video/BV133noesE4v|go 全栈：ssr 与 spa|2024-08-31 11:57:03|渣理大大|692|10|2|37|2|科技,计算机技术,spa,编程,ssr,go|
+https://www.bilibili.com/video/BV1oF411b7oV|optimizing go for clouds - bartłomiej płotka|2021-11-29 11:09:40|渣理大大|108|2|1|10|0|知识,野生技能协会,演讲,编程,cloud,go,golang|
+https://www.bilibili.com/video/BV1NU4y1N7tY|orion - golang 构建微服务框架|2021-09-09 18:58:32|渣理大大|488|8|1|16|0|知识,野生技能协会,go,golang|
+https://www.bilibili.com/video/BV1pf4y1P7xA|在 golang 召唤 simd 加速魔法|2021-09-09 18:54:07|渣理大大|205|1|0|5|0|知识,野生技能协会,go,golang|
+https://www.bilibili.com/video/BV11Y4y1p7Ku|初探golang编译器优化 - peter lai|2022-03-30 13:44:11|渣理大大|388|7|2|21|2|知识,野生技能协会,优化,go,编译器,golang|
+https://www.bilibili.com/video/BV14d4y1x74w|通过构建克隆版本的 toxiproxy 探索go网络编程|2022-11-27 13:47:31|渣理大大|174|5|2|9|1|今日份学习打卡,科技,计算机技术,编程,网络编程,go,golang,校园分享官第6期|
+https://www.bilibili.com/video/BV1DG4y1Z7yq|没有代码生成的解析器：go 中结合泛型实现parser combinator|2022-11-08 12:47:06|渣理大大|373|3|4|10|1|每天加点技能分,知识,野生技能协会,go,编程,经验分享,golang|
+https://www.bilibili.com/video/BV1dM4y1G7EF|从 go 的 runtime 源码发掘疯狂的 slice 用法|2021-09-09 18:53:01|渣理大大|572|5|1|27|2|知识,野生技能协会,go,golang|
+https://www.bilibili.com/video/BV1bdp2ehE1t|理解go运行时|2024-08-19 21:04:09|渣理大大|716|12|2|50|3|科技,计算机技术,go,编程,运行时|
+https://www.bilibili.com/video/BV1Ui4y1o7AK|使用go制作独立游戏 - daniela petruzalek|2021-11-29 11:26:42|渣理大大|1269|18|1|36|3|知识,野生技能协会,演讲,编程,go,golang|
+https://www.bilibili.com/video/BV1PU4y1M7Tc|我们是如何使用go驱动我们的elasticsearch服务|2021-11-29 17:31:18|渣理大大|1264|7|2|47|1|知识,野生技能协会,演讲,编程,go,golang|
+https://www.bilibili.com/video/BV1Uy4y1R76L|使用约定进行go服务集成测试|2023-01-22 13:07:41|渣理大大|159|4|0|7|0|用知识过好新的一年,科技,计算机技术,go,编程,集成测试,我在b站跨年|
+https://www.bilibili.com/video/BV1nF41187jc|验收测试，行为驱动开发bdd和go - riya dattani & chris james|2021-11-29 17:28:03|渣理大大|120|2|0|7|0|知识,野生技能协会,演讲,测试,编程,bdd,go,golang|
+https://www.bilibili.com/video/BV1ob4y1q7F5|测量go应用 - chris reeves|2021-11-29 11:14:07|渣理大大|159|0|0|3|0|知识,野生技能协会,演讲,编程,opentelemetry,go,golang|
+https://www.bilibili.com/video/BV1ER4y147g7|go测试覆盖率和项目整体覆盖率 - eleni fragkiadaki|2021-11-29 17:11:02|渣理大大|206|0|0|2|1|知识,野生技能协会,演讲,测试,编程,tdd,go,golang|
+https://www.bilibili.com/video/BV1m841187nH|先收集，后提问 - 如何高效收集和分析go服务器状态|2022-11-15 08:58:04|渣理大大|104|0|0|1|0|每天加点技能分,知识,野生技能协会,编程,经验分享,go,golang,我们都爱搞学习·第三期|
+https://www.bilibili.com/video/BV1GP41137Rq|apache beam如何在go中帮助你实现数据处理|2022-11-20 09:59:08|渣理大大|463|4|0|13|3|每天加点技能分,知识,野生技能协会,go,编程,数据处理,golang,我们都爱搞学习·第三期|
+https://www.bilibili.com/video/BV18A411F7W9|高性能 go 应用程序中的内存管理|2021-09-09 18:57:47|渣理大大|559|4|0|15|0|知识,野生技能协会,go,golang|
+https://www.bilibili.com/video/BV17P4y1Y7CT|go内存分配和释放|2021-09-09 18:56:21|渣理大大|1451|8|0|82|1|知识,野生技能协会,go,golang|
+https://www.bilibili.com/video/BV1E3411q7Lh|从开源学习 go 错误处理设计|2021-09-09 18:57:26|渣理大大|1690|27|6|116|1|知识,野生技能协会,go,golang|
+https://www.bilibili.com/video/BV1sb4y127WV|go 中的模糊测试|2021-09-09 19:00:43|渣理大大|248|1|0|8|0|知识,野生技能协会,go,golang|
+https://www.bilibili.com/video/BV1St4y1u7G7|驯服 go 的内存使用——并避免 rust 重写|2022-10-25 13:28:30|渣理大大|1782|35|21|98|12|我们都爱搞学习,知识,野生技能协会,程序员,go,学习,编程,经验分享,我们都爱搞学习·第二期|
+https://www.bilibili.com/video/BV1ee4y127we|兼容性：如何保证go程序持续工作 - russ cox|2022-10-29 21:18:55|渣理大大|273|2|2|9|1|我们都爱搞学习,知识,野生技能协会,go,程序,编程,工作,golang,我们都爱搞学习·第二期|
+https://www.bilibili.com/video/BV1qP411A7CZ|uber的大规模、半自动化go垃圾回收调整实践|2022-10-24 13:13:57|渣理大大|174|3|2|9|2|我们都爱搞学习,知识,野生技能协会,我们都爱搞学习·第二期|
+https://www.bilibili.com/video/BV1P4421X7LP|【面试题】微服务有什么优势？|2024-06-16 15:15:14|只喝冰美式的程序员|845|28|15|12|0|科技,计算机技术,面试,微服务,面试题,编程开发,架构设计,go实战|
+https://www.bilibili.com/video/BV1biY1eQEiN|gozero第一讲，初始化项目，安装goctl，跑起来一个接口|2024-08-13 20:19:47|随风飞2020|398|11|9|24|1|golang知识分享,科技,计算机技术,入门,教程,编程,编程开发|
+https://www.bilibili.com/video/BV1oyeneAE7v|gozero第二讲，定义.api文件，生成代码，编写逻辑，测试|2024-08-14 18:23:47|随风飞2020|134|2|0|3|1|golang知识分享,科技,计算机技术,编程,代码编写,编程开发|
+https://www.bilibili.com/video/BV1qkeneeEos|gozero第三讲，多个api文件生成代码时产生的问题，如何解决|2024-08-14 18:25:28|随风飞2020|100|0|0|1|1|golang知识分享,科技,计算机技术,编程,教程,代码编写,编程开发|
+https://www.bilibili.com/video/BV1xcebevENQ|gozero第5讲，修改模板，使用自定义模板生成代码|2024-08-15 21:01:34|随风飞2020|96|1|2|1|1|golang,科技,计算机技术,软件,教程,编程,编程开发,golang知识分享|
+https://www.bilibili.com/video/BV1DEYqewEZh|gopherjs入门视频教程，用golang给js写工具函数|2024-08-12 20:37:49|随风飞2020|57|0|0|0|1|golang知识分享,科技,计算机技术,编程,教程,编程开发|
+https://www.bilibili.com/video/BV1LS4y1U72n|一、go-zero简介及如何学go-zero|2022-03-20 02:39:57|吕秀军Mikael|40000|465|397|1453|96|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1kB4y127D5|二十八、go-zero的rpc-client发现rpc-server源码分析|2022-04-24 11:46:37|吕秀军Mikael|2621|25|22|23|6|科技,计算机技术,go-zero,go-zero教程,微服务,go|
+https://www.bilibili.com/video/BV14u411q7st|十、go-zero本地事务以及源码分析|2022-03-24 16:23:39|吕秀军Mikael|7256|41|22|21|5|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1934y1t7V1|三、go-zero杀手锏goctl详细使用|2022-03-20 20:04:43|吕秀军Mikael|16000|110|100|104|17|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1644y1N7AU|九、sqlc执行源码分析与model详解|2022-03-23 15:58:40|吕秀军Mikael|9456|52|39|54|6|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1d34y1t7P9|六、api服务之代码讲解|2022-03-22 00:32:36|吕秀军Mikael|11000|68|59|43|5|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1ur4y1q7JF|五、api服务之api文件|2022-03-22 00:24:05|吕秀军Mikael|13000|59|42|48|10|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1ou411q7SC|十一、api服务之middleware|2022-03-24 16:52:11|吕秀军Mikael|7533|36|26|30|1|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1hY4y1s7TR|十七、api如何调用rpc|2022-03-26 12:35:20|吕秀军Mikael|6733|38|16|33|4|科技,计算机技术,go-zero,go-zero教程,微服务框架,java如何调用第三方接口|
+https://www.bilibili.com/video/BV1494y1f7FP|二十五、rpc的客户端拦截器|2022-03-29 19:41:40|吕秀军Mikael|2943|11|10|7|0|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1j3411W7MD|二十四、rpc的服务端拦截器|2022-03-29 19:29:50|吕秀军Mikael|3819|17|17|14|1|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1Hi4y1k7Qz|十六、rpc服务如何独立调试|2022-03-26 12:35:58|吕秀军Mikael|6157|19|13|33|3|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1fY4y1s72k|二十二、api与rpc直连方式服务发现|2022-03-29 18:25:07|吕秀军Mikael|3915|13|8|14|2|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1kF411W7Vi|二十一、api与rpc通过etcd服务发现|2022-03-29 18:35:14|吕秀军Mikael|6353|41|22|84|1|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1ir4y1W7SY|二十三、api与rpc使用k8s服务发现及部署|2022-03-29 18:40:29|吕秀军Mikael|11000|114|79|286|24|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1nP4y1T7Br|七、api服务数据库操作|2022-03-22 11:42:51|吕秀军Mikael|13000|57|38|50|5|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV15q4y1Y74t|八、gotctl<=1.3.3生成model一个小bug|2022-03-23 14:43:35|吕秀军Mikael|6891|16|16|13|3|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV14Y4y1q7b2|二十、rpc中如何使用model|2022-03-27 17:39:07|吕秀军Mikael|4567|15|10|21|2|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1VP4y1M74r|十八、go-zero中写protobuf注意点|2022-03-27 14:33:25|吕秀军Mikael|4878|28|16|14|3|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1Ea411J7nj|三十三、go-zero-looklook开发教程|2022-05-17 08:36:00|吕秀军Mikael|15000|163|162|217|14|科技,计算机技术,go-zero,go-zero教程,gozero,go-zero视频教程,微服务,golang|
+https://www.bilibili.com/video/BV1pY411w7QS|三十二、go-zero-looklook业务架构|2022-05-16 07:03:19|吕秀军Mikael|6605|35|25|55|5|科技,计算机技术,go-zero,go-zero教程,gozero,go-zero视频教程,微服务,golang|
+https://www.bilibili.com/video/BV1NY411w7w7|三十一、goctl的template定制化自己的需求|2022-05-15 12:05:50|吕秀军Mikael|4627|59|43|39|5|科技,计算机技术,go-zero,go-zero教程,gozero,go-zero视频教程,微服务,golang|
+https://www.bilibili.com/video/BV1LB4y1m7pw|三十、go-zero的api参数校验集成第三方库|2022-04-28 13:19:53|吕秀军Mikael|5748|34|26|45|7|科技,计算机技术,go-zero,go-zero教程,微服务,go,golang|
+https://www.bilibili.com/video/BV1u94y1f7rT|十四、go-zero的api整体源码分析|2022-03-24 21:35:30|吕秀军Mikael|6050|62|58|37|12|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1zZ4y1B7qd|十二、go-zero的log|2022-03-24 18:29:45|吕秀军Mikael|6471|45|32|24|10|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1i3411p7sK|十五、go-zero的rpc服务简单介绍|2022-03-26 12:19:37|吕秀军Mikael|6279|34|32|22|1|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1ri4y1k7Bc|十三、go-zero单体项目及配置如何查看|2022-03-24 19:28:46|吕秀军Mikael|5462|42|35|15|2|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1P3411p79J|二、go-zero环境搭建|2022-03-20 20:23:08|吕秀军Mikael|16000|93|71|118|13|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1Tr4y1s7yp|十九、sql2pb告别手写pb的烦恼|2022-03-27 17:34:38|吕秀军Mikael|4648|54|40|22|0|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1o34y1Y7jS|二十七、go-zero rpc启动源码流程分析|2022-04-23 13:18:47|吕秀军Mikael|3418|34|21|23|4|科技,计算机技术,go-zero,go-zero教程,微服务,go|
+https://www.bilibili.com/video/BV1Ni4y1m7LC|二十九、go-zero单体项目最佳实践|2022-04-25 12:13:45|吕秀军Mikael|5918|38|30|59|7|科技,计算机技术,go-zero,go-zero教程,微服务,go|
+https://www.bilibili.com/video/BV1xP4y1u76b|四、（补录）goctl一键安装开发环境|2022-03-22 00:39:15|吕秀军Mikael|8404|32|19|18|5|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1X3411p7Ey|二十六、不同服务之间通过metadata传值|2022-03-29 19:56:18|吕秀军Mikael|3854|24|17|16|5|科技,计算机技术,go-zero,go-zero教程,微服务框架|
+https://www.bilibili.com/video/BV1gu411q7S7|go-zero微服务框架|2022-03-20 17:30:25|ericdong2012|3044|41|25|150|5|科技,计算机技术,go,go-zero,微服务|
+https://www.bilibili.com/video/BV1CP411i7ic|#145 go-zero 实战经验分享【go 夜读】|2023-06-15 23:33:59|Go夜读|5369|76|26|146|14|知识,野生技能协会,学习,go-zero,looklook,经验分享,源码,阅读,go,golang,github,go夜读|
+https://www.bilibili.com/video/BV1ta411H7pe|#135 从精通烤肉到精通http - hertz http 框架初识|2022-07-16 17:05:40|Go夜读|4513|92|25|111|8|科技,计算机技术,学习,源码,阅读,框架,http,go,golang,github,hertz,go夜读|
+https://www.bilibili.com/video/BV1CU4y1F7Vs|#119 go monkey patch 的原理及应用【go 夜读】|2021-10-23 00:35:12|Go夜读|2998|78|49|101|15|知识分享官,科技,计算机技术,原理,阅读,go,golang,github,patch,monkey,go夜读,打卡挑战|
+https://www.bilibili.com/video/BV1Fu411Z7LS|#121 微服务的数据一致性问题及解决方案 dtm 【go 夜读】|2021-11-02 23:28:20|Go夜读|5549|168|94|245|33|让学习变得更简单,科技,计算机技术,阅读,源码,go,golang,github,分布式事务,dtm,go夜读,打卡挑战|
+https://www.bilibili.com/video/BV1wi4y1R73Z|#124 go-zero 分布式事务实践|2021-12-22 22:46:59|Go夜读|4612|94|34|142|13|科技,计算机技术,学习,go-zero,源码,微服务,go,golang,github,分布式事务,dtm,go夜读|
+https://www.bilibili.com/video/BV1VY411j7ty|#131 grpc-go 基于 polaris 北极星的服务治理实践【go 夜读】|2022-04-14 22:19:17|Go夜读|3172|70|30|86|23|科技,计算机技术,学习,源码,阅读,go,golang,github,go夜读|
+https://www.bilibili.com/video/BV1T34y1x7AS|#130 开源 kv 引擎 nutsdb 的设计与实现【go 夜读】|2022-04-07 22:19:00|Go夜读|3360|87|57|97|9|科技,计算机技术,学习,nutsdb,源码,阅读,go,golang,github,编程开发,go夜读|
+https://www.bilibili.com/video/BV1j541117Qo|#132 transactionmesh  的一种实现方案【go 夜读】|2022-04-21 22:28:44|Go夜读|1552|45|17|30|6|科技,计算机技术,学习,源码,阅读,go,golang,github,transaction,分布式事务,mesh,go夜读|
+https://www.bilibili.com/video/BV1V44y1A7Mx|#147 高性能预写日志（write ahead log）的设计与实现【go 夜读】|2023-08-08 22:49:16|Go夜读|6698|169|93|318|26|知识,野生技能协会,学习,wal,rosedb,roseduan,阅读,源码,go,golang,github,go夜读|
+https://www.bilibili.com/video/BV1ih411h7yC|#117 详解 rosedb 及存储模型【go 夜读】|2021-07-03 20:18:56|Go夜读|5182|123|59|166|15|知识分享官,知识,野生技能协会,rosedb,lsm-tree,源码,阅读,数据库,go,golang,github,go夜读|
+https://www.bilibili.com/video/BV1Pf4y1Z7k2|#134 juicefs 导出/导入元数据的优化之路|2022-06-30 22:14:01|Go夜读|1165|39|15|17|3|科技,计算机技术,juicefs,阅读,经验分享,源码,优化,go,golang,github,元数据,go夜读|
+https://www.bilibili.com/video/BV1HF411o76n|#146 基于 zinx 的 tcp server 开发【go 夜读】|2023-06-30 12:00:00|Go夜读|3764|98|27|104|7|知识,野生技能协会,学习,源码,tcp,阅读,go,golang,github,zinx,go夜读,刘丹冰|
+https://www.bilibili.com/video/BV1GG4y1i7Cu|#136 如何利用命令行工具 hz 快速开发 hertz 服务——hertz 框架实践|2022-07-21 23:26:42|Go夜读|3705|44|16|67|10|科技,计算机技术,学习,hertz,源码,阅读,实战,go,golang,github,hz,go夜读|
+https://www.bilibili.com/video/BV1SL411U7Zh|#144 如何快速学习 go 语言设计模式【go 夜读】|2023-04-06 22:14:25|Go夜读|4598|88|18|108|14|知识,野生技能协会,学习,gof,go语言设计模式,设计模式,阅读,源码,go,golang,github,go夜读|
+https://www.bilibili.com/video/BV13c411L7D2|#143 从零开始的高性能rpc框架设计与实现【go 夜读】|2023-03-24 03:39:57|Go夜读|5458|111|34|200|16|知识,野生技能协会,学习,litterpc,阅读,源码,go,golang,github,rpc,go夜读|
+https://www.bilibili.com/video/BV14U411o7ZU|#152 从汇编角度理解 go 语言【go 夜读】|2024-05-23 22:32:37|Go夜读|5636|156|55|354|15|知识,野生技能协会,汇编,学习,plan9,阅读,源码,go,golang,github,go夜读|
+https://www.bilibili.com/video/BV1Et4y1d7Nk|#149 如何设计现代云原生网关：easegress【go夜读】|2024-01-18 21:39:21|Go夜读|3057|77|12|87|9|知识,野生技能协会,设计,学习,cloud-native,easegress,go,golang,github,网关,云原生,go夜读|
+https://www.bilibili.com/video/BV1Vv4y127Re|#141 kusionstack：“后云原生时代” 应用规模化运维解决方案|2022-11-24 22:44:35|Go夜读|1807|47|12|33|6|科技,计算机技术,学习,运维,kusionstack,源码,阅读,go,golang,github,云原生,go夜读|
+https://www.bilibili.com/video/BV1yL4y1p7xX|#122 7 天用 go 从零实现系列背后的故事【go 夜读】|2021-11-24 21:49:38|Go夜读|7121|252|166|281|33|知识分享官,知识,职业职场,七天系列,源码,阅读,go,golang,github,go夜读,打卡挑战|
+https://www.bilibili.com/video/BV1tQ4y1q742|#120 垃圾回收与 go 实现【go 夜读】|2021-10-28 22:42:56|Go夜读|8229|197|107|327|45|知识分享官,科技,计算机技术,gc,源码,垃圾回收,阅读,go,golang,github,go夜读,打卡挑战|
+https://www.bilibili.com/video/BV16X4y1A7TV|#116 理论结合实践详解 lsm 树存储引擎（bitcask、moss、leveldb 等）【go 夜读】|2021-06-18 00:44:41|Go夜读|7134|177|107|395|37|知识分享官,知识,野生技能协会,原理,lsm,阅读,经验分享,源码,go,golang,github,go夜读|
+https://www.bilibili.com/video/BV17S4y1C7CP|#127 消息最终一致性的架构革命【go 夜读】|2022-02-10 22:28:08|Go夜读|5232|136|60|210|38|科技,计算机技术,学习,源码,阅读,二阶段,go,golang,github,一致性,dtm,go夜读|
+https://www.bilibili.com/video/BV1Mg41197MM|#133 缓存与数据库一致的解决方案【go 夜读】|2022-06-09 22:23:03|Go夜读|6235|153|75|300|31|科技,计算机技术,学习,阅读,源码,数据库,go,golang,缓存,github,一致性,go夜读|
+https://www.bilibili.com/video/BV11D421A7zW|#151 xgo: 基于编译期代码重写实现 mock 和 trace【go 夜读】|2024-05-16 22:37:38|Go夜读|2295|65|28|70|8|知识,野生技能协会,学习,xgo,单测,源码,阅读,go,golang,github,mock,go夜读|
+https://www.bilibili.com/video/BV1K84y1q76p|#139 go 语言 excelize 开源基础库介绍【go 夜读】|2022-11-03 23:28:24|Go夜读|4912|147|63|170|84|科技,计算机技术,学习,源码,开源,阅读,go,golang,excel,github,go夜读,excelize|
+https://www.bilibili.com/video/BV1vw411e7w7|#148 excelize 构建 webassembly 版本跨语言支持实践|2023-09-21 22:32:39|Go夜读|2382|41|14|29|11|知识,野生技能协会,学习,源码,跨平台,阅读,go,golang,github,webassembly,go夜读,excelize|
+https://www.bilibili.com/video/BV19U4y1N7PM|#123 ebpf 与 go，超能力组合【go 夜读】|2021-12-09 22:54:51|Go夜读|13000|256|144|557|82|科技,计算机技术,ebpf,知识充电站,经验分享,阅读,源码,go,golang,github,go夜读,打卡挑战|
+https://www.bilibili.com/video/BV1Hb4y117vu|#118 go 字符串匹配及 rabin-karp 算法【go 夜读】|2021-09-30 06:33:20|Go夜读|1953|51|31|51|9|知识分享官,知识,野生技能协会,算法,源码,阅读,go,golang,github,字符串匹配,rabin-karp,go夜读|
+https://www.bilibili.com/video/BV1xt421h72t|【熟肉】go 1.22 为这门语言带来了新未来|2024-02-19 16:25:35|figuretu|15000|192|37|169|36|科技,计算机技术,知识,学习,语言,开发,编程,熟肉,后端,go,golang,编程开发|
+https://www.bilibili.com/video/BV15b421p7JU|golang发展史上最大的向下兼容性破坏之一：for循环变量不再共享而是每次迭代重新创建一个|2024-06-29 21:50:33|运维者说|19000|75|7|46|9|知识,野生技能协会,编程,运维,golang,k8s|
+https://www.bilibili.com/video/BV1mm42137TQ|llgo  一款基于llvm旨在更好地集成c和python生态的go编译器，强大到可怕！！|2024-06-18 18:51:39|七牛云|1244|20|0|16|3|科技,计算机技术,工程,学习,编程,go+,1024实训营,llgo,实习,校招,七牛云|
+https://www.bilibili.com/video/BV1DaiuebEgF|为什么llgo（go+）有可能让 go 从服务端领域破圈？｜1024实训营带教内容大公开|2024-08-02 14:48:36|七牛云|1640|9|4|18|0|科技,计算机技术,go,go+,goplus,1024实训营,llgo,编译器,七牛云|
+https://www.bilibili.com/video/BV16GYFe6EM9|llgo + rust ｜1024实训营学生成果展示（一）|2024-08-05 15:49:51|七牛云|1253|12|0|19|2|科技,计算机技术,go+,goplus,1024实训营,llgo,rust,编译器,七牛云|
+https://www.bilibili.com/video/BV1UuexeaEL3|go+ builder 编辑器体验优化架构设计 ｜1024实训营学生成果展示（二）|2024-08-15 10:42:50|七牛云|91|4|0|1|0|科技,计算机技术,go+,goplus,1024实训营,go+builder,编辑器,七牛云,架构设计|
+https://www.bilibili.com/video/BV1T8vhe7Ekb|如何迁移rust库到llgo｜1024实训营带教内容大公开|2024-08-01 15:29:37|七牛云|238|3|0|2|0|科技,计算机技术,go+,goplus,1024实训营,llgo,编译器,七牛云|
+https://www.bilibili.com/video/BV1FhYYeqEUu|llgo + c/c++ ｜1024实训营学生成果展示（二）|2024-08-09 12:01:26|七牛云|81|2|0|1|0|科技,计算机技术,c++,c语言,go+,goplus,1024实训营,llgo,编译器,七牛云|
+https://www.bilibili.com/video/BV1ojaUeMEzq|llgo + rust ｜1024实训营学生成果展示（二）|2024-08-07 16:30:31|七牛云|375|4|0|3|0|科技,计算机技术,go+,goplus,1024实训营,llgo,rust,编译器,七牛云|
+https://www.bilibili.com/video/BV13K4y1r7cN|许式伟：go+ classfile 库 yap 介绍｜1024实训营公开课|2024-01-09 20:34:27|七牛云|1004|14|4|14|3|科技,计算机技术,程序员,go+,1024实训营,经验分享,校招,七牛云|
+https://www.bilibili.com/video/BV1VK411b7fg|许式伟：架构拆解该怎么干｜1024实训营公开课|2023-12-29 18:33:52|七牛云|563|14|2|7|7|科技,计算机技术,程序员,编程,go+,1024实训营,经验分享,架构,七牛云|
+https://www.bilibili.com/video/BV1Na4y1C7cX|go+ community written by go+（一）｜1024实训营学生展示|2024-01-26 12:01:04|七牛云|1098|19|8|23|2|科技,计算机技术,编程,go+,1024实训营,community,七牛云,工程实践,校招实习|
+https://www.bilibili.com/video/BV1zD421j7gW|go+ community written by go+（二）｜第一届实训营终期成果展示|2024-03-15 19:47:22|七牛云|1159|17|2|25|4|科技,计算机技术,go,1024实训营,代码,七牛云,gop|
+https://www.bilibili.com/video/BV1sH4y1w7gF|为什么会有go+ ？再次聊聊 go+ 的过去、现在和未来|2024-06-18 18:47:02|七牛云|1615|20|2|16|4|科技,计算机技术,学习,工程,编程,1024实训营,实习,校招,七牛云|
+https://www.bilibili.com/video/BV18T4y1s7aj|go+后续实训目标｜1024实训营公开课|2023-12-25 14:05:10|七牛云|1040|14|4|18|2|科技,计算机技术,it,程序员,编程,go+,1024实训营,七牛云|
+https://www.bilibili.com/video/BV1VK411t7PQ|产品经理二三事｜1024 实训营公开课|2023-12-25 10:56:12|七牛云|263|2|0|6|0|科技,计算机技术,编程,go+,1024实训营|
+https://www.bilibili.com/video/BV1Uj411W74R|go+全景图  1024实训营公开课|2023-12-08 21:22:47|七牛云|3827|50|7|91|11|科技,计算机技术,编程,公开课|
+https://www.bilibili.com/video/BV1kH4y1a7oB|go+community架构实战课，大学生开发者必看｜1024实训营公开课|2024-02-04 15:16:52|七牛云|200|4|0|2|3|科技,计算机技术,程序员,编程,go+,1024实训营,校招,架构|
+https://www.bilibili.com/video/BV1NNeMeGETJ|go+ builder 素材库体验优化架构设计 ｜1024实训营学生成果展示（二）|2024-08-16 14:54:45|七牛云|137|5|0|1|0|科技,计算机技术,go+,goplus,1024实训营,go+builder,编辑器,七牛云|
+https://www.bilibili.com/video/BV1C64y1w7tK|基于 go+ 的stem编程创作平台（一）｜1024实训营学生作品展示|2024-01-26 11:34:08|七牛云|554|14|4|12|4|科技,计算机技术,go+,1024实训营,stem,scratch,少儿编程,七牛云,校招实习|
+https://www.bilibili.com/video/BV1ug4y1y77B|go+下一阶段会如何发展？ 1024实训营阶段展示|2023-12-23 18:14:17|七牛云|1633|23|6|36|3|科技,计算机技术,编程,go+,1024实训营|
+https://www.bilibili.com/video/BV1uv421172t|超实用，从使用视角的git协作实战，告别死记硬背｜1024实训营公开课|2024-02-01 21:02:32|七牛云|1352|55|23|171|15|科技,计算机技术,go+,1024实训营,实战,git,七牛云,校招实习|
+https://www.bilibili.com/video/BV1wdYfejERd|go+ builder 编辑器体验优化产品设计｜1024实训营学生成果展示（一）|2024-08-12 15:17:36|七牛云|124|3|0|0|0|科技,计算机技术,go+,goplus,go+builder,编辑器,七牛云|
+https://www.bilibili.com/video/BV1KHeEe3EUN|go+ builder 素材库体验优化产品设计 ｜1024实训营学生成果展示（一）|2024-08-14 15:49:53|七牛云|48|2|0|0|0|科技,计算机技术,go+,goplus,1024实训营,go+builder,素材库,七牛云|
+https://www.bilibili.com/video/BV1rZ421N7Bg|如何迁移 c/c++ 库到 llgo？｜1024实训营带教内容大公开|2024-07-22 17:50:23|七牛云|99|3|0|1|1|科技,计算机技术,go+,goplus,1024实训营,llgo,编译器,七牛云|
+https://www.bilibili.com/video/BV1HE4m1R7W6|想把rust带入llgo领域，先干什么？这是个产品决策！｜1024实训营带教内容大公开|2024-07-25 16:17:51|七牛云|381|6|4|8|4|科技,计算机技术,go+,goplus,1024实训营,llgo,编译器,七牛云|
+https://www.bilibili.com/video/BV13HYTemExX|llgo + cc++ ｜1024实训营学生成果展示（一）|2024-08-06 18:36:26|七牛云|131|2|0|1|0|科技,计算机技术,c,c++,go+,goplus,1024实训营,llgo,编译器,七牛云|
+https://www.bilibili.com/video/BV1FJ4m1877a|基于 go+ 的stem编程创作平台（二）｜第一届实训营终期成果展示|2024-03-15 18:55:11|七牛云|257|8|0|4|2|科技,计算机技术,学习,编程,1024实训营,stem,代码,code,少儿编程,七牛云|
+https://www.bilibili.com/video/BV1qZ4y1Y7VF|许式伟：go+ 演进之路  ecug 2022 中国技术力量 演讲实录|2022-07-10 18:25:11|七牛云|2507|40|10|67|5|科技,计算机技术,go+,编程开发|
+https://www.bilibili.com/video/BV1hp4y1d7U2|往后三年java和golang谁才是王者？——马士兵|2023-12-27 15:18:19|马士兵Java充电站|11000|61|17|54|32|科技,计算机技术,计算机,编程语言,科技,程序员,编程,面试,计算机技术,java,golang,编程开发|
+https://www.bilibili.com/video/BV1sN4y147tB|golang和java该如何选择，完全不需要犹豫|2023-12-22 00:49:15|老周聊golang|4639|21|6|23|1|科技,计算机技术,程序员,编程语言,java,秋招,golang,应届毕业|
+https://www.bilibili.com/video/BV1Do4y1u7h7|至少未来5年go语言一定是最好的选择！十年云原生高级架构师结合亲身经历告诉你|2023-06-03 17:08:02|老周聊golang|3414|26|7|16|1|生活,日常,开发,视频教程,职场,程序员,php,编程,golang,经验分享,python,架构师|
+https://www.bilibili.com/video/BV1S24y1N7Cn|golang程序员避坑指南！那些年你踩过go语言的哪些坑？（初级坑、中级坑、高级坑）|2023-05-25 16:59:28|老周聊golang|1849|29|17|41|2|科技,计算机技术,程序员,视频教程,编程语言,编程,golang开发,golang程序员,经验分享,go语言,golang,避坑指南|
+https://www.bilibili.com/video/BV14M41197yt|golang快速开发一个定时任务|2023-10-19 09:30:00|老周聊golang|2527|31|15|82|7|科技,计算机技术,go,定时任务,crontab|
+https://www.bilibili.com/video/BV1dw411S787|golang 中间件编程思想|2023-08-30 23:38:35|老周聊golang|2502|41|14|95|2|科技,计算机技术,无入侵,日志,trace,metric,编程思想,中间件,解耦|
+https://www.bilibili.com/video/BV1eN4y1Z79L|golang实现反向代理|2023-10-11 14:15:11|老周聊golang|3116|60|22|139|8|科技,计算机技术,微服务,golang,nginx,反向代理|
+https://www.bilibili.com/video/BV1Dh411P7sN|golang方向，如何将一个开源的即时聊天项目写入到简历，项目经验，练手，毕设一个项目全搞定！|2023-07-01 09:15:00|老周聊golang|2559|33|12|131|9|科技,计算机技术,学习,it,计算机,视频教程,知识,编程,软件应用,开源项目,github,golang|
+https://www.bilibili.com/video/BV1uz4y177PF|golang开源项目opentelemetry、分布式系统链路追踪、系统监控|2023-07-13 12:39:00|老周聊golang|3842|84|37|205|9|科技,计算机技术,程序员,编程语言,计算机,链路追踪,opentelemetry,golang云原生,golang开源项目,分布式,开源项目,golang,golang教程,go语言|
+https://www.bilibili.com/video/BV1h14y1r7mT|搞明白服务注册与发现的逻辑之后，那么代码实现就不是事了|2023-09-12 16:17:16|老周聊golang|3134|76|25|197|9|科技,计算机技术,服务注册,golang云原生,分布式选主,分布式,负载均衡,分布式锁,租约,服务发现,配置中心,etcd|
+https://www.bilibili.com/video/BV1nh4y1Y7xr|etcd分布式锁是公平锁吗，我们来看看它的基本逻辑|2023-09-14 22:23:18|老周聊golang|482|11|3|17|0|科技,计算机技术,原理,golang云原生,代理,分布式,监听,go,网关,分布式锁,etcd,公平锁|
+https://www.bilibili.com/video/BV1xm4y1P7FE|当突然被问到课程优势看我怎么回答|2023-09-11 23:08:38|老周聊golang|295|7|2|1|1|科技,计算机技术,golang入门,golang云原生,工程师,go,docker,vip课程,架构师,k8s,体验卡,devops|
+https://www.bilibili.com/video/BV1Ej411X7ds|【golang学习】快速搭建golang开发环境|2023-06-16 20:08:19|老周聊golang|2517|36|24|54|12|科技,计算机技术,视频教程,程序员,编程语言,编程,golang开发,golang入门,goland教程,goland环境配置,golang,go语言|
+https://www.bilibili.com/video/BV1V6421w7xh|golang gmp模型|2024-03-14 15:51:23|老周聊golang|888|15|2|25|0|科技,计算机技术,程序员,gmp,计算机,编程,实习,面试,golang|
+https://www.bilibili.com/video/BV1Jr421h7f6|golang抛出panic应用程序会崩溃么|2024-03-23 14:15:41|老周聊golang|1165|7|0|6|1|科技,计算机技术,面试,崩溃,golang|
+https://www.bilibili.com/video/BV1LoijexEfU|golang 开箱即用的流媒体音乐播放器|2024-08-03 15:54:45|老周聊golang|229|3|0|2|0|科技,计算机技术,项目,go,流媒体|
+https://www.bilibili.com/video/BV1wh4y1K7RY|golang泛型函数与泛型类型|2023-09-05 15:28:42|老周聊golang|444|8|2|9|1|科技,计算机技术,generic,泛型函数,泛型类型,t,复用,go,any,泛型,comparable|
+https://www.bilibili.com/video/BV1pP411a7Wf|golang泛型接口定义与使用|2023-09-05 17:12:26|老周聊golang|1041|19|2|29|2|科技,计算机技术,generic,泛型函数,泛型结构,t,接口,golang,receiver,泛型,comparable|
+https://www.bilibili.com/video/BV1b94y1x76w|golang泛型结构与泛型receiver|2023-09-05 16:09:13|老周聊golang|331|5|2|0|0|科技,计算机技术,结构,generic,泛型函数,泛型结构,t,receiver,泛型,comparable|
+https://www.bilibili.com/video/BV1xW4y1F7ak|golang经典面试题切片的基本原理-切片的扩容机制，面试从此不翻车|2024-01-22 10:10:00|老周聊golang|430|7|0|10|1|科技,计算机技术,程序员,原理,经典,编程,面试,切片,扩容,面试题,golang|
+https://www.bilibili.com/video/BV14e411H7D3|当面试被问到golang字符串基本原理时，可不要再翻车了|2024-01-11 17:22:54|老周聊golang|2171|47|33|99|2|科技,计算机技术,编程语言,程序员,学习,字符串,面试,golang|
+https://www.bilibili.com/video/BV1eC4y1C79n|golang经典面试题切片的基本原理-切片的深拷贝和浅拷贝，面试从此不不翻车|2024-01-20 09:30:00|老周聊golang|1046|20|8|29|1|科技,计算机技术,结构,程序员,原理,编程,切片,面试,golang|
+https://www.bilibili.com/video/BV1jT4y1h7ZQ|golang经典面试题切片的基本原理-切片的结构，从此不再翻车|2024-01-19 21:58:40|老周聊golang|572|13|5|23|0|科技,计算机技术,程序员,结构,编程,教程,切片,面试,golang|
+https://www.bilibili.com/video/BV1qk4y1D7To|golang经典面试题切片的基本原理-引用类型切片与golang的值传递，面试从此不翻车|2024-01-21 10:00:00|老周聊golang|273|4|0|5|0|科技,计算机技术,经典,程序员,原理,引用,切片,面试,golang|
+https://www.bilibili.com/video/BV1Hb421e7KV|应届毕业golang和java如何选择，来看看这9个城市的对比情况吧|2024-06-06 14:38:04|老周聊golang|579|7|0|8|0|科技,计算机技术,java,go,应届毕业|
+https://www.bilibili.com/video/BV1qk4y1T7ZK|推荐一个简洁实用的golang开源云盘项目|2023-06-29 21:17:57|老周聊golang|2551|48|24|123|8|科技,计算机技术,视频教程,it,计算机,学习,知识,编程,软件应用,开源项目,github,golang|
+https://www.bilibili.com/video/BV13y4y1F7gn|golang面向接口编程与私有构造函数依赖注入|2023-09-19 21:06:25|老周聊golang|1783|25|4|73|4|科技,计算机技术,函数,编程,面向接口编程,接口,go,构造函数,依赖注入|
+https://www.bilibili.com/video/BV1NQH1eHEHT|go语言到底需不需要依赖注入，且听我一说|2024-09-06 06:38:47|golang_player|989|13|0|15|2|科技,计算机技术,go,依赖注入|
+https://www.bilibili.com/video/BV1cGHEePEAR|go优雅地给函数计时|2024-09-06 06:06:00|张朝阳讲go语言|855|10|1|12|2|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1FN4y1q76v|go error的追踪与包装|2024-01-09 05:55:00|张朝阳讲go语言|2999|44|10|62|3|科技,计算机技术,go,error,go语言|
+https://www.bilibili.com/video/BV1r4421Q78E|为什么从db查不到数据也算error？|2024-06-26 06:05:00|张朝阳讲go语言|3241|35|2|23|1|科技,计算机技术,数据库,go,go语言|
+https://www.bilibili.com/video/BV1Fp421U7Nz|tesing errorf和fatalf|2024-03-18 06:05:00|张朝阳讲go语言|830|20|2|10|2|科技,计算机技术,单测,go,单元测试,go语言|
+https://www.bilibili.com/video/BV1aM4m1y72S|自定义error及error的断言|2024-07-25 06:48:00|张朝阳讲go语言|1128|16|5|26|2|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1Rh411P7oN|golang context该怎么玩儿|2023-06-28 07:24:51|张朝阳讲go语言|25000|523|283|884|43|科技,计算机技术,go,golang,go语言,context|
+https://www.bilibili.com/video/BV1qK411f7Cw|go语言进阶：1分钟秒懂context包！|2022-09-09 17:21:04|极客时间App|2650|21|0|17|2|科技,计算机技术,程序员,计算机,go,it,编程,go语言,编程学习,码农,编程开发|
+https://www.bilibili.com/video/BV1ts4y1z7E5|go不那么受欢迎的真正原因|2023-05-20 22:33:56|_优雅先森|23000|86|3|59|1|科技,计算机技术,it,编程语言,程序员,编程,google,原因,区块链,go,golang,编程开发|
+https://www.bilibili.com/video/BV1XT4y1B7W9|go语言拯救php程序员！|2022-05-15 17:00:00|极客时间App|20000|217|5|72|33|科技,计算机技术,程序员,职场,php,代码,互联网,go语言,编程开发|
+https://www.bilibili.com/video/BV18j421S7fD|go语言前景如何？|2024-02-28 18:06:11|涛哥编程日记|3786|29|2|5|4|科技,计算机技术,程序员,go,编程|
+https://www.bilibili.com/video/BV1wW4y1R7Lw|“编程语言百花齐放，为何go语言依然强势？揭秘go语言背后的技术优势和未来前景！”|2023-06-02 16:27:48|Python名讲师Alex|21000|464|15|106|28|互联网人互助指南,知识,职业职场,程序员,技术,编程语言,编程,互联网,优势,揭秘,前景,go语言,aigc启航计划|
+https://www.bilibili.com/video/BV1km4y117HM|2.go语言的优势|2023-04-16 15:40:30|IT行业研究员|512|9|0|3|0|科技,计算机技术,编程语言,it,程序员,go|
+https://www.bilibili.com/video/BV16h4y1W7nQ|3.go语言的应用领域|2023-04-16 16:03:48|IT行业研究员|746|9|0|4|0|科技,计算机技术,编程语言,it,程序员,go|
+https://www.bilibili.com/video/BV1RX4y1z7dc|5.go语言开发的学习路线|2023-04-16 16:57:05|IT行业研究员|281|3|2|1|0|科技,计算机技术,编程语言,开发,it,go,学习路线|
+https://www.bilibili.com/video/BV1fm4y117HB|1.go语言的介绍|2023-04-16 15:25:29|IT行业研究员|237|4|0|0|1|科技,计算机技术,编程语言,it,go|
+https://www.bilibili.com/video/BV1AM411L7Ab|4.哪些互联网大厂在使用go语言|2023-04-16 16:19:46|IT行业研究员|95|0|0|3|0|科技,计算机技术,it,编程语言,互联网,大厂,go|
+https://www.bilibili.com/video/BV11Q4y157um|go语言的核心优势是什么|2024-01-15 06:13:00|张朝阳讲go语言|9035|222|9|47|5|科技,计算机技术,go,c++,python|
+https://www.bilibili.com/video/BV1gc411C76w|为什么 go 语言在某些方面的性能还不如 java？|2023-12-24 20:12:00|程序员_小王|3653|12|0|7|0|科技,计算机技术,程序员,it,编程语言,性能,java,go语言,编译器优化,即时编译,hotspotvm|
+https://www.bilibili.com/video/BV1ke411z7bd|go语言ide：goland和vscode哪个更好？|2023-12-25 20:52:58|程序员_小王|4589|11|0|6|1|科技,计算机技术,程序员,编程,代码,ide,vscode,go语言,编程开发,集成开发环境|
+https://www.bilibili.com/video/BV1nT4y1S734|go语言基础系列教程之go开发工具介绍|2022-02-28 00:01:26|傲娇小Q|1933|9|5|21|3|知识,职业职场,学习,课程,视频教程,经验分享,职业,打卡挑战|
+https://www.bilibili.com/video/BV14q4y1t7Mk|go语言基础系列教程之go语言的介绍|2022-02-20 15:02:55|傲娇小Q|472|8|4|15|2|知识,职业职场,职场,视频教程,课程,职业,求职,经验分享,打卡挑战|
+https://www.bilibili.com/video/BV11R4y1L7W4|go语言基础系列教程之go语言环境安装|2022-02-20 23:22:06|傲娇小Q|819|3|3|4|3|知识,职业职场,视频教程,职场,课程,公开课,求职,职业,经验分享,打卡挑战|
+https://www.bilibili.com/video/BV1DL4y1c7KW|go语言基础系列教程之错误和异常处理|2022-05-07 22:14:15|傲娇小Q|502|7|4|7|0|职场加油站,知识,职业职场,视频教程,教育,学习,职场,课程,编程,公开课,经验分享,互联网|
+https://www.bilibili.com/video/BV1Qu411e7kZ|go语言基础系列教程之结构体的使用|2022-04-09 16:14:28|傲娇小Q|305|6|4|2|0|360行工作大揭秘,知识,职业职场,视频教程,学习,原创,教育,编程,求职,经验分享,面试,打卡挑战,春招b计划|
+https://www.bilibili.com/video/BV15a411j7ca|go语言基础系列教程之gomod包管理工具|2022-05-28 10:51:31|傲娇小Q|5944|68|33|176|6|职场加油站,知识,职业职场,计算机,学习,go,编程,go语言,码农,golang,经验分享,打卡挑战|
+https://www.bilibili.com/video/BV18v4y137K7|go语言基础系列教程之go build命令|2022-06-10 20:00:01|傲娇小Q|1487|18|5|18|3|职场加油站,知识,职业职场,go,课程,入门,编程,golang,求职,面试,经验分享,打卡挑战,职场加油站2022第二季|
+https://www.bilibili.com/video/BV1fY4y1V7N4|go语言基础系列教程之单元测试和基准测试|2022-06-01 22:20:13|傲娇小Q|1995|28|13|47|1|职场加油站,知识,职业职场,it,go,入门,测试,编程,面试,求职,golang,打卡挑战,职场加油站2022第二季|
+https://www.bilibili.com/video/BV1wT4y1Y7LC|go语言基础系列教程之函数|2022-04-04 23:01:51|傲娇小Q|278|2|2|3|0|让学习变得更简单,科技,计算机技术,学习,日常,原创,go语言函数,入门教程,golang,编程开发,打卡挑战,跟着up主创作吧（第三期）|
+https://www.bilibili.com/video/BV1R34y1479v|go语言基础系列教程之切片的使用|2022-03-27 23:16:44|傲娇小Q|390|4|4|2|0|让学习变得更简单,科技,计算机技术,教育,学习,golang,编程开发,职场干货,go教程,打卡挑战,跟着up主创作吧（第三期）|
+https://www.bilibili.com/video/BV1f3411p7Rh|go语言基础系列教程之字典（map）的使用|2022-03-29 23:03:01|傲娇小Q|280|3|0|0|0|让学习变得更简单,科技,计算机技术,#程序员日常,#go入门教程,编程开发,职场干货,go教程,跟着up主创作吧（第三期）|
+https://www.bilibili.com/video/BV1Xa411t7Z9|go语言基础系列教程之数组的使用|2022-03-25 20:30:00|傲娇小Q|247|5|2|4|0|我在b站做up主,科技,计算机技术,原创,golang,编程开发,职场干货,go教程,打卡挑战|
+https://www.bilibili.com/video/BV1vr4y1H7X5|go语言基础系列教程之接口（interface）|2022-04-17 22:50:58|傲娇小Q|783|5|2|10|0|职场加油站,知识,职业职场,视频教程,自制,职场,原创,课程,编程,互联网,求职,打卡挑战|
+https://www.bilibili.com/video/BV13u411Q7wk|go语言基础系列教程之变量和常量|2022-03-05 12:59:20|傲娇小Q|470|4|2|7|0|职场加油站,知识,职业职场,学习,视频教程,课程,经验分享,求职,打卡挑战|
+https://www.bilibili.com/video/BV1Pa411a76c|go语言基础系列教程之指针|2022-05-02 13:07:00|傲娇小Q|351|3|0|0|0|职场加油站,知识,职业职场,自制,教育,学习,视频教程,编程,公开课,求职,经验分享,打卡挑战|
+https://www.bilibili.com/video/BV1YF411t7KR|go语言基础系列教程之go语言数据类型和构成要素|2022-02-22 22:56:51|傲娇小Q|426|2|0|2|0|知识,职业职场,课程,学习,经验分享,求职,面试,打卡挑战|
+https://www.bilibili.com/video/BV1QR4y1G7D4|go语言基本数据类型及类型转换|2022-03-06 22:10:24|傲娇小Q|512|6|3|5|1|职场加油站,知识,职业职场,学习,公开课,找工作,求职,职业规划,面试,经验分享,打卡挑战|
+https://www.bilibili.com/video/BV1sr4y1B7q3|go语言中的运算符|2022-03-13 09:52:27|傲娇小Q|215|3|0|0|0|职场加油站,知识,职业职场,学习,视频教程,教育,面试,职业规划,经验分享,求职,打卡挑战|
+https://www.bilibili.com/video/BV1ST411g7g4|go语言标准库之fmt输入输出|2022-06-26 22:46:47|傲娇小Q|1285|27|15|36|1|职场加油站,知识,职业职场,go,开发,学习,视频教程,编程,求职,golang,go语言,面试,职场加油站2022第二季|
+https://www.bilibili.com/video/BV1da411H7cE|go语言标准库之log日志|2022-07-04 22:06:10|傲娇小Q|3405|56|27|120|0|技术宅的夏天,科技,计算机技术,入门,教育,课程,学习,教程,互联网,golang,go语言,编程开发,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV14V4y1E7eX|go语言标准库之flag命令行参数解析|2022-07-27 23:05:39|傲娇小Q|1769|34|17|57|3|技术宅的夏天,科技,计算机技术,入门,学习,go,编程,go语言,golang,gin,微服务,编程开发,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV18N4y1j7ED|go语言标准库之strconv字符串和基本数据类型之间的转换|2022-07-20 22:36:48|傲娇小Q|659|14|8|10|0|技术宅的夏天,科技,计算机技术,入门,学习,视频教程,教育,公开课,编程,go语言,基础,编程开发,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV1gY4y177BX|go语言标准库之time时间|2022-07-11 22:26:04|傲娇小Q|1920|35|17|68|3|技术宅的夏天,科技,计算机技术,教育,语言,学习,课程,go,编程,教程,go语言,编程开发,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV1sm4y1w76A|go语言并发编程之channel通信|2022-10-23 23:47:09|傲娇小Q|1520|22|10|48|3|1024程序员节，你有什么话想说？,科技,计算机技术,十一创作大挑战,1024程序员节,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1xN4y1w7XG|go语言并发编程之并发安全|2022-10-16 20:49:32|傲娇小Q|1516|32|17|41|2|1024程序员节，你有什么话想说？,科技,计算机技术,go,编程,十一创作大挑战,高并发,并发编程,1024程序员节,协程,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1He4y1m7dR|go语言并发编程之goroutine协程|2022-10-16 15:04:23|傲娇小Q|1617|28|20|47|2|1024程序员节，你有什么话想说？,科技,计算机技术,go,程序员,编程,十一创作大挑战,高并发,1024程序员节,协程,科技猎手计划·2022第四期|
+https://www.bilibili.com/video/BV1ov4y1S72Y|go语言并发编程之select通信|2022-10-30 23:53:30|傲娇小Q|2536|37|19|60|3|bilibili实用up主扶持计划,科技,计算机技术,go,编程,事件轮询,通信,区块链,select,高并发,并发编程|
+https://www.bilibili.com/video/BV1EW4y147cX|go语言并发编程之channel和select的应用场景|2022-11-06 20:24:33|傲娇小Q|3450|66|27|176|13|bilibili实用up主扶持计划,科技,计算机技术,go,编程,超时机制,分布式,计划任务,定时器,高并发,并发编程,事件监听|
+https://www.bilibili.com/video/BV1E841187eq|go语言并发编程之原子操作|2022-11-13 23:44:19|傲娇小Q|1767|35|19|77|4|bilibili实用up主扶持计划,科技,计算机技术,计算机,编程,原子,go语言,高并发,并发编程,线程安全|
+https://www.bilibili.com/video/BV1Hd4y1N7jM|go语言标准库之strings字符串处理|2022-08-04 21:00:00|傲娇小Q|1087|18|12|27|3|技术宅的夏天,科技,计算机技术,视频教程,it,入门,教程,公开课,go语言,经验分享,学习心得,编程开发,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV1iD4y167iU|go语言标准库之os系统相关函数|2022-08-28 23:27:29|傲娇小Q|1651|41|15|68|1|原神up主激励计划,科技,计算机技术,视频教程,入门,教程,实战,golang,基础,微服务,架构,编程开发|
+https://www.bilibili.com/video/BV1TG41147he|go语言标准库之sort排序|2022-08-21 21:49:48|傲娇小Q|702|15|8|17|0|技术宅的夏天,科技,计算机技术,教育,go,课程,初级,入门,学习视频,互联网,编程开发,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV1fN4y1G7Rv|go语言标准库之math数学常量和数学运算|2022-08-14 19:41:32|傲娇小Q|431|9|9|3|0|技术宅的夏天,科技,计算机技术,大学,数学,学习,教育,入门,go,it,求职,编程开发,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV1wt4y177m6|go语言标准库之path路径相关操作|2022-09-04 20:20:29|傲娇小Q|956|16|13|22|0|技术宅的夏天,科技,计算机技术,程序员,go,编程,glob,正则,一起学习,url,path,科技猎手计划2022第二季|
+https://www.bilibili.com/video/BV1qF411x75f|go语言中的流程控制语句|2022-03-20 23:33:21|傲娇小Q|168|2|0|1|0|让学习变得更简单,科技,计算机技术,go入门,流程控制,go,编程开发,打卡挑战,跟着up主创作吧（第三期）|
+https://www.bilibili.com/video/BV1oR4y1k7U6|各大操作系统下安装 goland ，一个很强大的 go 语言 ide|2022-12-07 18:29:46|悟空非空也|2030|9|0|13|1|科技,计算机技术,程序员,编程教程,编程,go入门编程,编程学习,ide,计算机技术,go,golang,编程开发|
+https://www.bilibili.com/video/BV1YP4y1Q7E8|macos 系统下 go 的安装和环境配置，重点是 goroot 和 gopath|2022-12-05 14:02:09|悟空非空也|2879|18|9|29|4|科技,计算机技术,编程,系统环境变量,gopath,goroot,编程学习,macos,go,golang,编程开发,运行环境|
+https://www.bilibili.com/video/BV17G4y1R7U8|window 系统下 go 的安装和环境配置，goroot 和 gopath 是关键|2022-12-03 17:08:01|悟空非空也|3700|66|42|82|23|科技,计算机技术,程序员,编程,gopath,window11,goroot,go安装,go,golang,编程开发,运行环境|
+https://www.bilibili.com/video/BV1sv4y1Q7YX|传统方式新建 go 项目，关键是项目结构要遵循 gopath 规范|2022-12-18 21:51:29|悟空非空也|1464|8|0|15|1|科技,计算机技术,编程教程,程序员,编程,go项目,go入门编程,编程学习,计算机技术,go,golang,编程开发|
+https://www.bilibili.com/video/BV1PR4y1C7Bw|linux 系统下 go 的安装和环境配置，重点是 goroot 和 gopath|2022-12-06 18:04:02|悟空非空也|2537|32|6|33|8|知识,野生技能协会,编程,系统环境变量,gopath,goroot,编程学习,linux,go,golang,编程开发,运行环境|
+https://www.bilibili.com/video/BV1qiWEeeEQC|go切片的坑|2024-08-23 03:24:02|CodeWithKC|846|15|1|21|0|知识,科学科普,编程,go,go,golang|
+https://www.bilibili.com/video/BV1D7eaenEAt|go迭代器如何使用|2024-07-26 00:20:07|CodeWithKC|755|14|0|12|1|3分钟分享一个科学知识,知识,科学科普,学习,语言,编程,教程,特性,实战,golang,“科学3分钟”2024全国科普微视频大赛|
+https://www.bilibili.com/video/BV14mp6ekEKA|【go潜在陷阱】循环变量作用域的坑被填平了|2024-08-19 01:26:07|CodeWithKC|118|6|0|1|0|知识,科学科普,编程,go,变量|
+https://www.bilibili.com/video/BV1GgY2ebEHj|go编年史【2007 - 2024】|2024-08-14 12:00:00|CodeWithKC|69|3|0|0|0|分享我的专业知识,知识,科学科普,go编年史,go发展史,go前世今生,科技史,go,必剪创作,万物研究所·夏日探索计划|
+https://www.bilibili.com/video/BV14gHsefEy9|golang直播课，小白入门班|2024-09-03 19:08:58|张朝阳讲go语言|397|2|1|0|0|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1AA4m1c7gM|go语言从入门到进阶，系列课程介绍|2024-04-15 09:53:56|张朝阳讲go语言|2063|9|0|3|0|科技,计算机技术,go,go语言,golang|
+https://www.bilibili.com/video/BV1wr42137zJ|《golang入门到通天》课程介绍|2024-04-25 06:00:00|张朝阳讲go语言|1233|13|4|8|0|科技,计算机技术,go,go语言,golang|
+https://www.bilibili.com/video/BV12u4y1d7zv|golang操作kafka|2023-06-19 06:00:00|张朝阳讲go语言|8986|213|86|393|17|科技,计算机技术,go,golang,kafka,go语言|
+https://www.bilibili.com/video/BV18u4y1R7t3|go有设计模式吗？|2023-08-08 06:56:44|张朝阳讲go语言|15000|232|98|231|25|科技,计算机技术,option模式,设计模式,go,golang,go语言,option|
+https://www.bilibili.com/video/BV1Mg4y1R7Jf|option模式前传--重新认识type关键字|2023-11-01 06:20:00|张朝阳讲go语言|3490|81|38|86|5|科技,计算机技术,option模式,go,type,go语言|
+https://www.bilibili.com/video/BV16G411C7Cb|option模式赏析。看了很多第三方库源码，总结出option模式的2种写法和2种应用场景|2023-11-03 06:15:00|张朝阳讲go语言|8717|179|77|325|21|科技,计算机技术,option模式,go,go语言|
+https://www.bilibili.com/video/BV19G4y1Q74e|一个让gopher 眼泛泪光的客户端框架：wails|2023-01-28 10:54:35|小叉RAY|5700|95|29|74|7|科技,软件应用,wails,go语言项目实战,go客户端,go语言,数量取胜,必剪创作|
+https://www.bilibili.com/video/BV1b3411A7Yh|【go1.18】泛型的使用，gopher最为期待的功能|2022-05-12 20:38:04|码神之路|2440|41|10|52|4|知识,野生技能协会,程序员,编程,go入门教程,go1.18,go,golang,go语言,泛型|
+https://www.bilibili.com/video/BV1eY411c7oH|【go小知识】go1.18新功能workspace，非常有用和实用|2022-05-09 12:33:08|码神之路|5910|100|29|143|12|知识,野生技能协会,程序员,编程,go新功能,go,golang,gopher,workspace|
+https://www.bilibili.com/video/BV1Zr4y147L4|go学习路线，网站上有笔记链接和视频链接，更方面查找和观看|2022-05-22 12:40:23|码神之路|2656|33|16|89|2|知识,野生技能协会,程序员,编程,go学习路线,go,golang,gopher|
+https://www.bilibili.com/video/BV1Ua411X7B4|完整golang学习路线，按照顺序学习即可|2022-07-02 17:46:44|码神之路|23000|200|70|392|16|知识,职业职场,it,程序员,编程入门,go学习路线,golang,学习路线|
+https://www.bilibili.com/video/BV1Ra4y1r7fz|golang到底有啥好学的？|2023-12-18 18:28:34|路飞-金角大王Alex|6494|39|0|4|9|科技,计算机技术,编程语言,程序员,科技,编程技术,编程,就业,计算机技术,java,golang,架构师|
+https://www.bilibili.com/video/BV1pe411671D|golang与rust哪个语言会是今后的主流？|2023-12-29 22:00:00|爱编程的松鼠|9587|29|4|16|2|职场吐槽大会,科技,计算机技术,科技,程序员,编程语言,语言,rust,互联网,计算机技术,golang,编程开发,百日招聘，就业集结令！|
+https://www.bilibili.com/video/BV1rd4y1p7rd|go（golang）与java的性能比较（fiber vs spring boot  prometheus  minio  mongodb)|2023-02-01 22:40:09|精选海外教程postcode|19000|168|24|169|29|科技,计算机技术,编程语言,性能,java|
+https://www.bilibili.com/video/BV1eL411E7gn|go语言真的会超越java吗？会成为下一个编程语言王者吗？|2021-08-09 19:11:57|余胜军说java编程|51000|432|31|90|27|知识,野生技能协会,学习,计算机,程序员,java,职业,简历,面试,it,java,go|
+https://www.bilibili.com/video/BV1zJ4m1E7Wz|真后悔拿java开发网站，改成go语言开发抗百万并发|2024-05-02 18:00:00|余胜军说java编程|14000|226|0|18|21|知识,野生技能协会,计算机,bug,开发,编程,百万,还是,网站,决定,3万,java开发|
+https://www.bilibili.com/video/BV1y3411r7pX|我该学哪个编程语言？对比10+主流语言优劣，入门编程不迷茫！自学必看，java、python、go、php|2021-08-10 12:48:07|程序员鱼皮|709000|32000|13000|22000|3470|科技猎手,科技,计算机技术,it,编程语言,学习,知识,程序员,计算机,编程,软件应用,互联网,代码,编程开发|
+https://www.bilibili.com/video/BV1Zx4y1y7GH|传说性能极高的go语言 适合谁去学？|2024-02-22 22:00:00|Python网红Alex|26000|603|106|269|227|科技,计算机技术,程序员,it,编程,互联网,培训机构,it培训,自学编程,go语言,golang,it行业|
+https://www.bilibili.com/video/BV1yV4y1M7kE|大厂高薪招go，是机会还是坑，这几点你一定要知道！|2022-09-19 18:00:00||67000|1250|298|306|98|知识,职业职场,程序员,开发,编程,go语言,面试,求职,大厂,互联网,工作,java|
+https://www.bilibili.com/video/BV16N4y1v7YR|java转go一年总结 教你逃离内卷！！！|2024-01-14 01:21:27|朽木木的|7793|93|25|175|30|科技,计算机技术,程序员,学习,编程语言,go,编程,总结,一年,逃离,内卷,java|
+https://www.bilibili.com/video/BV1na4y1Q7LR|24届程序员，java转go，实习一个月的真实感受|2023-11-07 23:05:26|雯ww63|43000|941|93|207|27|科技,计算机技术,程序员,学习,实习,经验分享,互联网,后端,应届生,java,秋招,24届|
+https://www.bilibili.com/video/BV1UN4y1c726|后端开发从java转go 新部门实习一个月～|2022-10-15 19:28:46|阿珊biu|88000|1364|397|816|146|职场加油站,知识,职业职场,开发,程序员,后端,go,java|
+https://www.bilibili.com/video/BV1ku4y1J7pk|字节引入rust是否代表java的缺点go也没解决？|2023-12-19 14:19:54|程序员_小王|58000|247|16|159|53|科技,计算机技术,程序员,计算机,go,it,编程,互联网,rust,java,字节跳动,字节|
+https://www.bilibili.com/video/BV1W64y1H7pZ|rust写出来跑得比go还慢，还是不玩rust折磨自己了（|2023-12-24 02:30:14|謬紗特|36000|126|4|56|9|科技,计算机技术,编程语言,go,编程,rust|
+https://www.bilibili.com/video/BV1Mo4y1i7Ff|go开发的女程序员日常    经常思考着人生，以后的路该怎么走|2023-02-17 00:15:00|金可鱼|90000|1313|308|352|150|生活,日常,程序员,日常,生活记录,开发,编程,上班,努力,00后,代码,go|
+https://www.bilibili.com/video/BV1CR4y1q73r|go开发的女程序员日常 ｜ 有的人想要离开，有的人却拼命进来|2023-02-10 00:15:23|金可鱼|67000|1091|270|142|42|生活,日常,生活记录,开发,日常,程序员,go,编程,努力,00后,上班,记录|
+https://www.bilibili.com/video/BV1Tw411F7A3|golang开发｜ 程序员的上班日常，头发真越来越少|2023-10-20 23:07:40|金可鱼|49000|1071|255|166|117|生活,日常,日常,生活记录,开发,互联网,golang|
+https://www.bilibili.com/video/BV1H94y1n7rC|golang开发日常 ：我：靠！|2023-11-28 00:05:00|金可鱼|127000|1900|281|396|166|生活,日常,it,程序员,生活记录,编程|
+https://www.bilibili.com/video/BV1nG411v78G|golang开发日常｜练习时长1年半|2023-12-05 00:05:00|金可鱼|35000|922|176|86|40|生活,日常,生活记录,it,程序员,互联网|
+https://www.bilibili.com/video/BV1v24y1H73W|全网java程序员都想转golang，比卷更可怕的是，没有岗位需求！|2023-02-21 18:03:15|Tom弹架构|21000|207|42|50|16|春招求职攻略,科技,计算机技术,编程语言,程序员,go,寻找100位内行人对谈,互联网,java,golang,java面试|
+https://www.bilibili.com/video/BV1Wz4y1x7hm|【编程语言对比】rust和golang实现同样功能，代码相似度有多高？|2023-07-27 23:13:48|永遠に死ぬ|50000|139|7|111|3|科技,计算机技术,编程语言,程序员,编程,代码,golang,rust编程,必剪创作|
+https://www.bilibili.com/video/BV1dH4y1j7by|从三个方面客观的分析golang的就业前景|2024-02-21 21:56:29|老周聊golang|1098|14|6|16|0|科技,计算机技术,c++,编程,就业,java,go|
+https://www.bilibili.com/video/BV1Mi421d77z|golang与c++的对比|2024-03-14 15:49:31|老周聊golang|664|5|0|4|0|科技,计算机技术,it,c++,程序员,计算机,对比,编程,实习,大学生,golang|
+https://www.bilibili.com/video/BV1w2421T7Ea|golang是辅助性语言？学golang找不到工作？|2024-03-09 17:41:16|老周聊golang|1406|6|1|2|1|科技,计算机技术,it,计算机,大学生,工作,暑期,实习,golang|
+https://www.bilibili.com/video/BV12g4y1U7t9|其他语言转golang的94个技术要点，你要能再多找出一个算我输-剪|2024-01-10 14:58:35|老周聊golang|775|14|4|46|6|科技,计算机技术,程序员,编程,golang,转go|
+https://www.bilibili.com/video/BV1kepjePEVs|字节跳动go一面：golang 内存逃逸现象是什么|2024-09-09 17:11:46|老周聊golang|961|23|8|55|1|科技,计算机技术,go,程序员,计算机,编程,go程序员,八股文,面试,面试题,golang,golang面试题|
+https://www.bilibili.com/video/BV1KN4y167Jb|golang 6大就业方向都需要掌握哪些专业技能？技术到底是学的多好，还是理解深入比较好？|2023-12-29 17:26:42|老周聊golang|2633|58|33|149|6|科技,计算机技术,程序员,游戏,职业规划,云计算,就业方向,go,devops,专业技能,golang,云原生|
+https://www.bilibili.com/video/BV18V411w7FP|golang项目实战-图床项目大体技术方案|2023-10-03 09:30:00|老周聊golang|359|7|4|3|0|科技,计算机技术,golang技术栈,公有云,存储,go,项目实战,云原生,分布式文件系统|
+https://www.bilibili.com/video/BV19X4y147iB|中年窘境当真不可破？golang 云原生 助你破局|2023-06-17 15:53:42|老周聊golang|566|13|0|9|1|知识,职业职场,职场,it,科普,程序员,编程,经验分享,互联网,golang,go语言,云原生|
+https://www.bilibili.com/video/BV1dz4y1B7NT|如何写出高逼格的代码，有一套属于自己统一规范的代码风格|2023-05-30 14:56:34|老周聊golang|324|7|7|7|1|科技猎手2023,科技,计算机技术,程序员,编程,规范,golang,代码,go语言,计算机技术,接口,编程开发|
+https://www.bilibili.com/video/BV1No4y137Kc|半个月爆肝，golang标准库最强学习指南：学习方法、路径图、资料都备齐了！|2023-05-31 15:00:00|老周聊golang|735|12|15|16|0|科技猎手2023,科技,计算机技术,编程语言,程序员,编程,golang标准库,golang,go语言,计算机技术,golang教程,编程开发|
+https://www.bilibili.com/video/BV1pm4y1j7NQ|给大家分享一个golang的爬虫项目pholcus（另附学习资料）|2023-07-26 15:32:30|老周聊golang|904|23|11|52|6|科技,计算机技术,编程语言,程序员,计算机,golang爬虫,golang云原生,golang爬虫项目,pholcus爬虫,golang,golang教程,go语言|
+https://www.bilibili.com/video/BV1UP411979H|golang基础语法宝典视频讲解（含基础语法部分学习资料）|2023-05-26 08:00:21|老周聊golang|311|4|4|6|2|科技,计算机技术,视频教程,程序员,编程语言,golang开发,golang程序员,go语言,经验分享,golang,基础语法,golang基础|
+https://www.bilibili.com/video/BV1yk4y1T7SH|【干货分享】golang 将chatgpt回复的markdown转html并发送到zblog|2023-06-29 16:28:32|老周聊golang|310|2|0|2|1|科技,计算机技术,视频教程,程序员,编程语言,编程,chatgpt,干货分享,html,golang,golang教程,go语言|
+https://www.bilibili.com/video/BV1HF411R7v1|golang微服务框架，go-kit微服务框架的7个核心功能|2023-07-05 20:38:47|老周聊golang|630|10|3|15|3|科技,计算机技术,程序员,编程语言,视频教程,golang框架,go-kit,计算机技术,微服务,golang教程,golang,微服务框架|
+https://www.bilibili.com/video/BV1KV411g7KX|【干货分享第二期】golang 将chatgpt回复的markdown发送到discuz论坛|2023-06-30 11:22:00|老周聊golang|178|2|1|4|0|科技,计算机技术,程序员,视频教程,编程语言,编程,chatgpt,干货分享,html,golang,golang教程,go语言|
+https://www.bilibili.com/video/BV1xh411A74p|golang 构建约束与generate标记（1.go:build  2.+build  3.go:generate）|2023-07-06 10:26:00|老周聊golang|403|6|0|6|0|科技,计算机技术,编程语言,视频教程,程序员,golang框架,generate,计算机技术,微服务,golang教程,golang,微服务框架|
+https://www.bilibili.com/video/BV1kh4y147u9|你真的会用chatgpt了吗？「建议收藏」25分钟带你了解chatgpt项目｜让你彻底熟练使用chatgpt|2023-05-29 15:00:12|老周聊golang|226|4|2|1|1|chatgpt来啦,科技,计算机技术,算法,编程,golang项目实战,chatgpt,项目,go语言,golang,项目实战,科技猎手2023,chatgpt项目|
+https://www.bilibili.com/video/BV1bp4y1f7SR|golang 三周速成计划书，解你燃眉之急|2023-12-15 17:08:08|老周聊golang|3543|131|150|255|9|科技,计算机技术,教程,速成,秋招,学习计划,golang,编程开发|
+https://www.bilibili.com/video/BV19V411c7bw|10分钟玩转golang内嵌|2023-09-26 09:50:00|老周聊golang|683|14|4|27|2|科技,计算机技术,继承,接口,结构体,struct,内嵌,interface|
+https://www.bilibili.com/video/BV1Tc411F7oJ|c++ +golang云原生技术栈视频课程4个项目实战+9个云服务+面试简历指导|2023-07-25 20:28:26|老周聊golang|490|7|2|22|2|科技,计算机技术,计算机,编程,音视频开发,spdk,kv存储,golang云原生,c++,ffmpeg,项目实战,linux内核|
+https://www.bilibili.com/video/BV1Hg411g7io|java应届生进公司被要求转go，选择对吗？|2021-06-16 18:00:14|我是程序汪|24000|287|52|103|19|知识,职业职场,程序员,java,编程,面试,互联网,应届生,java面试,必剪创作|
+https://www.bilibili.com/video/BV1Gh4y1F78C|2023年啦！带你重新了解go语言，不要再盲目说golang开发岗没前途了！学好golang同样轻松拿捏大厂！|2023-08-05 16:08:18|Linux-技术大师|9113|102|68|562|18|科技,计算机技术,编程语言,golang框架,golang入门,golang项目实战,golang,docker,golang教程,go语言,k8s,并发编程|
+https://www.bilibili.com/video/BV1jM4y1h7UE|成功上岸！将自己花3w买的golang编程开发教程，整整100集无偿分享给大家！go语言持续更新中！|2023-05-03 22:39:38|背锅的IU|5641|55|47|343|6|知识,野生技能协会,计算机,it,编程语言,程序员,编程,golang,go语言,编程开发,成功上岸,无偿分享|
+https://www.bilibili.com/video/BV1bN4y1Z7BT|花了2万多买的go语言（golang）教程全套，现在分享给大家，golang零基础入门到精通(java程序员转行golang开发必看)|2023-10-09 17:02:32|云原生技术架构|244000|4065|3987|11000|812|科技,计算机技术,计算机,程序员,编程,golang开发,golang入门,java,golang,golang教程,go语言,golang基础,程序员研究所|
+https://www.bilibili.com/video/BV1pfe2eUEe6|【b站独家】跟着大神学go语言，一周让你告别小白！|2024-07-24 16:20:52|小桃子编程|164|2|0|5|2|知识,野生技能协会,程序员,小白,编程,教程,erlang入门,erlang课程,go语言,大学生,erlang,计算机专业|
+https://www.bilibili.com/video/BV1j4edeaEmy|go语言web开发：开启互联网新纪元的重要钥匙！|2024-07-25 14:18:23|小桃子编程|543|6|2|34|1|知识,野生技能协会,it,erlang入门,erlang课程,web,互联网,go语言,大学生,java,erlang,计算机专业|
+https://www.bilibili.com/video/BV1pjsuenEoG|【gva插件开发】6.保存登录状态，获取用户信息，打包发布插件——用户状态cookie的使用和插件打包自动格式化的使用（翻转极光出品）|2024-08-28 20:58:15|go圈里最会写js的奇淼|618|12|8|2|1|知识,野生技能协会,课程,科技,go,编程,go语言,经验分享,golang,github,gin,vue|
+https://www.bilibili.com/video/BV1EW42197x9|【gva插件开发】2.管理端方法的调节和创建——调整更改用户方法和创建管理端更改密码方法（翻转极光出品）|2024-08-01 09:30:00|go圈里最会写js的奇淼|633|14|6|3|0|知识,野生技能协会,科技,go,课程,编程,经验分享,go语言,golang,github,gin,vue|
+https://www.bilibili.com/video/BV1zz421z7ET|【gin-vue-admin】v2.6.7版本，增加ai辅助功能，增加api同步功能，修复若干细节。（翻转极光出品）|2024-07-06 13:41:12|go圈里最会写js的奇淼|4055|66|43|111|22|知识,野生技能协会,科技,课程,go,编程,go语言,golang,经验分享,github,gin,vue|
+https://www.bilibili.com/video/BV1RU411f7UE|【gin-vue-admin】v2.6.4版本，更安全--自定义管理员密码，更漂亮--更美观的ui界面，更迅速--支持数据源自动化。（1010工作室出品）|2024-05-18 12:22:22|go圈里最会写js的奇淼|5411|76|44|135|14|知识,野生技能协会,课程,科技,go,编程,经验分享,golang,go语言,github,gin,vue|
+https://www.bilibili.com/video/BV14w4m1Q7Hb|1284-零声企业级go项目实战课程-从0带你实现chatgpt项目价值3580|2024-05-14 14:13:21|程序员技术手札|1948|32|4|176|5|知识,职业职场,it,go,课程,编程,chatgpt,实现,实战,项目,企业级,零声|
+https://www.bilibili.com/video/BV1Rd4y1C7A1|【狂神说】gin框架一小时上手  快速转型goweb开发  go语言零基础教程|2022-10-23 14:59:08|遇见狂神说|86000|1500|897|2348|290|科技,计算机技术,go,自学,it,编程,教程,gin框架,狂神说,golang,go语言,gin|
+https://www.bilibili.com/video/BV14M4y1t7XE|【超硬核讲解】golang开发必会的8个开源框架（gin、grpc、logrus、cobra、gorm、jwt、beego）原理实现，源码剖析及项目实战|2023-05-18 13:00:16|Qt_Operator|6071|96|53|612|31|知识,野生技能协会,gin框架,golang框架,golang微服务框架,logrus,golangweb框架,go语言,golang,golang教程,web框架,grpc|
+https://www.bilibili.com/video/BV1ao4y1V7bn|【附源码】2023全新golang实战项目合集, 17个golang企业级实战项目,超适合小白练手的实战项目! ( 最新录制)|2023-05-13 16:15:06|Qt_Operator|411|17|4|43|9|科技,计算机技术,程序员,golang框架,golang开发,golang项目,go语言,golang,docker,golang教程,k8s,golang实战|
+https://www.bilibili.com/video/BV1cx4y1R7kH|【附源码】这可能是b站讲的最好的golang教程案例，整整24个超适合小白练手的实战项目！（最新录制）|2023-07-27 15:40:05|Qt_Operator|671|6|6|46|3|知识,野生技能协会,程序员,计算机,golang入门,golang云原生,golang项目,golang,golang教程,go语言,实战项目,golang实战|
+https://www.bilibili.com/video/BV1rp4y1V7WS|【附源码】16个golang编写的实战项目，从小白到大神全栈（go语言/分布式/微服务/devops/docker/k8s二开）|2023-08-05 19:36:36|Qt_Operator|701|10|11|41|3|知识,野生技能协会,程序员,golang框架,golang云原生,golang项目,docker,golang,golang教程,go语言,k8s,golang实战|
+https://www.bilibili.com/video/BV1Wg4y177g4|2023年最新版golang零基础进阶视频教程_go语言基础入门到精通|2023-04-27 17:18:54|Qt_Operator|2097|41|16|200|11|科技,计算机技术,golang项目实战,golang云原生,go并发编程,go语言,golang,docker,golang教程,web框架,编程开发,k8s|
+https://www.bilibili.com/video/BV1Sx4y1N7Yr|2023最新golang入门视频教程，golang零基础入门到精通（小白必备，一学就会）|2023-03-14 15:37:35|Qt_Operator|4646|48|35|235|33|科技,计算机技术,编程语言,golang开发,go语言,docker,devops,golang教程,golang,k8s,grpc,云原生|
+https://www.bilibili.com/video/BV1ae41157o9|【狂神说】go语言零基础学习视频通俗易懂|2022-10-10 13:24:52|遇见狂神说|304000|4682|3738|8711|1044|科技,计算机技术,视频教程,go,零基础,编程,教程,狂神说,go语言,golang,go编程,狂神说java|
+https://www.bilibili.com/video/BV1Zz421y7Ln|【golang】16个go语言项目实战案例 学会这些从此不再做小白-毕业设计 入职简历 手把手带你完成16个项目（附源码）|2024-04-10 18:50:01|Linux-技术大师|6629|99|80|540|18|科技,计算机技术,编程语言,golang框架,golang云原生,golang项目,公有云,微服务,golang,golang教程,go语言,golang实战|
+https://www.bilibili.com/video/BV15u4y127xv|go+vue通用后台管理项目实战|2023-07-26 20:27:38|云州泇滴|17000|363|393|921|46|科技,软件应用,后台,通用,实战,go,vue,前后端分离|
+https://www.bilibili.com/video/BV17h4y177Cn|【练手项目】基于gin+vue3一步一步实战开发后台管理系统|2023-07-16 20:42:34|学灯网|21000|132|75|873|62|知识,校园学习,gin,vue,go语言,goweb,goland|
+https://www.bilibili.com/video/BV1AL411C7Lo|golang语言教程_go语言+gin实战教程72讲|2023-03-15 17:42:32|IT营|4742|48|5|296|11|知识,野生技能协会,golang教程,go语言,golang,go语言教程|
+https://www.bilibili.com/video/BV1HgHEevE1Z|go语言  函数|2024-09-07 20:20:00|张朝阳讲go语言|524|5|1|1|1|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1sV4y1v7P1|年轻人，不要技术崇拜|2023-08-09 06:34:20|张朝阳讲go语言|41000|307|58|287|24|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1wF41127iE|跟着标准库学adaptor--func转type的适配器|2023-10-02 06:10:11|张朝阳讲go语言|4061|73|17|122|13|科技,计算机技术,func,适配器,go,type,go语言|
+https://www.bilibili.com/video/BV1zN4y187i1|为什么go只有组合，没有继承|2023-12-26 05:50:00|张朝阳讲go语言|5066|54|11|57|9|科技,计算机技术,继承,组合,go,go语言|
+https://www.bilibili.com/video/BV1TP411W7eu|爬虫能做什么，不能做什么|2023-08-26 10:20:17|张朝阳讲go语言|1547|21|5|10|1|科技,计算机技术,爬虫,go,go语言|
+https://www.bilibili.com/video/BV1kG411d7tF|我用爬虫整理了b站最优秀的go视频|2023-09-02 06:17:46|张朝阳讲go语言|1702|21|0|25|2|科技,计算机技术,爬虫,go,go语言|
+https://www.bilibili.com/video/BV1Y94y1s7Ak|编程的傲慢与偏见|2023-09-08 18:50:00|张朝阳讲go语言|5494|66|12|19|8|科技,计算机技术,傲慢与偏见,编程,go,go语言|
+https://www.bilibili.com/video/BV1yb421q7he|函数类型与指针|2024-05-27 07:10:46|张朝阳讲go语言|1040|13|4|18|0|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1vx4y1C7Ge|go语言函数与接口互换|2024-03-01 05:58:00|张朝阳讲go语言|2444|48|16|48|7|科技,计算机技术,函数,接口,go,go语言|
+https://www.bilibili.com/video/BV1jJ4m1H7SW|go语言并发写map和slice|2024-04-27 06:15:00|张朝阳讲go语言|2982|35|5|53|4|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1Zb421J7UV|高并发限流策略--令牌桶算法|2024-07-01 06:00:00|张朝阳讲go语言|2419|54|8|95|9|科技,计算机技术,go,go语言,高并发|
+https://www.bilibili.com/video/BV1yC4y1G7aA|etcd 服务注册与发现|2023-10-27 06:10:00|张朝阳讲go语言|2963|46|10|64|7|科技,计算机技术,服务注册,go,go语言,服务发现,etcd|
+https://www.bilibili.com/video/BV1oC411V75S|服务注册与发现|2024-04-22 06:05:00|张朝阳讲go语言|952|16|3|9|0|科技,计算机技术,kitex,微服务,go,go语言|
+https://www.bilibili.com/video/BV12F4m1F7pe|微服务治理：限流、熔断和降级|2024-04-01 06:00:00|张朝阳讲go语言|1469|28|6|32|5|科技,计算机技术,降级,限流,熔断,微服务,go,go语言|
+https://www.bilibili.com/video/BV1C14y127sv|golang接口超时控制|2023-06-26 06:34:14|张朝阳讲go语言|6807|139|57|173|15|科技,计算机技术,编程语言,编程,超时,接口,go,golang,go语言|
+https://www.bilibili.com/video/BV14v421r7LG|如何使用终端运行go代码|2024-03-08 05:55:00|张朝阳讲go语言|1076|6|0|7|0|科技,计算机技术,终端,命令行,go,go语言,golang|
+https://www.bilibili.com/video/BV1hx421S7EM|go语言切片内存共享和扩容规律探究|2024-04-10 20:56:17|张朝阳讲go语言|1196|17|2|16|2|科技,计算机技术,切片,go,go语言,golang|
+https://www.bilibili.com/video/BV1xBW6ekE2q|大厂追捧的go语言到底是简单还是简陋？|2024-08-26 05:54:00|张朝阳讲go语言|9561|178|5|44|3|科技,计算机技术,go语言|
+https://www.bilibili.com/video/BV1az42187Ww|编程语言国内和国外有什么不同，为什么国内java和go比较多而c++和python比较少|2024-06-22 21:29:00|原子之音|25000|369|60|171|21|软件设计大赏,科技,计算机技术,编程语言,c++,go,招聘,裁员,python,java,golang,必剪创作,夏日灵感企划|
+https://www.bilibili.com/video/BV1tb421v7Tf|为什么高并发一般公司都用java不用c++，c#，rust或go？|2024-06-13 08:45:00|cpp后端教程|19000|75|0|60|1|知识分享官,知识,野生技能协会,程序员,计算机,java,c#,c++,go,编程,525心理健康日,rust,高并发|
+https://www.bilibili.com/video/BV1qw411b7BL|1小时学完golang，完全教程|2023-12-07 23:12:32|CodeFlyover|7434|153|36|576|36|科技,计算机技术,go,go语言|
+https://www.bilibili.com/video/BV1Nw8ieVEvA|未来3-5年程序员千万别碰这几种编程语言：java/python/golang/c/c++/c#/ai/大数据/测试/运维/游戏/区块链马士兵一个视频讲透！|2024-07-23 15:25:12|马士兵App|49000|997|391|2826|570|科技,计算机技术,it,计算机,java,编程语言,程序员,科技,编程,互联网,马士兵,计算机技术|
+https://www.bilibili.com/video/BV1hz42167qE|【区块链开发】使用 golang 从零开始构建区块链（34小时超详细课程）|2024-04-26 22:00:00|lllu_23|12000|290|98|1501|56|科技,计算机技术,中文字幕,开发,编程,defi,web3,区块链,go,golang,btc,币圈|
+https://www.bilibili.com/video/BV15T4y1B7TW|区块链实战  基于golang开发公链项目实战（完整）|2022-05-29 19:59:20|逆风微笑的代码狗|43000|501|175|2653|124|科技,计算机技术,it,计算机,编程,golang,go语言|
+https://www.bilibili.com/video/BV1fP4y1s7P2|go语言与区块链在线就业班（第二部分）|2021-08-01 12:02:15|我叫阿鑫ッ|9987|69|17|736|24|知识,野生技能协会,人工智能,go,程序员,比特币,golang,go语言,区块链|
+https://www.bilibili.com/video/BV1t8411p7BZ|【白嫖党必备】三个小时带你用go语言仿百度网盘，再不用担心被限速了！ golang项目实战、golang微服务|2022-12-14 19:15:03|阿栗Go|12000|183|94|691|43|科技,计算机技术,计算机,程序员,编程语言,编程,gin,go语言,百度网盘,golang,项目实战,野生技能协会|
+https://www.bilibili.com/video/BV1dU4y1o7Sb|【go实战项目】go游戏后端实战项目教程，完整的策略游戏，能学到高并发，websocket，rpc，mysql，多进程服务等，十年大厂程序员讲解|2022-03-18 11:46:09|码神之路|26000|218|141|982|57|知识,野生技能协会,游戏,游戏后端,go实战项目,echo框架,go,mysql,websocket,rpc,高并发,go实战|
+https://www.bilibili.com/video/BV1gY4y1D7VU|【游戏开发】golang服务端-接口实现-关卡战斗|2023-03-29 22:42:05|游戏开发阿强|2413|33|16|73|1|今天也要好好工作,知识,职业职场,程序员,学习,开发,编程,实现,战斗,服务端,接口,golang|
+https://www.bilibili.com/video/BV1wa4y1u7cj|【游戏开发】放置卡牌项目-服务端战斗-简单实现-golang|2023-04-05 12:15:03|游戏开发阿强|1159|9|2|20|1|挖呀挖呀挖,知识,野生技能协会,游戏制作,游戏,视频教程,游戏开发,编程,战斗,服务端,学习心得,万物研究所·第九期|

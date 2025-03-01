@@ -12,9 +12,27 @@ import (
 	"github.com/WlayRay/ElectricSearch/util"
 )
 
-const (
-	INDEX_SERVICE = "index_service"
-)
+var indexService string
+
+func init() {
+	var (
+		ok   bool
+		mode int
+	)
+	mode = util.ConfigMap["mode"].(int)
+	if mode < 2 || mode > 3 {
+		indexService = "standalone"
+		return
+	}
+	distributedConfig, ok := util.ConfigMap["distributed"].(map[string]any)
+	if !ok {
+		panic("distributed configuration not found!")
+	}
+
+	if indexService, ok = distributedConfig["index_service"].(string); !ok {
+		panic("indexService not found in config")
+	}
+}
 
 // IndexServiceWorker是一个grpc服务，用于索引文档
 type IndexServiceWorker struct {
@@ -72,14 +90,14 @@ func (service *IndexServiceWorker) Register(etcdEndpoint []string, servicePort, 
 		selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
 		service.selfAddr = fmt.Sprintf("%s:%d", selfLocalIp, servicePort)
 		hub := GetServiceHub(etcdEndpoint, int64(heartRate))
-		leaseId, err := hub.Register(INDEX_SERVICE, service.selfAddr, 0)
+		leaseId, err := hub.Register(indexService, service.selfAddr, 0)
 		if err != nil {
 			panic(err)
 		}
 		service.hub = hub
 		go func() {
 			for {
-				hub.Register(INDEX_SERVICE, service.selfAddr, leaseId)
+				hub.Register(indexService, service.selfAddr, leaseId)
 				time.Sleep(time.Duration(heartRate)*time.Second - 100*time.Millisecond)
 			}
 		}()
@@ -112,7 +130,7 @@ func (service *IndexServiceWorker) Count(ctx context.Context, request *CountRequ
 
 func (service *IndexServiceWorker) Close() error {
 	if service.hub != nil {
-		service.hub.UnRegister(INDEX_SERVICE, service.selfAddr)
+		service.hub.UnRegister(indexService, service.selfAddr)
 		service.hub.Close()
 	}
 	return service.Indexer.Close()

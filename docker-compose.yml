@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  etcd:
+    image: bitnami/etcd:latest
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd-server:2379
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+    networks:
+      - electric-search
+    command: etcd --name etcd-server
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7887:7887"
+    networks:
+      - electric-search
+    depends_on:
+      - etcd
+
+networks:
+  electric-search:
+    driver: bridge

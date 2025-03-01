@@ -9,14 +9,14 @@ server:
 distributed:
   total_workers: 2
   worker_index: 0
-  index_service: "index_service1"
+  index_service: "service-one"
   heart_rate: 3
 
 index:
   db_type: "badger"
   db_path: "data/"
   document_estimate_num: 50000
-  csv_file: "data/bilibili_video.csv"
+  csv_file: "bilibili_video.csv"
 
 etcd:
   servers:

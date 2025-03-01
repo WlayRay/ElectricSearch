@@ -1,7 +1,7 @@
 package service
 
 import (
-	"context"
+	"errors"
 	"strings"
 	"sync"
 	"time"
@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	SERVICE_ROOT_PATH = "/ElectricSearch/index" // etcd key的前缀
+	SERVICE_ROOT_PATH = "/electric-search/video-index" // etcd key的前缀
 )
 
 // 服务注册中心
@@ -51,16 +51,18 @@ func GetServiceHub(etcdEndpoints []string, heartRate int64) *ServiceHub {
 }
 
 func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) {
-	ctx := context.Background()
+	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
+	defer cancel()
+
 	if leaseID <= 0 {
 		// 创建一个有效期为heartRate的租约（单位：秒）
-		if lease, err := hub.client.Grant(ctx, hub.heartRate); err != nil {
+		if lease, err := hub.client.Grant(timeoutCtx, hub.heartRate); err != nil {
 			util.Log.Printf("create lease failed: %v", err)
 			return 0, err
 		} else {
 			keys := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/" + endpoint
-			// 服务注册
-			if _, err := hub.client.Put(ctx, keys, "", etcdv3.WithLease(lease.ID)); err != nil {
+			// 服务注册(向ETCD中写入一个key)
+			if _, err := hub.client.Put(timeoutCtx, keys, "", etcdv3.WithLease(lease.ID)); err != nil {
 				util.Log.Printf("register service %s endpoint %s failed: %v", service, endpoint, err)
 				return leaseID, err
 			} else {
@@ -69,7 +71,7 @@ func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID
 		}
 	} else {
 		// 续租
-		if _, err := hub.client.KeepAliveOnce(ctx, leaseID); err != rpctypes.ErrLeaseNotFound {
+		if _, err := hub.client.KeepAliveOnce(timeoutCtx, leaseID); !errors.Is(err, rpctypes.ErrLeaseNotFound) {
 			return hub.Register(service, endpoint, leaseID)
 		} else if err != nil {
 			util.Log.Printf("keep lease %d failed: %v", leaseID, err)
@@ -82,22 +84,26 @@ func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID
 
 // 注销服务
 func (hub *ServiceHub) UnRegister(service, endpoint string) error {
-	ctx := context.Background()
+	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
+	defer cancel()
+
 	key := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/" + endpoint
-	if _, err := hub.client.Delete(ctx, key); err != nil {
-		util.Log.Printf("unregist service %s endpoint %s failed: %v", service, endpoint, err)
+	if _, err := hub.client.Delete(timeoutCtx, key); err != nil {
+		util.Log.Printf("unregister service %s endpoint %s failed: %v", service, endpoint, err)
 		return err
 	} else {
-		util.Log.Printf("unregist service %s endpoint %s success", service, endpoint)
+		util.Log.Printf("unregister service %s endpoint %s success", service, endpoint)
 		return nil
 	}
 }
 
 // 服务发现，client每次进行RPC调用之前都查询etcd，获取server集合，然后采用负载均衡算法选择一台server。
 func (hub *ServiceHub) GetServiceEndpoints(service string) []string {
-	ctx := context.Background()
+	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
+	defer cancel()
+
 	prefix := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service
-	if resp, err := hub.client.Get(ctx, prefix, etcdv3.WithPrefix()); err != nil {
+	if resp, err := hub.client.Get(timeoutCtx, prefix, etcdv3.WithPrefix()); err != nil {
 		util.Log.Printf("get service %s endpoints failed: %v", service, err)
 		return nil
 	} else {

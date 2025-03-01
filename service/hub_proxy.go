@@ -1,7 +1,6 @@
 package service
 
 import (
-	"context"
 	"strings"
 	"sync"
 	"time"
@@ -51,10 +50,14 @@ func (proxy *ServiceHubProxy) watchEndpointsOfService(service string) {
 	if _, exists := proxy.watched.LoadOrStore(service, true); exists {
 		return
 	}
-	ctx := context.Background()
+
+	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
+	defer cancel()
+
 	prefix := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/"
-	watchChan := proxy.client.Watch(ctx, prefix, etcdv3.WithPrefix())
+	watchChan := proxy.client.Watch(timeoutCtx, prefix, etcdv3.WithPrefix())
 	util.Log.Printf("watch service: %s", service)
+
 	go func() {
 		for response := range watchChan {
 			for _, event := range response.Events {

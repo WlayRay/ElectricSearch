@@ -27,6 +27,6 @@ func Init() {
 func TestBuildIndex(t *testing.T) {
 	Init()
 	defer indexer.Close()
-	csvFile := util.RootPath + "data/bilibili_video.csv"
+	csvFile := util.RootPath + "data/bilibili_video.csv" // 改成项目中实际的csv文件路径
 	infrastructure.BuildIndexFromCSVFile(csvFile, indexer, 0, 0)
 }
