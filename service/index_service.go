@@ -29,7 +29,7 @@ func init() {
 		panic("distributed configuration not found!")
 	}
 
-	if indexService, ok = distributedConfig["index_service"].(string); !ok {
+	if indexService, ok = distributedConfig["index-service"].(string); !ok {
 		panic("indexService not found in config")
 	}
 }
@@ -46,20 +46,27 @@ func (service *IndexServiceWorker) Init(workerIndex int) error {
 
 	var docNumEstimate, dbType int
 	var dbPath string
+
+	indexConfig, ok := util.ConfigMap["index"].(map[string]any)
+	if !ok {
+		panic("index configuration not found!")
+	}
+
 	// 初始化预估最大文档数量
-	if v, ok := util.ConfigMap["document-estimate-num"]; ok {
-		docNumEstimate, _ = strconv.Atoi(v.(string))
+	if v, ok := indexConfig["document-estimate-num"]; ok {
+		docNumEstimate, _ = v.(int)
 	} else {
 		docNumEstimate = 50000
 	}
+
 	// 初始化正排索引文件存储路径
-	if v, ok := util.ConfigMap["db-path"]; ok {
+	if v, ok := indexConfig["db-path"]; ok {
 		dbPath = util.RootPath + strings.Replace(v.(string), "\"", "", -1)
 		if dbPath[len(dbPath)-1] != '/' {
 			dbPath += "/"
 		}
 		// 初始化正排索引使用的数据库类型
-		if v, ok := util.ConfigMap["db-type"]; ok {
+		if v, ok := indexConfig["db-type"]; ok {
 			switch v {
 			case "bolt":
 				dbType = kvdb.BOLT

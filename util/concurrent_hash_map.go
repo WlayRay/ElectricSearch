@@ -1,9 +1,10 @@
 package util
 
 import (
-	"github.com/dgryski/go-farm"
-	// "golang.org/x/exp/maps"
 	"sync"
+
+	"github.com/dgryski/go-farm"
+	"golang.org/x/exp/maps"
 )
 
 type ConcurrentHashMap struct {
@@ -64,11 +65,11 @@ type ConcurrentHashMapIterator struct {
 func (c *ConcurrentHashMap) NewIterator() *ConcurrentHashMapIterator {
 	keys := make([][]string, len(c.childMaps))
 	for _, v := range c.childMaps {
-		// rowKeys := maps.Keys(v) // 使用golang.org/x/exp/maps包的Keys方法获取一个map的所有key
-		var rowKeys []string
-		for i := range v {
-			rowKeys = append(rowKeys, i)
-		}
+		rowKeys := maps.Keys(v) // 使用golang.org/x/exp/maps包的Keys方法获取一个map的所有key
+		// var rowKeys []string
+		// for i := range v {
+		// rowKeys = append(rowKeys, i)
+		// }
 		keys = append(keys, rowKeys)
 	}
 

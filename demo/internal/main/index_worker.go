@@ -24,7 +24,6 @@ func GrpcIndexerInit() {
 
 	server := grpc.NewServer()
 	indexService = new(service.IndexServiceWorker)
-	// 初始化索引
 	indexService.Init(workerIndex)
 	if rebuildIndex {
 		util.Log.Printf("total workers = %d, worker index = %d", totalWorkers, workerIndex)

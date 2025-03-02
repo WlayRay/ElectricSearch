@@ -29,8 +29,18 @@ func startGin() {
 	engine := gin.Default()
 	gin.SetMode(gin.ReleaseMode)
 
+	engine.Use(func(ctx *gin.Context) {
+		defer func() {
+			if err := recover(); err != nil {
+				util.Log.Printf("Error: %v", err)
+				ctx.JSON(500, gin.H{
+					"code": 500,
+					"msg":  "Internal Server Error!",
+				})
+			}
+		}()
+	})
 	engine.Use(handler.GetUserInfo)
-	// categoriesBits := [...]string{"鬼畜", "记录", "科技", "美食", "音乐", "影视", "娱乐", "游戏", "综艺", "知识", "资讯", "番剧", "舞蹈", "游记"}
 
 	engine.POST("/search", handler.SearchAll)
 	engine.POST("/up_search", handler.SearchByAuthor)
@@ -54,8 +64,6 @@ func main() {
 	// 模式3为启动分布式部署下的etcd代理（Sentinel），后续的添加、搜索、删除文档等都通过代理操作
 	// 在分布式部署时，需要先通过模式2启动多个索引服务节点，然后再通过模式3启动etcd代理和web server
 }
-
-//go run ./demo/main
 
 func init() {
 	// 配置文件校验
@@ -81,7 +89,7 @@ func init() {
 		port, _ = strconv.Atoi(fmt.Sprintf("%v", v))
 	}
 
-	if v, ok := serverConfig["rebuild_index"]; !ok {
+	if v, ok := serverConfig["rebuild-index"]; !ok {
 		panic("rebuildIndex not found in ConfigMap!")
 	} else {
 		switch v := v.(type) {
@@ -101,7 +109,7 @@ func init() {
 	}
 
 	if mode == 2 {
-		if v, ok := distributedConfig["total_workers"]; !ok {
+		if v, ok := distributedConfig["total-workers"]; !ok {
 			panic("totalWorkers not found in ConfigMap!")
 		} else {
 			totalWorkers, _ = strconv.Atoi(fmt.Sprintf("%v", v))
@@ -110,7 +118,7 @@ func init() {
 			}
 		}
 
-		if v, ok := distributedConfig["worker_index"]; !ok {
+		if v, ok := distributedConfig["woker-index"]; !ok {
 			panic("workerIndex not found in ConfigMap!")
 		} else {
 			workerIndex, _ = strconv.Atoi(fmt.Sprintf("%v", v))
@@ -119,7 +127,7 @@ func init() {
 			}
 		}
 
-		if v, ok := distributedConfig["heart_rate"]; ok {
+		if v, ok := distributedConfig["heart-rate"]; ok {
 			heartRate, _ = strconv.Atoi(fmt.Sprintf("%v", v))
 		}
 	}
@@ -130,20 +138,20 @@ func init() {
 		panic("index configuration not found!")
 	}
 
-	if v, ok := indexConfig["csv_file"]; !ok {
+	if v, ok := indexConfig["csv-file"]; !ok {
 		panic("csvFilePath not found in ConfigMap!")
 	} else {
 		csvFilePath = util.RootPath + strings.Replace(fmt.Sprintf("%v", v), "\"", "", -1)
 		util.Log.Printf("csvFilePath: %s", csvFilePath)
 	}
 
-	if v, ok := indexConfig["db_path"]; !ok {
+	if v, ok := indexConfig["db-path"]; !ok {
 		panic("dbPath not found in ConfigMap!")
 	} else {
 		dbPath = util.RootPath + strings.Replace(fmt.Sprintf("%v", v), "\"", "", -1)
 	}
 
-	if v, ok := indexConfig["db_type"]; !ok {
+	if v, ok := indexConfig["db-type"]; !ok {
 		panic("dbType not found in ConfigMap!")
 	} else {
 		switch fmt.Sprintf("%v", v) {
@@ -156,7 +164,7 @@ func init() {
 		}
 	}
 
-	if v, ok := indexConfig["document_estimate_num"]; !ok {
+	if v, ok := indexConfig["document-estimate-num"]; !ok {
 		panic("documentEstimateNum not found in ConfigMap!")
 	} else {
 		documentEstimateNum, _ = strconv.Atoi(fmt.Sprintf("%v", v))

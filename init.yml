@@ -3,20 +3,20 @@ mode: 1
 
 server:
   # server启动时是否需要重建索引
-  rebuild_index: true
-  port: 7887
+  rebuild-index: false
+  port: 7884
 
 distributed:
-  total_workers: 2
-  worker_index: 0
-  index_service: "service-one"
-  heart_rate: 3
+  total-workers: 2
+  woker-index: 0
+  index-service: "service-one"
+  heart-rate: 3
 
 index:
-  db_type: "badger"
-  db_path: "data/"
-  document_estimate_num: 50000
-  csv_file: "bilibili_video.csv"
+  db-type: "badger"
+  db-path: "data/"
+  document-estimate-num: 50000
+  csv-file: "bilibili_video.csv"
 
 etcd:
   servers:

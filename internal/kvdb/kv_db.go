@@ -34,6 +34,7 @@ func GetKeyValueDB(dbType int, path string) (IKeyValueDB, error) {
 	paths := strings.Split(path, "/")
 	parentPath := strings.Join(paths[:len(paths)-1], "/") //获取父目录
 
+	// 打开或创建正排索引数据存放的目录
 	info, err := os.Stat(parentPath)
 	if os.IsNotExist(err) {
 		if err := os.MkdirAll(parentPath, os.ModePerm); err != nil {

@@ -166,6 +166,7 @@ func (idx SkipListReverseIndex) search(tq *types.TermQuery, onFlag, offFlag uint
 	if tq.Keyword != nil {
 		keyword := tq.Keyword.ToString()
 		if value, exists := idx.table.Get(keyword); exists {
+			// 找到关键词对应的跳表进行遍历
 			result := skiplist.New(skiplist.Uint64)
 			list := value.(*skiplist.SkipList)
 			for node := list.Front(); node != nil; node = node.Next() {
