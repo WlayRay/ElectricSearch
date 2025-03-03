@@ -12,25 +12,21 @@ import (
 	"github.com/WlayRay/ElectricSearch/util"
 )
 
-var indexService string
+var (
+	serviceRootPath string
+	indexGroup      string
+	distributedMap  map[string]any
+)
 
 func init() {
-	var (
-		ok   bool
-		mode int
-	)
-	mode = util.ConfigMap["mode"].(int)
-	if mode < 2 || mode > 3 {
-		indexService = "standalone"
-		return
-	}
-	distributedConfig, ok := util.ConfigMap["distributed"].(map[string]any)
-	if !ok {
-		panic("distributed configuration not found!")
-	}
-
-	if indexService, ok = distributedConfig["index-service"].(string); !ok {
-		panic("indexService not found in config")
+	// 构建当前woker的etcd key name
+	var ok bool
+	distributedMap, ok = util.ConfigMap["distributed"].(map[string]any)
+	if ok {
+		serviceRootPath = "/electric-search/" + distributedMap["index-name"].(string) // etcd key的前缀
+		indexGroup = fmt.Sprintf("Group-%d", distributedMap["group-index"].(int))
+	} else {
+		panic("distributed configuration not found or error!")
 	}
 }
 
@@ -41,7 +37,7 @@ type IndexServiceWorker struct {
 	selfAddr string
 }
 
-func (service *IndexServiceWorker) Init(workerIndex int) error {
+func (service *IndexServiceWorker) Init(groupIndex int) error {
 	service.Indexer = new(Indexer)
 
 	var docNumEstimate, dbType int
@@ -78,8 +74,15 @@ func (service *IndexServiceWorker) Init(workerIndex int) error {
 		} else {
 			dbType = kvdb.BOLT
 		}
+
+		dbPath += "_" + strconv.Itoa(groupIndex) //
+		if ip, err := util.GetLocalIP(); err == nil {
+			dbPath += "/" + ip
+			if port, ok := util.ConfigMap["server"].(map[string]any)["port"].(int); ok {
+				dbPath += strconv.Itoa(port)
+			}
+		}
 		util.Log.Println("db path:", dbPath)
-		dbPath += "_" + strconv.Itoa(workerIndex)
 	}
 	return service.Indexer.Init(docNumEstimate, dbType, dbPath)
 }
@@ -97,14 +100,14 @@ func (service *IndexServiceWorker) Register(etcdEndpoint []string, servicePort, 
 		selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
 		service.selfAddr = fmt.Sprintf("%s:%d", selfLocalIp, servicePort)
 		hub := GetServiceHub(etcdEndpoint, int64(heartRate))
-		leaseId, err := hub.Register(indexService, service.selfAddr, 0)
+		leaseId, err := hub.Register(indexGroup, service.selfAddr, 0)
 		if err != nil {
 			panic(err)
 		}
 		service.hub = hub
 		go func() {
 			for {
-				hub.Register(indexService, service.selfAddr, leaseId)
+				hub.Register(indexGroup, service.selfAddr, leaseId)
 				time.Sleep(time.Duration(heartRate)*time.Second - 100*time.Millisecond)
 			}
 		}()
@@ -137,7 +140,7 @@ func (service *IndexServiceWorker) Count(ctx context.Context, request *CountRequ
 
 func (service *IndexServiceWorker) Close() error {
 	if service.hub != nil {
-		service.hub.UnRegister(indexService, service.selfAddr)
+		service.hub.UnRegister(indexGroup, service.selfAddr)
 		service.hub.Close()
 	}
 	return service.Indexer.Close()

@@ -1,24 +1,27 @@
-# 启动哪类服务。1-standalone web server, 2-grpc index server, 3-distributed web server
-mode: 1
+# 请注意：不要改变每条配置的类型！
+
+# 启动哪类服务。1-单机部署（不依赖etcd）, 2-grpc server, 3-分布式部署（依赖etcd）
+# 使用模式3启动前需要用模式2启动多个grpc server
+mode: 2 
 
 server:
-  # server启动时是否需要重建索引
-  rebuild-index: false
-  port: 7884
+  rebuild-index: true  # server启动时是否需要重建索引
+  port: 12308  # 模式1、3为web server的端口，模式2为grpc server的端口
 
 distributed:
-  total-workers: 2
-  woker-index: 0
-  index-service: "service-one"
-  heart-rate: 3
+  index-name: "video-index"  #索引名称
+  total-shard: 2  # 分布式模式下，索引被拆分的分片个数
+  group-index: 1  # 分布式模式下，当前group的编号（一个shard对应一个group）
+  heart-rate: 3  # 每台worker心跳检测间隔，单位秒
 
 index:
-  db-type: "badger"
-  db-path: "data/"
-  document-estimate-num: 50000
-  csv-file: "bilibili_video.csv"
+  db-type: "badger"  # 正排索引使用的存储引擎类型，支持badger、bolt
+  db-path: "data/"  # 正排索引数据的存储路径
+  document-estimate-num: 50000  # 预估存储的文档数量，用于预分配内存
+  csv-file: "bilibili_video.csv"  # 构建索引的csv文件路径
 
 etcd:
+  # etcd集群地址
   servers:
     - "127.0.0.1:2379"
     - "127.0.0.1:2380"

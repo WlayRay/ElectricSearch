@@ -16,7 +16,7 @@ import (
 	"github.com/gogo/protobuf/proto"
 )
 
-func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorkers, workerIndex int) {
+func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalShards, groupIndex int) {
 	file, err := os.Open(csvFile)
 	if err != nil {
 		log.Printf("open file %s failed, err: %v", csvFile, err)
@@ -43,7 +43,7 @@ func BuildIndexFromCSVFile(csvFile string, indexer service.IIndexer, totalWorker
 		}
 		docId := strings.TrimPrefix(record[0], "https://www.bilibili.com/video/")
 
-		if totalWorkers > 0 && int(farm.Hash32WithSeed([]byte(docId), 0))%totalWorkers != workerIndex {
+		if totalShards > 0 && int(farm.Hash32WithSeed([]byte(docId), 0))%totalShards != groupIndex {
 			continue
 		}
 

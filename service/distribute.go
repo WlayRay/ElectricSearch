@@ -54,7 +54,7 @@ func (sentinel *Sentinel) GetGrpcConn(endpoint string) *grpc.ClientConn {
 }
 
 func (sentinel *Sentinel) AddDoc(doc types.Document) (int, error) {
-	endpoint := sentinel.hub.GetServiceEndpoint(indexService)
+	endpoint := sentinel.hub.GetServiceEndpoint(indexGroup)
 	if len(endpoint) == 0 {
 		return 0, fmt.Errorf("there is no alive index worker")
 	}
@@ -75,7 +75,7 @@ func (sentinel *Sentinel) AddDoc(doc types.Document) (int, error) {
 }
 
 func (sentinel *Sentinel) DeleteDoc(docId string) int {
-	endpoints := sentinel.hub.GetServiceEndpoints(indexService)
+	endpoints := sentinel.hub.GetServiceEndpoints(indexGroup)
 	if len(endpoints) == 0 {
 		return 0
 	}
@@ -104,7 +104,7 @@ func (sentinel *Sentinel) DeleteDoc(docId string) int {
 }
 
 func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64, orFlags []uint64) []*types.Document {
-	endpoints := sentinel.hub.GetServiceEndpoints(indexService)
+	endpoints := sentinel.hub.GetServiceEndpoints(indexGroup)
 	if len(endpoints) == 0 {
 		return nil
 	}
@@ -150,7 +150,7 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 
 func (sentinel *Sentinel) Count() int {
 	var n uint32
-	endpoints := sentinel.hub.GetServiceEndpoints(indexService)
+	endpoints := sentinel.hub.GetServiceEndpoints(indexGroup)
 	if len(endpoints) == 0 {
 		return 0
 	}

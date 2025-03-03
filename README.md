@@ -15,7 +15,7 @@
 
 ### 正排索引
 
-支持badger和bolt两种数据库存储将document存储在磁盘。
+支持badger和bolt两种存储引擎将documents存储在磁盘。
 
 ### 分布式索引
 
@@ -62,7 +62,7 @@ message BiliBiliVideo {
 }
 ```
 
-初始化索引服务，在[demo/main/web_server.go](demo/main/web_server.go)和[demo/main/index_worker.go](demo/main/index_worker.go)这两个文件中
+初始化索引服务，在[demo/internal/main/web_server.go](demo/internal/main/web_server.go)和[demo/internal/main/index_worker.go](demo/internal/main/index_worker.go)这两个文件中
 
 ``` go
 // 单机部署
@@ -73,10 +73,10 @@ if err := standaloneIndexer.Init(documentEstimateNum, dbType, dbPath); err != ni
 
 // 分布式部署
 indexService = new(service.IndexServiceWorker)
-indexService.Init(workerIndex)
+indexService.Init(groupIndex)
 ```
 
-分布式部署还要在[demo/main/web_server.go](demo/main/web_server.go)中创建代理
+分布式部署还要在[demo/internal/main/web_server.go](demo/internal/main/web_server.go)中创建代理
 
 ``` go
 handler.Indexer = service.NewSentinel(etcdEndpoints)

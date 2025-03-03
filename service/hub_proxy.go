@@ -54,7 +54,7 @@ func (proxy *ServiceHubProxy) watchEndpointsOfService(service string) {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
-	prefix := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/"
+	prefix := strings.TrimRight(serviceRootPath, "/") + "/" + service + "/"
 	watchChan := proxy.client.Watch(timeoutCtx, prefix, etcdv3.WithPrefix())
 	util.Log.Printf("watch service: %s", service)
 

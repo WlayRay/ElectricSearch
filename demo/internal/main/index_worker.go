@@ -24,10 +24,10 @@ func GrpcIndexerInit() {
 
 	server := grpc.NewServer()
 	indexService = new(service.IndexServiceWorker)
-	indexService.Init(workerIndex)
+	indexService.Init(groupIndex)
 	if rebuildIndex {
-		util.Log.Printf("total workers = %d, worker index = %d", totalWorkers, workerIndex)
-		infrastructure.BuildIndexFromCSVFile(csvFilePath, indexService.Indexer, totalWorkers, workerIndex)
+		util.Log.Printf("total workers = %d, worker index = %d", totalShards, groupIndex)
+		infrastructure.BuildIndexFromCSVFile(csvFilePath, indexService.Indexer, totalShards, groupIndex)
 	} else {
 		indexService.Indexer.LoadFromIndexFile() //直接从正排索引中加载
 	}

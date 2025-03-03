@@ -17,8 +17,8 @@ var (
 	dbType              int
 	dbPath              string
 	rebuildIndex        bool
-	totalWorkers        int
-	workerIndex         int
+	totalShards         int
+	groupIndex          int
 	csvFilePath         string
 	port                int
 	etcdEndpoints       []string
@@ -109,21 +109,21 @@ func init() {
 	}
 
 	if mode == 2 {
-		if v, ok := distributedConfig["total-workers"]; !ok {
-			panic("totalWorkers not found in ConfigMap!")
+		if v, ok := distributedConfig["total-shard"]; !ok {
+			panic("totalShards not found in ConfigMap!")
 		} else {
-			totalWorkers, _ = strconv.Atoi(fmt.Sprintf("%v", v))
-			if totalWorkers < 1 {
-				panic("totalWorkers invalid!")
+			totalShards, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+			if totalShards < 1 {
+				panic("totalShards invalid!")
 			}
 		}
 
-		if v, ok := distributedConfig["woker-index"]; !ok {
-			panic("workerIndex not found in ConfigMap!")
+		if v, ok := distributedConfig["group-index"]; !ok {
+			panic("groupIndex not found in ConfigMap!")
 		} else {
-			workerIndex, _ = strconv.Atoi(fmt.Sprintf("%v", v))
-			if workerIndex < 0 || workerIndex >= totalWorkers {
-				panic("workerIndex invalid!")
+			groupIndex, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+			if groupIndex < 0 || groupIndex >= totalShards {
+				panic("groupIndex invalid!")
 			}
 		}
 

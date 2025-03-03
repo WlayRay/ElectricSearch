@@ -12,10 +12,6 @@ import (
 	etcdv3 "go.etcd.io/etcd/client/v3"
 )
 
-const (
-	SERVICE_ROOT_PATH = "/electric-search/video-index" // etcd key的前缀
-)
-
 // 服务注册中心
 type ServiceHub struct {
 	client       *etcdv3.Client
@@ -50,7 +46,7 @@ func GetServiceHub(etcdEndpoints []string, heartRate int64) *ServiceHub {
 	return serviceHub
 }
 
-func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) {
+func (hub *ServiceHub) Register(woker, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
@@ -60,10 +56,10 @@ func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID
 			util.Log.Printf("create lease failed: %v", err)
 			return 0, err
 		} else {
-			keys := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/" + endpoint
+			keys := strings.TrimRight(serviceRootPath, "/") + "/" + woker + "/" + endpoint
 			// 服务注册(向ETCD中写入一个key)
 			if _, err := hub.client.Put(timeoutCtx, keys, "", etcdv3.WithLease(lease.ID)); err != nil {
-				util.Log.Printf("register service %s endpoint %s failed: %v", service, endpoint, err)
+				util.Log.Printf("register service %s endpoint %s failed: %v", woker, endpoint, err)
 				return leaseID, err
 			} else {
 				return leaseID, nil
@@ -72,7 +68,7 @@ func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID
 	} else {
 		// 续租
 		if _, err := hub.client.KeepAliveOnce(timeoutCtx, leaseID); !errors.Is(err, rpctypes.ErrLeaseNotFound) {
-			return hub.Register(service, endpoint, leaseID)
+			return hub.Register(woker, endpoint, leaseID)
 		} else if err != nil {
 			util.Log.Printf("keep lease %d failed: %v", leaseID, err)
 			return 0, err
@@ -83,16 +79,16 @@ func (hub *ServiceHub) Register(service, endpoint string, leaseID etcdv3.LeaseID
 }
 
 // 注销服务
-func (hub *ServiceHub) UnRegister(service, endpoint string) error {
+func (hub *ServiceHub) UnRegister(woker, endpoint string) error {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
-	key := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service + "/" + endpoint
+	key := strings.TrimRight(serviceRootPath, "/") + "/" + woker + "/" + endpoint
 	if _, err := hub.client.Delete(timeoutCtx, key); err != nil {
-		util.Log.Printf("unregister service %s endpoint %s failed: %v", service, endpoint, err)
+		util.Log.Printf("unregister service %s endpoint %s failed: %v", woker, endpoint, err)
 		return err
 	} else {
-		util.Log.Printf("unregister service %s endpoint %s success", service, endpoint)
+		util.Log.Printf("unregister service %s endpoint %s success", woker, endpoint)
 		return nil
 	}
 }
@@ -102,7 +98,7 @@ func (hub *ServiceHub) GetServiceEndpoints(service string) []string {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
-	prefix := strings.TrimRight(SERVICE_ROOT_PATH, "/") + "/" + service
+	prefix := strings.TrimRight(serviceRootPath, "/") + "/" + service
 	if resp, err := hub.client.Get(timeoutCtx, prefix, etcdv3.WithPrefix()); err != nil {
 		util.Log.Printf("get service %s endpoints failed: %v", service, err)
 		return nil
