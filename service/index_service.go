@@ -118,11 +118,11 @@ func (service *IndexServiceWorker) Register(servicePort int) error {
 	if servicePort < 1024 {
 		return fmt.Errorf("invalid listen port %d, should more than 1024", servicePort)
 	}
-	/*selfLocalIp, err := util.GetLocalIP()
+	selfLocalIp, err := util.GetLocalIP()
 	if err != nil {
 		panic(err)
-	}*/
-	selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
+	}
+	// selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
 	service.selfAddr = fmt.Sprintf("%s:%d", selfLocalIp, servicePort)
 
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()

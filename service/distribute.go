@@ -125,12 +125,11 @@ func (sentinel *Sentinel) DeleteDoc(docId string) int {
 }
 
 func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64, orFlags []uint64) []*types.Document {
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
-	docs := make([]*types.Document, 0, 1000)
-	resultCh := make(chan *types.Document, 1000)
-	errCh := make(chan error, 1)
+	docs := make([]*types.Document, 0, 1500)
+	resultCh := make(chan *types.Document, 1500)
 
 	groupCount := sentinel.getGroupCount()
 	if groupCount == 0 {
@@ -138,6 +137,7 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 	}
 
 	var wg sync.WaitGroup
+	wg.Add(groupCount)
 	for i := 0; i < groupCount; i++ {
 		group := fmt.Sprintf("group-%d", i)
 		endpoints := sentinel.Hub.GetServiceEndpoints(group)
@@ -145,15 +145,12 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 			continue
 		}
 
-		wg.Add(len(endpoints))
-
-		// 通过负载均衡获取一个worker的endpoint
 		endpoint := sentinel.Hub.GetServiceEndpoint(group)
 		go func(endpoint string) {
 			defer wg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn == nil {
-				errCh <- fmt.Errorf("failed to get connection for endpoint %s", endpoint)
+				util.Log.Fatalf("failed to get connection for endpoint %s", endpoint)
 				return
 			}
 
@@ -166,10 +163,7 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 			})
 
 			if err != nil {
-				select {
-				case errCh <- fmt.Errorf("search from worker %s failed: %w", endpoint, err):
-				default:
-				}
+				util.Log.Fatalf("search from worker %s failed: %s", endpoint, err)
 				return
 			}
 
@@ -183,34 +177,26 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 		}(endpoint)
 	}
 
+	// 启动一个 goroutine 等待所有查询完成并关闭 resultCh
 	go func() {
 		wg.Wait()
 		close(resultCh)
 	}()
 
-	for {
-		select {
-		case doc, ok := <-resultCh:
-			if !ok {
-				return docs
-			}
-			docs = append(docs, doc)
-		case err := <-errCh:
-			util.Log.Printf("search error: %v", err)
-		case <-ctx.Done():
-			util.Log.Printf("search timeout")
-			return docs
-		}
+	// 收集结果，一旦所有查询完成立即返回
+	for doc := range resultCh {
+		docs = append(docs, doc)
 	}
+
+	return docs
 }
 
 func (sentinel *Sentinel) Count() int {
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
 	var n uint32
-	resultCh := make(chan uint32, 1000)
-	errCh := make(chan error, 1)
+	resultCh := make(chan uint32, 1500)
 
 	groupCount := sentinel.getGroupCount()
 	if groupCount == 0 {
@@ -218,6 +204,7 @@ func (sentinel *Sentinel) Count() int {
 	}
 
 	var wg sync.WaitGroup
+	wg.Add(groupCount)
 	for i := 0; i < groupCount; i++ {
 		group := fmt.Sprintf("group-%d", i)
 		endpoints := sentinel.Hub.GetServiceEndpoints(group)
@@ -225,24 +212,18 @@ func (sentinel *Sentinel) Count() int {
 			continue
 		}
 
-		wg.Add(len(endpoints))
 		endpoint := sentinel.Hub.GetServiceEndpoint(group)
 		go func(endpoint string) {
 			defer wg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn == nil {
-				errCh <- fmt.Errorf("failed to get connection for endpoint %s", endpoint)
-				return
+				util.Log.Fatalf("failed to get connection for endpoint %s", endpoint)
 			}
 
 			client := NewIndexServiceClient(conn)
 			result, err := client.Count(ctx, &CountRequest{})
 			if err != nil {
-				select {
-				case errCh <- fmt.Errorf("count from worker %s failed: %w", endpoint, err):
-				default:
-				}
-				return
+				util.Log.Fatalf("count from worker %s failed: %s", endpoint, err)
 			}
 
 			select {
@@ -253,25 +234,18 @@ func (sentinel *Sentinel) Count() int {
 		}(endpoint)
 	}
 
+	// 启动一个 goroutine 等待所有计数完成并关闭 resultCh
 	go func() {
 		wg.Wait()
 		close(resultCh)
 	}()
 
-	for {
-		select {
-		case count, ok := <-resultCh:
-			if !ok {
-				return int(n)
-			}
-			atomic.AddUint32(&n, count)
-		case err := <-errCh:
-			util.Log.Printf("count error: %v", err)
-		case <-ctx.Done():
-			util.Log.Printf("count timeout")
-			return int(n)
-		}
+	// 收集结果，一旦所有计数完成立即返回
+	for count := range resultCh {
+		atomic.AddUint32(&n, count)
 	}
+
+	return int(n)
 }
 
 func (sentinel *Sentinel) Close() (err error) {

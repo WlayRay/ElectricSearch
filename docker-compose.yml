@@ -1,7 +1,11 @@
 version: '3.8'
 
+networks:
+  electric-search:
+    driver: bridge
+
 services:
-  etcd:
+  registration-center:
     image: bitnami/etcd:latest
     environment:
       - ALLOW_NONE_AUTHENTICATION=yes
@@ -11,25 +15,32 @@ services:
       - "2380:2380"
     networks:
       - electric-search
-    command: etcd --name etcd-server
 
-  grpc1:
+  grpc-1:
     build:
       context: .
       dockerfile: Dockerfile
     environment:
-      MODE: "2"    
+      MODE: "2"
       INDEX_NAME: "video-index"
-      GROUP_INDEX: "0"  
-      PORT: "12305"     
+      GROUP_INDEX: "0"
+      PORT: "12305"
+      DOCKER_ENVIRONMENT: "true"
     ports:
-      - "12305:12305"     
+      - "12305:12305"
     networks:
       - electric-search
     depends_on:
-      - etcd
+      - registration-center
+    command: >
+      sh -c "
+      sed -i 's/127.0.0.1:2379/registration-center:2379/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2380/registration-center:2380/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2381/registration-center:2381/g' /app/init.yml &&
+      /app/main
+      "
 
-  grpc2:
+  grpc-2:
     build:
       context: .
       dockerfile: Dockerfile
@@ -38,13 +49,22 @@ services:
       INDEX_NAME: "video-index"
       GROUP_INDEX: "1"
       PORT: "12306"
+      DOCKER_ENVIRONMENT: "true"
+    ports:
       - "12306:12306"
     networks:
       - electric-search
     depends_on:
-      - etcd
+      - registration-center
+    command: >
+      sh -c "
+      sed -i 's/127.0.0.1:2379/registration-center:2379/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2380/registration-center:2380/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2381/registration-center:2381/g' /app/init.yml &&
+      /app/main
+      "
 
-  grpc3:
+  grpc-3:
     build:
       context: .
       dockerfile: Dockerfile
@@ -53,12 +73,20 @@ services:
       INDEX_NAME: "video-index"
       GROUP_INDEX: "1"
       PORT: "12307"
+      DOCKER_ENVIRONMENT: "true"
     ports:
       - "12307:12307"
     networks:
       - electric-search
     depends_on:
-      - etcd
+      - registration-center
+    command: >
+      sh -c "
+      sed -i 's/127.0.0.1:2379/registration-center:2379/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2380/registration-center:2380/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2381/registration-center:2381/g' /app/init.yml &&
+      /app/main
+      "
 
   web:
     build:
@@ -67,13 +95,20 @@ services:
     environment:
       MODE: "3"
       INDEX_NAME: "video-index"
+      DOCKER_ENVIRONMENT: "true"
     ports:
       - "9000:9000"
     networks:
       - electric-search
     depends_on:
-      - etcd
-
-networks:
-  electric-search:
-    driver: bridge
+      - registration-center
+      - grpc-1
+      - grpc-2
+      - grpc-3
+    command: >
+      sh -c "
+      sed -i 's/127.0.0.1:2379/registration-center:2379/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2380/registration-center:2380/g' /app/init.yml &&
+      sed -i 's/127.0.0.1:2381/registration-center:2381/g' /app/init.yml &&
+      /app/main
+      "

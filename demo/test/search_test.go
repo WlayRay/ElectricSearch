@@ -2,6 +2,7 @@ package test
 
 import (
 	"bytes"
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -10,20 +11,19 @@ import (
 	"time"
 
 	infrastructure "github.com/WlayRay/ElectricSearch/demo/infrastructure"
-	"github.com/bytedance/sonic"
 )
 
 type SearchRequest struct {
-	Author       string
-	Keywords     []string
-	Categories   []string
-	MinViewCount int
-	MaxViewCount int
+	Author       string   `json:"author"`
+	Keywords     []string `json:"keywords"`
+	Categories   []string `json:"categories"`
+	MinViewCount int      `json:"minViewCount"`
+	MaxViewCount int      `json:"maxViewCount"`
 }
 
 func TestSearch(t *testing.T) {
 	client := http.Client{
-		Timeout: 100 * time.Second,
+		Timeout: 10 * time.Second,
 	}
 
 	request := SearchRequest{
@@ -33,13 +33,13 @@ func TestSearch(t *testing.T) {
 		MaxViewCount: 300000,
 	}
 
-	bs, _ := sonic.Marshal(request)
+	bs, _ := json.Marshal(request)
 
 	req, err := http.NewRequest("POST", "http://0.0.0.0:9000/search", bytes.NewReader(bs))
 	if err != nil {
 		t.Fatal(err)
 	}
-	req.Header.Set("Content-Type", "application/sonic")
+	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Cache-Control", "no-cache")
 
 	resp, err := client.Do(req)
@@ -51,7 +51,7 @@ func TestSearch(t *testing.T) {
 	content, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode == 200 {
 		var videos []infrastructure.BiliBiliVideo
-		sonic.Unmarshal(content, &videos)
+		json.Unmarshal(content, &videos)
 		for _, video := range videos {
 			fmt.Printf("%s %d %s %s\n", video.Id, video.ViewCount, video.Title, strings.Join(video.Keywords, "|"))
 		}
@@ -63,7 +63,7 @@ func TestSearch(t *testing.T) {
 
 func TestSearchByAuthor(t *testing.T) {
 	client := http.Client{
-		Timeout: 30 * time.Second,
+		Timeout: 10 * time.Second,
 	}
 
 	request := SearchRequest{
@@ -73,13 +73,13 @@ func TestSearchByAuthor(t *testing.T) {
 		MaxViewCount: 300000,
 	}
 
-	bs, _ := sonic.Marshal(request)
+	bs, _ := json.Marshal(request)
 
 	req, err := http.NewRequest("POST", "http://0.0.:9000/up_search", bytes.NewReader(bs))
 	if err != nil {
 		t.Fatal(err)
 	}
-	req.Header.Set("Content-Type", "application/sonic")
+	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Cache-Control", "no-cache")
 	req.Header.Set("X-UserName", "七牛云")
 
@@ -92,7 +92,7 @@ func TestSearchByAuthor(t *testing.T) {
 	content, _ := io.ReadAll(resp.Body)
 	if resp.StatusCode == 200 {
 		var videos []infrastructure.BiliBiliVideo
-		sonic.Unmarshal(content, &videos)
+		json.Unmarshal(content, &videos)
 		for _, video := range videos {
 			fmt.Printf("%s %d %s %s\n", video.Id, video.ViewCount, video.Title, strings.Join(video.Keywords, "|"))
 		}

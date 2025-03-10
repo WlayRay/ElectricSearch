@@ -3,7 +3,6 @@ module github.com/WlayRay/ElectricSearch
 go 1.22.6
 
 require (
-	github.com/bytedance/sonic v1.11.6
 	github.com/dgraph-io/badger/v4 v4.3.0
 	github.com/dgryski/go-farm v0.0.0-20200201041132-a6ae2369ad13
 	github.com/gogo/protobuf v1.3.2
@@ -17,6 +16,7 @@ require (
 )
 
 require (
+	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect

@@ -122,6 +122,18 @@ func (Hub *ServiceHub) addIndexGroup() int {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
+	// 获取分布式锁（解决在docker compose启动多个容器时的并发问题）
+	lockKey := ServiceRootPath + indexName + "/lock"
+	lock, err := Hub.client.Txn(timeoutCtx).
+		If(etcdv3.Compare(etcdv3.CreateRevision(lockKey), "=", 0)).
+		Then(etcdv3.OpPut(lockKey, "locked", etcdv3.WithLease(etcdv3.NoLease))).
+		Commit()
+	if err != nil || !lock.Succeeded {
+		util.Log.Printf("failed to acquire lock: %v", err)
+		return 0
+	}
+	defer Hub.client.Delete(timeoutCtx, lockKey)
+
 	key := ServiceRootPath + indexName + "/total-shards"
 	if res, err := Hub.client.Get(timeoutCtx, key, etcdv3.WithPrefix()); err == nil {
 		if res == nil {
@@ -155,6 +167,18 @@ func (Hub *ServiceHub) subIndexGroup() {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
+	// 获取分布式锁
+	lockKey := ServiceRootPath + indexName + "/lock"
+	lock, err := Hub.client.Txn(timeoutCtx).
+		If(etcdv3.Compare(etcdv3.CreateRevision(lockKey), "=", 0)).
+		Then(etcdv3.OpPut(lockKey, "locked", etcdv3.WithLease(etcdv3.NoLease))).
+		Commit()
+	if err != nil || !lock.Succeeded {
+		util.Log.Printf("failed to acquire lock: %v", err)
+		return
+	}
+	defer Hub.client.Delete(timeoutCtx, lockKey)
+
 	key := ServiceRootPath + indexName + "/total-shards"
 	if res, err := Hub.client.Get(timeoutCtx, key, etcdv3.WithPrefix()); err == nil {
 		if res == nil {
@@ -178,25 +202,38 @@ func (Hub *ServiceHub) subIndexGroup() {
 		}
 		return
 	}
-	return
 }
 
 func (Hub *ServiceHub) CountIndexGroup() int {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
+	// 获取分布式锁
+	lockKey := ServiceRootPath + indexName + "/lock"
+	lock, err := Hub.client.Txn(timeoutCtx).
+		If(etcdv3.Compare(etcdv3.CreateRevision(lockKey), "=", 0)).
+		Then(etcdv3.OpPut(lockKey, "locked", etcdv3.WithLease(etcdv3.NoLease))).
+		Commit()
+	if err != nil || !lock.Succeeded {
+		util.Log.Printf("failed to acquire lock: %v", err)
+		return 0
+	}
+	defer Hub.client.Delete(timeoutCtx, lockKey)
+
 	key := ServiceRootPath + indexName + "/total-shards"
 	if res, err := Hub.client.Get(timeoutCtx, key, etcdv3.WithPrefix()); err == nil {
 		if res == nil {
 			return 0
 		}
-		value := res.Kvs[0].Value
-		count, err := strconv.Atoi(string(value))
-		if err != nil {
-			util.Log.Printf("failed to convert value to int: %v", err)
-			return 0
+		if len(res.Kvs) > 0 {
+			value := res.Kvs[0].Value
+			count, err := strconv.Atoi(string(value))
+			if err != nil {
+				util.Log.Printf("failed to convert value to int: %v", err)
+				return 0
+			}
+			return count
 		}
-		return count
 	}
 	return 0
 }

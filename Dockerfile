@@ -3,12 +3,13 @@ FROM golang:1.24-alpine AS builder
 
 WORKDIR /app
 
-ENV GOPROXY=https://proxy.golang.com.cn,https://goproxy.cn,direct
+ENV GOPROXY=https://goproxy.cn,direct
 
 COPY . .
 
 # 构建可执行文件（启用静态编译）
-RUN go clean -modcache && \
+RUN rm -rf ./go.sum && \
+    go clean -modcache && \
     go mod tidy && \
     CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /app/main ./demo/internal/main
 
@@ -27,7 +28,7 @@ COPY init.yml /app/init.yml
 COPY bilibili_video.csv /app/bilibili_video.csv
 
 # 暴露端口
-EXPOSE 7887
+EXPOSE 12305 12306 12307 9000
 
 # 启动命令
 CMD ["/app/main"]
