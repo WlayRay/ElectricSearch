@@ -34,8 +34,8 @@ func SearchAll(ctx *gin.Context) {
 		})
 		return
 	}
-	searchRequest.Keywords = getKeywords(searchRequest.Keywords)
 
+	searchRequest.Keywords = getKeywords(searchRequest.Keywords)
 	if len(searchRequest.Keywords) == 0 && len(searchRequest.Author) == 0 {
 		ctx.String(http.StatusBadRequest, "关键词和作者不能同时为空")
 		return
@@ -83,6 +83,5 @@ func SearchByAuthor(ctx *gin.Context) {
 
 	searcher := internal.NewUpVideoSearcher()
 	videos := searcher.Search(searchCtx)
-
 	ctx.JSON(http.StatusOK, videos)
 }

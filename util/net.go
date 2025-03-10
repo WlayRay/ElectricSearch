@@ -21,7 +21,7 @@ func GetLocalIP() (ipv4 string, err error) {
 	for _, addr = range addrs {
 		// 这个网络地址是IP地址: ipv4, ipv6
 		if ipNet, isIpNet = addr.(*net.IPNet); isIpNet {
-				// 取第一个非lo的网卡IP
+			// 取第一个非lo的网卡IP
 			if !ipNet.IP.IsLoopback() {
 				if ipNet.IP.IsPrivate() { // 取内网地址
 					// 跳过IPV6

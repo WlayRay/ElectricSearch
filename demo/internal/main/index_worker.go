@@ -1,17 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"github.com/WlayRay/ElectricSearch/demo/infrastructure"
+	"github.com/WlayRay/ElectricSearch/service"
+	"github.com/WlayRay/ElectricSearch/util"
+	"google.golang.org/grpc"
 	"net"
 	"os"
 	"os/signal"
 	"strconv"
 	"syscall"
-
-	"github.com/WlayRay/ElectricSearch/demo/infrastructure"
-	"github.com/WlayRay/ElectricSearch/service"
-	"github.com/WlayRay/ElectricSearch/util"
-	"google.golang.org/grpc"
 )
 
 var indexService *service.IndexServiceWorker
@@ -24,22 +22,26 @@ func GrpcIndexerInit() {
 
 	server := grpc.NewServer()
 	indexService = new(service.IndexServiceWorker)
-	indexService.Init(groupIndex)
+	if err := indexService.Init(etcdEndpoints, currentGroup, heartRate); err != nil {
+		panic(err)
+	}
+
+	service.RegisterIndexServiceServer(server, indexService)
+	if err := indexService.Register(port); err != nil {
+		_ = indexService.Close()
+		util.Log.Fatalf("failed to register: %v", err)
+	}
+
 	if rebuildIndex {
-		util.Log.Printf("total workers = %d, worker index = %d", totalShards, groupIndex)
-		infrastructure.BuildIndexFromCSVFile(csvFilePath, indexService.Indexer, totalShards, groupIndex)
+		infrastructure.BuildIndexFromCSVFile(csvFilePath, indexService.Indexer, indexService.Hub.CountIndexGroup(), currentGroup)
 	} else {
 		indexService.Indexer.LoadFromIndexFile() //直接从正排索引中加载
 	}
 
-	service.RegisterIndexServiceServer(server, indexService)
-	fmt.Printf("Start gprc server on port: %d\n", port)
-	indexService.Register(etcdEndpoints, port, heartRate)
-
 	err = server.Serve(lis)
 	if err != nil {
+		util.Log.Fatalf("failed to serve: %v", err)
 		indexService.Close()
-		fmt.Printf("Failed to start grpc server: %v\n", err)
 	}
 }
 
@@ -47,7 +49,7 @@ func GrpcIndexerTeardown() {
 	signalCh := make(chan os.Signal, 1)
 	signal.Notify(signalCh, syscall.SIGINT, syscall.SIGTERM)
 	<-signalCh
-	indexService.Close()
+	_ = indexService.Close()
 	os.Exit(0)
 }
 

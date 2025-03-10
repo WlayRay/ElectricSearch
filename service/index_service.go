@@ -3,19 +3,23 @@ package service
 import (
 	"context"
 	"fmt"
-	"strconv"
-	"strings"
-	"time"
-
 	"github.com/WlayRay/ElectricSearch/internal/kvdb"
 	"github.com/WlayRay/ElectricSearch/types"
 	"github.com/WlayRay/ElectricSearch/util"
+	etcdv3 "go.etcd.io/etcd/client/v3"
+	"strconv"
+	"strings"
+	"time"
+)
+
+const (
+	ServiceRootPath = "/electric-search/" // etcd key的前缀
 )
 
 var (
-	serviceRootPath string
-	indexGroup      string
-	distributedMap  map[string]any
+	indexName      string
+	currentGroup   string
+	distributedMap map[string]any
 )
 
 func init() {
@@ -23,21 +27,23 @@ func init() {
 	var ok bool
 	distributedMap, ok = util.ConfigMap["distributed"].(map[string]any)
 	if ok {
-		serviceRootPath = "/electric-search/" + distributedMap["index-name"].(string) // etcd key的前缀
-		indexGroup = fmt.Sprintf("Group-%d", distributedMap["group-index"].(int))
+		indexName = distributedMap["index-name"].(string)
+		currentGroup = fmt.Sprintf("group-%d", distributedMap["group-index"].(int))
 	} else {
 		panic("distributed configuration not found or error!")
 	}
 }
 
-// IndexServiceWorker是一个grpc服务，用于索引文档
+// IndexServiceWorker 是一个grpc服务，用于索引文档
 type IndexServiceWorker struct {
 	Indexer  *Indexer
-	hub      *ServiceHub
+	Hub      *ServiceHub
 	selfAddr string
 }
 
-func (service *IndexServiceWorker) Init(groupIndex int) error {
+func (service *IndexServiceWorker) Init(etcdEndpoints []string, currentGroup, heartRate int) error {
+	Hub := GetServiceHub(etcdEndpoints, int64(heartRate))
+	service.Hub = Hub
 	service.Indexer = new(Indexer)
 
 	var docNumEstimate, dbType int
@@ -75,7 +81,7 @@ func (service *IndexServiceWorker) Init(groupIndex int) error {
 			dbType = kvdb.BOLT
 		}
 
-		dbPath += "_" + strconv.Itoa(groupIndex) //
+		dbPath += "_" + strconv.Itoa(currentGroup)
 		if ip, err := util.GetLocalIP(); err == nil {
 			dbPath += "/" + ip
 			if port, ok := util.ConfigMap["server"].(map[string]any)["port"].(int); ok {
@@ -87,31 +93,41 @@ func (service *IndexServiceWorker) Init(groupIndex int) error {
 	return service.Indexer.Init(docNumEstimate, dbType, dbPath)
 }
 
-func (service *IndexServiceWorker) Register(etcdEndpoint []string, servicePort, heartRate int) error {
+func (service *IndexServiceWorker) Register(servicePort int) error {
 	// 向注册中心注册自己
-	if len(etcdEndpoint) > 0 {
-		if servicePort < 1024 {
-			return fmt.Errorf("invalid listen port %d, should more than 1024", servicePort)
-		}
-		/*selfLocalIp, err := util.GetLocalIP()
-		if err != nil {
-			panic(err)
-		}*/
-		selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
-		service.selfAddr = fmt.Sprintf("%s:%d", selfLocalIp, servicePort)
-		hub := GetServiceHub(etcdEndpoint, int64(heartRate))
-		leaseId, err := hub.Register(indexGroup, service.selfAddr, 0)
-		if err != nil {
-			panic(err)
-		}
-		service.hub = hub
-		go func() {
-			for {
-				hub.Register(indexGroup, service.selfAddr, leaseId)
-				time.Sleep(time.Duration(heartRate)*time.Second - 100*time.Millisecond)
-			}
-		}()
+	if servicePort < 1024 {
+		return fmt.Errorf("invalid listen port %d, should more than 1024", servicePort)
 	}
+	/*selfLocalIp, err := util.GetLocalIP()
+	if err != nil {
+		panic(err)
+	}*/
+	selfLocalIp := "127.0.0.1" // 仅在本机器模拟分布式部署用
+	service.selfAddr = fmt.Sprintf("%s:%d", selfLocalIp, servicePort)
+
+	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
+	defer cancel()
+
+	leaseId, err := service.Hub.Register(currentGroup, service.selfAddr, 0)
+	if err != nil {
+		return err
+	}
+
+	if res, err := service.Hub.client.Get(timeoutCtx, ServiceRootPath+indexName+"/"+currentGroup, etcdv3.WithPrefix()); err == nil {
+		if len(res.Kvs) == 1 { // 新group中的worker数量为1时才代表有新group加入集群
+			service.Hub.addIndexGroup()
+		}
+	} else {
+		util.Log.Printf("failed to get key %s: %v", ServiceRootPath+indexName+currentGroup, err)
+	}
+
+	go func() {
+		for {
+			service.Hub.Register(currentGroup, service.selfAddr, leaseId)
+			time.Sleep(time.Duration(service.Hub.heartRate)*time.Second - 100*time.Millisecond)
+		}
+	}()
+
 	return nil
 }
 
@@ -139,9 +155,20 @@ func (service *IndexServiceWorker) Count(ctx context.Context, request *CountRequ
 }
 
 func (service *IndexServiceWorker) Close() error {
-	if service.hub != nil {
-		service.hub.UnRegister(indexGroup, service.selfAddr)
-		service.hub.Close()
+	if service.Hub != nil {
+		if err := service.Hub.UnRegister(currentGroup, service.selfAddr); err == nil {
+			timeoutCtx, cancel := util.GetDefaultTimeoutContext()
+			defer cancel()
+
+			if res, err := service.Hub.client.Get(timeoutCtx, ServiceRootPath+indexName+"/"+currentGroup, etcdv3.WithPrefix()); err == nil {
+				if res != nil {
+					if len(res.Kvs) <= 0 {
+						service.Hub.subIndexGroup()
+					}
+				}
+			}
+			service.Hub.Close()
+		}
 	}
 	return service.Indexer.Close()
 }

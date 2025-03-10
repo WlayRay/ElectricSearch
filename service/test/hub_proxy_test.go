@@ -2,8 +2,6 @@ package servicetest
 
 import (
 	"fmt"
-	"time"
-
 	"github.com/WlayRay/ElectricSearch/service"
 
 	// "fmt"
@@ -15,26 +13,45 @@ func TestGetServiceEndpointByProxy(t *testing.T) {
 		qps         = 10
 		etcdServers = []string{"127.0.0.1:2379"}
 		Endpoints   = []string{"127.0.0.1:6080", "127.0.0.2:6081", "127.0.0.3:6082"}
-		serviceName = "TestService"
+		group       = "group-1"
 	)
 
-	proxy := service.GetServiceHubProxy(etcdServers, 10, qps)
+	proxy := service.GetServiceHubProxy(etcdServers, 30, qps)
 
+	_, _ = proxy.Register(group, Endpoints[0], 0)
+	_, _ = proxy.Register(group, Endpoints[1], 0)
+	_, _ = proxy.Register(group, Endpoints[2], 0)
+	defer func() {
+		if err := proxy.UnRegister(group, Endpoints[0]); err != nil {
+			fmt.Printf("unregister %s failed: %v\n", Endpoints[0], err)
+		}
+	}()
+	defer func() {
+		if err := proxy.UnRegister(group, Endpoints[1]); err != nil {
+			fmt.Printf("unregister %s failed: %v\n", Endpoints[1], err)
+		}
+	}()
+	defer func() {
+		if err := proxy.UnRegister(group, Endpoints[2]); err != nil {
+			fmt.Printf("unregister %s failed: %v\n", Endpoints[2], err)
+		}
+	}()
+
+	groupWorkers := proxy.GetServiceEndpoints(group)
 	for i := 0; i < 3; i++ {
-		proxy.Register(serviceName, Endpoints[i], 0)
-		defer proxy.UnRegister(serviceName, Endpoints[i])
-		_ = proxy.GetServiceEndpoints(serviceName)
+		oneWorker := proxy.GetServiceEndpoint(group)
+		fmt.Printf("%d endpoints: %v\n", len(groupWorkers), oneWorker)
 	}
 
-	time.Sleep(1 * time.Second)
-	for i := 0; i < qps+5; i++ { // 桶里只有10个令牌，后五次访问会失败
-		endpoints := proxy.GetServiceEndpoints(serviceName)
-		fmt.Printf("%d endpoints: %v\n", len(Endpoints), endpoints)
-	}
-
-	time.Sleep(1 * time.Second) // 暂停一秒使令牌容量恢复
-	for i := 0; i < qps+5; i++ {
-		endpoints := proxy.GetServiceEndpoints(serviceName)
-		fmt.Printf("%d endpoints: %v\n", len(Endpoints), endpoints)
-	}
+	//time.Sleep(1 * time.Second)
+	//for i := 0; i < qps+5; i++ { // 桶里只有10个令牌，后五次访问会失败
+	//	endpoints := proxy.GetServiceEndpoints(group)
+	//	fmt.Printf("%d endpoints: %v\n", len(Endpoints), endpoints)
+	//}
+	//
+	//time.Sleep(1 * time.Second) // 暂停一秒使令牌容量恢复
+	//for i := 0; i < qps+5; i++ {
+	//	endpoints := proxy.GetServiceEndpoints(group)
+	//	fmt.Printf("%d endpoints: %v\n", len(Endpoints), endpoints)
+	//}
 }

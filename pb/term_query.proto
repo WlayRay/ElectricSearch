@@ -4,7 +4,7 @@ package raybox.term_query;
 
 import "doc.proto";
 
-option go_package = "types";
+option go_package = "github.com/WlayRay/ElectricSearch/types";
 
 message TermQuery {
   raybox.data.Keyword Keyword = 1;
@@ -13,7 +13,8 @@ message TermQuery {
 }
 
 /*
-protoc -I=/mnt/c/Users/1213/Desktop/github.com/WlayRay/ElectricSearch/github.com/WlayRay/ElectricSearch/pb
+protoc
+-I=/mnt/c/Users/1213/Desktop/github.com/WlayRay/ElectricSearch/github.com/WlayRay/ElectricSearch/pb
 --gogofaster_out=./types --proto_path=./pb term_query.proto
 在windows上-I需使用绝对路径
 */

@@ -6,12 +6,11 @@ mode: 2
 
 server:
   rebuild-index: true  # server启动时是否需要重建索引
-  port: 12308  # 模式1、3为web server的端口，模式2为grpc server的端口
+  port: 12307  # 模式1、3为web server的端口，模式2为grpc server的端口
 
 distributed:
   index-name: "video-index"  #索引名称
-  total-shard: 2  # 分布式模式下，索引被拆分的分片个数
-  group-index: 1  # 分布式模式下，当前group的编号（一个shard对应一个group）
+  group-index: 2  # 分布式模式下，当前group的编号（从0开始）
   heart-rate: 3  # 每台worker心跳检测间隔，单位秒
 
 index:

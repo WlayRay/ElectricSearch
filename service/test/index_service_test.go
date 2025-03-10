@@ -28,7 +28,7 @@ func StartService() {
 
 	server := grpc.NewServer()
 	indexServiceWorker := new(service.IndexServiceWorker)
-	indexServiceWorker.Init(1)                     //不进行服务注册，client直连server
+	indexServiceWorker.Init(etcdServers, 1, 3)     //不进行服务注册，client直连server
 	indexServiceWorker.Indexer.LoadFromIndexFile() //从文件中加载索引数据
 	// 注册服务的具体实现
 	service.RegisterIndexServiceServer(server, indexServiceWorker)

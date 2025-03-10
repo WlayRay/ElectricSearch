@@ -14,7 +14,7 @@ func TestSkipList(t *testing.T) {
 	list.Set(18, 3)
 	list.Remove(12) //删除元素
 
-	if value, ok := list.GetValue(18); ok { 
+	if value, ok := list.GetValue(18); ok {
 		fmt.Printf("Key %d Value %d\n", 18, value)
 	}
 

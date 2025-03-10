@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package raybox.data;
 
-option go_package = "types";
+option go_package = "github.com/WlayRay/ElectricSearch/types";
 
 message Keyword {
   string Field = 1;

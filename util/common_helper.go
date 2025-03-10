@@ -30,3 +30,12 @@ func CombineUint32(a, b uint32) uint64 {
 func DisassembleUint64(x uint64) (uint32, uint32) {
 	return uint32(x >> 32), uint32(x)
 }
+
+func RemoveElement[T comparable](s []T, target T) []T {
+	for i, v := range s {
+		if v == target {
+			return append(s[:i], s[i+1:]...)
+		}
+	}
+	return s
+}

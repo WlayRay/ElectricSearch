@@ -12,11 +12,11 @@ import (
 )
 
 type IServiceHub interface {
-	Register(service, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) // 注册服务
-	UnRegister(service, endpoint string) error                                         // 注销服务
-	GetServiceEndpoints(service string) []string                                       // 服务发现
-	GetServiceEndpoint(service string) string                                          // 根据负载均衡获取一台服务的endpoint
-	Close()                                                                            // 关闭etcd连接
+	Register(group, endpoint string, leaseID etcdv3.LeaseID) (etcdv3.LeaseID, error) // 注册服务
+	UnRegister(group, endpoint string) error                                         // 注销服务
+	GetServiceEndpoints(group string) []string                                       // 服务发现
+	GetServiceEndpoint(group string) string                                          // 根据负载均衡获取一台服务的endpoint
+	Close()                                                                          // 关闭etcd连接
 }
 
 // 代理模式，对ServiceHub做一层代理，提供缓存和限流保护
@@ -46,17 +46,17 @@ func GetServiceHubProxy(etcdEndpoints []string, heartRate int64, qps int) *Servi
 	return proxy
 }
 
-func (proxy *ServiceHubProxy) watchEndpointsOfService(service string) {
-	if _, exists := proxy.watched.LoadOrStore(service, true); exists {
+func (proxy *ServiceHubProxy) watchEndpointsOfGroup(group string) {
+	if _, exists := proxy.watched.LoadOrStore(group, true); exists {
 		return
 	}
 
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
-	prefix := strings.TrimRight(serviceRootPath, "/") + "/" + service + "/"
+	prefix := strings.TrimRight(ServiceRootPath, "/") + indexName + "/" + group + "/"
 	watchChan := proxy.client.Watch(timeoutCtx, prefix, etcdv3.WithPrefix())
-	util.Log.Printf("watch service: %s", service)
+	util.Log.Printf("watch group: %s", group)
 
 	go func() {
 		for response := range watchChan {
@@ -64,12 +64,12 @@ func (proxy *ServiceHubProxy) watchEndpointsOfService(service string) {
 				util.Log.Printf("etcd event type: %s", event.Type)
 				path := strings.Split(string(event.Kv.Key), "/")
 				if len(path) > 2 {
-					service := path[len(path)-2]
-					endpoints := proxy.ServiceHub.GetServiceEndpoints(service)
+					group := path[len(path)-2]
+					endpoints := proxy.ServiceHub.GetServiceEndpoints(group)
 					if len(endpoints) > 0 {
-						proxy.endpointCache.Store(service, endpoints)
+						proxy.endpointCache.Store(group, endpoints)
 					} else {
-						proxy.endpointCache.Delete(service)
+						proxy.endpointCache.Delete(group)
 					}
 				}
 			}
@@ -77,17 +77,17 @@ func (proxy *ServiceHubProxy) watchEndpointsOfService(service string) {
 	}()
 }
 
-func (proxy *ServiceHubProxy) GetServiceEndpoints(service string) []string {
+func (proxy *ServiceHubProxy) GetServiceEndpoints(group string) []string {
 	if !proxy.limiter.Allow() {
 		return nil
 	}
-	proxy.watchEndpointsOfService(service)
-	if endpoints, exists := proxy.endpointCache.Load(service); exists {
+	proxy.watchEndpointsOfGroup(group)
+	if endpoints, exists := proxy.endpointCache.Load(group); exists {
 		return endpoints.([]string)
 	} else {
-		endpoints := proxy.ServiceHub.GetServiceEndpoints(service)
+		endpoints := proxy.ServiceHub.GetServiceEndpoints(group)
 		if len(endpoints) > 0 {
-			proxy.endpointCache.Store(service, endpoints)
+			proxy.endpointCache.Store(group, endpoints)
 		}
 		return endpoints
 	}

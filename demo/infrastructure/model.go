@@ -7,11 +7,11 @@ import (
 )
 
 type SearchRequest struct {
-	Author       string
-	Keywords     []string
-	Categories   []string
-	MinViewCount int
-	MaxViewCount int
+	Author       string   `json:"author"`
+	Keywords     []string `json:"keywords"`
+	Categories   []string `json:"categories"`
+	MinViewCount int      `json:"minViewCount"`
+	MaxViewCount int      `json:"maxViewCount"`
 }
 
 type VideoSearchContext struct {

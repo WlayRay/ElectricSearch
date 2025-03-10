@@ -17,8 +17,7 @@ var (
 	dbType              int
 	dbPath              string
 	rebuildIndex        bool
-	totalShards         int
-	groupIndex          int
+	currentGroup        int
 	csvFilePath         string
 	port                int
 	etcdEndpoints       []string
@@ -109,22 +108,10 @@ func init() {
 	}
 
 	if mode == 2 {
-		if v, ok := distributedConfig["total-shard"]; !ok {
-			panic("totalShards not found in ConfigMap!")
-		} else {
-			totalShards, _ = strconv.Atoi(fmt.Sprintf("%v", v))
-			if totalShards < 1 {
-				panic("totalShards invalid!")
-			}
-		}
-
 		if v, ok := distributedConfig["group-index"]; !ok {
-			panic("groupIndex not found in ConfigMap!")
+			panic("currentGroup not found in ConfigMap!")
 		} else {
-			groupIndex, _ = strconv.Atoi(fmt.Sprintf("%v", v))
-			if groupIndex < 0 || groupIndex >= totalShards {
-				panic("groupIndex invalid!")
-			}
+			currentGroup, _ = strconv.Atoi(fmt.Sprintf("%v", v))
 		}
 
 		if v, ok := distributedConfig["heart-rate"]; ok {

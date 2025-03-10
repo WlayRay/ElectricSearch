@@ -73,7 +73,7 @@ if err := standaloneIndexer.Init(documentEstimateNum, dbType, dbPath); err != ni
 
 // 分布式部署
 indexService = new(service.IndexServiceWorker)
-indexService.Init(groupIndex)
+indexService.Init(currentGroup)
 ```
 
 分布式部署还要在[demo/internal/main/web_server.go](demo/internal/main/web_server.go)中创建代理

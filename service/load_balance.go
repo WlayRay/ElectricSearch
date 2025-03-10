@@ -10,15 +10,15 @@ type LoadBalancer interface {
 }
 
 type RoundRobin struct {
-	acc int64
+	acc uint64
 }
 
 func (rr *RoundRobin) Take(endPoints []string) string {
 	if len(endPoints) == 0 {
 		return ""
 	}
-	rr.acc = atomic.AddInt64(&rr.acc, 1) % int64(len(endPoints))
-	return endPoints[rr.acc]
+	atomic.AddUint64(&rr.acc, 1)
+	return endPoints[rr.acc%uint64(len(endPoints))]
 }
 
 type RandomSelect struct{}

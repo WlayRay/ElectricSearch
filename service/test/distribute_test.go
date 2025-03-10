@@ -30,11 +30,11 @@ func StartWorkers() {
 
 		server := grpc.NewServer()
 		indexServiceWorker := new(service.IndexServiceWorker)
-		indexServiceWorker.Init(i)
+		indexServiceWorker.Init(etcdServers, i, 3)
 		indexServiceWorker.Indexer.LoadFromIndexFile() //从文件中加载索引数据
 		// 注册服务的具体实现
 		service.RegisterIndexServiceServer(server, indexServiceWorker)
-		indexServiceWorker.Register(etcdServers, port, 20)
+		indexServiceWorker.Register(port)
 		go func(port int) {
 			// 启动服务
 			fmt.Printf("start grpc server on port %d\n", port)

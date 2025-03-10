@@ -106,7 +106,7 @@ func (indexer *Indexer) DeleteDoc(docId string) int {
 			}
 		}
 	} else {
-		util.Log.Printf("DeleteDoc error: %v", err)
+		//util.Log.Printf("DeleteDoc error: %v", err)
 	}
 	// 从正排索引上删除
 	indexer.forwardIndex.Delete(forwardKey)
