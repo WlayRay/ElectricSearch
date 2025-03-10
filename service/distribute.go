@@ -3,13 +3,14 @@ package service
 import (
 	"context"
 	"fmt"
-	"github.com/WlayRay/ElectricSearch/etcd"
-	"github.com/dgryski/go-farm"
-	etcdv3 "go.etcd.io/etcd/client/v3"
 	"strconv"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/WlayRay/ElectricSearch/etcd"
+	"github.com/dgryski/go-farm"
+	etcdv3 "go.etcd.io/etcd/client/v3"
 
 	"github.com/WlayRay/ElectricSearch/types"
 	"github.com/WlayRay/ElectricSearch/util"
@@ -285,7 +286,11 @@ func (sentinel *Sentinel) Close() (err error) {
 }
 
 func (*Sentinel) getGroupCount() int {
-	etcdServers := util.ConfigMap["etcd"].(map[string]any)["servers"].([]string)
+	var etcdServers []string
+	for _, v := range util.ConfigMap["etcd"].(map[string]any)["servers"].([]any) {
+		etcdServers = append(etcdServers, v.(string))
+	}
+
 	etcdConn, err := etcd.GetEtcdClient(etcdServers)
 	if err != nil {
 		util.Log.Fatalf("get etcd client failed: %s", err)

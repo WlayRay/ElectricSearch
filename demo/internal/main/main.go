@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strconv"
 	"strings"
 
@@ -44,11 +45,10 @@ func startGin() {
 	engine.POST("/search", handler.SearchAll)
 	engine.POST("/up_search", handler.SearchByAuthor)
 
-	if err := engine.Run("0.0.0.0:" + strconv.Itoa(port)); err != nil {
+	if err := engine.Run("0.0.0.0:" + "9000"); err != nil {
 		util.Log.Println("Server failed to start:", err)
 		return
 	}
-	util.Log.Println("Server started succeed at port:", port)
 }
 
 func main() {
@@ -67,11 +67,21 @@ func main() {
 func init() {
 	// 配置文件校验
 	// 初始化部署模式
-	if v, ok := util.ConfigMap["mode"]; !ok {
-		panic("mode not found in ConfigMap!")
+	modeStr := os.Getenv("MODE")
+	if modeStr == "" {
+		// 如果环境变量为空，从 ConfigMap 中读取
+		if v, ok := util.ConfigMap["mode"]; !ok {
+			panic("mode not found in ConfigMap!")
+		} else {
+			mode, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+			if mode < 1 || mode > 3 {
+				panic("mode invalid!")
+			}
+		}
 	} else {
-		mode, _ = strconv.Atoi(fmt.Sprintf("%v", v))
-		if mode < 1 || mode > 3 {
+		var err error
+		mode, err = strconv.Atoi(modeStr)
+		if err != nil || mode < 1 || mode > 3 {
 			panic("mode invalid!")
 		}
 	}
@@ -82,10 +92,15 @@ func init() {
 		panic("server configuration not found!")
 	}
 
-	if v, ok := serverConfig["port"]; !ok {
-		panic("port not found in ConfigMap!")
+	portStr := os.Getenv("PORT")
+	if portStr == "" {
+		if v, ok := serverConfig["port"]; !ok {
+			panic("port not found in ConfigMap!")
+		} else {
+			port, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+		}
 	} else {
-		port, _ = strconv.Atoi(fmt.Sprintf("%v", v))
+		port, _ = strconv.Atoi(portStr)
 	}
 
 	if v, ok := serverConfig["rebuild-index"]; !ok {
@@ -125,6 +140,7 @@ func init() {
 		panic("index configuration not found!")
 	}
 
+	// 建立索引的CSV文件
 	if v, ok := indexConfig["csv-file"]; !ok {
 		panic("csvFilePath not found in ConfigMap!")
 	} else {
@@ -132,12 +148,14 @@ func init() {
 		util.Log.Printf("csvFilePath: %s", csvFilePath)
 	}
 
+	// 正排索引数据存放目录
 	if v, ok := indexConfig["db-path"]; !ok {
 		panic("dbPath not found in ConfigMap!")
 	} else {
 		dbPath = util.RootPath + strings.Replace(fmt.Sprintf("%v", v), "\"", "", -1)
 	}
 
+	// 正排索引的存储引擎
 	if v, ok := indexConfig["db-type"]; !ok {
 		panic("dbType not found in ConfigMap!")
 	} else {
@@ -151,6 +169,7 @@ func init() {
 		}
 	}
 
+	// 预估文档数量
 	if v, ok := indexConfig["document-estimate-num"]; !ok {
 		panic("documentEstimateNum not found in ConfigMap!")
 	} else {

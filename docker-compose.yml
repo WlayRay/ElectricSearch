@@ -13,12 +13,62 @@ services:
       - electric-search
     command: etcd --name etcd-server
 
+  grpc1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MODE: "2"    
+      INDEX_NAME: "video-index"
+      GROUP_INDEX: "0"  
+      PORT: "12305"     
+    ports:
+      - "12305:12305"     
+    networks:
+      - electric-search
+    depends_on:
+      - etcd
+
+  grpc2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MODE: "2"
+      INDEX_NAME: "video-index"
+      GROUP_INDEX: "1"
+      PORT: "12306"
+      - "12306:12306"
+    networks:
+      - electric-search
+    depends_on:
+      - etcd
+
+  grpc3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MODE: "2"
+      INDEX_NAME: "video-index"
+      GROUP_INDEX: "1"
+      PORT: "12307"
+    ports:
+      - "12307:12307"
+    networks:
+      - electric-search
+    depends_on:
+      - etcd
+
   web:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      MODE: "3"
+      INDEX_NAME: "video-index"
     ports:
-      - "7887:7887"
+      - "9000:9000"
     networks:
       - electric-search
     depends_on:

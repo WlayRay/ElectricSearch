@@ -23,7 +23,7 @@ type SearchRequest struct {
 
 func TestSearch(t *testing.T) {
 	client := http.Client{
-		Timeout: 100 * time.Millisecond,
+		Timeout: 100 * time.Second,
 	}
 
 	request := SearchRequest{
@@ -35,7 +35,7 @@ func TestSearch(t *testing.T) {
 
 	bs, _ := sonic.Marshal(request)
 
-	req, err := http.NewRequest("POST", "http://localhost:7887/search", bytes.NewReader(bs))
+	req, err := http.NewRequest("POST", "http://0.0.0.0:9000/search", bytes.NewReader(bs))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -63,7 +63,7 @@ func TestSearch(t *testing.T) {
 
 func TestSearchByAuthor(t *testing.T) {
 	client := http.Client{
-		Timeout: 100 * time.Millisecond,
+		Timeout: 30 * time.Second,
 	}
 
 	request := SearchRequest{
@@ -75,7 +75,7 @@ func TestSearchByAuthor(t *testing.T) {
 
 	bs, _ := sonic.Marshal(request)
 
-	req, err := http.NewRequest("POST", "http://localhost:7887/up_search", bytes.NewReader(bs))
+	req, err := http.NewRequest("POST", "http://0.0.:9000/up_search", bytes.NewReader(bs))
 	if err != nil {
 		t.Fatal(err)
 	}

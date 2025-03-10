@@ -2,15 +2,15 @@
 
 # 启动哪类服务。1-单机部署（不依赖etcd）, 2-grpc server, 3-分布式部署（依赖etcd）
 # 使用模式3启动前需要用模式2启动多个grpc server
-mode: 2 
+mode: 3
 
 server:
   rebuild-index: true  # server启动时是否需要重建索引
-  port: 12307  # 模式1、3为web server的端口，模式2为grpc server的端口
+  port: 12306  # grpc server的端口
 
 distributed:
   index-name: "video-index"  #索引名称
-  group-index: 2  # 分布式模式下，当前group的编号（从0开始）
+  group-index: 1  # 分布式模式下，当前group的编号（从0开始）
   heart-rate: 3  # 每台worker心跳检测间隔，单位秒
 
 index:

@@ -3,13 +3,15 @@ package service
 import (
 	"context"
 	"fmt"
+	"os"
+	"strconv"
+	"strings"
+	"time"
+
 	"github.com/WlayRay/ElectricSearch/internal/kvdb"
 	"github.com/WlayRay/ElectricSearch/types"
 	"github.com/WlayRay/ElectricSearch/util"
 	etcdv3 "go.etcd.io/etcd/client/v3"
-	"strconv"
-	"strings"
-	"time"
 )
 
 const (
@@ -23,15 +25,33 @@ var (
 )
 
 func init() {
-	// 构建当前woker的etcd key name
-	var ok bool
-	distributedMap, ok = util.ConfigMap["distributed"].(map[string]any)
-	if ok {
-		indexName = distributedMap["index-name"].(string)
-		currentGroup = fmt.Sprintf("group-%d", distributedMap["group-index"].(int))
-	} else {
-		panic("distributed configuration not found or error!")
+	// 尝试从环境变量中读取 index-name 和 group-index
+	indexName = os.Getenv("INDEX_NAME")
+	groupIndexStr := os.Getenv("GROUP_INDEX")
+
+	if indexName == "" || groupIndexStr == "" {
+		// 如果环境变量为空，从 ConfigMap 中读取
+		var ok bool
+		distributedMap, ok = util.ConfigMap["distributed"].(map[string]any)
+		if ok {
+			if indexName == "" {
+				indexName = distributedMap["index-name"].(string)
+			}
+			if groupIndexStr == "" {
+				groupIndex, _ := distributedMap["group-index"].(int)
+				groupIndexStr = strconv.Itoa(groupIndex)
+			}
+		} else {
+			panic("distributed configuration not found or error!")
+		}
 	}
+
+	groupIndex, err := strconv.Atoi(groupIndexStr)
+	if err != nil {
+		panic("group-index invalid!")
+	}
+
+	currentGroup = fmt.Sprintf("group-%d", groupIndex)
 }
 
 // IndexServiceWorker 是一个grpc服务，用于索引文档
