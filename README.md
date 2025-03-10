@@ -2,6 +2,11 @@
 
 纯go语言实现的搜索引擎索引框架，支持[单机](service/test/indexer_test.go)部署和[分布式](service/test/distribute_test.go)部署，分布式部署需要etcd作为服务注册中心，可用使用Docker部署etcd
 
+本地一键模拟分布式部署命令（需安装 Docker 和 docker-compose ）： ```docker compose up --build -d```
+本地单机部署：
+1. 首先需要将[init.yml](./init.yml)的 "mode" 配置改为1
+2. 然后运行```go run .\demo\internal\main\```
+
 ## 项目架构
 
 ### 倒排索引
