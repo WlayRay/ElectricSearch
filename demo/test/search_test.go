@@ -75,7 +75,7 @@ func TestSearchByAuthor(t *testing.T) {
 
 	bs, _ := json.Marshal(request)
 
-	req, err := http.NewRequest("POST", "http://0.0.:9000/up_search", bytes.NewReader(bs))
+	req, err := http.NewRequest("POST", "http://0.0.0.0:9000/up_search", bytes.NewReader(bs))
 	if err != nil {
 		t.Fatal(err)
 	}

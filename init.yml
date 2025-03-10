@@ -6,11 +6,11 @@ mode: 3
 
 server:
   rebuild-index: true  # server启动时是否需要重建索引
-  port: 12306  # grpc server的端口
+  port: 12308  # grpc server的端口
 
 distributed:
   index-name: "video-index"  #索引名称
-  group-index: 1  # 分布式模式下，当前group的编号（从0开始）
+  group-index: 0  # 分布式模式下，当前group的编号（从0开始）
   heart-rate: 3  # 每台worker心跳检测间隔，单位秒
 
 index:

@@ -25,7 +25,6 @@ services:
       INDEX_NAME: "video-index"
       GROUP_INDEX: "0"
       PORT: "12305"
-      DOCKER_ENVIRONMENT: "true"
     ports:
       - "12305:12305"
     networks:
@@ -49,7 +48,6 @@ services:
       INDEX_NAME: "video-index"
       GROUP_INDEX: "1"
       PORT: "12306"
-      DOCKER_ENVIRONMENT: "true"
     ports:
       - "12306:12306"
     networks:
@@ -73,7 +71,6 @@ services:
       INDEX_NAME: "video-index"
       GROUP_INDEX: "1"
       PORT: "12307"
-      DOCKER_ENVIRONMENT: "true"
     ports:
       - "12307:12307"
     networks:
@@ -95,7 +92,6 @@ services:
     environment:
       MODE: "3"
       INDEX_NAME: "video-index"
-      DOCKER_ENVIRONMENT: "true"
     ports:
       - "9000:9000"
     networks:

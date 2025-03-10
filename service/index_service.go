@@ -118,6 +118,7 @@ func (service *IndexServiceWorker) Register(servicePort int) error {
 	if servicePort < 1024 {
 		return fmt.Errorf("invalid listen port %d, should more than 1024", servicePort)
 	}
+	
 	selfLocalIp, err := util.GetLocalIP()
 	if err != nil {
 		panic(err)
@@ -182,7 +183,7 @@ func (service *IndexServiceWorker) Close() error {
 
 			if res, err := service.Hub.client.Get(timeoutCtx, ServiceRootPath+indexName+"/"+currentGroup, etcdv3.WithPrefix()); err == nil {
 				if res != nil {
-					if len(res.Kvs) <= 0 {
+					if res.Count == 0 {
 						service.Hub.subIndexGroup()
 					}
 				}

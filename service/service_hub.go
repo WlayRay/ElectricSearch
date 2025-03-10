@@ -97,7 +97,7 @@ func (Hub *ServiceHub) GetServiceEndpoints(group string) []string {
 	if resp, err := Hub.client.Get(timeoutCtx, prefix, etcdv3.WithPrefix()); err != nil {
 		util.Log.Printf("get group %s endpoints failed: %v", group, err)
 		return nil
-	} else {
+	} else if resp.Count != 0 {
 		endpoints := make([]string, 0, len(resp.Kvs))
 		for _, kv := range resp.Kvs {
 			path := strings.Split(string(kv.Key), "/") // 只需要key，不需要value
@@ -105,6 +105,8 @@ func (Hub *ServiceHub) GetServiceEndpoints(group string) []string {
 		}
 		util.Log.Printf("now the %s group has endpoints: %v", group, endpoints)
 		return endpoints
+	} else {
+		return nil
 	}
 }
 
@@ -225,7 +227,7 @@ func (Hub *ServiceHub) CountIndexGroup() int {
 		if res == nil {
 			return 0
 		}
-		if len(res.Kvs) > 0 {
+		if res.Count > 0 {
 			value := res.Kvs[0].Value
 			count, err := strconv.Atoi(string(value))
 			if err != nil {

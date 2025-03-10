@@ -1,6 +1,7 @@
 package service
 
 import (
+	"context"
 	"strings"
 	"sync"
 	"time"
@@ -51,26 +52,26 @@ func (proxy *ServiceHubProxy) watchEndpointsOfGroup(group string) {
 		return
 	}
 
-	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
-	defer cancel()
-
 	prefix := strings.TrimRight(ServiceRootPath, "/") + indexName + "/" + group + "/"
-	watchChan := proxy.client.Watch(timeoutCtx, prefix, etcdv3.WithPrefix())
+	watchChan := proxy.client.Watch(context.Background(), prefix, etcdv3.WithPrefix())
 	util.Log.Printf("watch group: %s", group)
 
 	go func() {
 		for response := range watchChan {
 			for _, event := range response.Events {
 				util.Log.Printf("etcd event type: %s", event.Type)
+
 				path := strings.Split(string(event.Kv.Key), "/")
-				if len(path) > 2 {
-					group := path[len(path)-2]
-					endpoints := proxy.ServiceHub.GetServiceEndpoints(group)
-					if len(endpoints) > 0 {
-						proxy.endpointCache.Store(group, endpoints)
-					} else {
-						proxy.endpointCache.Delete(group)
-					}
+				if len(path) < 3 {
+					util.Log.Printf("invalid key format: %s", event.Kv.Key)
+					continue
+				}
+				group := path[len(path)-2]
+				endpoints := proxy.ServiceHub.GetServiceEndpoints(group)
+				if len(endpoints) > 0 {
+					proxy.endpointCache.Store(group, endpoints)
+				} else {
+					proxy.endpointCache.Delete(group)
 				}
 			}
 		}
@@ -79,8 +80,9 @@ func (proxy *ServiceHubProxy) watchEndpointsOfGroup(group string) {
 
 func (proxy *ServiceHubProxy) GetServiceEndpoints(group string) []string {
 	if !proxy.limiter.Allow() {
-		return nil
+		util.Log.Printf("rate limit exceeded for group: %s", group)
 	}
+
 	proxy.watchEndpointsOfGroup(group)
 	if endpoints, exists := proxy.endpointCache.Load(group); exists {
 		return endpoints.([]string)

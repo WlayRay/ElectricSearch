@@ -65,14 +65,14 @@ func (sentinel *Sentinel) AddDoc(doc types.Document) (int, error) {
 	groupIndex := sentinel.getGroupIndex(doc.Id)
 	endpoints := sentinel.Hub.GetServiceEndpoints(fmt.Sprintf("group-%d", groupIndex))
 	if len(endpoints) == 0 {
-		return 0, fmt.Errorf("there is no gourp can be used")
+		return 0, fmt.Errorf("there is no group can be used")
 	}
 
 	var total uint32
 	var wg sync.WaitGroup
 	wg.Add(len(endpoints))
 	for _, endpoint := range endpoints {
-		go func(endpoint string) {
+		go func(string) {
 			defer wg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn != nil {
@@ -100,11 +100,11 @@ func (sentinel *Sentinel) DeleteDoc(docId string) int {
 		return 0
 	}
 
-	var n uint32
+	var total uint32
 	wg := sync.WaitGroup{}
 	wg.Add(len(endpoints))
 	for _, endpoint := range endpoints {
-		go func(endpoint string) {
+		go func(string) {
 			defer wg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn != nil {
@@ -113,15 +113,15 @@ func (sentinel *Sentinel) DeleteDoc(docId string) int {
 				if err != nil {
 					util.Log.Printf("delete doc %s from worker %s failed: %s", docId, endpoint, err)
 				} else if affected.Count > 0 {
-					atomic.AddUint32(&n, affected.Count)
-					util.Log.Printf("delete doc %s from worker %s, affected %d", docId, endpoint, affected.Count)
+					atomic.AddUint32(&total, affected.Count)
 				}
 			}
 		}(endpoint)
 	}
 
 	wg.Wait()
-	return int(n)
+	util.Log.Printf("add delete %s to workers %v, affected %d", docId, endpoints, total)
+	return int(total)
 }
 
 func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64, orFlags []uint64) []*types.Document {
@@ -129,25 +129,32 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 	defer cancel()
 
 	docs := make([]*types.Document, 0, 1500)
-	resultCh := make(chan *types.Document, 1500)
-
 	groupCount := sentinel.getGroupCount()
 	if groupCount == 0 {
 		return nil
 	}
 
-	var wg sync.WaitGroup
-	wg.Add(groupCount)
+	// 使用多个通道来收集结果
+	resultChs := make([]chan *types.Document, groupCount)
+	for i := range resultChs {
+		resultChs[i] = make(chan *types.Document, 300)
+	}
+
+	var producerWg sync.WaitGroup
+	producerWg.Add(groupCount)
+
+	// 生产者：向通道发送数据
 	for i := 0; i < groupCount; i++ {
 		group := fmt.Sprintf("group-%d", i)
 		endpoints := sentinel.Hub.GetServiceEndpoints(group)
 		if len(endpoints) == 0 {
+			producerWg.Done() // 跳过空组
 			continue
 		}
 
 		endpoint := sentinel.Hub.GetServiceEndpoint(group)
-		go func(endpoint string) {
-			defer wg.Done()
+		go func(endpoint string, resultCh chan *types.Document) {
+			defer producerWg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn == nil {
 				util.Log.Fatalf("failed to get connection for endpoint %s", endpoint)
@@ -174,19 +181,38 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 					return
 				}
 			}
-		}(endpoint)
+		}(endpoint, resultChs[i])
 	}
 
-	// 启动一个 goroutine 等待所有查询完成并关闭 resultCh
+	// 消费者协程池
+	consumerCount := 4 // 消费者协程数量
+	var consumerWg sync.WaitGroup
+	consumerWg.Add(consumerCount)
+	mu := sync.Mutex{} // 用于保护共享结果切片
+
+	for i := 0; i < consumerCount; i++ {
+		go func() {
+			defer consumerWg.Done()
+			for _, ch := range resultChs {
+				for doc := range ch {
+					mu.Lock()
+					docs = append(docs, doc)
+					mu.Unlock()
+				}
+			}
+		}()
+	}
+
+	// 等待所有生产者完成并关闭通道
 	go func() {
-		wg.Wait()
-		close(resultCh)
+		producerWg.Wait()
+		for _, ch := range resultChs {
+			close(ch)
+		}
 	}()
 
-	// 收集结果，一旦所有查询完成立即返回
-	for doc := range resultCh {
-		docs = append(docs, doc)
-	}
+	// 等待所有消费者完成
+	consumerWg.Wait()
 
 	return docs
 }
@@ -196,34 +222,43 @@ func (sentinel *Sentinel) Count() int {
 	defer cancel()
 
 	var n uint32
-	resultCh := make(chan uint32, 1500)
-
 	groupCount := sentinel.getGroupCount()
 	if groupCount == 0 {
 		return 0
 	}
 
-	var wg sync.WaitGroup
-	wg.Add(groupCount)
+	// 使用多个通道来收集结果
+	resultChs := make([]chan uint32, groupCount)
+	for i := range resultChs {
+		resultChs[i] = make(chan uint32, 300)
+	}
+
+	var producerWg sync.WaitGroup
+	producerWg.Add(groupCount)
+
+	// 生产者：向通道发送数据
 	for i := 0; i < groupCount; i++ {
 		group := fmt.Sprintf("group-%d", i)
 		endpoints := sentinel.Hub.GetServiceEndpoints(group)
 		if len(endpoints) == 0 {
+			producerWg.Done() // 跳过空组
 			continue
 		}
 
 		endpoint := sentinel.Hub.GetServiceEndpoint(group)
-		go func(endpoint string) {
-			defer wg.Done()
+		go func(endpoint string, resultCh chan uint32) {
+			defer producerWg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn == nil {
 				util.Log.Fatalf("failed to get connection for endpoint %s", endpoint)
+				return
 			}
 
 			client := NewIndexServiceClient(conn)
 			result, err := client.Count(ctx, &CountRequest{})
 			if err != nil {
 				util.Log.Fatalf("count from worker %s failed: %s", endpoint, err)
+				return
 			}
 
 			select {
@@ -231,19 +266,35 @@ func (sentinel *Sentinel) Count() int {
 			case <-ctx.Done():
 				return
 			}
-		}(endpoint)
+		}(endpoint, resultChs[i])
 	}
 
-	// 启动一个 goroutine 等待所有计数完成并关闭 resultCh
+	// 消费者协程池
+	consumerCount := 4 // 消费者协程数量
+	var consumerWg sync.WaitGroup
+	consumerWg.Add(consumerCount)
+
+	for i := 0; i < consumerCount; i++ {
+		go func() {
+			defer consumerWg.Done()
+			for _, ch := range resultChs {
+				for count := range ch {
+					atomic.AddUint32(&n, count)
+				}
+			}
+		}()
+	}
+
+	// 等待所有生产者完成并关闭通道
 	go func() {
-		wg.Wait()
-		close(resultCh)
+		producerWg.Wait()
+		for _, ch := range resultChs {
+			close(ch)
+		}
 	}()
 
-	// 收集结果，一旦所有计数完成立即返回
-	for count := range resultCh {
-		atomic.AddUint32(&n, count)
-	}
+	// 等待所有消费者完成
+	consumerWg.Wait()
 
 	return int(n)
 }
@@ -276,8 +327,10 @@ func (*Sentinel) getGroupCount() int {
 	resp, getErr := etcdConn.Get(timeoutCtx, ServiceRootPath+indexName+"/total-shards", etcdv3.WithPrefix())
 	if getErr == nil {
 		if resp != nil {
-			totalGroups, _ := strconv.Atoi(string(resp.Kvs[0].Value))
-			return totalGroups
+			if resp.Count > 0 {
+				totalGroups, _ := strconv.Atoi(string(resp.Kvs[0].Value))
+				return totalGroups
+			}
 		}
 	}
 
