@@ -34,7 +34,7 @@ func WebServerTeardown() {
 	signalCh := make(chan os.Signal, 1)
 	signal.Notify(signalCh, syscall.SIGINT, syscall.SIGTERM)
 	<-signalCh
-	handler.Indexer.Close()
+	_ = handler.Indexer.Close()
 	os.Exit(0)
 }
 

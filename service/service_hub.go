@@ -117,7 +117,7 @@ func (Hub *ServiceHub) GetServiceEndpoint(group string) string {
 
 // 关闭etcd客户端连接
 func (Hub *ServiceHub) Close() {
-	Hub.client.Close()
+	_ = Hub.client.Close()
 }
 
 func (Hub *ServiceHub) addIndexGroup() int {
@@ -134,7 +134,9 @@ func (Hub *ServiceHub) addIndexGroup() int {
 		util.Log.Printf("failed to acquire lock: %v", err)
 		return 0
 	}
-	defer Hub.client.Delete(timeoutCtx, lockKey)
+	defer func() {
+		_, _ = Hub.client.Delete(timeoutCtx, lockKey)
+	}()
 
 	key := ServiceRootPath + indexName + "/total-shards"
 	if res, err := Hub.client.Get(timeoutCtx, key, etcdv3.WithPrefix()); err == nil {
@@ -179,7 +181,9 @@ func (Hub *ServiceHub) subIndexGroup() {
 		util.Log.Printf("failed to acquire lock: %v", err)
 		return
 	}
-	defer Hub.client.Delete(timeoutCtx, lockKey)
+	defer func() {
+		_, _ = Hub.client.Delete(timeoutCtx, lockKey)
+	}()
 
 	key := ServiceRootPath + indexName + "/total-shards"
 	if res, err := Hub.client.Get(timeoutCtx, key, etcdv3.WithPrefix()); err == nil {
@@ -220,7 +224,9 @@ func (Hub *ServiceHub) CountIndexGroup() int {
 		util.Log.Printf("failed to acquire lock: %v", err)
 		return 0
 	}
-	defer Hub.client.Delete(timeoutCtx, lockKey)
+	defer func() {
+		_, _ = Hub.client.Delete(timeoutCtx, lockKey)
+	}()
 
 	key := ServiceRootPath + indexName + "/total-shards"
 	if res, err := Hub.client.Get(timeoutCtx, key, etcdv3.WithPrefix()); err == nil {

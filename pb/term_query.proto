@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package raybox.term_query;
 
-import "doc.proto";
+import "pb/doc.proto";
 
 option go_package = "github.com/WlayRay/ElectricSearch/types";
 

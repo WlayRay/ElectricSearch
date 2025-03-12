@@ -40,8 +40,8 @@ func GrpcIndexerInit() {
 
 	err = server.Serve(lis)
 	if err != nil {
+		_ = indexService.Close()
 		util.Log.Fatalf("failed to serve: %v", err)
-		indexService.Close()
 	}
 }
 

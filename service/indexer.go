@@ -75,7 +75,7 @@ func (indexer *Indexer) AddDoc(doc types.Document) (int, error) {
 	var value bytes.Buffer
 	encoder := gob.NewEncoder(&value)
 	if err := encoder.Encode(doc); err == nil {
-		indexer.forwardIndex.Set([]byte(docId), value.Bytes())
+		_ = indexer.forwardIndex.Set([]byte(docId), value.Bytes())
 	} else {
 		return 0, err
 	}
@@ -109,7 +109,7 @@ func (indexer *Indexer) DeleteDoc(docId string) int {
 		//util.Log.Printf("DeleteDoc error: %v", err)
 	}
 	// 从正排索引上删除
-	indexer.forwardIndex.Delete(forwardKey)
+	_ = indexer.forwardIndex.Delete(forwardKey)
 	return n
 }
 
@@ -149,9 +149,9 @@ func (indexer *Indexer) Search(querys *types.TermQuery, onFlag, offFlag uint64, 
 	return results
 }
 
-func (Indexer *Indexer) Count() int {
+func (indexer *Indexer) Count() int {
 	n := 0
-	Indexer.forwardIndex.IterKey(func(k []byte) error {
+	indexer.forwardIndex.IterKey(func(k []byte) error {
 		n++
 		return nil
 	})

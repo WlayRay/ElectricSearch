@@ -118,7 +118,7 @@ func (service *IndexServiceWorker) Register(servicePort int) error {
 	if servicePort < 1024 {
 		return fmt.Errorf("invalid listen port %d, should more than 1024", servicePort)
 	}
-	
+
 	selfLocalIp, err := util.GetLocalIP()
 	if err != nil {
 		panic(err)
@@ -144,7 +144,7 @@ func (service *IndexServiceWorker) Register(servicePort int) error {
 
 	go func() {
 		for {
-			service.Hub.Register(currentGroup, service.selfAddr, leaseId)
+			_, _ = service.Hub.Register(currentGroup, service.selfAddr, leaseId)
 			time.Sleep(time.Duration(service.Hub.heartRate)*time.Second - 100*time.Millisecond)
 		}
 	}()

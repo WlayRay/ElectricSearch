@@ -82,7 +82,7 @@ func (s *Badger) BatchSet(keys, values [][]byte) error {
 			_ = txn.Set(key, value)
 		}
 	}
-	txn.Commit()
+	_ = txn.Commit()
 	return err
 }
 
@@ -157,14 +157,14 @@ func (s *Badger) BatchDelete(keys [][]byte) error {
 			_ = txn.Delete(key)
 		}
 	}
-	txn.Commit()
+	_ = txn.Commit()
 	return err
 }
 
 // Has 判断某个key是否存在
 func (s *Badger) Has(k []byte) bool {
 	var exists = false
-	s.db.View(func(txn *badger.Txn) error { //db.View相当于打开了一个读写事务:db.NewTransaction(true)。用db.Update的好处在于不用显式调用Txn.Discard()了
+	_ = s.db.View(func(txn *badger.Txn) error { //db.View相当于打开了一个读写事务:db.NewTransaction(true)。用db.Update的好处在于不用显式调用Txn.Discard()了
 		_, err := txn.Get(k)
 		if err != nil {
 			return err
@@ -179,7 +179,7 @@ func (s *Badger) Has(k []byte) bool {
 // IterDB 遍历整个DB
 func (s *Badger) IterDB(fn func(k, v []byte) error) int64 {
 	var total int64
-	s.db.View(func(txn *badger.Txn) error {
+	_ = s.db.View(func(txn *badger.Txn) error {
 		opts := badger.DefaultIteratorOptions
 		it := txn.NewIterator(opts)
 		defer it.Close()
@@ -212,7 +212,7 @@ func (s *Badger) IterDB(fn func(k, v []byte) error) int64 {
 // IterKey 只遍历key。key是全部存在LSM tree上的，只需要读内存，所以很快
 func (s *Badger) IterKey(fn func(k []byte) error) int64 {
 	var total int64
-	s.db.View(func(txn *badger.Txn) error {
+	_ = s.db.View(func(txn *badger.Txn) error {
 		opts := badger.DefaultIteratorOptions
 		opts.PrefetchValues = false //只需要读key，所以把PrefetchValues设为false
 		it := txn.NewIterator(opts)

@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package raybox.index;
 
-import "doc.proto";
-import "term_query.proto";
+import "pb/doc.proto";
+import "pb/term_query.proto";
 
 option go_package = "github.com/WlayRay/ElectricSearch/service";
 
