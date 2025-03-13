@@ -9,6 +9,73 @@
 
 ## 项目架构
 
+```
+├── Dockerfile                     # Docker构建文件
+├── README.md                      # 项目说明文档
+├── docker-compose.yml             # Docker Compose配置文件
+├── init.yml                       # 初始化配置文件
+├── demo                           # 示例应用
+│   ├── handler                    # HTTP接口处理逻辑
+│   │   ├── middle_ware.go         # 中间件
+│   │   └── search_controller.go   # 搜索控制器
+│   ├── infrastructure             # 基础设施层
+│   │   ├── bits.go                # Bit操作工具
+│   │   ├── build_index.go         # 构建索引逻辑
+│   │   ├── model.go               # 数据模型
+│   │   ├── video.pb.go            # Protobuf生成的代码
+│   │   └── video.proto            # Protobuf定义文件
+│   ├── internal                   # 内部实现
+│   │   ├── filter                 # 过滤器
+│   │   │   └── view_range.go      # 视图范围过滤
+│   │   ├── main                   # 主程序入口
+│   │   │   ├── index_worker.go    # 索引工作线程
+│   │   │   ├── main.go            # 主函数
+│   │   │   └── web_server.go      # Web服务器
+│   │   ├── recaller               # 召回器
+│   │   │   └── keyword.go         # 关键词召回
+│   │   └── video_search.go        # 视频搜索逻辑
+│   └── test                       # 示例测试
+│       ├── build_index_test.go    # 构建索引测试
+│       └── search_test.go         # 搜索测试
+├── etcd                           # Etcd相关工具
+│   ├── etcd_client.go             # Etcd客户端
+│   └── etcd_distributed_lock.go   # 分布式锁
+├── internal                       # 内部模块
+│   ├── kvdb                       # 键值数据库
+│   │   ├── badger_db.go           # Badger数据库实现
+│   │   ├── bolt_db.go             # Bolt数据库实现
+│   │   └── kv_db.go               # 键值数据库接口
+│   └── reverse_index              # 倒排索引
+│       ├── reverse_index.go       # 倒排索引接口
+│       └── skiplist_reverse_index.go # SkipList实现
+├── pb                             # Protobuf定义文件
+│   ├── doc.proto                  # 文档定义
+│   ├── index.proto                # 索引定义
+│   └── term_query.proto           # 查询定义
+├── service                        # 服务模块
+│   ├── IIndexer.go                # 索引接口
+│   ├── distribute.go              # 分布式逻辑
+│   ├── hub_proxy.go               # Hub代理
+│   ├── index.pb.go                # Protobuf生成的代码
+│   ├── index_service.go           # 索引服务
+│   ├── indexer.go                 # 索引器实现
+│   ├── load_balance.go            # 负载均衡
+│   └── service_hub.go             # 服务Hub
+├── types                          # 类型定义
+│   ├── doc.go                     # 文档类型
+│   ├── doc.pb.go                  # Protobuf生成的代码
+│   ├── term_query.go              # 查询类型
+│   └── term_query.pb.go           # Protobuf生成的代码
+└── util                           # 工具模块
+    ├── common_helper.go           # 通用辅助工具
+    ├── concurrent_hash_map.go     # 并发哈希表
+    ├── config.go                  # 配置工具
+    ├── context_tool.go            # 上下文工具
+    ├── log.go                     # 日志工具
+    ├── net.go                     # 网络工具
+    └── snowflake.go               # 雪花算法
+```
+
 ### 倒排索引
 
 <img src="asset/倒排索引.png" width="700"/>    
