@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/WlayRay/ElectricSearch/etcd"
 	"github.com/WlayRay/ElectricSearch/util"
@@ -124,18 +125,15 @@ func (Hub *ServiceHub) addIndexGroup() int {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
 
-	// 获取分布式锁（解决在docker compose启动多个容器时的并发问题）
-	lockKey := ServiceRootPath + indexName + "/lock"
-	lock, err := Hub.client.Txn(timeoutCtx).
-		If(etcdv3.Compare(etcdv3.CreateRevision(lockKey), "=", 0)).
-		Then(etcdv3.OpPut(lockKey, "locked", etcdv3.WithLease(etcdv3.NoLease))).
-		Commit()
-	if err != nil || !lock.Succeeded {
-		util.Log.Printf("failed to acquire lock: %v", err)
-		return 0
+	// 获取分布式锁
+	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 3, 2*time.Second, 10)
+	if err != nil {
+		panic(err)
 	}
 	defer func() {
-		_, _ = Hub.client.Delete(timeoutCtx, lockKey)
+		if err := lock.Release(); err != nil {
+			util.Log.Fatalf("failed to release lock: %v", err)
+		}
 	}()
 
 	key := ServiceRootPath + indexName + "/total-shards"
@@ -172,17 +170,14 @@ func (Hub *ServiceHub) subIndexGroup() {
 	defer cancel()
 
 	// 获取分布式锁
-	lockKey := ServiceRootPath + indexName + "/lock"
-	lock, err := Hub.client.Txn(timeoutCtx).
-		If(etcdv3.Compare(etcdv3.CreateRevision(lockKey), "=", 0)).
-		Then(etcdv3.OpPut(lockKey, "locked", etcdv3.WithLease(etcdv3.NoLease))).
-		Commit()
-	if err != nil || !lock.Succeeded {
-		util.Log.Printf("failed to acquire lock: %v", err)
-		return
+	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 3, 2*time.Second, 10)
+	if err != nil {
+		panic(err)
 	}
 	defer func() {
-		_, _ = Hub.client.Delete(timeoutCtx, lockKey)
+		if err := lock.Release(); err != nil {
+			util.Log.Fatalf("failed to release lock: %v", err)
+		}
 	}()
 
 	key := ServiceRootPath + indexName + "/total-shards"
@@ -215,17 +210,14 @@ func (Hub *ServiceHub) CountIndexGroup() int {
 	defer cancel()
 
 	// 获取分布式锁
-	lockKey := ServiceRootPath + indexName + "/lock"
-	lock, err := Hub.client.Txn(timeoutCtx).
-		If(etcdv3.Compare(etcdv3.CreateRevision(lockKey), "=", 0)).
-		Then(etcdv3.OpPut(lockKey, "locked", etcdv3.WithLease(etcdv3.NoLease))).
-		Commit()
-	if err != nil || !lock.Succeeded {
-		util.Log.Printf("failed to acquire lock: %v", err)
-		return 0
+	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 3, 2*time.Second, 10)
+	if err != nil {
+		panic(err)
 	}
 	defer func() {
-		_, _ = Hub.client.Delete(timeoutCtx, lockKey)
+		if err := lock.Release(); err != nil {
+			util.Log.Fatalf("failed to release lock: %v", err)
+		}
 	}()
 
 	key := ServiceRootPath + indexName + "/total-shards"

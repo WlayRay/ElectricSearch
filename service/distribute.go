@@ -144,7 +144,7 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 	producerWg.Add(groupCount)
 
 	// 生产者：向通道发送数据
-	for i := 0; i < groupCount; i++ {
+	for i := range groupCount {
 		group := fmt.Sprintf("group-%d", i)
 		endpoints := sentinel.Hub.GetServiceEndpoints(group)
 		if len(endpoints) == 0 {
@@ -153,7 +153,7 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 		}
 
 		endpoint := sentinel.Hub.GetServiceEndpoint(group)
-		go func(endpoint string, resultCh chan *types.Document) {
+		go func(endpoint string, resultCh chan<- *types.Document) {
 			defer producerWg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn == nil {
@@ -190,7 +190,7 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 	consumerWg.Add(consumerCount)
 	mu := sync.Mutex{} // 用于保护共享结果切片
 
-	for i := 0; i < consumerCount; i++ {
+	for range consumerCount {
 		go func() {
 			defer consumerWg.Done()
 			for _, ch := range resultChs {
@@ -246,7 +246,7 @@ func (sentinel *Sentinel) Count() int {
 		}
 
 		endpoint := sentinel.Hub.GetServiceEndpoint(group)
-		go func(endpoint string, resultCh chan uint32) {
+		go func(endpoint string, resultCh chan<- uint32) {
 			defer producerWg.Done()
 			conn := sentinel.GetGrpcConn(endpoint)
 			if conn == nil {
@@ -274,7 +274,7 @@ func (sentinel *Sentinel) Count() int {
 	var consumerWg sync.WaitGroup
 	consumerWg.Add(consumerCount)
 
-	for i := 0; i < consumerCount; i++ {
+	for range consumerCount {
 		go func() {
 			defer consumerWg.Done()
 			for _, ch := range resultChs {
@@ -310,6 +310,7 @@ func (sentinel *Sentinel) Close() (err error) {
 	return
 }
 
+// getGroupCount 获取当前索引的分组数量
 func (*Sentinel) getGroupCount() int {
 	var etcdServers []string
 	for _, v := range util.ConfigMap["etcd"].(map[string]any)["servers"].([]any) {
@@ -337,6 +338,7 @@ func (*Sentinel) getGroupCount() int {
 	return 0
 }
 
+// getGroupIndex 通过哈希选择一个group
 func (sentinel *Sentinel) getGroupIndex(key string) int {
 	return int(farm.Hash32WithSeed([]byte(key), uint32(sentinel.seed)) % uint32(sentinel.getGroupCount()))
 }
