@@ -1,8 +1,6 @@
 module github.com/WlayRay/ElectricSearch
 
-go 1.22.12
-
-toolchain go1.23.7
+go 1.23
 
 require (
 	github.com/dgraph-io/badger/v4 v4.6.0

@@ -3,6 +3,7 @@ package util
 import (
 	"bytes"
 	"encoding/binary"
+	"slices"
 )
 
 // IntToBytes 整型转换成字节
@@ -34,7 +35,7 @@ func DisassembleUint64(x uint64) (uint32, uint32) {
 func RemoveElement[T comparable](s []T, target T) []T {
 	for i, v := range s {
 		if v == target {
-			return append(s[:i], s[i+1:]...)
+			return slices.Delete(s, i, i+1)
 		}
 	}
 	return s

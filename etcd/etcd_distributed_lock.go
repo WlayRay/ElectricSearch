@@ -28,8 +28,7 @@ func AcquireDistributedLock(client *etcdv3.Client, lockKey string, maxRetries in
 	}
 
 	for range maxRetries {
-		timeoutCtx, cancel := util.GetDefaultTimeoutContext()
-		defer cancel()
+		timeoutCtx, _ := util.GetDefaultTimeoutContext()
 
 		lock, err = client.Txn(timeoutCtx).
 			If(etcdv3.Compare(etcdv3.CreateRevision(lockKey), "=", 0)).
