@@ -5,19 +5,19 @@
 mode: 3
 
 server:
-  rebuild-index: true  # server启动时是否需要重建索引
-  port: 12308  # grpc server的端口
+  rebuild-index: true # server启动时是否需要重建索引
+  port: 12308 # grpc server的端口
 
 distributed:
-  index-name: "video-index"  #索引名称
-  group-index: 0  # 分布式模式下，当前group的编号（从0开始）
-  heart-rate: 3  # 每台worker心跳检测间隔，单位秒
+  index-name: "video-index" #索引名称
+  group-index: 0 # 分布式模式下，当前group的编号（从0开始）
+  heart-rate: 3 # 每台worker心跳检测间隔，单位秒
 
 index:
-  db-type: "badger"  # 正排索引使用的存储引擎类型，支持badger、bolt
-  db-path: "data/"  # 正排索引数据的存储路径
-  document-estimate-num: 50000  # 预估存储的文档数量，用于预分配内存
-  csv-file: "bilibili_video.csv"  # 构建索引的csv文件路径
+  db-type: "badger" # 正排索引使用的存储引擎类型，支持badger、bolt
+  db-path: "data/" # 正排索引数据的存储路径
+  document-estimate-num: 50000 # 预估存储的文档数量，用于预分配内存
+  csv-file: "bilibili_video.csv" # 构建索引的csv文件路径
 
 etcd:
   # etcd集群地址
