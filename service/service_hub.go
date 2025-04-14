@@ -126,7 +126,7 @@ func (Hub *ServiceHub) addIndexGroup() int {
 	defer cancel()
 
 	// 获取分布式锁
-	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 3, 2*time.Second, 10)
+	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 10, 100*time.Millisecond, 2)
 	if err != nil {
 		panic(err)
 	}
@@ -170,7 +170,7 @@ func (Hub *ServiceHub) subIndexGroup() {
 	defer cancel()
 
 	// 获取分布式锁
-	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 3, 2*time.Second, 10)
+	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 10, 100*time.Millisecond, 2)
 	if err != nil {
 		panic(err)
 	}
@@ -210,7 +210,7 @@ func (Hub *ServiceHub) CountIndexGroup() int {
 	defer cancel()
 
 	// 获取分布式锁
-	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 3, 2*time.Second, 10)
+	lock, err := etcd.AcquireDistributedLock(Hub.client, ServiceRootPath+indexName+"/group-lock", 10, 100*time.Millisecond, 2)
 	if err != nil {
 		panic(err)
 	}

@@ -30,15 +30,16 @@ func WebServerInit(mode int) {
 	}
 }
 
-func WebServerTeardown() {
-	signalCh := make(chan os.Signal, 1)
-	signal.Notify(signalCh, syscall.SIGINT, syscall.SIGTERM)
+func WebServerTeardown(signalCh chan os.Signal) {
 	<-signalCh
 	_ = handler.Indexer.Close()
 	os.Exit(0)
 }
 
 func WebServerMain(mode int) {
-	go WebServerTeardown()
+	signalCh := make(chan os.Signal, 1)
+	signal.Notify(signalCh, syscall.SIGINT, syscall.SIGTERM)
+
+	go WebServerTeardown(signalCh)
 	WebServerInit(mode)
 }
