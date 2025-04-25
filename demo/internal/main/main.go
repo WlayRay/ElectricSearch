@@ -29,17 +29,6 @@ func startGin() {
 	engine := gin.Default()
 	gin.SetMode(gin.ReleaseMode)
 
-	engine.Use(func(ctx *gin.Context) {
-		defer func() {
-			if err := recover(); err != nil {
-				util.Log.Printf("Error: %v", err)
-				ctx.JSON(500, gin.H{
-					"code": 500,
-					"msg":  "Internal Server Error!",
-				})
-			}
-		}()
-	})
 	engine.Use(handler.GetUserInfo)
 
 	engine.POST("/search", handler.SearchAll)

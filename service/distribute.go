@@ -184,21 +184,17 @@ func (sentinel *Sentinel) Search(querys *types.TermQuery, onFlag, offFlag uint64
 		}(endpoint, resultChs[i])
 	}
 
-	// 消费者协程池
-	consumerCount := 4 // 消费者协程数量
 	var consumerWg sync.WaitGroup
-	consumerWg.Add(consumerCount)
-	mu := sync.Mutex{} // 用于保护共享结果切片
+	consumerWg.Add(groupCount)
+	mu := sync.Mutex{}
 
-	for range consumerCount {
+	for i := range groupCount {
 		go func() {
 			defer consumerWg.Done()
-			for _, ch := range resultChs {
-				for doc := range ch {
-					mu.Lock()
-					docs = append(docs, doc)
-					mu.Unlock()
-				}
+			for doc := range resultChs[i] {
+				mu.Lock()
+				docs = append(docs, doc)
+				mu.Unlock()
 			}
 		}()
 	}
@@ -237,7 +233,7 @@ func (sentinel *Sentinel) Count() int {
 	producerWg.Add(groupCount)
 
 	// 生产者：向通道发送数据
-	for i := 0; i < groupCount; i++ {
+	for i := range groupCount {
 		group := fmt.Sprintf("group-%d", i)
 		endpoints := sentinel.Hub.GetServiceEndpoints(group)
 		if len(endpoints) == 0 {
@@ -269,18 +265,14 @@ func (sentinel *Sentinel) Count() int {
 		}(endpoint, resultChs[i])
 	}
 
-	// 消费者协程池
-	consumerCount := 4 // 消费者协程数量
 	var consumerWg sync.WaitGroup
-	consumerWg.Add(consumerCount)
+	consumerWg.Add(groupCount)
 
-	for range consumerCount {
+	for i := range groupCount {
 		go func() {
 			defer consumerWg.Done()
-			for _, ch := range resultChs {
-				for count := range ch {
-					atomic.AddUint32(&n, count)
-				}
+			for count := range resultChs[i] {
+				atomic.AddUint32(&n, count)
 			}
 		}()
 	}

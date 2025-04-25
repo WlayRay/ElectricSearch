@@ -89,7 +89,7 @@ func (Hub *ServiceHub) UnRegister(group, endpoint string) error {
 	}
 }
 
-// 服务发现，client每次进行RPC调用之前都查询etcd，获取server集合，然后采用负载均衡算法选择一台server。
+// 服务发现，client每次进行RPC调用之前都查询etcd，获取server集合
 func (Hub *ServiceHub) GetServiceEndpoints(group string) []string {
 	timeoutCtx, cancel := util.GetDefaultTimeoutContext()
 	defer cancel()
